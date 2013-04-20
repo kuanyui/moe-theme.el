@@ -1,15 +1,12 @@
 <link href="markdown.css" rel="stylesheet"></link>
 # moe-theme
 Just another Emacs theme.
-![Screenshot](https://github.com/kuanyui/moe-theme.el/raw/master/screenshot)
+![Screenshot](https://github.com/kuanyui/moe-theme.el/raw/master/pics/screenshot.png)
 This theme supports Emacs 24 native theme.
 # 
 > I am a blockquote
-## Warranty and License
-This theme is made by an Emacs user who don't understand programming at all (truly); so, 
-*I WILL NOT PROVIDE ANY WARRANTY FOR THIS FREE SOFTWARE.*
 **bold**
-*italic*
+*A quick black tux jumps over the lazy dog*
 This theme (include pictures) is released under GPL v3.
 
 ## Requirements
@@ -25,7 +22,6 @@ Download the one you prefer to `~/.emacs.d/themes`.Then, add these to your init 
 	(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/") ;;Emacs24之後的theme路徑指定
 	(load-theme 'moe-dark t)
 	(enable-theme 'moe-dark)
-
     
 Or you can load theme just by adding:    
 
