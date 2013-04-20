@@ -4,7 +4,7 @@ Just another Emacs theme.
 ![Screenshot](https://github.com/kuanyui/moe-theme.el/raw/master/screenshot)
 This theme supports Emacs 24 native theme.
 # 
-> I am a comment
+> I am a blockquote
 ## Warranty and License
 This theme is made by an Emacs user who don't understand programming at all (truly); so, 
 *I WILL NOT PROVIDE ANY WARRANTY FOR THIS FREE SOFTWARE.*
@@ -30,8 +30,12 @@ Download the one you prefer to `~/.emacs.d/themes`.Then, add these to your init 
 Or you can load theme just by adding:    
 
     (load-file "~/.emacs.d/themes/moe-dark-theme.el"))  ;;都不行就直接用這招
+### Paren
+I recommend set the value of `show-paren-style` to `expression` for optimized visual experience:
 
-Now, restart Emacs, and press `y` twice to accept.
+    (show-paren-mode t)
+    (setq show-paren-style 'expression) ;;另一種突顯方式(突顯整個括號範圍)
+    
 ## Note
 ### Doesn't have a 256-colors terminal?
 If you use `Konsole`, it can be customized in `Edit Current Profile>General>Environment>Edit`
@@ -57,5 +61,7 @@ If you also use `tmux`, add this to `~/.tmux.conf`, too:
 啊，於是就有了moe-theme.el
 
 我不會寫程式，然而還使用Emacs應該是件有點反常的事：我連寫theme寫錯了都不太會除錯...
+
+我盡量兼顧配色美感與可讀性，所以moe-dark跟moe-light是互相獨立、分開寫的，例如黃色在淡色背景根本看不到，基本上不能用。另外moe-light真的比較難做，畢竟字的顏色普遍都不容易在淡色背景中顯現出來，所以辨識度一定會比較差。如果你很重視辨識度，那請選擇moe-dark。
 
 希望您會喜歡這個moe-theme.el

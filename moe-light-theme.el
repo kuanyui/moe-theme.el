@@ -1,4 +1,4 @@
-;;; moe-light-theme.el --- Tango-based custom theme for faces
+;;; moe-light-theme.el --- A theme for otaku
 
 ;; Author: kuanyui<azazabc123@gmail.com>
 ;; Based on "tango-dark-theme" , a part of GNU Emacs 24
@@ -38,18 +38,20 @@ Moe, moe, chew!")
 	      (((class color) (min-colors 256))
 	       (:foreground ,black-5 :background ,LIGHT_BG))
 	      (,class
-	       (:foreground ,black-5 :background "black"))))
-   `(cursor ((,class (:background ,white-1))))
+	       (:foreground ,black-5 :background LIGHT_BG))))
+   `(cursor ((,class (:background ,white-1 :foreground ,green-3))))
 
    ;; Highlighting faces
    `(fringe ((,class (:foreground ,black-1 :background ,white-2))))
    `(linum ((,class (:foreground ,white-1 :background ,white-3))))
-   `(highlight ((,class (:foreground ,black-5 :background ,green-0))))
-   `(region ((,class (:foreground ,white-1 :background ,black-1))))
+   `(highlight ((,class (:background ,green-0))))
+   `(hl-line ((,class (:background ,green-00)))) ;;這裡遇到輸入法會有問題orz
+   `(region ((,class (:foreground ,white-1 :background ,blue-1))))
    `(secondary-selection ((,class (:background ,blue-3))))
    `(isearch ((,class (:foreground ,white-1 :background ,orange-3))))
    `(lazy-highlight ((,class (:background ,magenta-3 :foreground ,white-1))))
    `(trailing-whitespace ((,class (:background ,red-3))))
+   `(show-paren-match ((,class (:background ,blue-00))))
 
    ;; Mode line & frames' faces
    `(mode-line ((,class
@@ -76,8 +78,8 @@ Moe, moe, chew!")
    `(font-lock-doc-face ((,class (:foreground ,red-2))))
    `(font-lock-doc-string-face ((,class (:foreground ,yellow-2))))
    `(font-lock-function-name-face ((,class (:foreground ,yellow-2))))
-   `(font-lock-keyword-face ((,class (:foreground ,green-2))))
-   `(font-lock-negation-char-face ((,class (:foreground ,green-2))))
+   `(font-lock-keyword-face ((,class (:foreground ,green-3))))
+   `(font-lock-negation-char-face ((,class (:foreground ,green-3))))
    `(font-lock-preprocessor-face ((,class (:foreground ,purple-2))))
    `(font-lock-regexp-grouping-backslash ((,class (:foreground ,yellow-2))))
    `(font-lock-regexp-grouping-construct ((,class (:foreground ,purple-2))))
@@ -115,31 +117,32 @@ Moe, moe, chew!")
    `(org-column ((,class (:background ,white-3 :foreground ,black-5))))
    `(org-column-title ((,class (:background ,green-2 :foreground ,black-5 :underline t :weight bold))))
    `(org-deadline-announce ((,class (:foreground ,red-3))))
-   `(org-scheduled ((,class (:foreground ,green-2))))
+   `(org-scheduled ((,class (:foreground ,green-3))))
    `(org-scheduled-previously ((,class (:foreground ,red-1))))
    `(org-scheduled-today ((,class (:foreground ,blue-2))))
-   `(org-special-keyword ((,class (:foreground ,yellow-2))))
-   `(org-table ((,class (:background ,yellow-00 :foreground ,black-3))))
+   `(org-special-keyword ((,class (:background ,yellow-2 :foreground ,black-5))))
+   `(org-table ((,class (:background ,yellow-0 :foreground ,black-3))))
    `(org-time-grid ((,class (:foreground ,orange-2))))
    `(org-upcoming-deadline ((,class (:inherit font-lock-keyword-face))))
    `(org-warning ((,class (:bold t :foreground ,red-3 :weight bold :underline nil))))
-   `(org-formula ((,class (:foreground ,yellow-2))))
+   `(org-formula ((,class (:foreground ,purple-2))))
    `(org-headline-done ((,class (:foreground ,green-2))))
    `(org-hide ((,class (:foreground ,black-2))))
-   `(org-code ((,class (:foreground ,yellow-2))))
+   `(org-code ((,class (:foreground ,blue-2))))
    `(org-link ((,class (:foreground ,blue-1))))
    `(org-footnote ((,class (:foreground ,magenta-3))))
    `(org-ellipsis ((,class (:foreground ,red-2))))
+   `(org-agenda-clocking ((,class (:foreground ,blue-3 :background ,blue-0 :bold t))))
    `(org-agenda-date ((,class (:foreground ,blue-2 :underline nil))))
-   `(org-agenda-todo ((,class (:foreground ,black-3 :background ,red-2))))
+   `(org-agenda-todo ((,class (:foreground ,white-1 :background ,red-2))))
    `(org-agenda-done ((,class (:foreground ,black-3 :background ,green-2))))
    `(org-agenda-dimmed-todo-face ((,class (:foreground ,white-1 :background ,red-2))))
    `(org-block ((,class (:foreground ,orange-1))))
    `(org-quote ((,class (:foreground ,orange-1))))
    `(org-block-begin-line ((,class (:foreground ,orange-2))))
    `(org-block-end-line ((,class (:foreground ,orange-2))))
-   `(org-mode-line-clock ((,class (:foreground ,blue-3 :background ,black-5 :bold t))))
-   `(org-mode-line-clock-overrun ((,class (:foreground ,black-3 :background ,red-1 :bold t))))
+   `(org-mode-line-clock ((,class (:foreground ,blue-3 :background ,blue-0 :bold t))))
+   `(org-mode-line-clock-overrun ((,class (:foreground ,white-1 :background ,red-1 :bold t))))
 
    ;; undo-tree
    `(undo-tree-visualizer-default-face ((,class (:foreground ,black-5))))
@@ -148,20 +151,20 @@ Moe, moe, chew!")
    `(undo-tree-visualizer-register-face ((,class (:foreground ,yellow-2))))
 
    ;; Markdown faces
-   `(markdown-blockquote-face ((,class (:foreground ,green-3 :background ,LIGHT_BG :italic t))))
+   `(markdown-blockquote-face ((,class (:foreground ,green-3 :background ,yellow-00 :italic t))))
    `(markdown-bold-face ((,class (:foreground ,black-5 :bold t))))
-   `(markdown-comment-face ((,class (:foreground ,black-2 :italic t))))
+   `(markdown-comment-face ((,class (:foreground ,white-3 :italic t))))
    `(markdown-header-face-1 ((,class (:foreground ,orange-2 :bold t))))
    `(markdown-header-face-2 ((,class (:foreground ,orange-2 :bold t))))
    `(markdown-header-face-3 ((,class (:foreground ,orange-2 :bold t))))
    `(markdown-header-face-4 ((,class (:foreground ,orange-2 :bold t))))
    `(markdown-header-face-5 ((,class (:foreground ,orange-2 :bold t))))
    `(markdown-header-face-6 ((,class (:foreground ,orange-2 :bold t))))
-   `(markdown-link-face ((,class (:foreground ,magenta-1 :underline t))))
+   `(markdown-link-face ((,class (:foreground ,magenta-1 :bold t :underline t))))
    `(markdown-inline-code-face ((,class (:foreground ,blue-3 :background ,blue-00))))
    `(markdown-italic-face ((,class (:foreground ,black-5 :italic t))))
-   `(markdown-list-face ((,class (:background ,red-2 :foreground ,white-1 :bold t))))
-   `(markdown-math-face ((,class (:foreground ,magenta-1))))
+   `(markdown-list-face ((,class (:foreground ,black-5 :bold t))))
+   `(markdown-math-face ((,class (:foreground ,purple-2))))
    `(markdown-missing-link-face ((,class (:foreground ,red-1 :bold t))))
    `(markdown-pre-face ((,class (:foreground ,blue-2))))
    `(markdown-reference-face ((,class (:foreground ,orange-2 :italic t))))
@@ -218,6 +221,7 @@ Moe, moe, chew!")
    `(helm-selection ((,class (:foreground ,black-3 :background ,green-01))))
    `(helm-bookmark-directory ((,class (:foreground ,blue-1 :background ,LIGHT_BG :bold t))))
    `(helm-bookmark-file ((,class (:foreground ,black-5 :background ,LIGHT_BG))))
+   `(helm-bookmark-info ((,class (:foreground ,green-2 :background ,LIGHT_BG))))
    `(helm-ff-directory ((,class (:foreground ,blue-1 :background ,LIGHT_BG :bold t))))
    `(helm-ff-file ((,class (:foreground ,black-5 :background ,LIGHT_BG))))
    `(helm-ff-excutable ((,class (:foreground ,green-2 :background ,LIGHT_BG :bold t))))
@@ -225,6 +229,9 @@ Moe, moe, chew!")
    `(helm-header ((,class (:foreground ,blue-3 :background ,white-1))))
    `(helm-candidate-number ((,class (:foreground ,blue-3 :background ,white-1))))
    `(helm-match ((,class (:foreground ,green-2 :background ,LIGHT_BG :bold t))))
+   `(helm-buffer-saved-out ((,class (:foreground ,red-2 :background ,LIGHT_BG))))
+   `(helm-ff-invalid-symlink ((,class (:foreground ,white-1 :background ,red-2))))
+   `(helm-ff-prefix ((,class (:foreground ,white-1 :background ,orange-2))))
 
    ;; Message faces
    `(message-header-name ((,class (:foreground ,blue-3))))
@@ -256,24 +263,32 @@ Moe, moe, chew!")
 
    ;; Flyspell faces
    `(flyspell-duplicate ((,class (:underline t foreground-color,orange-1))))
-   `(flyspell-incorrect ((,class (:background ,red-1 :foreground ,black-5 :bold t))))
+   `(flyspell-incorrect ((,class (:background ,red-1 :foreground ,white-1 :bold t))))
 
    ;; Semantic faces
    `(semantic-decoration-on-includes ((,class (:underline ,black-1))))
    `(semantic-decoration-on-private-members-face
-     ((,class (:background ,purple-3))))
+     ((,class (:background ,purple-0))))
    `(semantic-decoration-on-protected-members-face
-     ((,class (:background ,magenta-3))))
+     ((,class (:background ,magenta-1))))
    `(semantic-decoration-on-unknown-includes
-     ((,class (:background ,red-3))))
+     ((,class (:background ,red-0))))
    `(semantic-decoration-on-unparsed-includes
-     ((,class (:background ,black-4))))
+     ((,class (:background ,yellow-1))))
    `(semantic-tag-boundary-face ((,class (:overline ,blue-1))))
    `(semantic-unmatched-syntax-face ((,class (:underline ,red-1))))
+
+   ;; CUA
+   `(cua-rectangle ((,class (:background ,magenta-3 :foreground ,white-1))))
+
+   ;; Ace-jump
+   `(ace-jump-face-background ((,class (:foreground ,white-3))))
+   `(ace-jump-face-foreground ((,class (:foreground ,red-2 :bold t))))
 
    ;; Flymake
    `(flymake-warnline ((,class (:underline ,orange-1))))
    `(flymake-errline ((,class (:underline ,red-2)))))
+
 
   (custom-theme-set-variables
    'moe-light

@@ -42,12 +42,14 @@ Moe, moe, chew!")
    ;; Highlighting faces
    `(fringe ((,class (:foreground ,black-3 :background ,white-3))))
    `(linum ((,class (:foreground ,white-2 :background ,black-2))))
-   `(highlight ((,class (:foreground ,white-1 :background ,black-3))))
+   `(highlight ((,class (:background ,black-3))))
+   `(hl-line ((,class (:background ,black-3)))) ;;這裡遇到輸入法會有問題orz
    `(region ((,class (:foreground ,black-3 :background ,green-2))))
    `(secondary-selection ((,class (:background ,blue-3))))
    `(isearch ((,class (:foreground ,white-1 :background ,orange-3))))
    `(lazy-highlight ((,class (:background ,magenta-3 :foreground ,white-1))))
    `(trailing-whitespace ((,class (:background ,red-3))))
+   `(show-paren-match ((,class (:background ,black-2))))
 
    ;; Mode line & frames' faces
    `(mode-line ((,class
@@ -128,6 +130,7 @@ Moe, moe, chew!")
    `(org-link ((,class (:foreground ,blue-1))))
    `(org-footnote ((,class (:foreground ,magenta-3))))
    `(org-ellipsis ((,class (:foreground ,red-2))))
+   `(org-agenda-clocking ((,class (:foreground ,blue-3 :background ,blue-0 :bold t))))
    `(org-agenda-date ((,class (:foreground ,blue-2 :underline nil))))
    `(org-agenda-todo ((,class (:foreground ,black-3 :background ,red-2))))
    `(org-agenda-done ((,class (:foreground ,black-3 :background ,green-2))))
@@ -223,6 +226,10 @@ Moe, moe, chew!")
    `(helm-header ((,class (:foreground ,blue-3 :background ,white-1))))
    `(helm-candidate-number ((,class (:foreground ,blue-3 :background ,white-1))))
    `(helm-match ((,class (:foreground ,green-2 :background ,black-5 :bold t))))
+   `(helm-buffer-saved-out ((,class (:foreground ,red-2 :background ,black-5))))
+   `(helm-ff-invalid-symlink ((,class (:foreground ,white-1 :background ,red-2))))
+   `(helm-ff-prefix ((,class (:foreground ,white-1 :background ,orange-2))))
+
 
    ;; Message faces
    `(message-header-name ((,class (:foreground ,blue-1))))
@@ -268,6 +275,13 @@ Moe, moe, chew!")
      ((,class (:background ,black-4))))
    `(semantic-tag-boundary-face ((,class (:overline ,blue-1))))
    `(semantic-unmatched-syntax-face ((,class (:underline ,red-1))))
+
+   ;; CUA
+   `(cua-rectangle ((,class (:background ,magenta-3 :foreground ,white-1))))
+
+   ;; Ace-jump
+   `(ace-jump-face-background ((,class (:foreground ,black-2))))
+   `(ace-jump-face-foreground ((,class (:foreground ,red-2))))
 
    ;; Flymake
    `(flymake-warnline ((,class (:underline ,orange-1))))
