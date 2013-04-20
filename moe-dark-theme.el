@@ -19,12 +19,12 @@ Moe, moe, chew!")
       (cyan-1 "#87ffff") (cyan-2 "#00ffff") (cyan-3 "#00d7af") (cyan-4 "#5f87af")
       (purple-1 "#d18aff") (purple-2 "#9a08ff") (purple-3 "#6c0099")
       (red-1 "#ef2929")  (red-2 "#cc0000")  (red-3 "#a40000")
-      (white-1 "#ffffff") (white-2 "#d3d3d3") (white-3 "#bcbcbc") (LIGHT_BG "#ffffd7")
-      (black-1 "#999999") (black-2 "#555555") (black-3 "#303030")
+      (white-1 "#dadada") (white-2 "#c6c6c6") (white-3 "#b2b2b2") (LIGHT_BG "#ffffd7")
+      (black-1 "#a8a8a8") (black-2 "#8a8a8a") (black-3 "#4e4e4e")
 
       (green-01 "#d7ff00")
       (green-0 "#d7ff5f") (blue-0 "#8cc4ff") (purple-0 "#e6a8df") (yellow-0 "#ffff87")
-      (red-0 "#ff4b4b")  (black-4 "#41423f") (black-5 "#1c1c1c") (orange-0 "#ffaf87")
+      (red-0 "#ff4b4b")  (black-4 "#3a3a3a") (black-5 "#303030") (orange-0 "#ffaf87")
       (green-00 "#d7ff87") (yellow-00 "#ffffaf") (blue-00 "#d7d7ff"))
  
   (custom-theme-set-faces
@@ -35,7 +35,7 @@ Moe, moe, chew!")
 	      (((class color) (min-colors 256))
 	       (:foreground ,white-1 :background ,black-5))
 	      (,class
-	       (:foreground ,white-1 :background "black"))))
+	       (:foreground ,white-1 :background ,black-5))))
    `(cursor ((,class (:background ,white-1))))
 
    ;; Highlighting faces
@@ -53,7 +53,7 @@ Moe, moe, chew!")
    ;; Mode line & frames' faces
    `(mode-line ((,class
 		 (:box (:line-width -1 :style released-button)
-		  :background ,blue-1 :foreground ,black-4))))
+		  :background ,white-1 :foreground ,blue-2))))
    `(mode-line-inactive ((,class
 			  (:box (:line-width -1 :style released-button)
 			   :background ,black-3 :foreground ,white-1))))
@@ -168,8 +168,8 @@ Moe, moe, chew!")
    `(markdown-url-face ((,class (:foreground ,magenta-3 :underline t))))
 
    ;; Twittering-mode
-   `(twittering-username-face ((,class (:foreground ,blue-1))))
-   `(twittering-uri-face ((,class (:foreground ,blue-1))))
+   `(twittering-username-face ((,class (:foreground ,blue-1 :bold t))))
+   `(twittering-uri-face ((,class (:foreground ,blue-1 :underline t))))
    `(twittering-timeline-footer-face ((,class (:foreground ,white-3))))
    `(twittering-timeline-header-face ((,class (:foreground ,white-3))))
 

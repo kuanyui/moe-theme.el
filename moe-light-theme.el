@@ -20,11 +20,11 @@ Moe, moe, chew!")
       (purple-1 "#d18aff") (purple-2 "#9a08ff") (purple-3 "#6c0099")
       (red-1 "#ef2929")  (red-2 "#cc0000")  (red-3 "#a40000")
       (white-1 "#ffffff") (white-2 "#d3d3d3") (white-3 "#b2b2b2") (LIGHT_BG "#ffffd7")
-      (black-1 "#8a8a8a") (black-2 "#585858") (black-3 "#303030")
+      (black-1 "#9e9e9e") (black-2 "#8a8a8a") (black-3 "#767676")
 
       (green-01 "#d7ff00")
       (green-0 "#d7ff5f") (blue-0 "#afd7ff") (purple-0 "#e6a8df") (yellow-0 "#ffff87")
-      (red-0 "#ff4b4b")  (black-4 "#41423f") (black-5 "#1c1c1c") (orange-0 "#ffaf87")
+      (red-0 "#ff4b4b")  (black-4 "#626262") (black-5 "#5f5f5f") (orange-0 "#ffaf87")
       (green-00 "#d7ff87") (yellow-00 "#ffffaf") (blue-00 "#d7d7ff"))
 
   (custom-theme-set-faces
@@ -40,7 +40,7 @@ Moe, moe, chew!")
 
    ;; Highlighting faces
    `(fringe ((,class (:foreground ,black-1 :background ,white-2))))
-   `(linum ((,class (:foreground ,white-1 :background ,white-3))))
+   `(linum ((,class (:foreground "#87875f" :background "#d7d7af"))))
    `(highlight ((,class (:background ,green-0))))
    `(hl-line ((,class (:background ,green-00)))) ;;這裡遇到輸入法會有問題orz
    `(region ((,class (:foreground ,white-1 :background ,blue-1))))
@@ -58,7 +58,7 @@ Moe, moe, chew!")
 			  (:box (:line-width -1 :style released-button)
 			   :background ,blue-00 :foreground ,black-1))))
    `(mode-line-buffer-id ((,class (:foreground ,black-3 :background ,blue-1))))
-   `(vertical-border ((,class (:foreground ,black-2 :background ,black-2))))
+   `(vertical-border ((,class (:foreground ,white-3 :background ,white-3))))
 
    ;; Escape and prompt faces
    `(minibuffer-prompt ((,class (:foreground ,black-3 :background ,green-2))))
@@ -168,8 +168,8 @@ Moe, moe, chew!")
    `(markdown-url-face ((,class (:foreground ,magenta-3 :underline t))))
 
    ;; Twittering-mode
-   `(twittering-username-face ((,class (:foreground ,blue-1 :bold t))))
-   `(twittering-uri-face ((,class (:foreground ,blue-1 :bold t))))
+   `(twittering-username-face ((,class (:foreground ,blue-3 :background ,blue-00))))
+   `(twittering-uri-face ((,class (:foreground ,blue-2 :underline t))))
    `(twittering-timeline-footer-face ((,class (:foreground ,black-1 :bold t))))
    `(twittering-timeline-header-face ((,class (:foreground ,black-1 :bold t))))
 
