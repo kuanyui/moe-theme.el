@@ -46,9 +46,9 @@ If you also use `tmux`, add this to `~/.tmux.conf`, too:
 	
     set -g default-terminal "screen-256color"
 
-## Nonsense
-1. Is this theme safe?
-    => I don't understand programming at all, so don't worry that I would put some dangerous elisp in it.
+## Known Bugs
+* When type characters with IM (e.g. fcitx), and run Emacs under terminal emulator (e.g. Konsole) with `moe-light-theme`; when you type words in IM, the string embedded in Emacs may be very insignificant (But as you output the word from IM, it turns normal).
+
 
 沒想到我竟然也有開github repository的一天啊。
 

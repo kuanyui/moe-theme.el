@@ -2,9 +2,6 @@
 
 ;; Author: kuanyui<azazabc123@gmail.com>
 ;; Based on "tango-dark-theme" , a part of GNU Emacs 24
-;;	    Chong Yidong <cyd@stupidchicken>
-;;          Jan Moringen <jan.moringen@uni-bielefeld.de>
-
 
 ;;; Code:
 
@@ -38,8 +35,8 @@ Moe, moe, chew!")
 	      (((class color) (min-colors 256))
 	       (:foreground ,black-5 :background ,LIGHT_BG))
 	      (,class
-	       (:foreground ,black-5 :background LIGHT_BG))))
-   `(cursor ((,class (:background ,white-1 :foreground ,green-3))))
+	       (:foreground ,black-5 :background ,LIGHT_BG))))
+   `(cursor ((,class (:background ,black-5))))
 
    ;; Highlighting faces
    `(fringe ((,class (:foreground ,black-1 :background ,white-2))))
@@ -76,12 +73,12 @@ Moe, moe, chew!")
    `(font-lock-comment-face ((,class (:foreground ,red-2))))
    `(font-lock-constant-face ((,class (:foreground ,blue-2))))
    `(font-lock-doc-face ((,class (:foreground ,red-2))))
-   `(font-lock-doc-string-face ((,class (:foreground ,yellow-2))))
-   `(font-lock-function-name-face ((,class (:foreground ,yellow-2))))
+   `(font-lock-doc-string-face ((,class (:foreground ,orange-2))))
+   `(font-lock-function-name-face ((,class (:foreground ,orange-2))))
    `(font-lock-keyword-face ((,class (:foreground ,green-3))))
    `(font-lock-negation-char-face ((,class (:foreground ,green-3))))
    `(font-lock-preprocessor-face ((,class (:foreground ,purple-2))))
-   `(font-lock-regexp-grouping-backslash ((,class (:foreground ,yellow-2))))
+   `(font-lock-regexp-grouping-backslash ((,class (:foreground ,orange-2))))
    `(font-lock-regexp-grouping-construct ((,class (:foreground ,purple-2))))
    `(font-lock-string-face ((,class (:foreground ,magenta-3))))
    `(font-lock-type-face ((,class (:foreground ,blue-2))))
@@ -151,12 +148,12 @@ Moe, moe, chew!")
    `(undo-tree-visualizer-register-face ((,class (:foreground ,yellow-2))))
 
    ;; Markdown faces
-   `(markdown-blockquote-face ((,class (:foreground ,green-3 :background ,yellow-00 :italic t))))
+   `(markdown-blockquote-face ((,class (:foreground ,green-3 :background ,green-00 :italic t))))
    `(markdown-bold-face ((,class (:foreground ,black-5 :bold t))))
    `(markdown-comment-face ((,class (:foreground ,white-3 :italic t))))
-   `(markdown-header-face-1 ((,class (:foreground ,orange-2 :bold t))))
-   `(markdown-header-face-2 ((,class (:foreground ,orange-2 :bold t))))
-   `(markdown-header-face-3 ((,class (:foreground ,orange-2 :bold t))))
+   `(markdown-header-face-1 ((,class (:foreground ,orange-2 :bold t :height 2.0))))
+   `(markdown-header-face-2 ((,class (:foreground ,orange-2 :bold t :height 1.5))))
+   `(markdown-header-face-3 ((,class (:foreground ,orange-2 :bold t :height 1.2))))
    `(markdown-header-face-4 ((,class (:foreground ,orange-2 :bold t))))
    `(markdown-header-face-5 ((,class (:foreground ,orange-2 :bold t))))
    `(markdown-header-face-6 ((,class (:foreground ,orange-2 :bold t))))

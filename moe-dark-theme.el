@@ -2,9 +2,6 @@
 
 ;; Author: kuanyui<azazabc123@gmail.com>
 ;; Based on "tango-dark-theme" , a part of GNU Emacs 24
-;;	    Chong Yidong <cyd@stupidchicken>
-;;          Jan Moringen <jan.moringen@uni-bielefeld.de>
-
 
 ;;; Code:
 
@@ -152,9 +149,9 @@ Moe, moe, chew!")
    `(markdown-blockquote-face ((,class (:foreground ,red-2 :italic t))))
    `(markdown-bold-face ((,class (:foreground ,white-1 :bold t))))
    `(markdown-comment-face ((,class (:foreground ,black-2 :italic t))))
-   `(markdown-header-face-1 ((,class (:foreground ,yellow-1 :bold t))))
-   `(markdown-header-face-2 ((,class (:foreground ,yellow-1 :bold t))))
-   `(markdown-header-face-3 ((,class (:foreground ,yellow-1 :bold t))))
+   `(markdown-header-face-1 ((,class (:foreground ,yellow-1 :bold t :height 2.0))))
+   `(markdown-header-face-2 ((,class (:foreground ,yellow-1 :bold t :height 1.5))))
+   `(markdown-header-face-3 ((,class (:foreground ,yellow-1 :bold t :height 1.2))))
    `(markdown-header-face-4 ((,class (:foreground ,yellow-1 :bold t))))
    `(markdown-header-face-5 ((,class (:foreground ,yellow-1 :bold t))))
    `(markdown-header-face-6 ((,class (:foreground ,yellow-1 :bold t))))
