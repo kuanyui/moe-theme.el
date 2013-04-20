@@ -1,4 +1,4 @@
-;;; moe-light-theme.el --- A theme for otaku
+;;; moe-light-theme.el --- An eye-candy theme for Emacser
 
 ;; Author: kuanyui<azazabc123@gmail.com>
 ;; Based on "tango-dark-theme" , a part of GNU Emacs 24
@@ -12,19 +12,19 @@ Moe, moe, chew!")
 (let ((class '((class color) (min-colors 89)))
       ;; Palette colors.
       (yellow-1 "#fce94f") (yellow-2 "#ffd700") (yellow-3 "#c4a000")
-      (orange-1 "#ff9742") (orange-2 "#ff8700") (orange-3 "#ff5d17")
+      (orange-1 "#ffaf5f") (orange-2 "#ff8700") (orange-3 "#ff5d17") (orange-4 "#d75f00")
       (magenta-1 "#ff7bbb") (magenta-2 "#ff4ea3") (magenta-3 "#ff1f8b")
-      (green-1 "#afff00") (green-2 "#a1db00") (green-3 "#5faf00") (green-4 "#005f00")
-      (blue-1 "#729fcf") (blue-2 "#1f5bff") (blue-3 "#005f87") (blue-4 "#0000af")
+      (green-1 "#afff00") (green-2 "#a1db00") (green-3 "#5faf00") (green-4 "#008700") (green-5 "#005f00")
+      (blue-1 "#729fcf") (blue-2 "#1f5bff") (blue-3 "#005f87") (blue-4 "#005faf") (blue-5 "#0000af") 
       (cyan-1 "#87ffff") (cyan-2 "#00ffff") (cyan-3 "#00d7af") (cyan-4 "#5f87af")
       (purple-1 "#d18aff") (purple-2 "#9a08ff") (purple-3 "#6c0099")
       (red-1 "#ef2929")  (red-2 "#cc0000")  (red-3 "#a40000")
       (white-1 "#ffffff") (white-2 "#d3d3d3") (white-3 "#b2b2b2") (LIGHT_BG "#ffffd7")
       (black-1 "#8a8a8a") (black-2 "#585858") (black-3 "#303030")
-      ;; Not in palette; used for better contrast.
+
       (green-01 "#d7ff00")
       (green-0 "#d7ff5f") (blue-0 "#afd7ff") (purple-0 "#e6a8df") (yellow-0 "#ffff87")
-      (red-0 "#ff4b4b")  (black-4 "#41423f") (black-5 "#1c1c1c")
+      (red-0 "#ff4b4b")  (black-4 "#41423f") (black-5 "#1c1c1c") (orange-0 "#ffaf87")
       (green-00 "#d7ff87") (yellow-00 "#ffffaf") (blue-00 "#d7d7ff"))
 
   (custom-theme-set-faces
@@ -231,39 +231,40 @@ Moe, moe, chew!")
    `(helm-ff-prefix ((,class (:foreground ,white-1 :background ,orange-2))))
 
    ;;Dired+
-   `(dired-directory ((,class (:foreground ,blue-2 :bold t))))
+   `(dired-directory ((,class (:foreground ,blue-1 :bold t))))
    `(dired-flagged ((,class (:foreground ,red-1))))
    `(dired-header ((,class (:foreground ,blue-1))))
-   `(dired-ignored ((,class (:foreground ,black-1))))
+   `(dired-ignored ((,class (:foreground ,white-3))))
    `(dired-mark ((,class (:foreground ,green-1))))
    `(dired-marked ((,class (:foreground ,green-2))))
    `(dired-perm-write ((,class (:foreground ,red-2))))
    `(dired-symlink ((,class (:foreground ,magenta-2))))
    `(dired-warning ((,class (:foreground ,white-1 :background ,red-1 :bold t))))
-   `(diredp-compressed-file-suffix ((,class (:foreground ,blue-3))))
-   `(diredp-date-time ((,class (:foreground ,blue-1 :background ,black-2))))
+   `(diredp-compressed-file-suffix ((,class (:foreground ,purple-2))))
+   `(diredp-date-time ((,class (:foreground ,blue-3 :background ,blue-00))))
    `(diredp-deletion ((,class (:foreground ,white-1, :background ,red-3))))
    `(diredp-deletion-file-name ((,class (:foreground ,red-2))))
    `(diredp-dir-heading ((,class (:foreground ,black-5 :background ,white-1))))
-   `(diredp-dir-priv ((,class (:foreground ,white-1 :background ,blue-1 :bold t))))
+   `(diredp-dir-priv ((,class (:foreground ,blue-1 :bold t))))
    `(diredp-display-msg ((,class (:foreground ,orange-2))))
-   `(diredp-exec-priv ((,class (:foreground ,white-1 :background ,green-2 :bold t))))
-   `(diredp-executable-tag ((,class (:foreground ,green-2)))
-   `(diredp-file-name ((,class (:foreground ,white-1))))
-   `(diredp-file-suffix ((,class (:foreground ,yellow-0))))
+   `(diredp-executable-tag ((,class (:foreground ,green-2))))
+   `(diredp-file-name ((,class (:foreground ,black-5))))
+   `(diredp-file-suffix ((,class (:foreground ,orange-3))))
    `(diredp-flag-mark ((,class (:foreground ,white-1 :background ,magenta-3 :bold t))))
    `(diredp-flag-mark-line ((,class (:foreground ,black-5 :background ,magenta-1))))
-   `(diredp-ignored-file-name ((,class (:foreground ,black-1))))
+   `(diredp-ignored-file-name ((,class (:foreground ,white-3))))
    `(diredp-link-priv ((,class (:foreground ,magenta-3))))
    `(diredp-mode-line-flagged ((,class (:foreground ,black-5 :background ,green-2))))
-   `(diredp-mode-line-marked ((,class (:foreground ,red-3 :background ,red-1))))
-   `(diredp-no-priv ((,class (:foreground ,white-1 :background ,black-5))))
-   `(diredp-number ((,class (:foreground ,yellow-1))))
+   `(diredp-mode-line-marked ((,class (:foreground ,white-1 :background ,magenta-3 bold t))))
+   `(diredp-no-priv ((,class (:foreground ,yellow-3 :background ,yellow-00))))
+   `(diredp-number ((,class (:foreground ,green-3))))
    `(diredp-other-priv ((,class (:foreground ,white-1 :background ,blue-3))))
    `(diredp-rare-priv ((,class (:foreground ,white-1 :background ,purple-2))))
-   `(diredp-read-priv ((,class (:foreground ,white-1 :background ,orange-2))))
    `(diredp-symlink ((,class (:foreground ,magenta-3))))
-   `(diredp-write-priv ((,class (:foreground ,white-1 :background ,blue-1))))
+   `(diredp-read-priv ((,class (:foreground ,red-3 :background ,orange-0))))
+   `(diredp-write-priv ((,class (:foreground ,blue-5 :background ,blue-0))))
+   `(diredp-exec-priv ((,class (:foreground ,green-4 :background ,green-0))))
+
    
    ;; Message faces
    `(message-header-name ((,class (:foreground ,blue-3))))
@@ -325,7 +326,7 @@ Moe, moe, chew!")
   (custom-theme-set-variables
    'moe-light
    `(ansi-color-names-vector [,black-5 ,red-0 ,green-0 ,yellow-1
-			      ,blue-1 ,purple-1 ,blue-0 ,white-1]))))
+			      ,blue-1 ,purple-1 ,blue-0 ,white-1])))
 
 
 (provide-theme 'moe-light)

@@ -1,4 +1,4 @@
-;;; moe-dark-theme.el --- Tango-based custom theme for faces
+;;; moe-dark-theme.el --- An eye-candy theme for Emacser
 
 ;; Author: kuanyui<azazabc123@gmail.com>
 ;; Based on "tango-dark-theme" , a part of GNU Emacs 24
@@ -15,15 +15,17 @@ Moe, moe, chew!")
       (orange-1 "#ffaf5f") (orange-2 "#ff8700") (orange-3 "#ff5d17") (orange-4 "#d75f00")
       (magenta-1 "#ff7bbb") (magenta-2 "#ff4ea3") (magenta-3 "#ff1f8b")
       (green-1 "#afff00") (green-2 "#a1db00") (green-3 "#5faf00") (green-4 "#008700") (green-5 "#005f00")
-      (blue-1 "#729fcf") (blue-2 "#1f5bff") (blue-3 "#005f87") (blue-4 "#005faf") 
+      (blue-1 "#729fcf") (blue-2 "#1f5bff") (blue-3 "#005f87") (blue-4 "#005faf") (blue-5 "#0000af") 
       (cyan-1 "#87ffff") (cyan-2 "#00ffff") (cyan-3 "#00d7af") (cyan-4 "#5f87af")
       (purple-1 "#d18aff") (purple-2 "#9a08ff") (purple-3 "#6c0099")
       (red-1 "#ef2929")  (red-2 "#cc0000")  (red-3 "#a40000")
-      (white-1 "#ffffff") (white-2 "#d3d3d3") (white-3 "#bcbcbc")
+      (white-1 "#ffffff") (white-2 "#d3d3d3") (white-3 "#bcbcbc") (LIGHT_BG "#ffffd7")
       (black-1 "#999999") (black-2 "#555555") (black-3 "#303030")
-      ;; Not in palette; used for better contrast.
+
+      (green-01 "#d7ff00")
       (green-0 "#d7ff5f") (blue-0 "#8cc4ff") (purple-0 "#e6a8df") (yellow-0 "#ffff87")
-      (red-0 "#ff4b4b")  (black-4 "#41423f") (black-5 "#1c1c1c") (orange-0 "#ffaf87"))
+      (red-0 "#ff4b4b")  (black-4 "#41423f") (black-5 "#1c1c1c") (orange-0 "#ffaf87")
+      (green-00 "#d7ff87") (yellow-00 "#ffffaf") (blue-00 "#d7d7ff"))
  
   (custom-theme-set-faces
    'moe-dark
@@ -51,11 +53,11 @@ Moe, moe, chew!")
    ;; Mode line & frames' faces
    `(mode-line ((,class
 		 (:box (:line-width -1 :style released-button)
-		  :background ,white-1 :foreground ,blue-3))))
+		  :background ,blue-1 :foreground ,black-4))))
    `(mode-line-inactive ((,class
 			  (:box (:line-width -1 :style released-button)
 			   :background ,black-3 :foreground ,white-1))))
-   `(mode-line-buffer-id ((,class (:foreground ,black-3 :background ,blue-1))))
+   `(mode-line-buffer-id ((,class (:foreground ,black-3 :background ,blue-1 :bold t))))
    `(vertical-border ((,class (:foreground ,white-1 :background ,white-1))))
 
    ;; Escape and prompt faces
@@ -259,7 +261,7 @@ Moe, moe, chew!")
    `(diredp-rare-priv ((,class (:foreground ,white-1 :background ,purple-2))))
    `(diredp-symlink ((,class (:foreground ,magenta-3))))
    `(diredp-read-priv ((,class (:foreground ,red-3 :background ,orange-0))))
-   `(diredp-write-priv ((,class (:foreground ,blue-4 :background ,blue-0))))
+   `(diredp-write-priv ((,class (:foreground ,blue-5 :background ,blue-0))))
    `(diredp-exec-priv ((,class (:foreground ,green-4 :background ,green-0))))
 
    ;; Message faces
