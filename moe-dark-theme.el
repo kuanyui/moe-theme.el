@@ -116,7 +116,7 @@ Moe, moe, chew!")
    `(org-scheduled ((,class (:foreground ,green-2))))
    `(org-scheduled-previously ((,class (:foreground ,red-1))))
    `(org-scheduled-today ((,class (:foreground ,blue-1))))
-   `(org-special-keyword ((,class (:foreground ,yellow-2))))
+   `(org-special-keyword ((,class (:foreground ,yellow-4 :background ,yellow-0))))
    `(org-table ((,class (:foreground ,white-1 :background ,black-3))))
    `(org-time-grid ((,class (:foreground ,orange-2))))
    `(org-upcoming-deadline ((,class (:inherit font-lock-keyword-face))))
@@ -218,17 +218,19 @@ Moe, moe, chew!")
    ;; Helm
    `(helm-selection ((,class (:foreground ,black-3 :background ,green-2))))
    `(helm-bookmark-directory ((,class (:foreground ,blue-1 :background ,black-5 :bold t))))
-   `(helm-bookmark-file ((,class (:foreground ,white-1 :background ,black-5))))
+   `(helm-bookmark-file ((,class (:foreground ,yellow-4 :background ,yellow-0))))
+   `(helm-bookmark-info ((,class (:foreground ,green-4 :background ,green-0))))
    `(helm-ff-directory ((,class (:foreground ,blue-1 :background ,black-5 :bold t))))
    `(helm-ff-file ((,class (:foreground ,white-1 :background ,black-5))))
    `(helm-ff-excutable ((,class (:foreground ,green-1 :background ,black-5 :bold t))))
-   `(helm-source-header ((,class (:foreground ,black-2 :background ,blue-1 :bold t))))
+   `(helm-source-header ((,class (:foreground ,black-4 :background ,blue-1 :bold t))))
    `(helm-header ((,class (:foreground ,blue-3 :background ,white-1))))
-   `(helm-candidate-number ((,class (:foreground ,blue-3 :background ,white-1))))
+   `(helm-candidate-number ((,class (:foreground ,blue-3 :background ,white-0))))
    `(helm-match ((,class (:foreground ,green-2 :background ,black-5 :bold t))))
    `(helm-buffer-saved-out ((,class (:foreground ,red-2 :background ,black-5))))
    `(helm-ff-invalid-symlink ((,class (:foreground ,white-1 :background ,red-2))))
    `(helm-ff-prefix ((,class (:foreground ,white-1 :background ,orange-2))))
+   `(helm-buffer-size ((,class (:foreground ,orange-2))))
 
    ;;Dired+
    `(dired-directory ((,class (:foreground ,blue-1 :bold t))))
@@ -265,8 +267,8 @@ Moe, moe, chew!")
    `(diredp-write-priv ((,class (:foreground ,blue-5 :background ,blue-0))))
    `(diredp-exec-priv ((,class (:foreground ,red-3 :background ,orange-0))))
 
-   ;;Magit
-   `(magit-branch ((,class (:foreground ,blue-2 :background ,white-0 :underline ,blue-2))))
+   ;; Magit
+   `(magit-branch ((,class (:foreground ,blue-2 :background ,white-0 :underline ,blue-2 :bold t))))
    `(magit-diff-add ((,class (:foreground ,green-0 :background ,black-5 :bold t))))
    `(magit-diff-del ((,class (:foreground ,red-1 :background ,black-5 :bold t))))
    `(magit-diff-file-header ((,class (:foreground ,white-0 :background ,black-2 :bold t))))
@@ -281,26 +283,20 @@ Moe, moe, chew!")
    `(magit-item-mark ((,class (:foreground ,white-0 :background ,blue-3))))
    `(magit-log-author ((,class (:foreground ,green-0 :background ,black-3))))
    `(magit-log-author-date-cutoff ((,class (:foreground ,red-1 :bold t))))
-   `(magit-log-date ((,class (:foreground ,white-1))))
-   `(magit-log-graph ((,class (:foreground ,white-1))))
-  `(magit-log-head-label-bisect-bad ((,class (:foreground ,black-3 :background ,red-1))))
+   `(magit-log-date ((,class (:foreground ,white-1 :background ,black-3))))
+   `(magit-log-graph ((,class (:foreground ,white-2 :background ,black-3))))
+   `(magit-log-head-label-bisect-bad ((,class (:foreground ,black-3 :background ,red-1))))
    `(magit-log-head-label-bisect-good ((,class (:foreground ,black-3 :background ,green-0))))
-   `(magit-log-head-label-default ((,class (:foreground ,white-1 :background ,black-3 :bold t))))
-   `(magit-log-head-label-local ((,class (:foreground ,black-3 :background ,white-1 :bold t))))
+   `(magit-log-head-label-default ((,class (:foreground ,white-0 :background ,black-2 :bold t))))
+   `(magit-log-head-label-local ((,class (:foreground ,white-0 :background ,black-2 :bold t))))
    `(magit-log-head-label-patches ((,class (:foreground ,black-3 :background ,red-1 :bold t))))
-   `(magit-log-head-label-remote ((,class (:foreground ,green-4 :background ,white-1 :bold t))))
+   `(magit-log-head-label-remote ((,class (:foreground ,blue-3 :background ,blue-1 :bold t))))
    `(magit-log-head-label-tags ((,class (:foreground ,yellow-4 :background ,yellow-00 :bold t))))
    `(magit-log-message ((,class (:foreground ,white-0 :background ,black-5))))
-   `(magit-log-sha1 ((,class (:foreground ,red-1 :background ,black-3))))
-   `(magit-section-title ((,class (:foreground ,blue-2 :background ,white-0 :underline ,blue-2))))
-   `(magit-valid-signature ((,class (:foreground ,cyan-1 :background ,black-5))))
-   `(magit-whitespace-warning-face ((,class (:foreground ,white-0 :background ,red-3))))
-
-
-
-
-   
-
+   `(magit-log-sha1 ((,class (:foreground ,orange-2 :background ,black-3))))
+   `(magit-section-title ((,class (:foreground ,orange-3 :background ,black-5 :underline ,orange-3 :bold ,t))))
+   `(magit-valid-signature ((,class (:foreground ,cyan-1 :background ,black-5 :bold t))))
+   `(magit-whitespace-warning-face ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
 
    ;; Message faces
    `(message-header-name ((,class (:foreground ,blue-1))))
@@ -355,16 +351,19 @@ Moe, moe, chew!")
    `(ace-jump-face-foreground ((,class (:foreground ,red-2))))
 
    ;; Rainbow-delimiters
-   `(rainbow-delimiters-depth-1-face ((,class (:foreground ,red-1))))
-   `(rainbow-delimiters-depth-2-face ((,class (:foreground ,blue-1))))
-   `(rainbow-delimiters-depth-3-face ((,class (:foreground ,orange-2))))
-   `(rainbow-delimiters-depth-4-face ((,class (:foreground ,green-2))))
-   `(rainbow-delimiters-depth-5-face ((,class (:foreground ,magenta-2))))
-   `(rainbow-delimiters-depth-6-face ((,class (:foreground ,cyan-1))))
-   `(rainbow-delimiters-depth-7-face ((,class (:foreground ,purple-2))))
-   `(rainbow-delimiters-depth-8-face ((,class (:foreground ,white-1))))
-   `(rainbow-delimiters-depth-9-face ((,class (:foreground ,yellow-2))))
+   `(rainbow-delimiters-depth-1-face ((,class (:bold t :foreground ,red-1))))
+   `(rainbow-delimiters-depth-2-face ((,class (:bold t :foreground ,blue-1))))
+   `(rainbow-delimiters-depth-3-face ((,class (:bold t :foreground ,orange-2))))
+   `(rainbow-delimiters-depth-4-face ((,class (:bold t :foreground ,green-2))))
+   `(rainbow-delimiters-depth-5-face ((,class (:bold t :foreground ,magenta-2))))
+   `(rainbow-delimiters-depth-6-face ((,class (:bold t :foreground ,cyan-1))))
+   `(rainbow-delimiters-depth-7-face ((,class (:bold t :foreground ,purple-2))))
+   `(rainbow-delimiters-depth-8-face ((,class (:bold t :foreground ,white-1))))
+   `(rainbow-delimiters-depth-9-face ((,class (:bold t :foreground ,yellow-2))))
    `(rainbow-delimiters-unmatched-face ((,class (:foreground ,white-1 :background ,red-3 :bold t))))
+
+   ;; which-function-mode
+   `(which-func ((,class (:foreground ,white-0 :background ,orange-2))))
 
    ;; Flymake
    `(flymake-warnline ((,class (:underline ,orange-2))))
@@ -383,5 +382,3 @@ Moe, moe, chew!")
 ;; End:
 
 ;;; moe-dark-theme.el ends here
-
-
