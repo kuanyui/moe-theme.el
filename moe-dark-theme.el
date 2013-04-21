@@ -170,7 +170,7 @@ Moe, moe, chew!")
    `(markdown-url-face ((,class (:foreground ,magenta-3 :underline ,magenta-3))))
 
    ;; Twittering-mode
-   `(twittering-username-face ((,class (:foreground ,blue-1 :bold t))))
+   `(twittering-username-face ((,class (:foreground ,blue-1 :background ,black-5 :bold t))))
    `(twittering-uri-face ((,class (:foreground ,blue-1 :underline t))))
    `(twittering-timeline-footer-face ((,class (:foreground ,white-3))))
    `(twittering-timeline-header-face ((,class (:foreground ,white-3))))
