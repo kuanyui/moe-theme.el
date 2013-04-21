@@ -11,7 +11,7 @@ Moe, moe, chew!")
 
 (let ((class '((class color) (min-colors 89)))
       ;; Palette colors.
-      (yellow-1 "#fce94f") (yellow-2 "#ffd700") (yellow-3 "#c4a000")
+      (yellow-1 "#fce94f") (yellow-2 "#ffd700") (yellow-3 "#c4a000") (yellow-4 "#875f00")
       (orange-1 "#ffaf5f") (orange-2 "#ff8700") (orange-3 "#ff5d17") (orange-4 "#d75f00")
       (magenta-1 "#ff7bbb") (magenta-2 "#ff4ea3") (magenta-3 "#ff1f8b")
       (green-1 "#afff00") (green-2 "#a1db00") (green-3 "#5faf00") (green-4 "#008700") (green-5 "#005f00")
@@ -20,9 +20,9 @@ Moe, moe, chew!")
       (purple-1 "#d18aff") (purple-2 "#9a08ff") (purple-3 "#6c0099")
       (red-1 "#ef2929")  (red-2 "#cc0000")  (red-3 "#a40000")
       (white-1 "#dadada") (white-2 "#c6c6c6") (white-3 "#b2b2b2") (LIGHT_BG "#ffffd7")
-      (black-1 "#a8a8a8") (black-2 "#8a8a8a") (black-3 "#4e4e4e")
+      (black-1 "#a8a8a8") (black-2 "#8a8a8a") (black-2-5 "#6c6c6c") (black-3 "#4e4e4e")
 
-      (green-01 "#d7ff00") (white-0 "#ffffff")
+      (green-01 "#d7ff00") (green-02 "#87ff87") (white-0 "#ffffff")
       (green-0 "#d7ff5f") (blue-0 "#8cc4ff") (purple-0 "#e6a8df") (yellow-0 "#ffff87")
       (red-0 "#ff4b4b")  (black-4 "#3a3a3a") (black-5 "#303030") (orange-0 "#ffaf87")
       (green-00 "#d7ff87") (yellow-00 "#ffffaf") (blue-00 "#d7d7ff"))
@@ -264,6 +264,43 @@ Moe, moe, chew!")
    `(diredp-read-priv ((,class (:foreground ,green-4 :background ,green-0))))
    `(diredp-write-priv ((,class (:foreground ,blue-5 :background ,blue-0))))
    `(diredp-exec-priv ((,class (:foreground ,red-3 :background ,orange-0))))
+
+   ;;Magit
+   `(magit-branch ((,class (:foreground ,blue-2 :background ,white-0 :underline ,blue-2))))
+   `(magit-diff-add ((,class (:foreground ,green-0 :background ,black-5 :bold t))))
+   `(magit-diff-del ((,class (:foreground ,red-1 :background ,black-5 :bold t))))
+   `(magit-diff-file-header ((,class (:foreground ,white-0 :background ,black-2 :bold t))))
+   `(magit-diff-hunk-header ((,class (:foreground ,white-2 :background ,black-2-5 :bold t))))
+   `(magit-diff-merge-current ((,class (:foreground ,purple-1))))
+   `(magit-diff-merge-diff3-separator ((,class (:foreground ,purple-1))))
+   `(magit-diff-merge-proposed ((,class (:foreground ,purple-1))))
+   `(magit-diff-merge-separator ((,class (:foreground ,purple-1))))
+   `(magit-diff-none ((,class (:foreground ,black-2))))
+   `(magit-header ((,class (:foreground ,blue-2 :background ,white-0 :underline ,blue-2))))
+   `(magit-item-highlight ((,class (:background ,black-3))))
+   `(magit-item-mark ((,class (:foreground ,white-0 :background ,blue-3))))
+   `(magit-log-author ((,class (:foreground ,green-0 :background ,black-3))))
+   `(magit-log-author-date-cutoff ((,class (:foreground ,red-1 :bold t))))
+   `(magit-log-date ((,class (:foreground ,white-1))))
+   `(magit-log-graph ((,class (:foreground ,white-1))))
+  `(magit-log-head-label-bisect-bad ((,class (:foreground ,black-3 :background ,red-1))))
+   `(magit-log-head-label-bisect-good ((,class (:foreground ,black-3 :background ,green-0))))
+   `(magit-log-head-label-default ((,class (:foreground ,white-1 :background ,black-3 :bold t))))
+   `(magit-log-head-label-local ((,class (:foreground ,black-3 :background ,white-1 :bold t))))
+   `(magit-log-head-label-patches ((,class (:foreground ,black-3 :background ,red-1 :bold t))))
+   `(magit-log-head-label-remote ((,class (:foreground ,green-4 :background ,white-1 :bold t))))
+   `(magit-log-head-label-tags ((,class (:foreground ,yellow-4 :background ,yellow-00 :bold t))))
+   `(magit-log-message ((,class (:foreground ,white-0 :background ,black-5))))
+   `(magit-log-sha1 ((,class (:foreground ,red-1 :background ,black-3))))
+   `(magit-section-title ((,class (:foreground ,blue-2 :background ,white-0 :underline ,blue-2))))
+   `(magit-valid-signature ((,class (:foreground ,cyan-1 :background ,black-5))))
+   `(magit-whitespace-warning-face ((,class (:foreground ,white-0 :background ,red-3))))
+
+
+
+
+   
+
 
    ;; Message faces
    `(message-header-name ((,class (:foreground ,blue-1))))
