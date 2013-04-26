@@ -24,7 +24,7 @@ Moe, moe, chew!")
 
       (green-01 "#d7ff00") (green-02 "#87ff87") (white-0 "#ffffff")
       (green-0 "#d7ff5f") (blue-0 "#8cc4ff") (purple-0 "#e6a8df") (yellow-0 "#ffff87")
-      (red-0 "#ff4b4b")  (black-4 "#3a3a3a") (black-5 "#303030") (orange-0 "#ffaf87")
+      (red-0 "#ff4b4b")  (black-4 "#3a3a3a") (black-5 "#303030") (black-6 "#000000") (orange-0 "#ffaf87")
       (green-00 "#d7ff87") (yellow-00 "#ffffaf") (blue-00 "#d7d7ff"))
  
   (custom-theme-set-faces
@@ -48,7 +48,7 @@ Moe, moe, chew!")
    `(isearch ((,class (:foreground ,white-1 :background ,orange-3))))
    `(lazy-highlight ((,class (:background ,magenta-3 :foreground ,white-1))))
    `(trailing-whitespace ((,class (:background ,red-3))))
-   `(show-paren-match ((,class (:background ,black-2))))
+   `(show-paren-match ((,class (:background ,black-6))))
 
    ;; Mode line & frames' faces
    `(mode-line ((,class
@@ -97,9 +97,9 @@ Moe, moe, chew!")
    `(org-checkbox ((,class (:background ,white-2 :foreground ,black-3
                                    :box (:line-width 1 :style released-button)))))
    `(org-date ((,class (:foreground ,blue-2 :underline t))))
-   `(org-done ((,class (:bold t :weight bold :foreground ,black-3 :background ,green-2
+   `(org-done ((,class (:bold t :weight bold :foreground ,green-4 :background ,green-2
                               :box (:line-width 1 :style none)))))
-   `(org-todo ((,class (:bold t :weight bold :foreground ,black-3 :background ,red-1
+   `(org-todo ((,class (:bold t :weight bold :foreground ,white-0 :background ,red-2
                               :box (:line-width 1 :style none)))))
    `(org-level-1 ((,class (:foreground ,blue-1 :height 1.3))))
    `(org-level-2 ((,class (:foreground ,green-2 :height 1.2))))
