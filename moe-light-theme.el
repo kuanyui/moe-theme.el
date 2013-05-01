@@ -44,12 +44,11 @@ Moe, moe, chew!")
    `(highlight ((,class (:background ,green-0))))
    `(hl-line ((,class (:background ,green-00)))) ;;這裡遇到輸入法會有問題orz
    `(region ((,class (:foreground ,white-0 :background ,blue-1))))
-   `(secondary-selection ((,class (:background ,blue-3))))
+   `(secondary-selection ((,class (:background ,blue-3 :foreground ,white-0))))
    `(isearch ((,class (:foreground ,white-0 :background ,orange-3))))
    `(lazy-highlight ((,class (:background ,magenta-3 :foreground ,white-0))))
    `(trailing-whitespace ((,class (:background ,red-3))))
    `(show-paren-match ((,class (:background ,blue-00))))
-
    ;; Mode line & frames' faces
    `(mode-line ((,class
 		 (:box (:line-width -1 :style released-button)
@@ -139,6 +138,7 @@ Moe, moe, chew!")
    `(org-block-end-line ((,class (:foreground ,orange-2))))
    `(org-mode-line-clock ((,class (:foreground ,blue-3 :background ,blue-0 :bold t))))
    `(org-mode-line-clock-overrun ((,class (:foreground ,white-0 :background ,red-1 :bold t))))
+
 
    ;; undo-tree
    `(undo-tree-visualizer-default-face ((,class (:foreground ,black-5))))
@@ -326,6 +326,9 @@ Moe, moe, chew!")
    `(ediff-even-diff-B ((,class (:background ,yellow-0))))
    `(ediff-odd-diff-B ((,class (:background ,orange-0))))
 
+   ;; smerge
+   `(smerge-refined-change ((,class (:background ,blue-3 :foreground ,white-0))))
+   
    ;; Flyspell faces
    `(flyspell-duplicate ((,class (:underline t foreground-color,orange-1))))
    `(flyspell-incorrect ((,class (:background ,red-1 :foreground ,white-0 :bold t))))

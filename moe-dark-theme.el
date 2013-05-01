@@ -44,7 +44,7 @@ Moe, moe, chew!")
    `(highlight ((,class (:background ,black-3))))
    `(hl-line ((,class (:background ,black-3)))) ;;這裡遇到輸入法會有問題orz
    `(region ((,class (:foreground ,black-3 :background ,green-2))))
-   `(secondary-selection ((,class (:background ,blue-3))))
+   `(secondary-selection ((,class (:background ,blue-3 :foreground ,white-0))))
    `(isearch ((,class (:foreground ,white-1 :background ,orange-3))))
    `(lazy-highlight ((,class (:background ,magenta-3 :foreground ,white-1))))
    `(trailing-whitespace ((,class (:background ,red-3))))
@@ -326,6 +326,9 @@ Moe, moe, chew!")
    `(ediff-even-diff-B ((,class (:background ,black-4))))
    `(ediff-odd-diff-B ((,class (:background ,black-4))))
 
+   ;; smerge
+   `(smerge-refined-change ((,class (:background ,blue-3 :foreground ,white-0))))
+   
    ;; Flyspell faces
    `(flyspell-duplicate ((,class (:underline t foreground-color,orange-1))))
    `(flyspell-incorrect ((,class (:background ,red-1 :foreground ,white-1 :bold t))))
