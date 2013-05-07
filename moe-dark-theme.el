@@ -354,16 +354,17 @@ Moe, moe, chew!")
    `(ace-jump-face-foreground ((,class (:foreground ,red-2))))
 
    ;; Rainbow-delimiters
-   `(rainbow-delimiters-depth-1-face ((,class (:bold t :foreground ,red-1))))
-   `(rainbow-delimiters-depth-2-face ((,class (:bold t :foreground ,blue-1))))
-   `(rainbow-delimiters-depth-3-face ((,class (:bold t :foreground ,orange-2))))
-   `(rainbow-delimiters-depth-4-face ((,class (:bold t :foreground ,green-2))))
-   `(rainbow-delimiters-depth-5-face ((,class (:bold t :foreground ,magenta-2))))
-   `(rainbow-delimiters-depth-6-face ((,class (:bold t :foreground ,cyan-1))))
-   `(rainbow-delimiters-depth-7-face ((,class (:bold t :foreground ,purple-2))))
-   `(rainbow-delimiters-depth-8-face ((,class (:bold t :foreground ,white-1))))
-   `(rainbow-delimiters-depth-9-face ((,class (:bold t :foreground ,yellow-2))))
-   `(rainbow-delimiters-unmatched-face ((,class (:foreground ,white-1 :background ,red-3 :bold t))))
+   `(rainbow-delimiters-depth-1-face ((,class (:bold nil :foreground ,red-2))))
+   `(rainbow-delimiters-depth-2-face ((,class (:bold nil :foreground ,blue-1))))
+   `(rainbow-delimiters-depth-3-face ((,class (:bold nil :foreground ,green-2))))
+   `(rainbow-delimiters-depth-4-face ((,class (:bold nil :foreground ,magenta-2))))
+   `(rainbow-delimiters-depth-5-face ((,class (:bold nil :foreground ,cyan-3))))
+   `(rainbow-delimiters-depth-6-face ((,class (:bold nil :foreground ,orange-2))))
+   `(rainbow-delimiters-depth-7-face ((,class (:bold nil :foreground ,purple-2))))
+   `(rainbow-delimiters-depth-8-face ((,class (:bold nil :foreground ,white-1))))
+   `(rainbow-delimiters-depth-9-face ((,class (:bold nil :foreground ,yellow-2))))
+   `(rainbow-delimiters-unmatched-face ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
+
 
    ;; which-function-mode
    `(which-func ((,class (:foreground ,white-0 :background ,orange-2))))
