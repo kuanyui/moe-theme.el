@@ -45,7 +45,7 @@ You can also add these to your `.emacs` to automatically switch `moe-dark` and `
                       nil))
     (run-with-timer 0 (* 1 60) 'auto-switch-moe-theme)
 
-From now on, your Emacs will have a light theme within day and have a dark on in night. =w=+
+From now on, your Emacs will have a light theme within day and have a dark one in night. =w=+
 
 ## Note
 ### No 256-Color Output?

@@ -30,7 +30,7 @@ Moe, moe, chew!")
   (custom-theme-set-faces
    'moe-dark
    ;; Ensure sufficient contrast on low-color terminals.
-   `(default ((((class color) (min-colors 4096))
+   `(default ((((class color) (min-colors 4096)) ;gui背景顏色為何會是#2f2f2f?
 	       (:foreground ,white-1 :background ,black-5))
 	      (((class color) (min-colors 256))
 	       (:foreground ,white-1 :background ,black-5))
