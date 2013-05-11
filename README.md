@@ -3,8 +3,12 @@
 Just another Emacs theme.
 ![Screenshot](https://github.com/kuanyui/moe-theme.el/raw/master/pics/screenshot.png)
 This theme supports Emacs 24 native theme.
+# What Special?
+* Delightful and cheerful color-platte.
+* Quite completed font-faces.
+* 
 # Support
-`moe-theme.el` provide good-looking[tm] and quite fully-supported font-faces include:
+`moe-theme.el` provide good-looking[tm] and quite fully-supported font-faces for various modes, include:
 * Dired/Dired+
 * Helm
 * Org-mode
@@ -74,4 +78,4 @@ The mode you're using has an ugly looking? `Moe-theme` doesn't support the mode 
 * When type characters with IM (e.g. fcitx), and run Emacs under terminal emulator (e.g. Konsole) with `moe-light-theme`; when you type words in IM, the string embedded in Emacs may be very insignificant (But as you output the word from IM, it turns normal).
 
 ## License
-`moe-theme.el` (include images) is released under GPL v3.
+`moe-theme.el` (include images) is released under GPL v3. Copyleft is so cute!
