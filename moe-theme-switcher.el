@@ -27,11 +27,30 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
         (load-theme 'moe-light t) (load-theme 'moe-dark t))
     nil))
 
+;; (Thanks for letoh!)
+;; Fix strange bahavior of sunrise-sunset when buffer's width is too narrow.
+(defun get-sunrise-sunset-string ()
+  "get the real result from `sunrise-sunset'"
+  (save-window-excursion
+    (let ((regex "[0-9]+:[0-9]+[ap]m")
+          (s (sunrise-sunset))
+          (buf (get-buffer "*temp*")))
+      (unless (and (stringp s)
+                   (string-match-p regex s))
+        (when buf
+          (with-current-buffer buf
+            (let* ((s1 (buffer-string))
+                   (s2 (if (string-match-p regex s1)
+                           s1 nil)))
+              (setq s s2)
+              (kill-buffer buf)))))
+      s)))
+
 ;; Convert am/pm to 24hr and save to 24h/sunrise & 24h/set
 ;; Excute every 24 hr
 (defun convert-time-format-of-sunrise-and-sunset ()
   (let (rise_set a b c d e f)
-    (setq rise_set (sunrise-sunset))
+    (setq rise_set (get-sunrise-sunset-string))
     (if (string-match "0:00 hours daylight" rise_set) ;If polar-night
         (progn 
           (setq 24h/sunrise 'polar-night
@@ -40,10 +59,10 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
           (progn
             (setq 24h/sunrise 'midnight-sun
                   24h/sunset 'midnight-sun))
-        (progn
-         (string-match "\\([0-9][0-9]?\\):\\([0-9][0-9]\\)\\([ap]m\\).+\\([0-9][0-9]?\\):\\([0-9][0-9]\\)\\([ap]m\\)" rise_set)
-         (setq a (string-to-number (match-string 1 rise_set))
-               b (string-to-number (match-string 2 rise_set))
+        (progn                          ;Convert 12hr to 24hr
+          (string-match "\\([0-9][0-9]?\\):\\([0-9][0-9]\\)\\([ap]m\\).+\\([0-9][0-9]?\\):\\([0-9][0-9]\\)\\([ap]m\\)" rise_set)
+          (setq a (string-to-number (match-string 1 rise_set))
+                b (string-to-number (match-string 2 rise_set))
                c (match-string 3 rise_set)
                d (string-to-number (match-string 4 rise_set))
                e (string-to-number (match-string 5 rise_set))
