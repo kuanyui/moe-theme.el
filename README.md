@@ -1,5 +1,5 @@
 # moe-theme
-![moe-theme](pics/moe-theme.png)
+![moe-theme](https://raw.github.com/kuanyui/moe-theme.el/master/pics/moe-theme.png)
 # Screenshot
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark01.png"><img src="pics/dark01.png" width="355" height="192"/></a>
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light01.png"><img src="pics/light01.png" width="355" height="192"/></a>
