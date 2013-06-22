@@ -97,9 +97,9 @@ Moe, moe, chew!")
    `(org-checkbox ((,class (:background ,white-2 :foreground ,black-3
                                    :box (:line-width 1 :style released-button)))))
    `(org-date ((,class (:foreground ,blue-2 :underline t))))
-   `(org-done ((,class (:bold t :weight bold :foreground ,green-4 :background ,green-2
+   `(org-done ((,class (:bold t :weight bold :foreground ,green-4 :background ,green-0
                               :box (:line-width 1 :style none)))))
-   `(org-todo ((,class (:bold t :weight bold :foreground ,white-0 :background ,red-2
+   `(org-todo ((,class (:bold t :weight bold :foreground ,red-3 :background ,orange-0
                               :box (:line-width 1 :style none)))))
    `(org-level-1 ((,class (:foreground ,blue-1 :height 1.3))))
    `(org-level-2 ((,class (:foreground ,green-2 :height 1.2))))
