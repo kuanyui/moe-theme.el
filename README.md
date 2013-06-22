@@ -1,14 +1,14 @@
 # moe-theme
 ![moe-theme](pics/moe-theme.png)
 # Screenshot
-<img src="pics/dark01.png" width="425" height="230"/>
-<img src="pics/light01.png" width="425" height="230"/>
-<img src="pics/dark02.png" width="425" height="230"/>
-<img src="pics/light02.png" width="425" height="230"/>
-<img src="pics/dark03.png" width="425" height="230"/>
-<img src="pics/light03.png" width="425" height="230"/>
-<img src="pics/dark04.png" width="425" height="230"/>
-<img src="pics/light04.png" width="425" height="230"/>
+<img src="pics/dark01.png" width="360" height="195"/>
+<img src="pics/light01.png" width="360" height="195"/>
+<img src="pics/dark02.png" width="360" height="195"/>
+<img src="pics/light02.png" width="360" height="195"/>
+<img src="pics/dark03.png" width="360" height="195"/>
+<img src="pics/light03.png" width="360" height="195"/>
+<img src="pics/dark04.png" width="360" height="195"/>
+<img src="pics/light04.png" width="360" height="195"/>
 
 # What Special?
 * Optimized for terminal.
