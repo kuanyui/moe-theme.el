@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="moe-theme.el : A colorful eye-candy theme for Emacser. Moe, moe, chew!" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>moe-theme.el</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/kuanyui/moe-theme.el">View on GitHub</a>
+
+          <h1 id="project_title">moe-theme.el</h1>
+          <h2 id="project_tagline">A colorful eye-candy theme for Emacser. Moe, moe, chew!</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/kuanyui/moe-theme.el/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/kuanyui/moe-theme.el/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="moe-themeel" class="anchor" href="#moe-themeel"><span class="octicon octicon-link"></span></a>moe-theme.el</h1>
+
+<p><img src="https://raw.github.com/kuanyui/moe-theme.el/master/pics/moe-theme.png" alt="moe-theme"></p>
+
+<h2>
+<a name="screenshot" class="anchor" href="#screenshot"><span class="octicon octicon-link"></span></a>Screenshot</h2>
+
+<p><a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark01.png"><img src="pics/dark01.png" width="355" height="192"></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light01.png"><img src="pics/light01.png" width="355" height="192"></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark02.png"><img src="pics/dark02.png" width="355" height="192"></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light02.png"><img src="pics/light02.png" width="355" height="192"></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark03.png"><img src="pics/dark03.png" width="355" height="192"></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light03.png"><img src="pics/light03.png" width="355" height="192"></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark04.png"><img src="pics/dark04.png" width="355" height="192"></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light04.png"><img src="pics/light04.png" width="355" height="192"></a></p>
+
+<h2>
+<a name="what-special" class="anchor" href="#what-special"><span class="octicon octicon-link"></span></a>What Special?</h2>
+
+<ul>
+<li>Optimized for terminal.</li>
+<li>Black-on-white &amp; white-on-black.</li>
+<li>Delightful and cheerful color-platte.</li>
+<li>Relatively (...maybe?) completed font-faces.</li>
+<li>Automatically switch between dark and light moe-theme according local time! (optional)</li>
+</ul><h2>
+<a name="support" class="anchor" href="#support"><span class="octicon octicon-link"></span></a>Support</h2>
+
+<p><code>moe-theme.el</code> provide good-looking[tm] and quite fully-supported font-faces for various modes, include:</p>
+
+<ul>
+<li>Dired/Dired+</li>
+<li>Helm</li>
+<li>Org-mode</li>
+<li>Magit</li>
+<li>Markdown-mode</li>
+<li>popup/Auto-complete-mode</li>
+<li>Rainbow-delimiters</li>
+<li>Twittering-mode</li>
+<li>undo-tree</li>
+<li>......and More!</li>
+</ul><h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>Emacs 24 (or above)</li>
+<li>256-colors (or higher) terminal.</li>
+</ul><h2>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<p><code>moe-light</code> and <code>moe-dark</code> are independent from each other, so you can just download one of them.</p>
+
+<p>Download the one you prefer to <code>~/.emacs.d/themes</code>.Then, add these to your init file (take <code>moe-dark-theme.el</code> as example):</p>
+
+<pre><code>;;customize theme
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'moe-dark t)
+</code></pre>
+
+<p>Or you can load theme just by adding:    </p>
+
+<pre><code>(load-file "~/.emacs.d/themes/moe-dark-theme.el"))
+</code></pre>
+
+<h3>
+<a name="have-a-good-mood-today" class="anchor" href="#have-a-good-mood-today"><span class="octicon octicon-link"></span></a>Have A Good Mood Today?</h3>
+
+<p>I prefer a terminal with a black-on-white color scheme. I found that in the daytime, sunlight is strong and black-on-white is more readable; However, white-on-black would be less harsh to the eyes at night.</p>
+
+<p>So if you like, you can add the following line to your <code>~/.emacs</code> to automatically switch between <code>moe-dark</code> and <code>moe-light</code> according to the system time:</p>
+
+<pre><code>(require 'moe-theme-switcher)
+</code></pre>
+
+<p>By adding the line above, your Emacs will have a light theme in the day and a dark one at night. =w=+</p>
+
+<h2>
+<a name="note" class="anchor" href="#note"><span class="octicon octicon-link"></span></a>Note</h2>
+
+<h3>
+<a name="no-256-color-output" class="anchor" href="#no-256-color-output"><span class="octicon octicon-link"></span></a>No 256-Color Output?</h3>
+
+<p>If your terminal emulator doesn't render 256-color output correctly, set its environment variable <code>TERM</code> to <code>xterm-256color</code>. For example, if you are using <code>Konsole</code>, navigate to <code>Edit Current Profile &gt; General &gt; Environment &gt; Edit</code> and add the following line:</p>
+
+<pre><code>TERM=xterm-256color
+</code></pre>
+
+<p>If you also use <code>tmux</code>, add this to <code>~/.tmux.conf</code>, too:</p>
+
+<pre><code>set -g default-terminal "screen-256color"
+</code></pre>
+
+<h3>
+<a name="paren" class="anchor" href="#paren"><span class="octicon octicon-link"></span></a>Paren</h3>
+
+<p>If you use Emacs build-in <code>show-paren-mode</code>, I recommend set the value of <code>show-paren-style</code> to <code>expression</code> for optimized visual experience:</p>
+
+<pre><code>(show-paren-mode t)
+(setq show-paren-style 'expression)
+</code></pre>
+
+<h3>
+<a name="not-supported-the-modes-youre-using" class="anchor" href="#not-supported-the-modes-youre-using"><span class="octicon octicon-link"></span></a>Not supported the mode(s) you're using?</h3>
+
+<p>The mode you're using has an ugly looking? <code>Moe-theme</code> doesn't support the mode you like? It's welcome to report wishlist or issue on github, I'll try to add related settings as soon as possible. Or of course, you can push request, too.</p>
+
+<h2>
+<a name="known-bugs" class="anchor" href="#known-bugs"><span class="octicon octicon-link"></span></a>Known Bugs</h2>
+
+<ul>
+<li>When type characters with IM (e.g. fcitx), and run Emacs under terminal emulator (e.g. Konsole) with <code>moe-light-theme</code>; when you type words in IM, the string embedded in Emacs may be very insignificant (But as you output the word from IM, it turns normal).</li>
+<li>moe-light under GUI version's Emacs seems to have a wrong background color.</li>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><code>moe-theme.el</code> (include images) is released under GPL v3. Copyleft is so cute!</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">moe-theme.el maintained by <a href="https://github.com/kuanyui">kuanyui</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
