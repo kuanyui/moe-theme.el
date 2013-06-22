@@ -1,6 +1,6 @@
 # moe-theme
 ![moe-theme](https://raw.github.com/kuanyui/moe-theme.el/master/pics/moe-theme.png)
-# Screenshot
+## Screenshot
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark01.png"><img src="pics/dark01.png" width="355" height="192"/></a>
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light01.png"><img src="pics/light01.png" width="355" height="192"/></a>
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark02.png"><img src="pics/dark02.png" width="355" height="192"/></a>
@@ -10,14 +10,14 @@
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark04.png"><img src="pics/dark04.png" width="355" height="192"/></a>
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light04.png"><img src="pics/light04.png" width="355" height="192"/></a>
 
-# What Special?
+## What Special?
 * Optimized for terminal.
 * Black-on-white & white-on-black.
 * Delightful and cheerful color-platte.
 * Relatively (...maybe?) completed font-faces.
 * Automatically switch between dark and light moe-theme according local time! (optional)
 
-# Support
+## Support
 `moe-theme.el` provide good-looking[tm] and quite fully-supported font-faces for various modes, include:
 * Dired/Dired+
 * Helm
