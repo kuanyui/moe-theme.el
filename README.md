@@ -12,6 +12,7 @@
 
 # What Special?
 * Optimized for terminal.
+* Black-on-white & white-on-black.
 * Delightful and cheerful color-platte.
 * Relatively (...maybe?) completed font-faces.
 * Automatically switch between dark and light moe-theme according local time! (optional)
