@@ -1,14 +1,14 @@
 # moe-theme
 ![moe-theme](pics/moe-theme.png)
 # Screenshot
-<img src="pics/dark01.png" width="360" height="195"/>
-<img src="pics/light01.png" width="360" height="195"/>
-<img src="pics/dark02.png" width="360" height="195"/>
-<img src="pics/light02.png" width="360" height="195"/>
-<img src="pics/dark03.png" width="360" height="195"/>
-<img src="pics/light03.png" width="360" height="195"/>
-<img src="pics/dark04.png" width="360" height="195"/>
-<img src="pics/light04.png" width="360" height="195"/>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark01.png"><img src="pics/dark01.png" width="360" height="195"/></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light01.png"><img src="pics/light01.png" width="360" height="195"/></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark02.png"><img src="pics/dark02.png" width="360" height="195"/></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light02.png"><img src="pics/light02.png" width="360" height="195"/></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark03.png"><img src="pics/dark03.png" width="360" height="195"/></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light03.png"><img src="pics/light03.png" width="360" height="195"/></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark04.png"><img src="pics/dark04.png" width="360" height="195"/></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light04.png"><img src="pics/light04.png" width="360" height="195"/></a>
 
 # What Special?
 * Optimized for terminal.
