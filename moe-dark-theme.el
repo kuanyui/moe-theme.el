@@ -19,7 +19,7 @@ Moe, moe, chew!")
       (cyan-1 "#87ffff") (cyan-2 "#00ffff") (cyan-3 "#00d7af") (cyan-4 "#5f87af")
       (purple-1 "#d18aff") (purple-2 "#9a08ff") (purple-3 "#6c0099")
       (red-1 "#ef2929")  (red-2 "#cc0000")  (red-3 "#a40000")
-      (white-1 "#dadada") (white-2 "#c6c6c6") (white-3 "#b2b2b2") (LIGHT_BG "#ffffd7")
+      (white-1 "#c6c6c6") (white-2 "#c6c6c6") (white-3 "#b2b2b2") (LIGHT_BG "#ffffd7") ;;original:(white-1 "#dadada")
       (black-1 "#a8a8a8") (black-2 "#8a8a8a") (black-2-5 "#6c6c6c") (black-3 "#4e4e4e")
 
       (green-01 "#d7ff00") (green-02 "#87ff87") (white-0 "#ffffff")
