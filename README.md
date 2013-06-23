@@ -45,7 +45,7 @@ Download the one you prefer to `~/.emacs.d/themes`.Then, add these to your init 
     
 Or you can load theme just by adding:    
 
-    (load-file "~/.emacs.d/themes/moe-dark-theme.el"))
+    (load-file "~/.emacs.d/themes/moe-dark-theme.el")
 
 ### Have A Good Mood Today?
 I prefer a terminal with a black-on-white color scheme. I found that in the daytime, sunlight is strong and black-on-white is more readable; However, white-on-black would be less harsh to the eyes at night.
