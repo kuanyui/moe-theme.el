@@ -9,6 +9,8 @@
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light03.png"><img src="pics/light03.png" width="355" height="192"/></a>
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark04.png"><img src="pics/dark04.png" width="355" height="192"/></a>
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light04.png"><img src="pics/light04.png" width="355" height="192"/></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark05.png"><img src="pics/dark05.png" width="355" height="192"/></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light05.png"><img src="pics/light05.png" width="355" height="192"/></a>
 
 ## What Special?
 * Optimized for terminal.
