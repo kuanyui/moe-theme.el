@@ -39,20 +39,26 @@
 
 Download the one you prefer to `~/.emacs.d/themes`.Then, add these to your init file (take `moe-dark-theme.el` as example):
 
+```lisp
 	;;customize theme
 	(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 	(load-theme 'moe-dark t)
+```
     
 Or you can load theme just by adding:    
 
+```lisp
     (load-file "~/.emacs.d/themes/moe-dark-theme.el")
+```
 
 ### Have A Good Mood Today?
 I prefer a terminal with a black-on-white color scheme. I found that in the daytime, sunlight is strong and black-on-white is more readable; However, white-on-black would be less harsh to the eyes at night.
 
 So if you like, you can add the following line to your `~/.emacs` to automatically switch between `moe-dark` and `moe-light` according to the system time:
 
+```lisp
 	(require 'moe-theme-switcher)
+```
 
 By adding the line above, your Emacs will have a light theme in the day and a dark one at night. =w=+
 
@@ -69,8 +75,10 @@ If you also use `tmux`, add this to `~/.tmux.conf`, too:
 ### Paren
 If you use Emacs build-in `show-paren-mode`, I recommend set the value of `show-paren-style` to `expression` for optimized visual experience:
 
+```lisp
     (show-paren-mode t)
     (setq show-paren-style 'expression)
+```
 
 ### Not supported the mode(s) you're using?
 The mode you're using has an ugly looking? `Moe-theme` doesn't support the mode you like? It's welcome to report wishlist or issue on github, I'll try to add related settings as soon as possible. Or of course, you can push request, too.
