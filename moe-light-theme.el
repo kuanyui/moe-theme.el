@@ -42,7 +42,7 @@ Moe, moe, chew!")
    `(fringe ((,class (:foreground ,black-1 :background ,white-2))))
    `(linum ((,class (:foreground "#87875f" :background "#d7d7af"))))
    `(highlight ((,class (:background ,green-0))))
-   `(hl-line ((,class (:background ,green-00)))) ;;這裡遇到輸入法會有問題orz
+   `(hl-line ((,class (:background ,green-00)))) ; Embedded strings of IM (e.g. fcitx) would be very unreadable... orz
    `(region ((,class (:foreground ,white-0 :background ,blue-1))))
    `(secondary-selection ((,class (:background ,blue-3 :foreground ,white-0))))
    `(isearch ((,class (:foreground ,white-0 :background ,orange-3))))

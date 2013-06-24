@@ -30,7 +30,7 @@ Moe, moe, chew!")
   (custom-theme-set-faces
    'moe-dark
    ;; Ensure sufficient contrast on low-color terminals.
-   `(default ((((class color) (min-colors 4096)) ;gui背景顏色為何會是#2f2f2f?
+   `(default ((((class color) (min-colors 4096)) ; Why the background under gui becomes #2f2f2f?
 	       (:foreground ,white-1 :background ,black-5))
 	      (((class color) (min-colors 256))
 	       (:foreground ,white-1 :background ,black-5))
@@ -42,7 +42,7 @@ Moe, moe, chew!")
    `(fringe ((,class (:foreground ,black-3 :background ,white-3))))
    `(linum ((,class (:foreground ,white-1 :background ,black-2))))
    `(highlight ((,class (:background ,black-3))))
-   `(hl-line ((,class (:background ,black-3)))) ;;這裡遇到輸入法會有問題orz
+   `(hl-line ((,class (:background ,black-3))))
    `(region ((,class (:foreground ,black-3 :background ,green-2))))
    `(secondary-selection ((,class (:background ,blue-3 :foreground ,white-0))))
    `(isearch ((,class (:foreground ,white-1 :background ,orange-3))))
