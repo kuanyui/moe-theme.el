@@ -13,11 +13,11 @@
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light05.png"><img src="pics/light05.png" width="355" height="192"/></a>
 
 ## What Special?
-* Optimized for terminal.
+* Optimized for terminal color palettes.
 * Black-on-white & white-on-black.
-* Delightful and cheerful color-platte.
-* Relatively (...maybe?) completed font-faces.
-* Automatically switch between dark and light moe-theme according local time! (optional)
+* Delightful and cheerful color-palettes.
+* Quite completed font faces for each mode.
+* Automatically switch between dark and light `moe-theme` by local time! (optional)
 
 ## Support
 `moe-theme.el` provide good-looking[tm] and quite fully-supported font-faces for various modes, include:
@@ -33,7 +33,7 @@
 * ......and More!
 
 ## Requirements
-* Emacs 24 (or above)
+* Emacs 24 or above (under CLI, that is `emacs -nw`)
 * 256-colors (or higher) terminal.
 
 ## Install
@@ -99,11 +99,10 @@ If you use Emacs build-in `show-paren-mode`, I recommend set the value of `show-
 ```
 
 ### Not supported the mode(s) you're using?
-The mode you're using has an ugly looking? `Moe-theme` doesn't support the mode you like? It's welcome to report wishlist or issue on github, I'll try to add related settings as soon as possible. Or of course, you can push request, too.
+Can't bear a mode with an ugly looking? `moe-theme` doesn't support the mode you like? It's welcome to report wishlist or issue on github, I'll try to add related settings as soon as possible. Or of course, you can push request, too.
 
-## Known Bugs
-* When type characters with IM (e.g. fcitx), and run Emacs under terminal emulator (e.g. Konsole) with `moe-light-theme`; when you type words in IM, the string embedded in Emacs may be very insignificant (But as you output the word from IM, it turns normal).
-* moe-light under GUI version's Emacs seems to have a wrong background color.
-
+## Known Issues
+* When typing characters with IM (e.g. fcitx) under terminal emulator (e.g. Konsole) with `moe-light-theme`, the string embedded in Emacs may be very insignificant (But as you output the word from IM, it turns normal).
+* The background colors seems to be wrong under a GUI version's Emacs.
 ## License
 `moe-theme.el` (include images) is released under GPL v3. Copyleft is so cute!
