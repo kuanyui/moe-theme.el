@@ -103,7 +103,8 @@ Can't bear a mode with an ugly looking? `moe-theme` doesn't support the mode you
 
 ## Known Issues
 * When using `moe-light` and typing characters under terminal emulator (e.g. Konsole) with IM (e.g. fcitx), the string embedded in Emacs may be very insignificant (But as you output the word from IM, it turns normal).
-* [Maybe have fixed] (I don't sure due to strange behavior of Emacs, it's welcome to report issue) The background colors seems to be wrong under a GUI version's Emacs.
+* \[Maybe have fixed\]  The background colors seems to be wrong under a GUI version's Emacs.
+(I don't sure if this issue really fixed due to strange behavior of Emacs, it's welcome to report issue)
 
 ## License
 `moe-theme.el` (include images) is released under GPL v3. Copyleft is so cute!
