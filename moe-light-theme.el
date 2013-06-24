@@ -382,11 +382,6 @@ Moe, moe, chew!")
       (set-background-color "#ffffd7")
       (set-foreground-color "#5f5f5f")))
 
-;;;###autoload
-(when load-file-name
-  (add-to-list 'custom-theme-load-path
-               (file-name-as-directory (file-name-directory load-file-name))))
-
 (provide-theme 'moe-light)
 
 ;; Local Variables:
