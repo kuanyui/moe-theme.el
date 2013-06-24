@@ -383,6 +383,11 @@ Moe, moe, chew!")
       (set-background-color "#303030")
       (set-foreground-color "#c6c6c6")))
 
+;;;###autoload
+(when load-file-name
+  (add-to-list 'custom-theme-load-path
+               (file-name-as-directory (file-name-directory load-file-name))))
+
 (provide-theme 'moe-dark)
 
 ;; Local Variables:

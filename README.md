@@ -33,7 +33,7 @@
 * ......and More!
 
 ## Requirements
-* Emacs 24 or above (CLI, that is `emacs -nw`)
+* Emacs 24 or above.
 * 256-colors (or higher) terminal.
 
 ## Install
