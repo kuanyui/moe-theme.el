@@ -377,7 +377,11 @@ Moe, moe, chew!")
    'moe-dark
    `(ansi-color-names-vector [,black-5 ,red-0 ,green-0 ,yellow-1
 			      ,blue-1 ,purple-1 ,blue-0 ,white-1])))
-
+;; fix wrong default face under GUI version Emacs
+(if window-system 
+    (progn 
+      (set-background-color "#303030")
+      (set-foreground-color "#c6c6c6")))
 
 (provide-theme 'moe-dark)
 

@@ -376,7 +376,11 @@ Moe, moe, chew!")
    'moe-light
    `(ansi-color-names-vector [,black-5 ,red-0 ,green-0 ,yellow-1
 			      ,blue-1 ,purple-1 ,blue-0 ,white-0])))
-
+;; fix wrong default face
+(if window-system
+    (progn 
+      (set-background-color "#ffffd7")
+      (set-foreground-color "#5f5f5f")))
 
 (provide-theme 'moe-light)
 
