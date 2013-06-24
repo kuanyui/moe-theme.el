@@ -33,7 +33,7 @@
 * ......and More!
 
 ## Requirements
-* Emacs 24 or above (under CLI, that is `emacs -nw`)
+* Emacs 24 or above (CLI, that is `emacs -nw`)
 * 256-colors (or higher) terminal.
 
 ## Install
@@ -102,7 +102,7 @@ If you use Emacs build-in `show-paren-mode`, I recommend set the value of `show-
 Can't bear a mode with an ugly looking? `moe-theme` doesn't support the mode you like? It's welcome to report wishlist or issue on github, I'll try to add related settings as soon as possible. Or of course, you can push request, too.
 
 ## Known Issues
-* When using moe-light` and typing characters under terminal emulator (e.g. Konsole) with IM (e.g. fcitx), the string embedded in Emacs may be very insignificant (But as you output the word from IM, it turns normal).
+* When using `moe-light` and typing characters under terminal emulator (e.g. Konsole) with IM (e.g. fcitx), the string embedded in Emacs may be very insignificant (But as you output the word from IM, it turns normal).
 * The background colors seems to be wrong under a GUI version's Emacs.
 
 ## License
