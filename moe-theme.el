@@ -3,9 +3,13 @@
 ;; This program is not part of GNU Emacs. 
 ;; But it is distributed under GPL v3 :-)
 ;;
-;; *This file is established for packaging. If you want to install manually, check README.md instead of this!*
+;; This file is established for packaging. If you want to install manually, check README.md instead of this!
 ;; 
 ;; Author: kuanyui <azazabc123@gmail.com>
+;; Keywords: themes
+;; X-URL: https://github.com/kuanyui/moe-theme.el
+;; URL: https://github.com/kuanyui/moe-theme.el
+;; Version: {{VERSION}}
 
 ;;; Commentary:
 
