@@ -34,7 +34,9 @@
 ;; 
 ;; By adding the line above, your Emacs will have a light theme in the day and a dark one at night. =w=+
 ;; 
-;; ### Live in Antarctica?
+;; 
+;; Live in Antarctica?
+;; 
 ;; Daytime is longer in summer but shorter in winter; or you live in a high latitude region which midnight-sun or polar-night may occur such as Finland or Antarctica?
 ;; 
 ;; There's a variable `moe-theme-switch-by-sunrise-and-sunset` would solve your problem (default value is `t`)
