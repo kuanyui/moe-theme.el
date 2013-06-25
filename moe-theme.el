@@ -1,4 +1,4 @@
-;;; moe-theme --- A colorful eye-candy theme. Moe, moe, chu!
+;;; moe-theme --- A colorful eye-candy theme. Moe, moe, kyun!
 
 ;; This program is not part of GNU Emacs. 
 ;; But it is distributed under GPL v3 :-)

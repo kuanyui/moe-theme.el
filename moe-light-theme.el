@@ -7,7 +7,7 @@
 
 (deftheme moe-light
   "Face colors for 256 colors terminal (dark background).
-Moe, moe, chew!")
+Moe, moe, kyun!")
 
 (let ((class '((class color) (min-colors 89)))
       ;; Palette colors.
