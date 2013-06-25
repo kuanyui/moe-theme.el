@@ -52,6 +52,7 @@
 ;; 	(setq calendar-latitude +25)
 ;; 	(setq calendar-longitude +121)
 
+;;; Code:
 
 ;;;###autoload
 (when load-file-name
