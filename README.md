@@ -13,9 +13,9 @@
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light05.png"><img src="pics/light05.png" width="355" height="192"/></a>
 
 ## What Special?
-* Optimized for terminal color palettes.
+* Optimized for terminal's 256 color palettes.
 * Black-on-white & white-on-black.
-* Delightful and cheerful color-palettes.
+* Delightful and cheerful color palettes.
 * Quite completed font faces for each mode.
 * Automatically switch between dark and light `moe-theme` by local time! (optional)
 
@@ -37,9 +37,17 @@
 * 256-colors (or higher) terminal.
 
 ## Install
-`moe-light` and `moe-dark` are independent from each other, so you can just download one of them.
+### Via package.el
+`Moe-theme` is available in [MELPA](https://github.com/milkypostman/melpa) repository now, so you can install `moe-theme` easily with `M-x` `list-packages`.
 
-Download the one you prefer to `~/.emacs.d/themes`.Then, add these to your init file (take `moe-dark-theme.el` as example):
+If you want `moe-theme` to load automatically as Emacs startup, take `moe-dark` for example, you can use:
+
+```lisp
+	(load-theme 'moe-dark t)
+```
+
+### Manually
+Download the archive of `moe-theme` to `~/.emacs.d/themes` and extract it. Then, add these to your init file:
 
 ```lisp
 	;;customize theme
@@ -52,6 +60,8 @@ Or you can load theme just by adding:
 ```lisp
     (load-file "~/.emacs.d/themes/moe-dark-theme.el")
 ```
+
+(Note: `moe-light-theme.el` and `moe-dark-theme.el` are independent from each other, so you can just download one of them.)
 
 ## Have A Good Mood Today?
 I prefer a terminal with a black-on-white color scheme. I found that in the daytime, sunlight is strong and black-on-white is more readable; However, white-on-black would be less harsh to the eyes at night.
@@ -103,8 +113,7 @@ Can't bear a mode with an ugly looking? `moe-theme` doesn't support the mode you
 
 ## Known Issues
 * When using `moe-light` and typing characters under terminal emulator (e.g. Konsole) with IM (e.g. fcitx), the string embedded in Emacs may be very insignificant (But as you output the word from IM, it turns normal).
-* \[Maybe have fixed\]  The background colors seems to be wrong under a GUI version's Emacs.
-(I don't sure if this issue really fixed due to strange behavior of Emacs, it's welcome to report issue)
 
 ## License
 `moe-theme.el` (include images) is released under GPL v3. Copyleft is so cute!
+
