@@ -39,7 +39,7 @@ Moe, moe, kyun!")
    `(cursor ((,class (:background ,black-5))))
 
    ;; Highlighting faces
-   `(fringe ((,class (:foreground ,black-1 :background ,white-2))))
+   `(fringe ((,class (:foreground ,black-1 :background "#d7d7af"))))
    `(linum ((,class (:foreground "#87875f" :background "#d7d7af"))))
    `(highlight ((,class (:background ,green-0))))
    `(hl-line ((,class (:background ,green-00)))) ; Embedded strings of IM (e.g. fcitx) would be very unreadable... orz
@@ -57,7 +57,7 @@ Moe, moe, kyun!")
 			  (:box (:line-width -1 :style released-button)
 			   :background ,blue-00 :foreground ,black-1))))
    `(mode-line-buffer-id ((,class (:foreground ,black-6 :background ,blue-1 :bold t))))
-   `(vertical-border ((,class (:foreground ,white-3 :background ,white-3))))
+   `(vertical-border ((,class (:foreground "#d7d7af" :background "#d7d7af"))))
 
    ;; Escape and prompt faces
    `(minibuffer-prompt ((,class (:foreground ,black-6 :background ,green-2))))

@@ -39,7 +39,7 @@ Moe, moe, kyun!")
    `(cursor ((,class (:background ,white-1))))
 
    ;; Highlighting faces
-   `(fringe ((,class (:foreground ,black-3 :background ,white-3))))
+   `(fringe ((,class (:foreground ,black-3 :background ,black-2))))
    `(linum ((,class (:foreground ,white-1 :background ,black-2))))
    `(highlight ((,class (:background ,black-3))))
    `(hl-line ((,class (:background ,black-3))))
@@ -58,7 +58,7 @@ Moe, moe, kyun!")
 			  (:box (:line-width -1 :style released-button)
 			   :background ,black-3 :foreground ,white-1))))
    `(mode-line-buffer-id ((,class (:foreground ,black-3 :background ,blue-1 :bold t))))
-   `(vertical-border ((,class (:foreground ,white-1 :background ,white-1))))
+   `(vertical-border ((,class (:foreground ,black-2 :background ,black-2))))
 
    ;; Escape and prompt faces
    `(minibuffer-prompt ((,class (:foreground ,black-3 :background ,green-2))))
