@@ -109,7 +109,7 @@ If you use Emacs build-in `show-paren-mode`, I recommend set the value of `show-
 ```
 
 ### Not supported the mode(s) you're using?
-Can't bear a mode with an ugly looking? `moe-theme` doesn't support the mode you like? It's welcome to report wishlist or issue on github, I'll try to add related settings as soon as possible. Or of course, you can push request, too.
+Can't bear a mode with an ugly looking? `moe-theme` doesn't support the mode you like? It's welcome to report wishlist or issue on github, I'll try to add related settings as soon as possible. Or of course, you can push request, too. We need your feedback!
 
 ## Known Issues
 * When using `moe-light` and typing characters under terminal emulator (e.g. Konsole) with IM (e.g. fcitx), the string embedded in Emacs may be very insignificant (But as you output the word from IM, it turns normal).
