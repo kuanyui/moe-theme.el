@@ -392,14 +392,58 @@ Moe, moe, kyun!")
    `(eshell-ls-special ((,class (:foreground ,yellow-1))))
    `(eshell-ls-symlink  ((,class (:foreground ,magenta-2))))
    `(eshell-ls-unreadable ((,class (:foreground ,black-2))))
-   `(eshell-prompt ((,class (:foreground ,red-2 :bold t))))
+   `(eshell-prompt ((,class (:foreground ,white-0 :background ,black-2-5 :bold t))))
 
    ;; which-function-mode
    `(which-func ((,class (:foreground ,white-0 :background ,orange-2))))
 
    ;; Flymake
    `(flymake-warnline ((,class (:underline ,orange-2))))
-   `(flymake-errline ((,class (:underline ,red-2)))))
+   `(flymake-errline ((,class (:underline ,red-2))))
+
+   ;; mmm-mode
+   `(mmm-default-submode-face ((,class (:background ,yellow-00))))
+
+   ;; Clojure
+   `(clojure-test-failure-face ((,class (:underline ,orange-2))))
+   `(clojure-test-error-face ((,class (:underline ,red-2))))
+   `(clojure-test-success-face ((,class (:underline ,green-3))))
+
+   ;; rcirc
+   `(rcirc-bright-nick ((,class (:foreground ,blue-1 :bold t))))
+   `(rcirc-dim-nick ((,class (:foreground ,black-2 :bold t))))
+   `(rcirc-keyword ((,class (:foreground ,magenta-2 :bold t))))
+   `(rcirc-my-nick ((,class (:foreground ,green-2 :bold t))))
+   `(rcirc-nick-in-message ((,class (:foreground ,green-3))))
+   `(rcirc-nick-in-message-full-line ((,class (:foreground ,blue-3))))
+   `(rcirc-other-nick ((,class (:foreground ,blue-1 :bold t))))
+   `(rcirc-prompt ((,class (:foreground ,black-3 :background ,green-01 :bold t))))
+   `(rcirc-server ((,class (:foreground ,black-1))))
+   `(rcirc-server-prefix ((,class (:foreground ,black-1))))
+   `(rcirc-timestamp ((,class (:foreground ,orange-2))))
+   `(rcirc-track-keyword ((,class (:foreground ,magenta-2))))
+   `(rcirc-track-nick ((,class (:foreground ,blue-1))))
+   `(rcirc-url ((,class (:foreground ,blue-1 :bold nil :underline ,blue-2))))
+
+   ;; ERC
+   `(erc-button ((,class (:foreground ,blue-1 :underline ,blue-1 :bold nil))))
+   `(erc-current-nick-face ((,class (:foreground ,green-1))))
+   `(erc-dangerous-hosts ((,class (:foreground ,red-2 :bold t))))
+   `(erc-direct-msg-face ((,class (:foreground ,orange-2))))
+   `(erc-error-face ((,class (:foreground ,red-2))))
+   `(erc-header-face ((,class (:background ,blue-1))))
+   `(erc-input-face ((,class (:foreground ,white-0))))
+   `(erc-keyword-face ((,class (:foreground ,magenta-2 :bold t))))
+   `(erc-my-nick-face ((,class (:foreground ,green-1 :bold t))))
+   `(erc-nick-default-face ((,class (:bold t :foreground ,blue-1))))
+   `(erc-nick-msg-face ((,class (:weight normal :foreground ,orange-2))))
+   `(erc-notice-face ((,class (:foreground ,black-2))))
+   `(erc-pal-face ((,class (:foreground ,purple-1))))
+   `(erc-prompt-face ((,class (:bold t :foreground ,green-01 :background ,black-2-5))))
+   `(erc-timestamp-face ((,class (:foreground ,orange-2))))
+
+
+)
 
   (custom-theme-set-variables
    'moe-dark

@@ -22,6 +22,8 @@
 ## Support
 `moe-theme.el` provide good-looking[tm] and quite fully-supported font-faces for various modes, include:
 * Dired/Dired+
+* ERC/rcirc
+* Eshell
 * Helm
 * Org-mode
 * Magit
