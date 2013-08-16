@@ -441,6 +441,19 @@ Moe, moe, kyun!")
    `(erc-pal-face ((,class (:foreground ,purple-1))))
    `(erc-prompt-face ((,class (:bold t :foreground ,black-3 :background ,green-01))))
    `(erc-timestamp-face ((,class (:foreground ,orange-2))))
+
+   ;; ReStructuredText
+   `(rst-level-1-face ((,class (:foreground ,green-3 :background ,green-00 :bold t))))
+   `(rst-level-2-face ((,class (:foreground ,green-3 :background ,green-00 :bold t))))
+   `(rst-level-3-face ((,class (:foreground ,green-3 :background ,green-00 :bold t))))
+   `(rst-level-4-face ((,class (:foreground ,green-3 :background ,green-00 :bold t))))
+   `(rst-level-5-face ((,class (:foreground ,green-3 :background ,green-00 :bold t))))
+   `(rst-level-6-face ((,class (:foreground ,green-3 :background ,green-00 :bold t))))
+   `(rst-block ((,class (:foreground ,orange-2 :background ,LIGHT_BG :bold t))))
+   `(rst-reference ((,class (:foreground ,magenta-3 :background ,LIGHT_BG))))
+   `(rst-definition ((,class (:foreground ,yellow-3 :background ,LIGHT_BG))))
+   `(rst-external ((,class (:foreground ,blue-2 :background ,LIGHT_BG))))
+
 )
 
   (custom-theme-set-variables

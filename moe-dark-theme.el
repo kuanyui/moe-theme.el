@@ -442,7 +442,18 @@ Moe, moe, kyun!")
    `(erc-prompt-face ((,class (:bold t :foreground ,green-01 :background ,black-2-5))))
    `(erc-timestamp-face ((,class (:foreground ,orange-2))))
 
-
+   ;; ReStructuredText
+   `(rst-level-1-face ((,class (:foreground ,green-2 :background ,black-5 :bold t))))
+   `(rst-level-2-face ((,class (:foreground ,green-2 :background ,black-5 :bold t))))
+   `(rst-level-3-face ((,class (:foreground ,green-2 :background ,black-5 :bold t))))
+   `(rst-level-4-face ((,class (:foreground ,green-2 :background ,black-5 :bold t))))
+   `(rst-level-5-face ((,class (:foreground ,green-2 :background ,black-5 :bold t))))
+   `(rst-level-6-face ((,class (:foreground ,green-2 :background ,black-5 :bold t))))
+   `(rst-block ((,class (:foreground ,orange-2 :background ,black-5 :bold t))))
+   `(rst-reference ((,class (:foreground ,magenta-2 :background ,black-5))))
+   `(rst-definition ((,class (:foreground ,yellow-1 :background ,black-5))))
+   `(rst-external ((,class (:foreground ,blue-1 :background ,black-5))))
+   
 )
 
   (custom-theme-set-variables
