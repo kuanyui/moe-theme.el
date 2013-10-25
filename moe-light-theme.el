@@ -171,7 +171,7 @@ Moe, moe, kyun!")
    `(markdown-url-face ((,class (:foreground ,magenta-3 :underline ,magenta-3))))
 
    ;; Twittering-mode
-   `(twittering-username-face ((,class (:foreground ,blue-3 :background ,blue-00))))
+   `(twittering-username-face ((,class (:foreground ,blue-3 :background ,blue-00 :bold t))))
    `(twittering-uri-face ((,class (:foreground ,blue-2 :underline ,blue-2))))
    `(twittering-timeline-footer-face ((,class (:foreground ,black-1 :bold t))))
    `(twittering-timeline-header-face ((,class (:foreground ,black-1 :bold t))))
@@ -455,6 +455,10 @@ Moe, moe, kyun!")
    `(rst-definition ((,class (:foreground ,yellow-3 :background ,LIGHT_BG))))
    `(rst-external ((,class (:foreground ,blue-2 :background ,LIGHT_BG))))
 
+   ;; yalinum
+   `(yalinum-bar-face ((,class (:foreground "#d7d7af" :background "#87875f"))))
+   `(yalinum-face ((,class (:foreground "#87875f" :background "#d7d7af"))))
+   `(yalinum-track-face ((,class (:foreground "#87875f" :background "#d7d7af"))))
 )
 
   (custom-theme-set-variables

@@ -454,7 +454,11 @@ Moe, moe, kyun!")
    `(rst-reference ((,class (:foreground ,magenta-2 :background ,black-5))))
    `(rst-definition ((,class (:foreground ,yellow-1 :background ,black-5))))
    `(rst-external ((,class (:foreground ,blue-1 :background ,black-5))))
-   
+
+   ;; yalinum
+   `(yalinum-bar-face ((,class (:foreground ,black-2-5 :background ,white-1))))
+   `(yalinum-face ((,class (:foreground ,white-1 :background ,black-2))))
+   `(yalinum-track-face ((,class (:foreground ,white-1 :background ,black-2-5))))   
 )
 
   (custom-theme-set-variables
