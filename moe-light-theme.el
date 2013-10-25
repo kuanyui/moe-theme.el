@@ -41,6 +41,7 @@ Moe, moe, kyun!")
    ;; Highlighting faces
    `(fringe ((,class (:foreground ,black-1 :background "#d7d7af"))))
    `(linum ((,class (:foreground "#87875f" :background "#d7d7af"))))
+   `(linum-highlight-face ((,class (:background "#87875f" :foreground "#d7d7af"))))
    `(highlight ((,class (:background ,green-0))))
    `(hl-line ((,class (:background ,green-00)))) ; Embedded strings of IM (e.g. fcitx) would be very unreadable... orz
    `(region ((,class (:foreground ,white-0 :background ,blue-1))))
@@ -463,7 +464,7 @@ Moe, moe, kyun!")
 ;; fix wrong default face
 (if window-system
     (progn 
-      (set-background-color "#ffffd7")
+      (set-background-color "#ffffe0")
       (set-foreground-color "#5f5f5f")))
 
 (provide-theme 'moe-light)

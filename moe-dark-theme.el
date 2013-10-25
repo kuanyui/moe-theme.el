@@ -30,7 +30,7 @@ Moe, moe, kyun!")
   (custom-theme-set-faces
    'moe-dark
    ;; Ensure sufficient contrast on low-color terminals.
-   `(default ((((class color) (min-colors 4096)) ; Why the background under gui becomes #2f2f2f?
+   `(default ((((class color) (min-colors 4096))
 	       (:foreground ,white-1 :background ,black-5))
 	      (((class color) (min-colors 256))
 	       (:foreground ,white-1 :background ,black-5))
@@ -41,6 +41,7 @@ Moe, moe, kyun!")
    ;; Highlighting faces
    `(fringe ((,class (:foreground ,black-3 :background ,black-2))))
    `(linum ((,class (:foreground ,white-1 :background ,black-2))))
+   `(linum-highlight-face ((,class (:background ,white-1 :foreground ,black-2))))
    `(highlight ((,class (:background ,black-3))))
    `(hl-line ((,class (:background ,black-3))))
    `(region ((,class (:foreground ,black-3 :background ,green-2))))
