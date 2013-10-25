@@ -119,6 +119,7 @@ Can't bear a mode with an ugly looking? `moe-theme` doesn't support the mode you
 ## Todo
 * Minor mode for `moe-theme-switcher`.
 * (Seems impossible...?) A variable controlling if enlarge title font size, e.g. org-mode.
+
 ## License
 `moe-theme.el` (include images) is released under GPL v3. Copyleft is so cute!
 
