@@ -3,7 +3,7 @@
 ;; This program is not part of GNU Emacs. 
 ;; But it is distributed under GPL v3 :-)
 ;;
-;; This file is established for packaging. If you want to install manually, check README.md instead of this!
+;; This file is established for packaging. If you want to install manually, check README.md!
 ;; 
 ;; Author: kuanyui <azazabc123@gmail.com>
 ;; Keywords: themes
@@ -63,3 +63,11 @@
 (when load-file-name
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; no-update-autoloads: t
+;; coding: utf-8
+;; End:
+;;; moe-theme.el ends here
