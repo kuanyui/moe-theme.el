@@ -65,9 +65,6 @@
                (file-name-as-directory (file-name-directory load-file-name))))
 
 ;; Local Variables:
-;; version-control: never
-;; no-byte-compile: t
-;; no-update-autoloads: t
 ;; coding: utf-8
 ;; End:
 ;;; moe-theme.el ends here
