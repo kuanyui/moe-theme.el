@@ -89,10 +89,6 @@ Moe, moe, kyun!")
    `(org-document-title ((,class (:foreground ,blue-1 :background ,LIGHT_BG :weight bold :height 1.5))))
    `(org-document-info ((,class (:foreground ,blue-3 :background ,LIGHT_BG :weight bold))))
    `(org-document-info-keyword ((,class (:foreground ,black-5 :background ,LIGHT_BG))))
-   `(org-agenda-date-today
-     ((,class (:foreground ,orange-2 :slant italic :weight bold))) t)
-   `(org-agenda-structure
-     ((,class (:inherit font-lock-comment-face))))
    `(org-archived ((,class (:slant italic))))
    `(org-checkbox ((,class (:background ,white-2 :foreground ,black-3
                                    :box (:line-width 1 :style released-button)))))
@@ -110,16 +106,20 @@ Moe, moe, kyun!")
    `(org-level-7 ((,class (:bold t :foreground ,purple-2))))
    `(org-level-8 ((,class (:bold t :foreground ,yellow-2))))
    `(org-tag ((,class (:background ,black-1 :foreground ,white-0 :bold t :weight bold))))
-   `(org-column ((,class (:background ,white-4 :foreground ,black-5))))
-   `(org-column-title ((,class (:background ,green-2 :foreground ,black-5 :underline t :weight bold))))
+   `(org-column ((,class (:background ,yellow-00 :foreground ,black-3))))
+   `(org-column-title ((,class (:background ,blue-0 :foreground ,black-5 :underline t :weight bold))))
+   `(org-agenda-date-today
+     ((,class (:foreground ,orange-2 :slant italic :weight bold))) t)
+   `(org-agenda-structure
+     ((,class (:inherit font-lock-comment-face))))
    `(org-deadline-announce ((,class (:foreground ,red-3))))
-   `(org-scheduled ((,class (:foreground ,green-3))))
+   `(org-scheduled ((,class (:foreground ,black-2))))
    `(org-scheduled-previously ((,class (:foreground ,red-1))))
-   `(org-scheduled-today ((,class (:foreground ,blue-2))))
+   `(org-scheduled-today ((,class (:foreground ,blue-1 :background ,yellow-00))))
    `(org-special-keyword ((,class (:background ,yellow-2 :foreground ,yellow-4))))
    `(org-table ((,class (:background ,yellow-0 :foreground ,black-3))))
    `(org-time-grid ((,class (:foreground ,orange-2))))
-   `(org-upcoming-deadline ((,class (:inherit font-lock-keyword-face))))
+   `(org-upcoming-deadline ((,class (:foreground ,red-3 :background ,yellow-00))))
    `(org-warning ((,class (:bold t :foreground ,red-3 :weight bold))))
    `(org-formula ((,class (:foreground ,purple-2))))
    `(org-headline-done ((,class (:foreground ,green-2))))
@@ -129,7 +129,7 @@ Moe, moe, kyun!")
    `(org-footnote ((,class (:foreground ,magenta-3))))
    `(org-ellipsis ((,class (:foreground ,red-2))))
    `(org-agenda-clocking ((,class (:foreground ,blue-3 :background ,blue-0 :bold t))))
-   `(org-agenda-date ((,class (:foreground ,blue-2 :underline nil))))
+   `(org-agenda-date ((,class (:foreground ,orange-1 :underline nil))))
    `(org-agenda-todo ((,class (:foreground ,white-0 :background ,red-2))))
    `(org-agenda-done ((,class (:foreground ,black-3 :background ,green-2))))
    `(org-agenda-dimmed-todo-face ((,class (:foreground ,white-0 :background ,red-2))))
@@ -465,6 +465,7 @@ Moe, moe, kyun!")
    'moe-light
    `(ansi-color-names-vector [,black-5 ,red-0 ,green-0 ,yellow-1
 			      ,blue-1 ,purple-1 ,blue-0 ,white-0])))
+
 ;; fix wrong default face
 (if window-system
     (progn 
