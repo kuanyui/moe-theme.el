@@ -1,7 +1,7 @@
 ;;; moe-light-theme.el --- An eye-candy theme for Emacser
 
 ;; Author: kuanyui<azazabc123@gmail.com>
-;; Based on "tango-dark-theme" , a part of GNU Emacs 24
+;; Based on "tango-dark-theme"
 
 ;;; Code:
 
@@ -461,6 +461,14 @@ Moe, moe, kyun!")
    `(yalinum-bar-face ((,class (:foreground "#d7d7af" :background "#87875f"))))
    `(yalinum-face ((,class (:foreground "#87875f" :background "#d7d7af"))))
    `(yalinum-track-face ((,class (:foreground "#87875f" :background "#d7d7af"))))
+
+   ;; Ruby
+   `(enh-ruby-heredoc-delimiter-face ((,class (:foreground ,purple-2))))
+   `(enh-ruby-op-face ((,class (:foreground ,orange-3 :bold t))))
+   `(enh-ruby-regexp-delimiter-face ((,class (:foreground ,purple-2))))
+   `(enh-ruby-string-delimiter-face ((,class (:foreground ,purple-3))))
+   `(erm-syn-errline ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
+   `(erm-syn-warnline ((,class (:foreground ,white-0 :background ,orange-2 :bold t))))
 )
 
   (custom-theme-set-variables
