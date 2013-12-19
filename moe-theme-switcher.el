@@ -7,6 +7,8 @@
 
 (require 'moe-dark-theme)
 (require 'moe-light-theme)
+(require 'solar)
+(require 'calendar)
 
 (defvar moe-theme-switch-by-sunrise-and-sunset t
 "Automatically switch between dark and light moe-theme.
@@ -22,7 +24,7 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
 )
 
 (defun switch-at-fixed-time ()
-  (let ((now (string-to-int (format-time-string "%H"))))
+  (let ((now (string-to-number (format-time-string "%H"))))
     (if (and (>= now 06) (<= now 18))
         (load-theme 'moe-light t) (load-theme 'moe-dark t))
     nil))
@@ -40,33 +42,28 @@ Example:
 
 ;; Excute every minute.
 (defun switch-by-locale ()
-  (let ((sunrise-sunset a b c)
-        (length-of-day a b)
-        (sunrise a)
-        (sunset a))
-    (setq sunrise-sunset (solar-sunrise-sunset (calendar-current-date)))
-    ; length of day should never be nil
-    (setq length-of-day (mapcar
-                         (lambda (x) (string-to-number x))
-                         (split-string (car (cddr sunrise-sunset ":")))))
-
-    (if (equal length-of-day '(0 0)) ; Polar night
-        (load-theme 'moe-dark t)
-      (if (equal length-of-day '(24 0)) ; Midnight sun
-          (load-theme 'moe-light t)
-        (let ((now (list (string-to-number (format-time-string "%H"))
-                         (string-to-number (format-time-string "%M"))))
-              (sunrise (float-to-time-list (caar sunrise-sunset)))
-              (sunset (float-to-time-list (car (cadr sunrise-sunset)))))
-          (if (and
-               (or (> (car now) (car sunrise))
-                   (and (= (car now) (car sunrise))
-                        (>= (cdr now) (cdr sunrise))))
-               (or (< (car now) (car sunset))
-                   (and (= (car now) (car sunset))
-                        (< (cdr now) (cdr sunset)))))
-              (load-theme 'moe-light t)
-            (load-theme 'moe-dark t)))))))
+  (let* ((sunrise-sunset (solar-sunrise-sunset (calendar-current-date)))
+        (length-of-day (mapcar
+                        (lambda (x) (string-to-number x))
+                        (split-string (car (cddr sunrise-sunset ":"))))))
+    (progn
+      (if (equal length-of-day '(0 0)) ; Polar night
+          (load-theme 'moe-dark t)
+        (if (equal length-of-day '(24 0)) ; Midnight sun
+            (load-theme 'moe-light t)
+          (let ((now (list (string-to-number (format-time-string "%H"))
+                           (string-to-number (format-time-string "%M"))))
+                (sunrise (float-to-time-list (caar sunrise-sunset)))
+                (sunset (float-to-time-list (car (cadr sunrise-sunset)))))
+            (if (and
+                 (or (> (car now) (car sunrise))
+                     (and (= (car now) (car sunrise))
+                          (>= (cdr now) (cdr sunrise))))
+                 (or (< (car now) (car sunset))
+                     (and (= (car now) (car sunset))
+                          (< (cdr now) (cdr sunset)))))
+                (load-theme 'moe-light t)
+              (load-theme 'moe-dark t))))))))
 
 (defun moe-theme-auto-switch ()
   (interactive)
@@ -81,6 +78,3 @@ Example:
 (run-with-timer 0 (* 1 60) 'moe-theme-auto-switch)
 
 (provide 'moe-theme-switcher)
-
-
-
