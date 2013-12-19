@@ -18,7 +18,7 @@ Moe, moe, kyun!")
       (blue-1 "#729fcf") (blue-2 "#1f5bff") (blue-3 "#005f87") (blue-4 "#005faf") (blue-5 "#0000af") 
       (cyan-1 "#87ffff") (cyan-2 "#00ffff") (cyan-3 "#00d7af") (cyan-4 "#5f87af")
       (purple-1 "#d18aff") (purple-2 "#9a08ff") (purple-3 "#6c0099")
-      (red-1 "#ef2929")  (red-2 "#cc0000")  (red-3 "#a40000")
+      (red-1 "#ef2929")  (red-2 "#dd0000")  (red-3 "#a40000")
       (white-1 "#c6c6c6") (white-2 "#c6c6c6") (white-3 "#b2b2b2") (LIGHT_BG "#ffffd7") ;;original:(white-1 "#dadada")
       (black-1 "#a8a8a8") (black-2 "#8a8a8a") (black-2-5 "#6c6c6c") (black-3 "#4e4e4e")
 
