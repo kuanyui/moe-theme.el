@@ -19,7 +19,7 @@ Moe, moe, kyun!")
       (cyan-1 "#87ffff") (cyan-2 "#00ffff") (cyan-3 "#00d7af") (cyan-4 "#5f87af")
       (purple-1 "#d18aff") (purple-2 "#9a08ff") (purple-3 "#6c0099")
       (red-1 "#ef2929")  (red-2 "#cc0000")  (red-3 "#a40000")
-      (white-1 "#eeeeee") (white-2 "#dadada") (white-3 "#c6c6c6") (white-4 "#b2b2b2") (LIGHT_BG "#ffffd7")
+      (white-1 "#eeeeee") (white-2 "#dadada") (white-3 "#c6c6c6") (white-4 "#b2b2b2") (LIGHT_BG "#fdfde7")
       (black-1 "#9e9e9e") (black-2 "#8a8a8a") (black-3 "#767676")
 
       (green-01 "#d7ff00")
@@ -479,7 +479,7 @@ Moe, moe, kyun!")
 ;; fix wrong default face
 (if window-system
     (progn 
-      (set-background-color "#ffffe0")
+      (set-background-color "#fdfde7")
       (set-foreground-color "#5f5f5f")))
 
 (provide-theme 'moe-light)
