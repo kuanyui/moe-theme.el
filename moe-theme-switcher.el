@@ -23,13 +23,13 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
 	(setq calendar-longitude +121)"
 )
 
-(defun switch-at-fixed-time ()
+(defun moe-theme-switch-at-fixed-time ()
   (let ((now (string-to-number (format-time-string "%H"))))
     (if (and (>= now 06) (<= now 18))
         (load-theme 'moe-light t) (load-theme 'moe-dark t))
     nil))
 
-(defun float-to-time-list (time)
+(defun moe-theme-float-to-time-list (time)
   "Converts time represented as a float to a list
 Example:
 > (float-to-time-list 4.5)
@@ -41,37 +41,40 @@ Example:
     (list hours minutes)))
 
 ;; Excute every minute.
-(defun switch-by-locale ()
+(defun moe-theme-switch-by-locale ()
   (let* ((sunrise-sunset (solar-sunrise-sunset (calendar-current-date)))
-        (length-of-day (mapcar
-                        (lambda (x) (string-to-number x))
-                        (split-string (car (cddr sunrise-sunset ":"))))))
-    (progn
-      (if (equal length-of-day '(0 0)) ; Polar night
-          (load-theme 'moe-dark t)
-        (if (equal length-of-day '(24 0)) ; Midnight sun
-            (load-theme 'moe-light t)
-          (let ((now (list (string-to-number (format-time-string "%H"))
-                           (string-to-number (format-time-string "%M"))))
-                (sunrise (float-to-time-list (caar sunrise-sunset)))
-                (sunset (float-to-time-list (car (cadr sunrise-sunset)))))
-            (if (and
-                 (or (> (car now) (car sunrise))
-                     (and (= (car now) (car sunrise))
-                          (>= (cdr now) (cdr sunrise))))
-                 (or (< (car now) (car sunset))
-                     (and (= (car now) (car sunset))
-                          (< (cdr now) (cdr sunset)))))
-                (load-theme 'moe-light t)
-              (load-theme 'moe-dark t))))))))
+         (length-of-day (mapcar
+                         (lambda (x) (string-to-number x))
+                         (split-string (car (cddr sunrise-sunset)) ":"))))
+    (if (equal length-of-day '(0 0)) ; Polar night
+        (load-theme 'moe-dark t)
+      (if (equal length-of-day '(24 0)) ; Midnight sun
+          (load-theme 'moe-light t)
+        (let ((now (list (string-to-number (format-time-string "%H"))
+                         (string-to-number (format-time-string "%M"))))
+              (sunrise (moe-theme-float-to-time-list (caar sunrise-sunset)))
+              (sunset (moe-theme-float-to-time-list (car (cadr sunrise-sunset)))))
+          ;;Check that the time is between sunrise and sunset
+          (if (and
+               (or (> (car now) (car sunrise))
+                   (and (= (car now) (car sunrise))
+                        (>= (cdr now) (cdr sunrise))))
+               (or (< (car now) (car sunset))
+                   (and (= (car now) (car sunset))
+                        (< (cdr now) (cdr sunset)))))
+              (load-theme 'moe-light t)
+            (load-theme 'moe-dark t)))))))
 
 (defun moe-theme-auto-switch ()
   (interactive)
-  (if (and moe-theme-switch-by-sunrise-and-sunset
-           (boundp 'calendar-longitude)
-           (boundp 'calendar-latitude))
-      (switch-by-locale)
-    (switch-at-fixed-time)))
+  ;; Only do something if the theme is not the last applied theme
+  (if (not (or (equal '(moe-light) (last custom-enabled-themes))
+               (equal '(moe-dark) (last custom-enabled-themes))))
+      (if (and moe-theme-switch-by-sunrise-and-sunset
+               (boundp 'calendar-longitude)
+               (boundp 'calendar-latitude))
+          (moe-theme-switch-by-locale)
+        (moe-theme-switch-at-fixed-time))))
 
 (moe-theme-auto-switch)
 
