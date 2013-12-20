@@ -397,6 +397,9 @@ Moe, moe, kyun!")
    `(eshell-ls-unreadable ((,class (:foreground ,black-2))))
    `(eshell-prompt ((,class (:foreground ,black-3 :background ,yellow-0 :bold t))))
 
+   ;; Comint prompt
+   `(comint-highlight-prompt ((,class (:foreground ,black-3 :background ,yellow-0 :bold t))))
+
    ;; which-function-mode
    `(which-func ((,class (:foreground ,white-0 :background ,orange-2))))
 
