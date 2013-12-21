@@ -93,7 +93,7 @@ Moe, moe, kyun!")
    `(org-archived ((,class (:slant italic))))
    `(org-checkbox ((,class (:background ,white-2 :foreground ,black-3
                                    :box (:line-width 1 :style released-button)))))
-   `(org-date ((,class (:foreground ,blue-2 :underline t))))
+   `(org-date ((,class (:foreground ,blue-0 :underline t))))
    `(org-done ((,class (:bold t :weight bold :foreground ,green-4 :background ,green-0
                               :box (:line-width 1 :style none)))))
    `(org-todo ((,class (:bold t :weight bold :foreground ,red-3 :background ,orange-0
