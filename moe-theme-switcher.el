@@ -26,8 +26,10 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
 (defun moe-theme-switch-at-fixed-time ()
   (let ((now (string-to-number (format-time-string "%H"))))
     (if (and (>= now 06) (<= now 18))
-        (load-theme 'moe-light t) (load-theme 'moe-dark t))
-    nil))
+        (if (not (equal '(moe-light) (last custom-enabled-themes)))
+            (load-theme 'moe-light t))
+      (if (not (equal '(moe-dark) (last custom-enabled-themes)))
+          (load-theme 'moe-dark t)))))
 
 (defun moe-theme-float-to-time-list (time)
   "Converts time represented as a float to a list
@@ -62,19 +64,19 @@ Example:
                (or (< (car now) (car sunset))
                    (and (= (car now) (car sunset))
                         (< (cdr now) (cdr sunset)))))
-              (load-theme 'moe-light t)
-            (load-theme 'moe-dark t)))))))
+              ;; Don't apply the theme if it's the last applied theme
+              (if (not (equal '(moe-light) (last custom-enabled-themes)))
+                  (load-theme 'moe-light t))
+            (if (not (equal '(moe-dark) (last custom-enabled-themes)))
+                (load-theme 'moe-dark t))))))))
 
 (defun moe-theme-auto-switch ()
   (interactive)
-  ;; Only do something if the theme is not the last applied theme
-  (if (not (or (equal '(moe-light) (last custom-enabled-themes))
-               (equal '(moe-dark) (last custom-enabled-themes))))
-      (if (and moe-theme-switch-by-sunrise-and-sunset
-               (boundp 'calendar-longitude)
-               (boundp 'calendar-latitude))
-          (moe-theme-switch-by-locale)
-        (moe-theme-switch-at-fixed-time))))
+  (if (and moe-theme-switch-by-sunrise-and-sunset
+           (boundp 'calendar-longitude)
+           (boundp 'calendar-latitude))
+      (moe-theme-switch-by-locale)
+    (moe-theme-switch-at-fixed-time)))
 
 (moe-theme-auto-switch)
 
