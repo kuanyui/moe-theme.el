@@ -415,6 +415,9 @@ Moe, moe, kyun!")
    `(clojure-test-error-face ((,class (:underline ,red-2))))
    `(clojure-test-success-face ((,class (:underline ,green-3))))
 
+   ;; Javascript
+   `(js2-function-param-face ((,class (:foreground ,green-3))))
+
    ;; rcirc
    `(rcirc-bright-nick ((,class (:foreground ,blue-1 :bold t))))
    `(rcirc-dim-nick ((,class (:foreground ,black-2 :bold t))))
