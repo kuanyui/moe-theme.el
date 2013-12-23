@@ -141,7 +141,16 @@ Moe, moe, kyun!")
    `(org-block-end-line ((,class (:foreground ,orange-2))))
    `(org-mode-line-clock ((,class (:foreground ,blue-3 :background ,blue-0 :bold t))))
    `(org-mode-line-clock-overrun ((,class (:foreground ,white-0 :background ,red-1 :bold t))))
-
+   
+   ;; outline
+   `(outline-1 ((,class (:bold t :foreground ,blue-1))))
+   `(outline-2 ((,class (:bold t :foreground ,green-2))))
+   `(outline-3 ((,class (:bold t :foreground ,orange-2))))
+   `(outline-4 ((,class (:bold t :foreground ,cyan-3))))
+   `(outline-5 ((,class (:bold t :foreground ,red-2))))
+   `(outline-6 ((,class (:bold t :foreground ,magenta-2))))
+   `(outline-7 ((,class (:bold t :foreground ,purple-2))))
+   `(outline-8 ((,class (:bold t :foreground ,yellow-2))))
 
    ;; undo-tree
    `(undo-tree-visualizer-default-face ((,class (:foreground ,black-5))))
