@@ -17,15 +17,15 @@ Moe, moe, kyun!")
       (green-1 "#afff00") (green-2 "#a1db00") (green-3 "#00af00") (green-4 "#008700") (green-5 "#005f00")
       (blue-1 "#729fcf") (blue-2 "#1f5bff") (blue-3 "#005f87") (blue-4 "#005faf") (blue-5 "#0000af") 
       (cyan-1 "#87ffff") (cyan-2 "#00ffff") (cyan-3 "#00d7af") (cyan-4 "#5f87af")
-      (purple-1 "#d18aff") (purple-2 "#9a08ff") (purple-3 "#6c0099")
+      (purple-1 "#d18aff") (purple-2 "#9a08ff") (purple-3 "#6c0099") (purple-4 "#6c0099")
       (red-1 "#ef2929")  (red-2 "#cc0000")  (red-3 "#a40000")
       (white-1 "#eeeeee") (white-2 "#dadada") (white-3 "#c6c6c6") (white-4 "#b2b2b2") (LIGHT_BG "#fdfde7")
       (black-1 "#9e9e9e") (black-2 "#8a8a8a") (black-3 "#767676")
 
-      (green-01 "#d7ff00")
-      (green-0 "#d7ff5f") (blue-0 "#afd7ff") (purple-0 "#e6a8df") (yellow-0 "#ffff87") (white-0 "#ffffff")
+      (green-01 "#d7ff00") (green-02 "#87ff87") (white-0 "#ffffff")
+      (green-0 "#d7ff5f") (blue-0 "#afd7ff") (purple-0 "#af87ff") (yellow-0 "#ffff87") (white-0 "#ffffff")
       (red-0 "#ff4b4b")  (black-4 "#626262") (black-5 "#5f5f5f") (black-6 "#3a3a3a") (orange-0 "#ffaf87") (magenta-0 "#ffafd7")
-      (green-00 "#d7ff87") (yellow-00 "#ffffaf") (blue-00 "#d7d7ff"))
+      (green-00 "#d7ff87") (yellow-00 "#ffffaf") (orange-00 "#ffd787") (blue-00 "#d7d7ff") (purple-00 "#e6a8df"))
 
   (custom-theme-set-faces
    'moe-light
@@ -303,14 +303,26 @@ Moe, moe, kyun!")
    `(magit-log-author-date-cutoff ((,class (:foreground ,red-1 :bold t))))
    `(magit-log-date ((,class (:foreground ,black-5 :background ,green-0))))
    `(magit-log-graph ((,class (:foreground ,black-2 :background ,LIGHT_BG))))
-   `(magit-log-head-label-bisect-bad ((,class (:foreground ,white-1 :background ,red-0))))
+   `(magit-log-head-label-bisect-bad ((,class (:foreground ,white-0 :background ,red-3))))
    `(magit-log-head-label-bisect-good ((,class (:foreground ,black-3 :background ,green-0))))
-   `(magit-log-head-label-default ((,class (:foreground ,white-0 :background ,black-3 :bold t))))
-   `(magit-log-head-label-local ((,class (:foreground ,white-0 :background ,black-3 :bold t))))
-   `(magit-log-head-label-patches ((,class (:foreground ,red-3 :background ,orange-0 :bold t))))
-   `(magit-log-head-label-remote ((,class (:foreground ,green-3 :background ,green-0 :bold t))))
-   `(magit-log-head-label-tags ((,class (:foreground ,yellow-4 :background ,yellow-0 :bold t))))
+   `(magit-log-head-label-bisect-skip ((,class (:foreground ,yellow-3 :background ,orange-00))))
+   `(magit-log-head-label-default ((,class (:foreground ,green-4 :background ,green-2 :bold t))))
+   `(magit-log-head-label-head ((,class (:foreground ,green-4 :background ,green-01 :bold t))))
+   `(magit-log-head-label-local ((,class (:foreground ,green-4 :background ,green-00 :bold t))))
+   `(magit-log-head-label-patches ((,class (:foreground ,black-5 :background ,orange-1 :bold t))))
+   `(magit-log-head-label-remote ((,class (:foreground ,blue-3 :background ,blue-0 :bold t))))
+   `(magit-log-head-label-tags ((,class (:foreground ,yellow-4 :background ,yellow-00 :bold t))))
+   `(magit-log-head-label-wip ((,class (:foreground ,black-1 :background ,white-2))))
    `(magit-log-message ((,class (:foreground ,black-5 :background ,LIGHT_BG))))
+   `(magit-log-reflog-label-amend ((,class (:foreground ,magenta-3 :background ,magenta-0))))
+   `(magit-log-reflog-label-checkout ((,class (:foreground ,green-3 :background ,green-00))))
+   `(magit-log-reflog-label-cherry-pick ((,class (:foreground ,orange-4 :background ,orange-00))))
+   `(magit-log-reflog-label-commit ((,class (:foreground ,yellow-4 :background ,yellow-0))))
+   `(magit-log-reflog-label-merge ((,class (:foreground ,purple-4 :background ,purple-00))))
+   `(magit-log-reflog-label-other ((,class (:foreground ,white-0 :background ,black-3))))
+   `(magit-log-reflog-label-rebase ((,class (:foreground ,green-4 :background ,yellow-00))))
+   `(magit-log-reflog-label-remote ((,class (:foreground ,blue-4 :background ,blue-0))))
+   `(magit-log-reflog-label-reset ((,class (:foreground ,black-5 :background ,red-0))))
    `(magit-log-sha1 ((,class (:foreground ,orange-2 :background ,LIGHT_BG))))
    `(magit-section-title ((,class (:foreground ,orange-3 :background ,LIGHT_BG :underline ,orange-3 :bold ,t))))
    `(magit-valid-signature ((,class (:foreground ,cyan-3 :background ,LIGHT_BG :bold t))))
@@ -415,6 +427,9 @@ Moe, moe, kyun!")
    `(clojure-test-error-face ((,class (:underline ,red-2))))
    `(clojure-test-success-face ((,class (:underline ,green-3))))
 
+   ;; Javascript
+   `(js2-function-param-face ((,class (:foreground ,green-3))))
+   
    ;; rcirc
    `(rcirc-bright-nick ((,class (:foreground ,blue-1 :bold t))))
    `(rcirc-dim-nick ((,class (:foreground ,black-2 :bold t))))
@@ -478,7 +493,6 @@ Moe, moe, kyun!")
    'moe-light
    `(ansi-color-names-vector [,black-5 ,red-0 ,green-0 ,yellow-1
 			      ,blue-1 ,purple-1 ,blue-0 ,white-0])))
-
 ;; fix wrong default face
 (if window-system
     (progn 
@@ -492,5 +506,3 @@ Moe, moe, kyun!")
 ;; End:
 
 ;;; moe-light-theme.el ends here
-
-
