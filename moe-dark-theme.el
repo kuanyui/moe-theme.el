@@ -504,6 +504,16 @@ Moe, moe, kyun!")
    `(enh-ruby-string-delimiter-face ((,class (:foreground ,purple-0))))
    `(erm-syn-errline ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
    `(erm-syn-warnline ((,class (:foreground ,white-0 :background ,orange-2 :bold t))))
+
+   ;; ansi-term
+   `(term-color-black ((,class (:background ,black-5 :foreground ,black-5))))
+   `(term-color-blue ((,class (:background ,cyan-3 :foreground ,cyan-3))))
+   `(term-color-cyan ((,class (:background ,cyan-3 :foreground ,cyan-3))))
+   `(term-color-green ((,class (:background ,green-2 :foreground ,green-2))))
+   `(term-color-magenta ((,class (:background ,magenta-3 :foreground ,magenta-3))))
+   `(term-color-red ((,class (:background ,red-1 :foreground ,red-1))))
+   `(term-color-white ((,class (:background ,white-0 :foreground ,white-0))))
+   `(term-color-yellow ((,class (:background ,orange-2 :foreground ,orange-2))))
 )
 
   (custom-theme-set-variables
