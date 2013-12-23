@@ -93,7 +93,7 @@ Moe, moe, kyun!")
    `(org-archived ((,class (:slant italic))))
    `(org-checkbox ((,class (:background ,white-2 :foreground ,black-3
                                    :box (:line-width 1 :style released-button)))))
-   `(org-date ((,class (:foreground ,blue-2 :underline t))))
+   `(org-date ((,class (:foreground ,blue-0 :underline t))))
    `(org-done ((,class (:bold t :weight bold :foreground ,green-4 :background ,green-0
                               :box (:line-width 1 :style none)))))
    `(org-todo ((,class (:bold t :weight bold :foreground ,red-3 :background ,orange-0
@@ -116,7 +116,7 @@ Moe, moe, kyun!")
    `(org-scheduled-previously ((,class (:foreground ,red-1))))
    `(org-scheduled-today ((,class (:foreground ,yellow-2))))
    `(org-special-keyword ((,class (:background ,black-3 :foreground ,white-1))))
-   `(org-table ((,class (:background ,yellow-1 :foreground ,black-3))))
+   `(org-table ((,class (:background ,black-3 :foreground ,white-1))))
    `(org-time-grid ((,class (:foreground ,orange-2))))
    `(org-upcoming-deadline ((,class (:foreground ,red-1))))
    `(org-warning ((,class (:bold t :foreground ,white-0 :background ,red-3))))
@@ -124,7 +124,7 @@ Moe, moe, kyun!")
    `(org-headline-done ((,class (:foreground ,green-2))))
    `(org-hide ((,class (:foreground ,black-5))))
    `(org-code ((,class (:foreground ,blue-2))))
-   `(org-link ((,class (:foreground ,blue-2 :underline ,blue-2))))
+   `(org-link ((,class (:foreground ,blue-0 :underline t))))
    `(org-footnote ((,class (:foreground ,magenta-3))))
    `(org-ellipsis ((,class (:foreground ,red-2))))
    `(org-agenda-clocking ((,class (:foreground ,blue-3 :background ,blue-0 :bold t))))
@@ -414,6 +414,9 @@ Moe, moe, kyun!")
    `(clojure-test-failure-face ((,class (:underline ,orange-2))))
    `(clojure-test-error-face ((,class (:underline ,red-2))))
    `(clojure-test-success-face ((,class (:underline ,green-3))))
+
+   ;; Javascript
+   `(js2-function-param-face ((,class (:foreground ,green-3))))
 
    ;; rcirc
    `(rcirc-bright-nick ((,class (:foreground ,blue-1 :bold t))))
