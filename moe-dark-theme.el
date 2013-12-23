@@ -428,8 +428,16 @@ Moe, moe, kyun!")
    `(flymake-warnline ((,class (:underline ,orange-2))))
    `(flymake-errline ((,class (:underline ,red-2))))
 
-   ;; mmm-mode
+   ;; MMM-Mode
+   `(mmm-cleanup-submode-face ((,class (:background ,orange-00))))
+   `(mmm-code-submode-face ((,class (:background ,blue-00))))
+   `(mmm-comment-submode-face ((,class (:background ,blue-0))))
+   `(mmm-declaration-submode-face ((,class (:background ,cyan-1))))
    `(mmm-default-submode-face ((,class (:background ,yellow-00))))
+   `(mmm-delimiter-face ((,class (:background nil :foreground ,white-0))))
+   `(mmm-init-submode-face ((,class (:background ,magenta-0))))
+   `(mmm-output-submode-face ((,class (:background ,purple-00))))
+   `(mmm-special-submode-face ((,class (:background ,green-00))))
 
    ;; Clojure
    `(clojure-test-failure-face ((,class (:underline ,orange-2))))
