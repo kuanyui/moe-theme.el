@@ -142,6 +142,7 @@ Moe, moe, kyun!")
    `(org-block-end-line ((,class (:foreground ,orange-2))))
    `(org-mode-line-clock ((,class (:foreground ,blue-3 :background ,blue-0 :bold t))))
    `(org-mode-line-clock-overrun ((,class (:foreground ,white-0 :background ,red-1 :bold t))))
+
    ;; outline
    `(outline-1 ((,class (:bold t :foreground ,blue-1))))
    `(outline-2 ((,class (:bold t :foreground ,green-2))))
@@ -182,7 +183,7 @@ Moe, moe, kyun!")
    `(markdown-url-face ((,class (:foreground ,magenta-3 :underline ,magenta-3))))
 
    ;; Twittering-mode
-   `(twittering-username-face ((,class (:foreground ,blue-1 :background ,black-5 :bold t))))
+   `(twittering-username-face ((,class (:foreground ,blue-1 :background ,black-4 :bold t :underline t))))
    `(twittering-uri-face ((,class (:foreground ,blue-1 :underline t))))
    `(twittering-timeline-footer-face ((,class (:foreground ,white-3))))
    `(twittering-timeline-header-face ((,class (:foreground ,white-3))))
@@ -514,6 +515,14 @@ Moe, moe, kyun!")
    `(term-color-red ((,class (:background ,red-1 :foreground ,red-1))))
    `(term-color-white ((,class (:background ,white-0 :foreground ,white-0))))
    `(term-color-yellow ((,class (:background ,orange-2 :foreground ,orange-2))))
+
+   ;; ido-mode
+   `(ido-first-match ((,class (:foreground ,orange-2 :bold t))))
+   `(ido-incomplete-regexp ((,class (:foreground ,red-0 :bold t))))
+   `(ido-indicator ((,class (:foreground ,yellow-4 :background ,orange-00))))
+   `(ido-only-match ((,class (:foreground ,green-2 :background nil))))
+   `(ido-subdir ((,class (:foreground ,blue-1 :bold t))))
+   `(ido-virtual ((,class (:foreground ,magenta-3))))
 )
 
   (custom-theme-set-variables

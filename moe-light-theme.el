@@ -61,7 +61,7 @@ Moe, moe, kyun!")
    `(vertical-border ((,class (:foreground "#d7d7af" :background "#d7d7af"))))
 
    ;; Escape and prompt faces
-   `(minibuffer-prompt ((,class (:foreground ,black-6 :background ,green-2))))
+   `(minibuffer-prompt ((,class (:foreground ,black-5 :background ,green-2 :bold nil))))
    `(escape-glyph ((,class (:foreground ,yellow-3))))
    `(error ((,class (:foreground ,red-0))))
    `(warning ((,class (:foreground ,orange-1))))
@@ -182,7 +182,7 @@ Moe, moe, kyun!")
    `(markdown-url-face ((,class (:foreground ,magenta-3 :underline ,magenta-3))))
 
    ;; Twittering-mode
-   `(twittering-username-face ((,class (:foreground ,blue-3 :background ,blue-00 :bold t))))
+   `(twittering-username-face ((,class (:foreground ,blue-3 :background ,blue-00 :bold t :underline t))))
    `(twittering-uri-face ((,class (:foreground ,blue-2 :underline ,blue-2))))
    `(twittering-timeline-footer-face ((,class (:foreground ,black-1 :bold t))))
    `(twittering-timeline-header-face ((,class (:foreground ,black-1 :bold t))))
@@ -514,6 +514,14 @@ Moe, moe, kyun!")
    `(term-color-red ((,class (:background ,red-2 :foreground ,red-2))))
    `(term-color-white ((,class (:background ,white-0 :foreground ,white-0))))
    `(term-color-yellow ((,class (:background ,orange-2 :foreground ,orange-2))))
+
+   ;; ido-mode
+   `(ido-first-match ((,class (:foreground ,orange-2 :bold t))))
+   `(ido-incomplete-regexp ((,class (:foreground ,red-2 :bold t))))
+   `(ido-indicator ((,class (:foreground ,yellow-4 :background ,orange-00))))
+   `(ido-only-match ((,class (:foreground ,green-4 :background ,green-00 :bold t))))
+   `(ido-subdir ((,class (:foreground ,blue-1 :bold t))))
+   `(ido-virtual ((,class (:foreground ,magenta-3))))
 )
 
   (custom-theme-set-variables
