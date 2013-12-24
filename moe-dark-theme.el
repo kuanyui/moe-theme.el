@@ -338,6 +338,21 @@ Moe, moe, kyun!")
    `(magit-valid-signature ((,class (:foreground ,cyan-1 :background ,black-5 :bold t))))
    `(magit-whitespace-warning-face ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
 
+   ;; git-commit-mode
+   `(git-commit-branch-face ((,class (:foreground ,orange-2))))
+   `(git-commit-comment-action-face ((,class (:foreground ,orange-2))))
+   `(git-commit-comment-file-face ((,class (:foreground ,magenta-2))))
+   `(git-commit-comment-heading-face ((,class (:foreground ,green-01 :background nil))))
+   `(git-commit-known-pseudo-header-face ((,class (:foreground ,green-1))))
+   `(git-commit-no-branch-face ((,class (:foreground ,orange-3))))
+   `(git-commit-nonempty-second-line-face ((,class (:foreground ,red-2))))
+   `(git-commit-note-face ((,class (:foreground ,cyan-3))))
+   `(git-commit-overlong-summary-face ((,class (:foreground ,red-2))))
+   `(git-commit-pseudo-header-face ((,class (:foreground ,magenta-3))))
+   `(git-commit-summary-face ((,class (:foreground ,blue-1))))
+   `(git-rebase-description-face ((,class (:foreground ,black-3))))
+   `(git-rebase-killed-action-face ((,class (:foreground ,black-3))))
+
    ;; Message faces
    `(message-header-name ((,class (:foreground ,blue-1))))
    `(message-header-cc ((,class (:foreground ,yellow-3))))

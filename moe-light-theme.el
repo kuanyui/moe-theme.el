@@ -336,7 +336,22 @@ Moe, moe, kyun!")
    `(magit-section-title ((,class (:foreground ,orange-3 :background ,LIGHT_BG :underline ,orange-3 :bold ,t))))
    `(magit-valid-signature ((,class (:foreground ,cyan-3 :background ,LIGHT_BG :bold t))))
    `(magit-whitespace-warning-face ((,class (:foreground ,white-0 :background ,red-2 :bold t))))
-   
+
+   ;; git-commit-mode
+   `(git-commit-branch-face ((,class (:foreground ,orange-2))))
+   `(git-commit-comment-action-face ((,class (:foreground ,orange-2))))
+   `(git-commit-comment-file-face ((,class (:foreground ,magenta-2))))
+   `(git-commit-comment-heading-face ((,class (:foreground ,green-4 :background ,green-00))))
+   `(git-commit-known-pseudo-header-face ((,class (:foreground ,green-2))))
+   `(git-commit-no-branch-face ((,class (:foreground ,orange-3))))
+   `(git-commit-nonempty-second-line-face ((,class (:foreground ,red-2))))
+   `(git-commit-note-face ((,class (:foreground ,cyan-3))))
+   `(git-commit-overlong-summary-face ((,class (:foreground ,red-2))))
+   `(git-commit-pseudo-header-face ((,class (:foreground ,magenta-3))))
+   `(git-commit-summary-face ((,class (:foreground ,blue-2))))
+   `(git-rebase-description-face ((,class (:foreground ,white-3))))
+   `(git-rebase-killed-action-face ((,class (:foreground ,white-3))))
+
    ;; Message faces
    `(message-header-name ((,class (:foreground ,blue-3))))
    `(message-header-cc ((,class (:foreground ,yellow-3))))
