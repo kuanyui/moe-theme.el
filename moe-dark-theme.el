@@ -383,7 +383,7 @@ Moe, moe, kyun!")
 
    ;; smerge
    `(smerge-refined-change ((,class (:background ,blue-3 :foreground ,white-0))))
-   
+
    ;; Flyspell faces
    `(flyspell-duplicate ((,class (:underline t foreground-color,orange-1))))
    `(flyspell-incorrect ((,class (:background ,red-1 :foreground ,white-1 :bold t))))
@@ -405,8 +405,8 @@ Moe, moe, kyun!")
    `(cua-rectangle ((,class (:background ,magenta-3 :foreground ,white-1))))
 
    ;; Ace-jump
-   `(ace-jump-face-background ((,class (:foreground ,black-2))))
-   `(ace-jump-face-foreground ((,class (:foreground ,red-2))))
+   `(ace-jump-face-background ((,class (:background nil :foreground ,black-2-5))))
+   `(ace-jump-face-foreground ((,class (:foreground ,orange-2 :bold t))))
 
    ;; Rainbow-delimiters
    `(rainbow-delimiters-depth-1-face ((,class (:bold t :foreground ,red-2))))
