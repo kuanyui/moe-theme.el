@@ -50,7 +50,7 @@ Moe, moe, kyun!")
    `(lazy-highlight ((,class (:background ,magenta-3 :foreground ,white-1))))
    `(trailing-whitespace ((,class (:background ,red-3))))
    `(show-paren-match ((,class (:background ,black-6))))
-   `(header-line ((,class (:background ,blue-1 :foreground ,black-4 :underline t))))
+   `(header-line ((,class (:background ,blue-0 :foreground ,black-4 :underline t))))
 
    ;; Mode line & frames' faces
    `(mode-line ((,class
@@ -193,7 +193,7 @@ Moe, moe, kyun!")
    `(popup-face ((,class (:background ,blue-00 :foreground ,blue-3))))
    `(popup-isearch-match ((,class (:background ,cyan-1 :foreground ,black-3))))
    `(popup-menu-face ((,class (:background ,blue-00 :foreground ,blue-3))))
-   `(popup-menu-selection-face ((,class (:background ,blue-1 :foreground ,white-1))))
+   `(popup-menu-selection-face ((,class (:background ,blue-1 :foreground ,white-0))))
    `(popup-menu-summary-face ((,class (:background ,blue-00 :foreground ,blue-3))))
    `(popup-scroll-bar-background-face ((,class (:background ,blue-0 :foreground ,blue-0))))
    `(popup-scroll-bar-foreground-face ((,class (:background ,blue-3 :foreground ,blue-3))))
