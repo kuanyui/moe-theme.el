@@ -259,7 +259,7 @@ Moe, moe, kyun!")
    `(helm-ff-prefix ((,class (:foreground ,white-0 :background ,orange-2))))
    `(helm-buffer-size ((,class (:foreground ,orange-2))))
 
-   ;; Dired+
+   ;; Dired/Dired+
    `(dired-directory ((,class (:foreground ,blue-1 :bold t))))
    `(dired-flagged ((,class (:foreground ,red-1))))
    `(dired-header ((,class (:foreground ,black-5  :background ,green-01 :bold t))))
@@ -295,7 +295,7 @@ Moe, moe, kyun!")
    `(diredp-exec-priv ((,class (:foreground ,red-3 :background ,orange-0))))
 
    ;; Magit
-   `(magit-branch ((,class (:foreground ,blue-2 :background ,blue-0 :bold t))))
+   `(magit-branch ((,class (:foreground ,blue-4 :background ,blue-0 :bold t))))
    `(magit-diff-add ((,class (:foreground ,green-3 :background nil :bold t))))
    `(magit-diff-del ((,class (:foreground ,red-2 :background nil :bold t))))
    `(magit-diff-file-header ((,class (:foreground ,black-4 :background ,white-3 :bold t))))
@@ -338,7 +338,7 @@ Moe, moe, kyun!")
    `(magit-whitespace-warning-face ((,class (:foreground ,white-0 :background ,red-2 :bold t))))
 
    ;; git-commit-mode
-   `(git-commit-branch-face ((,class (:foreground ,orange-2))))
+   `(git-commit-branch-face ((,class (:foreground ,blue-4 :background ,blue-0 :underline t))))
    `(git-commit-comment-action-face ((,class (:foreground ,orange-2))))
    `(git-commit-comment-file-face ((,class (:foreground ,magenta-2))))
    `(git-commit-comment-heading-face ((,class (:foreground ,green-4 :background ,green-00))))
