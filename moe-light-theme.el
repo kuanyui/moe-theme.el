@@ -57,12 +57,8 @@ Moe, moe, kyun!")
    `(header-line ((,class (:background ,blue-1 :foreground ,white-0 :underline t))))
 
    ;; Mode line & frames' faces
-   `(mode-line ((,class
-		 (:box (:line-width -1 :style nil)
-		  :background ,blue-1 :foreground ,white-0))))
-   `(mode-line-inactive ((,class
-			  (:box (:line-width -1 :style nil)
-			   :background ,white-2 :foreground ,black-1))))
+   `(mode-line ((,class (:background ,blue-1 :foreground ,white-0))))
+   `(mode-line-inactive ((,class (:background ,white-2 :foreground ,black-1))))
    `(mode-line-buffer-id ((,class (:foreground ,black-6 :background ,blue-1 :bold t))))
    `(vertical-border ((,class (:foreground "#d7d7af" :background "#d7d7af"))))
 
