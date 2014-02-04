@@ -573,6 +573,11 @@ Moe, moe, kyun!")
    `(ido-only-match ((,class (:foreground ,green-2 :background nil))))
    `(ido-subdir ((,class (:foreground ,blue-1 :bold t))))
    `(ido-virtual ((,class (:foreground ,magenta-3))))
+
+   ;; git-gutter-fringe
+   `(git-gutter-fr:modified ((,class (:foreground ,magenta-2))))
+   `(git-gutter-fr:added ((,class (:foreground ,yellow-2))))
+   `(git-gutter-fr:deleted ((,class (:foreground ,red-1))))
 )
 
   (custom-theme-set-variables
