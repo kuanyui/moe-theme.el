@@ -15,7 +15,7 @@ Moe, moe, kyun!")
       (orange-1 "#ffaf5f") (orange-2 "#ff8700") (orange-3 "#ff5d17") (orange-4 "#d75f00")
       (magenta-1 "#ff7bbb") (magenta-2 "#ff4ea3") (magenta-3 "#ff1f8b")
       (green-1 "#afff00") (green-2 "#a1db00") (green-3 "#5faf00") (green-4 "#008700") (green-5 "#005f00")
-      (blue-1 "#729fcf") (blue-2 "#1f5bff") (blue-3 "#005f87") (blue-4 "#005faf") (blue-5 "#0000af") 
+      (blue-1 "#729fcf") (blue-2 "#1f5bff") (blue-3 "#005f87") (blue-4 "#005faf") (blue-5 "#0000af")
       (cyan-1 "#87ffff") (cyan-2 "#00ffff") (cyan-3 "#00d7af") (cyan-4 "#5f87af")
       (purple-1 "#d18aff") (purple-2 "#9a08ff") (purple-3 "#6c0099")
       (red-1 "#ef2929")  (red-2 "#cc0000")  (red-3 "#a40000")
@@ -26,7 +26,7 @@ Moe, moe, kyun!")
       (green-0 "#d7ff5f") (blue-0 "#8cc4ff") (purple-0 "#e6a8df") (yellow-0 "#ffff87")
       (red-0 "#ff4b4b")  (black-4 "#3a3a3a") (black-5 "#303030") (black-6 "#000000") (orange-0 "#ffaf87")
       (green-00 "#d7ff87") (yellow-00 "#ffffaf") (blue-00 "#d7d7ff"))
- 
+
   (custom-theme-set-faces
    'moe-dark
    ;; Ensure sufficient contrast on low-color terminals.
@@ -40,7 +40,7 @@ Moe, moe, kyun!")
 
    ;; Highlighting faces
    `(fringe ((,class (:foreground ,black-3 :background ,black-2))))
-   `(linum ((,class (:foreground ,white-1 :background ,black-2))))
+   `(linum ((,class (:foreground ,white-1 :background ,black-5))))
    `(linum-highlight-face ((,class (:background ,white-1 :foreground ,black-2))))
    `(highlight ((,class (:background ,black-3))))
    `(hl-line ((,class (:background ,black-3))))
@@ -187,7 +187,7 @@ Moe, moe, kyun!")
    `(popup-scroll-bar-background-face ((,class (:background ,blue-0 :foreground ,blue-0))))
    `(popup-scroll-bar-foreground-face ((,class (:background ,blue-3 :foreground ,blue-3))))
    `(popup-summary-face ((,class (:background ,blue-00 :foreground ,blue-3))))
-   `(popup-tip-face ((,class (:background ,yellow-00 :foreground ,black-3))))   
+   `(popup-tip-face ((,class (:background ,yellow-00 :foreground ,black-3))))
 
    ;; Button and link faces
    `(link ((,class (:underline t :foreground ,blue-1))))
@@ -346,7 +346,7 @@ Moe, moe, kyun!")
 
    ;; smerge
    `(smerge-refined-change ((,class (:background ,blue-3 :foreground ,white-0))))
-   
+
    ;; Flyspell faces
    `(flyspell-duplicate ((,class (:underline t foreground-color,orange-1))))
    `(flyspell-incorrect ((,class (:background ,red-1 :foreground ,white-1 :bold t))))
@@ -403,6 +403,8 @@ Moe, moe, kyun!")
    ;; Flymake
    `(flymake-warnline ((,class (:underline ,orange-2))))
    `(flymake-errline ((,class (:underline ,red-2))))
+   `(flycheck-error ((,class (:background ,red-2))))
+   `(flycheck-warnline ((,class (:background ,orange-2))))
 
    ;; mmm-mode
    `(mmm-default-submode-face ((,class (:background ,yellow-00))))
@@ -469,6 +471,12 @@ Moe, moe, kyun!")
    `(enh-ruby-string-delimiter-face ((,class (:foreground ,purple-0))))
    `(erm-syn-errline ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
    `(erm-syn-warnline ((,class (:foreground ,white-0 :background ,orange-2 :bold t))))
+
+   ;; powerline
+   `(powerline-active1 ((,class (:background ,white-1 :foreground ,blue-2))))
+   `(powerline-active2 ((,class (:foreground ,blue-4 :background ,blue-0))))
+   `(powerline-inactive1 ((,class (:foreground ,blue-2 :background ,white-1))))
+   `(powerline-inactive2 ((,class (:foreground ,blue-0 :background ,blue-4))))
 )
 
   (custom-theme-set-variables
@@ -476,8 +484,8 @@ Moe, moe, kyun!")
    `(ansi-color-names-vector [,black-5 ,red-0 ,green-0 ,yellow-1
 			      ,blue-1 ,purple-1 ,blue-0 ,white-1])))
 ;; fix wrong default face under GUI version Emacs
-(if window-system 
-    (progn 
+(if window-system
+    (progn
       (set-background-color "#303030")
       (set-foreground-color "#c6c6c6")))
 
