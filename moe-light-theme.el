@@ -15,7 +15,7 @@ Moe, moe, kyun!")
       (orange-1 "#ffaf5f") (orange-2 "#ff8700") (orange-3 "#ff5d17") (orange-4 "#d75f00")
       (magenta-1 "#ff7bbb") (magenta-2 "#ff4ea3") (magenta-3 "#ff1f8b")
       (green-1 "#afff00") (green-2 "#a1db00") (green-3 "#00af00") (green-4 "#008700") (green-5 "#005f00")
-      (blue-1 "#729fcf") (blue-2 "#1f5bff") (blue-3 "#005f87") (blue-4 "#005faf") (blue-5 "#0000af") 
+      (blue-1 "#729fcf") (blue-2 "#1f5bff") (blue-3 "#005f87") (blue-4 "#005faf") (blue-5 "#0000af")
       (cyan-1 "#87ffff") (cyan-2 "#00ffff") (cyan-3 "#00d7af") (cyan-4 "#5f87af")
       (purple-1 "#d18aff") (purple-2 "#9a08ff") (purple-3 "#6c0099") (purple-4 "#6c0099")
       (red-1 "#ef2929")  (red-2 "#cc0000")  (red-3 "#a40000")
@@ -24,7 +24,7 @@ Moe, moe, kyun!")
 
       (green-01 "#d7ff00") (green-02 "#87ff87") (white-0 "#ffffff")
       (green-0 "#d7ff5f") (blue-0 "#afd7ff") (purple-0 "#af87ff") (yellow-0 "#ffff87") (white-0 "#ffffff")
-      (red-0 "#ff4b4b")  (black-4 "#626262") (black-5 "#5f5f5f") (black-6 "#3a3a3a") (orange-0 "#ffaf87") (magenta-0 "#ffafd7")
+      (red-0 "#ff4b4b")  (black-4 "#626262") (black-5 "#5f5f5f") (black-6 "#3a3a3a") (orange-0 "#ffaf87") (magenta-0 "#ffafd7") (magenta-00 "#ffd7ff")
       (green-00 "#d7ff87") (yellow-00 "#ffffaf") (orange-00 "#ffd787") (blue-00 "#d7d7ff") (purple-00 "#e6a8df"))
 
   (custom-theme-set-faces
@@ -143,7 +143,7 @@ Moe, moe, kyun!")
    `(org-block-end-line ((,class (:foreground ,orange-2))))
    `(org-mode-line-clock ((,class (:foreground ,blue-3 :background ,blue-0 :bold t))))
    `(org-mode-line-clock-overrun ((,class (:foreground ,white-0 :background ,red-1 :bold t))))
-   
+
    ;; outline
    `(outline-1 ((,class (:bold t :foreground ,blue-1))))
    `(outline-2 ((,class (:bold t :foreground ,green-2))))
@@ -374,19 +374,19 @@ Moe, moe, kyun!")
 
    ;; Diff
    `(diff-added ((,class (:foreground ,green-3 :bold t))))
-   `(diff-changed ((,class (:foreground ,yellow-4 :background ,yellow-0 :bold t))))
+   `(diff-changed ((,class (:foreground ,yellow-3 :bold t))))
    `(diff-context ((,class (:foreground ,white-4))))
-   `(diff-file-header ((,class (:foreground ,black-4 :background ,white-3 :bold t))))
+   `(diff-file-header ((,class (:foreground ,blue-3 :background ,blue-0 :bold t :underline t))))
    `(diff-function ((,class (:foreground ,black-2 :background ,white-2))))
-   `(diff-header ((,class (:foreground ,black-2 :background ,white-2))))
-   `(diff-hunk-header ((,class (:foreground ,black-2 :background ,white-2))))
+   `(diff-header ((,class (:foreground ,blue-3 :background ,blue-0))))
+   `(diff-hunk-header ((,class (:foreground ,blue-3 :background ,blue-00 :overline t))))
    `(diff-index ((,class (:foreground ,black-4 :background ,white-3 :bold t))))
-   `(diff-indicator-added ((,class (:foreground ,green-3 :bold t))))
-   `(diff-indicator-changed ((,class (:foreground ,yellow-4 :bold t))))
-   `(diff-indicator-removed ((,class (:foreground ,red-3 :bold t))))
-   `(diff-nonexistent ((,class (:foreground ,white-0 :background ,red-3 :bold t ))))
+   `(diff-indicator-added ((,class (:foreground ,white-0 :background ,green-3 :bold t))))
+   `(diff-indicator-changed ((,class (:foreground ,white-0 :background ,yellow-3 :bold t))))
+   `(diff-indicator-removed ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
+   `(diff-nonexistent ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
    `(diff-refine-added ((,class (:foreground ,green-3))))
-   `(diff-refine-change ((,class (:foreground ,yellow-4 :background ,yellow-0 :bold t))))
+   `(diff-refine-change ((,class (:foreground ,yellow-3 :bold t))))
    `(diff-refine-removed ((,class (:foreground ,red-3 :bold t))))
    `(diff-removed ((,class (:foreground ,red-3 :bold t))))
 
@@ -410,7 +410,7 @@ Moe, moe, kyun!")
 
    ;; smerge
    `(smerge-refined-change ((,class (:background ,blue-3 :foreground ,white-0))))
-   
+
    ;; Flyspell faces
    `(flyspell-duplicate ((,class (:underline t foreground-color,orange-1))))
    `(flyspell-incorrect ((,class (:background ,red-1 :foreground ,white-0 :bold t))))
@@ -470,7 +470,7 @@ Moe, moe, kyun!")
    ;; Flymake
    `(flymake-warnline ((,class (:underline ,orange-2))))
    `(flymake-errline ((,class (:underline ,red-2))))
-   
+
    ;; MMM-Mode
    `(mmm-cleanup-submode-face ((,class (:background ,orange-00))))
    `(mmm-code-submode-face ((,class (:background ,blue-00))))
@@ -481,7 +481,7 @@ Moe, moe, kyun!")
    `(mmm-init-submode-face ((,class (:background ,magenta-0))))
    `(mmm-output-submode-face ((,class (:background ,purple-00))))
    `(mmm-special-submode-face ((,class (:background ,green-00))))
-   
+
    ;; Clojure
    `(clojure-test-failure-face ((,class (:underline ,orange-2))))
    `(clojure-test-error-face ((,class (:underline ,red-2))))
@@ -489,7 +489,7 @@ Moe, moe, kyun!")
 
    ;; Javascript
    `(js2-function-param-face ((,class (:foreground ,green-3))))
-   
+
    ;; rcirc
    `(rcirc-bright-nick ((,class (:foreground ,blue-1 :bold t))))
    `(rcirc-dim-nick ((,class (:foreground ,black-2 :bold t))))
@@ -573,7 +573,7 @@ Moe, moe, kyun!")
 			      ,blue-1 ,purple-1 ,blue-0 ,white-0])))
 ;; fix wrong default face
 (if window-system
-    (progn 
+    (progn
       (set-background-color "#fdfde7")
       (set-foreground-color "#5f5f5f")))
 
