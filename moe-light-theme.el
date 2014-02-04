@@ -24,8 +24,8 @@ Moe, moe, kyun!")
 
       (green-01 "#d7ff00") (green-02 "#87ff87") (white-0 "#ffffff")
       (green-0 "#d7ff5f") (blue-0 "#afd7ff") (purple-0 "#af87ff") (yellow-0 "#ffff87") (white-0 "#ffffff")
-      (red-0 "#ff4b4b")  (black-4 "#626262") (black-5 "#5f5f5f") (black-6 "#3a3a3a") (orange-0 "#ffaf87") (magenta-0 "#ffafd7") (magenta-00 "#ffd7ff")
-      (green-00 "#d7ff87") (yellow-00 "#ffffaf") (orange-00 "#ffd787") (blue-00 "#d7d7ff") (purple-00 "#e6a8df"))
+      (red-0 "#ff4b4b") (red-00 "#ffafaf") (black-4 "#626262") (black-5 "#5f5f5f") (black-6 "#3a3a3a") (orange-0 "#ffaf87") (magenta-0 "#ffafd7") (magenta-00 "#ffd7ff")
+      (green-00 "#d7ff87") (yellow-00 "#ffffaf") (orange-00 "#ffd787") (orange-000 "#ffd7af") (blue-00 "#d7d7ff") (purple-00 "#e6a8df"))
 
   (custom-theme-set-faces
    'moe-light
@@ -373,8 +373,8 @@ Moe, moe, kyun!")
    `(grep-match-face ((,class (:foreground nil :background nil :inherit match))))
 
    ;; Diff
-   `(diff-added ((,class (:foreground ,green-3 :bold t))))
-   `(diff-changed ((,class (:foreground ,yellow-3 :bold t))))
+   `(diff-added ((,class (:foreground ,green-4 :background ,green-00 :bold t))))
+   `(diff-changed ((,class (:foreground ,yellow-4 :background ,yellow-00 :bold t))))
    `(diff-context ((,class (:foreground ,white-4))))
    `(diff-file-header ((,class (:foreground ,blue-3 :background ,blue-0 :bold t :underline t))))
    `(diff-function ((,class (:foreground ,black-2 :background ,white-2))))
@@ -388,7 +388,7 @@ Moe, moe, kyun!")
    `(diff-refine-added ((,class (:foreground ,green-3))))
    `(diff-refine-change ((,class (:foreground ,yellow-3 :bold t))))
    `(diff-refine-removed ((,class (:foreground ,red-3 :bold t))))
-   `(diff-removed ((,class (:foreground ,red-3 :bold t))))
+   `(diff-removed ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
 
    ;; Ediff
    `(ediff-current-diff-A ((,class (:background ,yellow-0))))

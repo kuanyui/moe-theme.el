@@ -15,7 +15,7 @@ Moe, moe, kyun!")
       (orange-1 "#ffaf5f") (orange-2 "#ff8700") (orange-3 "#ff5d17") (orange-4 "#d75f00")
       (magenta-1 "#ff7bbb") (magenta-2 "#ff4ea3") (magenta-3 "#ff1f8b")
       (green-1 "#afff00") (green-2 "#a1db00") (green-3 "#5faf00") (green-4 "#008700") (green-5 "#005f00")
-      (blue-1 "#729fcf") (blue-2 "#1f5bff") (blue-3 "#005f87") (blue-4 "#005faf") (blue-5 "#0000af") 
+      (blue-1 "#729fcf") (blue-2 "#1f5bff") (blue-3 "#005f87") (blue-4 "#005faf") (blue-5 "#0000af")
       (cyan-1 "#87ffff") (cyan-2 "#00ffff") (cyan-3 "#00d7af") (cyan-4 "#5f87af")
       (purple-1 "#d18aff") (purple-2 "#af5fff") (purple-3 "#9a08ff") (purple-4 "#6c0099")
       (red-1 "#ef2929")  (red-2 "#dd0000")  (red-3 "#a40000")
@@ -26,7 +26,7 @@ Moe, moe, kyun!")
       (green-0 "#d7ff5f") (blue-0 "#8cc4ff") (purple-0 "#af87ff") (yellow-0 "#ffff87") (magenta-0 "#ffafff")
       (red-0 "#ff4b4b")  (black-4 "#3a3a3a") (black-5 "#303030") (black-6 "#000000") (orange-0 "#ffaf87")
       (green-00 "#d7ff87") (yellow-00 "#ffffaf") (orange-00 "#ffd787") (blue-00 "#d7d7ff") (purple-00 "#e6a8df"))
- 
+
   (custom-theme-set-faces
    'moe-dark
    ;; Ensure sufficient contrast on low-color terminals.
@@ -153,7 +153,7 @@ Moe, moe, kyun!")
    `(outline-6 ((,class (:bold t :foreground ,cyan-3))))
    `(outline-7 ((,class (:bold t :foreground ,magenta-2))))
    `(outline-8 ((,class (:bold t :foreground ,purple-2))))
-   
+
    ;; undo-tree
    `(undo-tree-visualizer-default-face ((,class (:foreground ,white-1))))
    `(undo-tree-visualizer-current-face ((,class (:foreground ,green-2 :weight bold))))
@@ -198,7 +198,7 @@ Moe, moe, kyun!")
    `(popup-scroll-bar-background-face ((,class (:background ,blue-0 :foreground ,blue-0))))
    `(popup-scroll-bar-foreground-face ((,class (:background ,blue-3 :foreground ,blue-3))))
    `(popup-summary-face ((,class (:background ,blue-00 :foreground ,blue-3))))
-   `(popup-tip-face ((,class (:background ,yellow-00 :foreground ,black-3))))   
+   `(popup-tip-face ((,class (:background ,yellow-00 :foreground ,black-3))))
 
    ;; Button and link faces
    `(link ((,class (:underline t :foreground ,blue-1))))
@@ -373,22 +373,22 @@ Moe, moe, kyun!")
    `(grep-match-face ((,class (:foreground nil :background nil :inherit match))))
 
    ;; Diff
-   `(diff-added ((,class (:foreground ,green-0 :bold t))))
-   `(diff-changed ((,class (:foreground ,yellow-2 :bold t))))
+   `(diff-added ((,class (:foreground ,green-0 :background ,black-4 :bold t))))
+   `(diff-changed ((,class (:foreground ,yellow-2 :background ,black-4 :bold t))))
    `(diff-context ((,class (:foreground ,black-2-5))))
-   `(diff-file-header ((,class (:foreground ,white-0 :background ,black-3 :bold t))))
+   `(diff-file-header ((,class (:foreground ,black-5 :background ,blue-0 :bold t))))
    `(diff-function ((,class (:foreground ,black-4 :background ,white-2))))
-   `(diff-header ((,class (:foreground ,black-4 :background ,white-2))))
-   `(diff-hunk-header ((,class (:foreground ,black-4 :background ,white-2))))
+   `(diff-header ((,class (:foreground ,blue-3 :background ,blue-0))))
+   `(diff-hunk-header ((,class (:foreground ,blue-0 :background ,black-3 :bold t))))
    `(diff-index ((,class (:foreground ,black-4 :background ,white-3 :bold t))))
-   `(diff-indicator-added ((,class (:foreground ,green-1 :bold t))))
-   `(diff-indicator-changed ((,class (:foreground ,yellow-2 :bold t))))
-   `(diff-indicator-removed ((,class (:foreground ,red-1 :bold t))))
-   `(diff-nonexistent ((,class (:foreground ,white-0 :background ,red-3 :bold t ))))
+   `(diff-indicator-added ((,class (:foreground ,white-0 :background ,green-3 :bold t))))
+   `(diff-indicator-changed ((,class (:foreground ,white-0 :background ,yellow-3 :bold t))))
+   `(diff-indicator-removed ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
+   `(diff-nonexistent ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
    `(diff-refine-added ((,class (:foreground ,green-2))))
    `(diff-refine-change ((,class (:foreground ,yellow-3 :bold t))))
    `(diff-refine-removed ((,class (:foreground ,red-2 :bold t))))
-   `(diff-removed ((,class (:foreground ,red-0 :bold t))))
+   `(diff-removed ((,class (:foreground ,red-0 :background ,black-4 :bold t))))
 
    ;; Ediff
    `(ediff-current-diff-A ((,class (:background ,yellow-4))))
@@ -489,7 +489,7 @@ Moe, moe, kyun!")
 
    ;; Javascript
    `(js2-function-param-face ((,class (:foreground ,green-3))))
-   
+
    ;; rcirc
    `(rcirc-bright-nick ((,class (:foreground ,blue-1 :bold t))))
    `(rcirc-dim-nick ((,class (:foreground ,black-2 :bold t))))
@@ -572,8 +572,8 @@ Moe, moe, kyun!")
    `(ansi-color-names-vector [,black-5 ,red-0 ,green-0 ,yellow-1
 			      ,blue-1 ,purple-1 ,blue-0 ,white-1])))
 ;; fix wrong default face under GUI version Emacs
-(if window-system 
-    (progn 
+(if window-system
+    (progn
       (set-background-color "#303030")
       (set-foreground-color "#c6c6c6")))
 
