@@ -206,6 +206,18 @@ Moe, moe, kyun!")
 
    ;; Gnus
    `(gnus-button ((,class (:weight normal :foreground ,blue-2 :underline t))))
+   `(gnus-cite-1 ((,class (:foreground ,blue-1 :background ,LIGHT_BG :slant italic))))
+   `(gnus-cite-10 ((,class (:foreground ,magenta-1 :background ,LIGHT_BG :slant italic))))
+   `(gnus-cite-11 ((,class (:foreground ,cyan-3 :background ,LIGHT_BG :slant italic))))
+   `(gnus-cite-2 ((,class (:foreground ,green-2 :background ,LIGHT_BG :slant italic))))
+   `(gnus-cite-3 ((,class (:foreground ,magenta-2 :background ,LIGHT_BG :slant italic))))
+   `(gnus-cite-4 ((,class (:foreground ,cyan-3 :background ,LIGHT_BG :slant italic))))
+   `(gnus-cite-5 ((,class (:foreground ,red-2 :background ,LIGHT_BG :slant italic))))
+   `(gnus-cite-6 ((,class (:foreground ,purple-2 :background ,LIGHT_BG :slant italic))))
+   `(gnus-cite-7 ((,class (:foreground ,orange-2 :background ,LIGHT_BG :slant italic))))
+   `(gnus-cite-8 ((,class (:foreground ,blue-1 :background ,LIGHT_BG :slant italic))))
+   `(gnus-cite-9 ((,class (:foreground ,green-2 :background ,LIGHT_BG :slant italic))))
+
    `(gnus-emphasis-highlight-words ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
    `(gnus-group-mail-1 ((,class (:foreground ,blue-2))))
    `(gnus-group-mail-1-empty ((,class (:foreground ,black-2))))
