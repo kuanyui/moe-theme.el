@@ -473,6 +473,11 @@ Moe, moe, kyun!")
    `(flycheck-error ((,class (:background ,red-2))))
    `(flycheck-warnline ((,class (:background ,orange-2))))
 
+   ;; Malabar
+   `(malabar-error-face ((,class (:background ,red-2))))
+   `(malabar-warning-face ((,class (:underline ,orange-2))))
+   `(malabar-info-face ((,class (:underline ,blue-2))))
+
    ;; MMM-Mode
    `(mmm-cleanup-submode-face ((,class (:background ,orange-00))))
    `(mmm-code-submode-face ((,class (:background ,blue-00))))
@@ -577,7 +582,7 @@ Moe, moe, kyun!")
    ;; git-gutter-fringe
    `(git-gutter-fr:modified ((,class (:foreground ,magenta-2))))
    `(git-gutter-fr:added ((,class (:foreground ,yellow-2))))
-   `(git-gutter-fr:deleted ((,class (:foreground ,red-1))))
+   `(git-gutter-fr:deleted ((,class (:foreground ,red-2))))
 )
 
   (custom-theme-set-variables
