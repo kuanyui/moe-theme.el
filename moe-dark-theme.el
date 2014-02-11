@@ -509,6 +509,8 @@ Moe, moe, kyun!")
    ;; Flymake
    `(flymake-warnline ((,class (:underline ,orange-2))))
    `(flymake-errline ((,class (:underline ,red-2))))
+
+   ;; Flycheck
    `(flycheck-error ((,class (:background ,red-2))))
    `(flycheck-warnline ((,class (:background ,orange-2))))
 
