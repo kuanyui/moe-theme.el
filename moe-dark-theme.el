@@ -474,7 +474,7 @@ Moe, moe, kyun!")
    `(flycheck-warnline ((,class (:background ,orange-2))))
 
    ;; Malabar
-   `(malabar-error-face ((,class (:background ,red-2))))
+   `(malabar-error-face ((,class (:underline ,red-2))))
    `(malabar-warning-face ((,class (:underline ,orange-2))))
    `(malabar-info-face ((,class (:underline ,blue-2))))
 
