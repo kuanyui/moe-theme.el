@@ -376,9 +376,9 @@ Moe, moe, kyun!")
 
    ;; git-commit-mode
    `(git-commit-branch-face ((,class (:foreground ,blue-4 :background ,blue-0 :underline t))))
-   `(git-commit-comment-action-face ((,class (:foreground ,orange-2 :background nil))))
+   `(git-commit-comment-action-face ((,class (:foreground ,orange-3 :background ,LIGHT_BG :underline t))))
    `(git-commit-comment-file-face ((,class (:foreground ,magenta-2))))
-   `(git-commit-comment-heading-face ((,class (:foreground ,green-4 :background ,green-00))))
+   `(git-commit-comment-heading-face ((,class (:foreground ,green-4 :background ,green-00 :bold t))))
    `(git-commit-known-pseudo-header-face ((,class (:foreground ,green-2))))
    `(git-commit-no-branch-face ((,class (:foreground ,orange-3))))
    `(git-commit-nonempty-second-line-face ((,class (:foreground ,red-2))))
