@@ -40,7 +40,7 @@ Moe, moe, kyun!")
 
    ;; Highlighting faces
    `(fringe ((,class (:foreground ,black-3 :background ,black-2))))
-   `(linum ((,class (:foreground ,white-1 :background ,black-5))))
+   `(linum ((,class (:foreground ,white-1 :background ,black-2))))
    `(linum-highlight-face ((,class (:background ,white-1 :foreground ,black-2))))
    `(highlight ((,class (:background ,black-3))))
    `(hl-line ((,class (:background ,black-3))))
