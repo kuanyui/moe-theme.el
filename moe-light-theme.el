@@ -470,6 +470,14 @@ Moe, moe, kyun!")
    ;; Flymake
    `(flymake-warnline ((,class (:underline ,orange-2))))
    `(flymake-errline ((,class (:underline ,red-2))))
+   `(flycheck-error ((,class (:background ,red-2))))
+   `(flycheck-warnline ((,class (:background ,orange-2))))
+
+   ;; Malabar
+   `(malabar-error-face ((,class (:underline ,red-2))))
+   `(malabar-warning-face ((,class (:underline ,orange-2))))
+   `(malabar-info-face ((,class (:underline ,blue-2))))
+
 
    ;; MMM-Mode
    `(mmm-cleanup-submode-face ((,class (:background ,orange-00))))
@@ -548,6 +556,12 @@ Moe, moe, kyun!")
    `(erm-syn-errline ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
    `(erm-syn-warnline ((,class (:foreground ,white-0 :background ,orange-2 :bold t))))
 
+   ;; powerline
+   `(powerline-active1 ((,class (:background ,white-1 :foreground ,blue-2))))
+   `(powerline-active2 ((,class (:foreground ,blue-4 :background ,blue-0))))
+   `(powerline-inactive1 ((,class (:foreground ,blue-2 :background ,white-1))))
+   `(powerline-inactive2 ((,class (:foreground ,blue-0 :background ,blue-4))))
+
    ;; ansi-term
    `(term-color-black ((,class (:background ,black-5 :foreground ,black-5))))
    `(term-color-blue ((,class (:background ,blue-1 :foreground ,blue-1))))
@@ -565,6 +579,11 @@ Moe, moe, kyun!")
    `(ido-only-match ((,class (:foreground ,green-4 :background ,green-00 :bold t))))
    `(ido-subdir ((,class (:foreground ,blue-1 :bold t))))
    `(ido-virtual ((,class (:foreground ,magenta-3))))
+
+   ;; git-gutter-fringe
+   `(git-gutter-fr:modified ((,class (:foreground ,magenta-2))))
+   `(git-gutter-fr:added ((,class (:foreground ,yellow-2))))
+   `(git-gutter-fr:deleted ((,class (:foreground ,red-2))))
 )
 
   (custom-theme-set-variables
