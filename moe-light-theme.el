@@ -596,12 +596,6 @@ Moe, moe, kyun!")
    `(erm-syn-errline ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
    `(erm-syn-warnline ((,class (:foreground ,white-0 :background ,orange-2 :bold t))))
 
-   ;; powerline
-   `(powerline-active1 ((,class (:background ,white-1 :foreground ,blue-2))))
-   `(powerline-active2 ((,class (:foreground ,blue-4 :background ,blue-0))))
-   `(powerline-inactive1 ((,class (:foreground ,blue-2 :background ,white-1))))
-   `(powerline-inactive2 ((,class (:foreground ,blue-0 :background ,blue-4))))
-
    ;; ansi-term
    `(term-color-black ((,class (:background ,black-5 :foreground ,black-5))))
    `(term-color-blue ((,class (:background ,blue-1 :foreground ,blue-1))))
