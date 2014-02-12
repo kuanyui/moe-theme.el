@@ -510,6 +510,15 @@ Moe, moe, kyun!")
    `(flymake-warnline ((,class (:underline ,orange-2))))
    `(flymake-errline ((,class (:underline ,red-2))))
 
+   ;; Flycheck
+   `(flycheck-error ((,class (:background ,red-2))))
+   `(flycheck-warnline ((,class (:background ,orange-2))))
+
+   ;; Malabar
+   `(malabar-error-face ((,class (:underline ,red-2))))
+   `(malabar-warning-face ((,class (:underline ,orange-2))))
+   `(malabar-info-face ((,class (:underline ,blue-2))))
+
    ;; MMM-Mode
    `(mmm-cleanup-submode-face ((,class (:background ,orange-00))))
    `(mmm-code-submode-face ((,class (:background ,blue-00))))
@@ -604,6 +613,11 @@ Moe, moe, kyun!")
    `(ido-only-match ((,class (:foreground ,green-2 :background nil))))
    `(ido-subdir ((,class (:foreground ,blue-1 :bold t))))
    `(ido-virtual ((,class (:foreground ,magenta-3))))
+
+   ;; git-gutter-fringe
+   `(git-gutter-fr:modified ((,class (:foreground ,magenta-2))))
+   `(git-gutter-fr:added ((,class (:foreground ,yellow-2))))
+   `(git-gutter-fr:deleted ((,class (:foreground ,red-2))))
 
    ;; widget
    `(widget-button ((,class (:foreground ,blue-1 :underline t :bold t))))
