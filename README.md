@@ -20,7 +20,7 @@
 * Automatically switch between dark and light `moe-theme` by local time! (optional)
 
 ## Support
-`moe-theme.el` provide good-looking[tm] and quite fully-supported font-faces for various modes, include:
+`moe-theme.el` provide good-looking™ and quite fully-supported font-faces for various modes, include:
 * Diff / EDiff
 * Dired / Dired+
 * ERC / rcirc
