@@ -613,6 +613,19 @@ Moe, moe, kyun!")
    `(ido-subdir ((,class (:foreground ,blue-1 :bold t))))
    `(ido-virtual ((,class (:foreground ,magenta-3))))
 
+   ;; git-gutter (&-fringe)
+   `(git-gutter-fr:added ((,class (:foreground ,green-4 :background ,green-0 :bold t))))
+   `(git-gutter-fr:deleted ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
+   `(git-gutter-fr:modified ((,class (:foreground ,yellow-4 :background ,yellow-0 :bold t))))
+   `(git-gutter:added ((,class (:foreground ,green-4 :background ,green-0 :bold t))))
+   `(git-gutter:deleted ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
+   `(git-gutter:modified ((,class (:foreground ,yellow-4 :background ,yellow-0 :bold t))))
+
+   ;; Column marker
+   `(column-marker-1 ((,class (:background ,white-3))))
+   `(column-marker-2 ((,class (:background ,yellow-0))))
+   `(column-marker-3 ((,class (:background ,red-00))))
+
    ;; widget
    `(widget-button ((,class (:foreground ,blue-2 :underline t :bold t))))
    `(widget-button-pressed ((,class (:foreground ,blue-1))))
