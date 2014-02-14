@@ -335,7 +335,7 @@ Moe, moe, kyun!")
    ;; Magit
    `(magit-branch ((,class (:foreground ,blue-2 :background ,white-0 :underline ,blue-2 :bold t))))
    `(magit-diff-add ((,class (:foreground ,green-0 :background nil :bold t))))
-   `(magit-diff-del ((,class (:foreground ,red-1 :background nil :bold t))))
+   `(magit-diff-del ((,class (:foreground ,red-0 :background nil :bold t))))
    `(magit-diff-file-header ((,class (:foreground ,white-0 :background ,black-2 :bold t))))
    `(magit-diff-hunk-header ((,class (:foreground ,white-2 :background ,black-2-5 :bold t))))
    `(magit-diff-merge-current ((,class (:foreground ,purple-1))))
