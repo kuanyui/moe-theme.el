@@ -509,6 +509,15 @@ Moe, moe, kyun!")
    `(flymake-warnline ((,class (:underline ,orange-2))))
    `(flymake-errline ((,class (:underline ,red-2))))
 
+   ;; Flycheck
+   `(flycheck-error ((,class (:background ,red-2 :foreground ,white-0 :bold t))))
+   `(flycheck-warnline ((,class (:background ,orange-2 :foreground ,white-0 :bold t))))
+
+   ;; Malabar
+   `(malabar-error-face ((,class (:underline ,red-2))))
+   `(malabar-warning-face ((,class (:underline ,orange-2))))
+   `(malabar-info-face ((,class (:underline ,blue-2))))
+
    ;; MMM-Mode
    `(mmm-cleanup-submode-face ((,class (:background ,orange-00))))
    `(mmm-code-submode-face ((,class (:background ,blue-00))))
@@ -617,7 +626,7 @@ Moe, moe, kyun!")
    'moe-light
    `(ansi-color-names-vector [,black-5 ,red-0 ,green-2 ,yellow-1
 			      ,blue-1 ,purple-1 ,blue-0 ,white-0])))
-;; fix wrong default face
+;; fix wrong default face under GUI version Emacs
 (if window-system
     (progn
       (set-background-color "#fdfde7")
