@@ -21,14 +21,16 @@
 
 ## Support
 `moe-theme.el` provide good-looking[tm] and quite fully-supported font-faces for various modes, include:
-* Dired/Dired+
-* ERC/rcirc
-* Eshell/Ansi-term
-* Helm/ido
+* Diff / EDiff
+* Dired / Dired+
+* ERC / rcirc
+* Eshell / Ansi-term
+* Gnus / Message
+* Helm / ido
 * Org-mode
-* Magit
+* Magit / Git-commit / Git-gutter
 * Markdown-mode
-* popup/Auto-complete-mode
+* popup / Auto-complete-mode
 * Rainbow-delimiters
 * Twittering-mode
 * undo-tree
