@@ -296,6 +296,7 @@ Moe, moe, kyun!")
    `(helm-ff-invalid-symlink ((,class (:foreground ,white-1 :background ,red-2))))
    `(helm-ff-prefix ((,class (:foreground ,white-1 :background ,orange-2))))
    `(helm-buffer-size ((,class (:foreground ,orange-2))))
+   `(helm-grep-file ((,class (:foreground ,purple-1))))
 
    ;; Dired/Dired+
    `(dired-directory ((,class (:foreground ,blue-1 :bold t))))
