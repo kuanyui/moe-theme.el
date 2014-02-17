@@ -334,7 +334,7 @@ Moe, moe, kyun!")
    `(diredp-exec-priv ((,class (:foreground ,red-3 :background ,orange-0))))
 
    ;; Magit
-   `(magit-branch ((,class (:foreground ,blue-2 :background ,white-0 :underline ,blue-2 :bold t))))
+   `(magit-branch ((,class (:foreground ,white-0 :background ,orange-2 :bold t :underline nil))))
    `(magit-diff-add ((,class (:foreground ,green-0 :background nil :bold t))))
    `(magit-diff-del ((,class (:foreground ,red-0 :background nil :bold t))))
    `(magit-diff-file-header ((,class (:foreground ,white-0 :background ,black-2 :bold t))))
