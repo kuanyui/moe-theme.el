@@ -1,7 +1,7 @@
 ;; moe-theme-switcher.el
 ;; Author: kuanyui (azazabc123@gmail.com)
 ;; Date: 2013/05/11 11:39
-;; 
+;;
 ;; This file is not a part of GNU Emacs,
 ;; but this file is released under GPL v3.
 
@@ -12,9 +12,11 @@
 (defvar moe-theme-switch-by-sunrise-and-sunset t
 "Automatically switch between dark and light moe-theme.
 
-If this value is nil, moe-theme will switch at fixed time (06:00 and 18:00). 
+If this value is nil, moe-theme will switch at fixed time (06:00 and 18:00).
 
-If this value is t and both calendar-latitude and calendar-longitude are set properly, the switching will be triggered at the sunrise and sunset time of the local calendar.
+If this value is t and both calendar-latitude and calendar-longitude are set
+properly, the switching will be triggered at the sunrise and sunset time of the
+local calendar.
 
 Take Keelung, Taiwan(25N,121E) for example, you can set like this:
 
@@ -68,7 +70,7 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
   (let (rise_set a b c d e f)
     (setq rise_set (get-sunrise-sunset-string))
     (if (string-match "0:00 hours daylight" rise_set) ;If polar-night
-        (progn 
+        (progn
           (setq 24h/sunrise 'polar-night
                 24h/sunset 'polar-night))
       (if (string-match "24:00 hours daylight" rise_set) ;If midnight-sun
@@ -100,14 +102,14 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
        (let ((now (list (string-to-number (format-time-string "%H"))
                         (string-to-number (format-time-string "%M")))))
          (if (and (or                        ;magic-logic [tm]
-                   (> (car now) (car 24h/sunrise)) 
-                   (and 
-                    (= (car now) (car 24h/sunrise)) 
-                    (>= (second now) (second 24h/sunrise)))) 
-                  (or 
-                   (< (car now) (car 24h/sunset)) 
-                   (and 
-                    (= (car now) (car 24h/sunset)) 
+                   (> (car now) (car 24h/sunrise))
+                   (and
+                    (= (car now) (car 24h/sunrise))
+                    (>= (second now) (second 24h/sunrise))))
+                  (or
+                   (< (car now) (car 24h/sunset))
+                   (and
+                    (= (car now) (car 24h/sunset))
                     (< (second now) (second 24h/sunset)))))
              (moe-load-theme 'light)
            (moe-load-theme 'dark)
@@ -141,4 +143,3 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
 (moe-theme-auto-switch)
 
 (provide 'moe-theme-switcher)
-

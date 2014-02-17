@@ -36,7 +36,7 @@
 ;;    It's impossible to satisfy everyone with one theme, so `moe-theme` provide
 ;;    some customizations that you may like.
 ;;
-;;    # Resize Titles ##########################################################
+;;    ### Resize Titles ########################################################
 ;;
 ;;    You may want to resize the titles in `markdown-mode', `org-mode', or
 ;;    `rst-mode':
@@ -51,7 +51,7 @@
 ;;    If you don't like this, just leave them nil, and all the titles will be
 ;;    the same size.
 ;;
-;;    # Colorful Mode-line and Powerline #######################################
+;;    ### Colorful Mode-line and Powerline #####################################
 ;;
 ;;    Tired of boring blue mode-line? Set default mode-line color like this:
 ;;
@@ -64,7 +64,7 @@
 ;;    Mayby you'll also like `moe-theme-random-color', which gives you a
 ;;    random mood :D.
 ;;
-;;    # Powerline ##############################################################
+;;    ### Powerline ############################################################
 ;;
 ;;    Now we supports Powerline (https://github.com/milkypostman/powerline),
 ;;    which makes mode-line looks fabulous! We recommended installing Powerline
@@ -73,13 +73,20 @@
 ;;    ### Too Yellow Background? ###############################################
 ;;
 ;;    With 256-colors, default yellow background of moe-light may be too yellow
-;;    on some screens.
+;;    and harsh to eyes on some screens.
 ;;
 ;;    If you encounter this problem, and want to set background color to #ffffff
 ;;    in terminal, set the value of `moe-light-pure-white-background-in-terminal'
 ;;    to t:
 ;;
 ;;        (setq moe-light-pure-white-background-in-terminal t)
+;;
+;;    ### Highlight Buffer-id on Mode-line? ####################################
+;;
+;;    You may be dislike default highlight on mode-line-buffer-id, now it can be
+;;    disable:
+;;
+;;        (setq moe-theme-highlight-buffer-id nil)
 ;;
 ;;
 ;; = Auto Switching ============================================================
@@ -350,7 +357,7 @@ You may also like `moe-theme-random-color'"
   (setq moe-theme-mode-line-color
         (intern (completing-read
                  "Select a color: "
-                 '((blue) (orange) (magenta) (yellow) (purple) (red) (cyan) (w/b))
+                 '((blue) (green) (orange) (magenta) (yellow) (purple) (red) (cyan) (w/b))
                  nil t "" nil nil t)))
   (if (eq (frame-parameter nil 'background-mode) 'light)
       (moe-light)
@@ -361,9 +368,9 @@ You may also like `moe-theme-random-color'"
 (defun moe-theme-random-color ()
   "Give me a random mode-line color.=w=+"
   (interactive)
-  (let* ((n (abs (% (random) 8)))
+  (let* ((n (abs (% (random) 9)))
          (current-color moe-theme-mode-line-color)
-         (color-list '(blue orange magenta yellow purple red cyan w/b)))
+         (color-list '(blue green orange magenta yellow purple red cyan w/b)))
     (if (eq (elt color-list n) current-color) ;If gotten color eq current-color, random again.
         (moe-theme-random-color)
       (setq moe-theme-mode-line-color (elt color-list n)))

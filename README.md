@@ -11,13 +11,17 @@
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light04.png"><img src="pics/light04.png" width="355" height="192"/></a>
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark05.png"><img src="pics/dark05.png" width="355" height="192"/></a>
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light05.png"><img src="pics/light05.png" width="355" height="192"/></a>
+<a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/mode-line-preview.png"><img src="pics/mode-line-preview.png" width="710" height="182"/></a>
 
 ## What Special?
 * Optimized for terminal's 256 color palettes.
 * Black-on-white & white-on-black.
 * Delightful and cheerful color palettes.
-* Quite completed font faces for each mode.
-* Automatically switch between dark and light `moe-theme` by local time! (optional)
+* Quite completed (and reasonable) font faces for each mode.
+* **Easy to customize!**
+    * Colorful Mode-line / Powerline.
+    * Enlarge titles font sizes or not.
+    * Automatically switch between dark and light `moe-theme` by local time! (optional)
 
 ## Support
 `moe-theme.el` provide good-looking™ and quite fully-supported font-faces for various modes, include:
@@ -53,7 +57,7 @@ Download the archive of `moe-theme` to `~/.emacs.d/themes` and extract it. Then,
 ```
 
 ## Customizations
-It's impossible to satisfy everyone with one theme, but `moe-theme` provide some customizations that you may like.
+It's impossible to satisfy everyone with one fixed theme, but `moe-theme` provide some customizations that you may like.
 
 Select a theme you like and let's go on:
 
@@ -102,13 +106,21 @@ Mayby you'll also like `moe-theme-random-color`, which gives you a random mood :
 Now `moe-theme` supports [Powerline](https://github.com/milkypostman/powerline), which makes mode-line looks fabulous! We recommended installing `powerline` and run `powerline-moe-theme`.
 
 ### Too Yellow Background?
-With 256-colors, default yellow background of moe-light may be too yellow on some screens.
+With 256-colors terminal, default yellow background of moe-light may be too yellow and harsh to eyes on some screens.
 
 If you encounter this problem, and want to set background color to `#ffffff` in terminal, set the value of `moe-light-pure-white-background-in-terminal` to t:
 
 ```lisp
     (setq moe-light-pure-white-background-in-terminal t)
 ```
+
+### Highlight Buffer-id on Mode-line?
+You may be dislike default highlight on mode-line-buffer-id, now it can be disable:
+
+```lisp
+(setq moe-theme-highlight-buffer-id nil)
+```
+
 ## Have A Good Mood Today?
 I prefer a terminal with a black-on-white color scheme. I found that in the daytime, sunlight is strong and black-on-white is more readable; However, white-on-black would be less harsh to the eyes at night.
 
