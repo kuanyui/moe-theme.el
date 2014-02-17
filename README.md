@@ -53,9 +53,9 @@ Download the archive of `moe-theme` to `~/.emacs.d/themes` and extract it. Then,
 ```
 
 ## Customizations
-It's impossible to satisfy everyone with one theme, but `moe-theme` provide some customizations that you may like it
+It's impossible to satisfy everyone with one theme, but `moe-theme` provide some customizations that you may like.
 
-Select a theme you like and go on:
+Select a theme you like and let's go on:
 
 ```lisp
     (require 'moe-theme)
@@ -81,6 +81,7 @@ You may want to resize titles in `markdown-mode`, `org-mode`, or `ReStructuredTe
   (setq moe-theme-resize-org-title '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
   (setq moe-theme-resize-rst-title '(2.0 1.7 1.5 1.3 1.1 1.0))
 ```
+
 >Markdown should have 6 items; org has 9 items; rst has 6 items.
 
 The values should be lists. Larger the values, larger the fonts.
