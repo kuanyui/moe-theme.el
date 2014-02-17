@@ -40,15 +40,9 @@
 * Emacs 24 or above.
 * 256-colors (or higher) terminal.
 
-## Install
+## Download
 ### Via package.el
 `Moe-theme` is available in [MELPA](https://github.com/milkypostman/melpa) repository now, so you can install `moe-theme` easily with `M-x` `list-packages`.
-
-If you want `moe-theme` to load automatically as Emacs startup, take `moe-dark` for example, you can use:
-
-```lisp
-	(load-theme 'moe-dark t)
-```
 
 ### Manually
 Download the archive of `moe-theme` to `~/.emacs.d/themes` and extract it. Then, add these to your init file:
@@ -56,17 +50,64 @@ Download the archive of `moe-theme` to `~/.emacs.d/themes` and extract it. Then,
 ```lisp
 	;;customize theme
 	(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-	(load-theme 'moe-dark t)
 ```
-    
-Or you can load theme just by adding:    
+
+## Customizations
+It's impossible to satisfy everyone with one theme, but `moe-theme` provide some customizations that you may like it
+
+Select a theme you like and go on:
 
 ```lisp
-    (load-file "~/.emacs.d/themes/moe-dark-theme.el")
+    (require 'moe-theme)
+    ;; Choose the one you like, (moe-light) or (moe-dark)
+    (moe-light)
 ```
 
-(Note: `moe-light-theme.el` and `moe-dark-theme.el` are independent from each other, so you can just download one of them.)
+>#### Load Theme Itself Only?
+>If you just want to use `load-theme` to apply **ONLY** `moe-theme` itself and **without customizations**, you can skip "Customizations" chapter and just use this:
+>
+>```lisp
+>    (load-theme 'moe-dark t)
+>    ;;or
+>    (load-theme 'moe-light t)
+>```
 
+### Resize Titles
+You may want to resize titles in `markdown-mode`, `org-mode`, or `ReStructuredText-mode`:
+
+```lisp
+  ;; Resize titles
+  (setq moe-theme-resize-markdown-title '(2.0 1.7 1.5 1.3 1.0 1.0))
+  (setq moe-theme-resize-org-title '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
+  (setq moe-theme-resize-rst-title '(2.0 1.7 1.5 1.3 1.1 1.0))
+```
+>Markdown should have 6 items; org has 9 items; rst has 6 items.
+
+The values should be lists. Larger the values, larger the fonts.
+If you don't like this, just leave them nil, and all the titles will be the same size.
+
+### Colorful Mode-line and Powerline
+Tired of boring blue mode-line? Set default mode-line color like this:
+```lisp
+  (setq moe-theme-mode-line-color 'orange)
+  ;; (Available colors: blue, orange, magenta, yellow, purple, red, cyan, w/b.)
+```
+
+You can use `moe-theme-select-color` to change color interactively.
+
+Mayby you'll also like `moe-theme-random-color`, which gives you a random mood :D.
+
+#### Powerline
+Now `moe-theme` supports [Powerline](https://github.com/milkypostman/powerline), which makes mode-line looks fabulous! We recommended installing `powerline` and run `powerline-moe-theme`.
+
+### Too Yellow Background?
+With 256-colors, default yellow background of moe-light may be too yellow on some screens.
+
+If you encounter this problem, and want to set background color to `#ffffff` in terminal, set the value of `moe-light-pure-white-background-in-terminal` to t:
+
+```lisp
+    (setq moe-light-pure-white-background-in-terminal t)
+```
 ## Have A Good Mood Today?
 I prefer a terminal with a black-on-white color scheme. I found that in the daytime, sunlight is strong and black-on-white is more readable; However, white-on-black would be less harsh to the eyes at night.
 
@@ -94,7 +135,7 @@ Take "Keelung, Taiwan" (25N,121E) for example, you can set like this:
 	(setq calendar-longitude +121)
 ```
 
-## Note
+## Notes
 ### No 256-Color Output?
 If your terminal emulator doesn't render 256-color output correctly, set its environment variable `TERM` to `xterm-256color`. For example, if you are using `Konsole`, navigate to `Edit Current Profile > General > Environment > Edit` and add the following line:
 

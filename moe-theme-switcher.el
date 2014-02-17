@@ -7,6 +7,7 @@
 
 (require 'moe-dark-theme)
 (require 'moe-light-theme)
+(require 'moe-theme)
 
 (defvar moe-theme-switch-by-sunrise-and-sunset t
 "Automatically switch between dark and light moe-theme.
@@ -21,25 +22,25 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
 	(setq calendar-longitude +121)"
 )
 
-(defvar moe-now nil
-  "Variable recording which theme (moe-dark or light) is being used.")
+(defvar moe-theme-which-enabled nil
+  "Variable indicate which theme (moe-dark or light) is being used.")
 
 (defun moe-load-theme (switch-to)
   "Avoid unnecessary load-theme and screen flashing in GUI version Emacs"
-  (cond ((equal switch-to "light")
-         (if (not (equal moe-now "light"))
-           (progn (load-theme 'moe-light t)
-                  (setq moe-now "light"))))
-        ((equal switch-to "dark")
-         (if (not (equal moe-now "dark"))
-           (progn (load-theme 'moe-dark t)
-                  (setq moe-now "dark"))))))
+  (cond ((equal switch-to 'light)
+         (if (not (equal moe-theme-which-enabled 'light))
+           (progn (moe-light)
+                  (setq moe-theme-which-enabled 'light)))) ;[FIXME] Maybe unnecessary
+        ((equal switch-to 'dark)
+         (if (not (equal moe-theme-which-enabled 'dark))
+           (progn (moe-dark)
+                  (setq moe-theme-which-enabled 'dark)))))) ;[FIXME] Maybe unnecessary
 
 (defun switch-at-fixed-time ()
   (let ((now (string-to-int (format-time-string "%H"))))
     (if (and (>= now 06) (<= now 18))
-        (moe-load-theme "light")
-      (moe-load-theme "dark"))
+        (moe-load-theme 'light)
+      (moe-load-theme 'dark))
     nil))
 
 ;; (Thanks for letoh!)
@@ -92,9 +93,9 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
 ;; Excute every minute.
 (defun switch-by-locale ()
   (if (equal 24h/sunrise 'polar-night)  ;If polar-night...moe-dark!
-      (moe-load-theme "dark")
+      (moe-load-theme 'dark)
     (if (equal 24h/sunrise 'midnight-sun) ;If midnight-sun...moe-light!
-        (moe-load-theme "light")
+        (moe-load-theme 'light)
       (progn
        (let ((now (list (string-to-number (format-time-string "%H"))
                         (string-to-number (format-time-string "%M")))))
@@ -108,8 +109,8 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
                    (and 
                     (= (car now) (car 24h/sunset)) 
                     (< (second now) (second 24h/sunset)))))
-             (moe-load-theme "light")
-           (moe-load-theme "dark")
+             (moe-load-theme 'light)
+           (moe-load-theme 'dark)
            ))))))
 
 (defun moe-theme-auto-switch ()
@@ -130,10 +131,14 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
   ()
   )
 
+(setq moe-timer (run-with-timer 0 (* 1 60) 'moe-theme-auto-switch))
+
+;; [FIXME] A minor-mode to enable/disable moe-theme-switcher
+(defun moe-theme-switcher-disable ()
+  (interactive)
+  (cancel-timer moe-timer))
 
 (moe-theme-auto-switch)
-
-(run-with-timer 0 (* 1 60) 'moe-theme-auto-switch)
 
 (provide 'moe-theme-switcher)
 
