@@ -49,11 +49,13 @@
 `Moe-theme` is available in [MELPA](https://github.com/milkypostman/melpa) repository now, so you can install `moe-theme` easily with `M-x` `list-packages`.
 
 ### Manually
-Download the archive of `moe-theme` to `~/.emacs.d/themes` and extract it. Then, add these to your init file:
+Download the archive of `moe-theme` (or `git clone` it) to `~/.emacs.d/moe-theme.el` and extract it. Then, add these to your init file:
 
 ```lisp
 	;;customize theme
-	(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+	(add-to-list 'custom-theme-load-path "~/.emacs.d/moe-theme.el/")
+    (add-to-list 'load-path "~/.emacs.d/moe-theme.el/")
+    (require 'moe-theme)
 ```
 
 ## Customizations
@@ -62,7 +64,6 @@ It's impossible to satisfy everyone with one fixed theme, but `moe-theme` provid
 Select a theme you like and let's go on:
 
 ```lisp
-    (require 'moe-theme)
     ;; Choose the one you like, (moe-light) or (moe-dark)
     (moe-light)
 ```
@@ -108,14 +109,13 @@ Now `moe-theme` supports [Powerline](https://github.com/milkypostman/powerline),
 ### Too Yellow Background?
 With 256-colors terminal, default yellow background of moe-light may be too yellow and harsh to eyes on some screens.
 
-If you encounter this problem, and want to set background color to `#ffffff` in terminal, set the value of `moe-light-pure-white-background-in-terminal` to t:
+If you encounter this problem, and want to set background color to `#ffffff` in terminal, set the value of `moe-light-pure-white-background-in-terminal` to t. Add this line before `(moe-light)` or `(moe-dark)`:
 
 ```lisp
     (setq moe-light-pure-white-background-in-terminal t)
 ```
-
 ### Highlight Buffer-id on Mode-line?
-You may be dislike default highlight on mode-line-buffer-id, now it can be disable:
+You may be dislike default highlight on mode-line-buffer-id, now it can be disable by setting the value of `moe-theme-highlight-buffer-id` to nil. Add this line before `(moe-light)` or `(moe-dark)`:
 
 ```lisp
 (setq moe-theme-highlight-buffer-id nil)
@@ -174,7 +174,6 @@ Can't bear a mode with an ugly looking? `moe-theme` doesn't support the mode you
 
 ## Todo
 * Minor mode for `moe-theme-switcher`.
-* (Seems impossible...?) A variable controlling if enlarge title font size, e.g. org-mode.
 
 ## License
 `moe-theme.el` (include images) is released under GPL v3. Copyleft is so cute!
