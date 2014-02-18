@@ -93,29 +93,34 @@ The values should be lists. Larger the values, larger the fonts.
 If you don't like this, just leave them nil, and all the titles will be the same size.
 
 ### Colorful Mode-line and Powerline
-Tired of boring blue mode-line? Set default mode-line color like this:
+Tired of boring blue mode-line? You can set default mode-line color. Add following line **before** `(moe-light)` or `(moe-dark)`
+
 ```lisp
   (setq moe-theme-mode-line-color 'orange)
   ;; (Available colors: blue, orange, magenta, yellow, purple, red, cyan, w/b.)
 ```
 
-You can use `moe-theme-select-color` to change color interactively.
+You can also use `moe-theme-select-color` to change color interactively.
 
-Mayby you'll also like `moe-theme-random-color`, which gives you a random mood :D.
+Mayby you'll like `moe-theme-random-color`, too; which gives you a random mood :D.
 
 #### Powerline
-Now `moe-theme` supports [Powerline](https://github.com/milkypostman/powerline), which makes mode-line looks fabulous! We recommended installing `powerline` and run `powerline-moe-theme`.
+Now `moe-theme` supports [Powerline](https://github.com/milkypostman/powerline), which makes mode-line looks fabulous! We recommended installing `powerline` and run `powerline-moe-theme`. You can add this line to your init file:
+
+```lisp
+(powerline-moe-theme)
+```
 
 ### Too Yellow Background?
 With 256-colors terminal, default yellow background of moe-light may be too yellow and harsh to eyes on some screens.
 
-If you encounter this problem, and want to set background color to `#ffffff` in terminal, set the value of `moe-light-pure-white-background-in-terminal` to t. Add this line before `(moe-light)` or `(moe-dark)`:
+If you encounter this problem, and want to set background color to `#ffffff` in terminal, set the value of `moe-light-pure-white-background-in-terminal` to t. Add this line **before** `(moe-light)` or `(moe-dark)`:
 
 ```lisp
     (setq moe-light-pure-white-background-in-terminal t)
 ```
 ### Highlight Buffer-id on Mode-line?
-You may be dislike default highlight on mode-line-buffer-id, now it can be disable by setting the value of `moe-theme-highlight-buffer-id` to nil. Add this line before `(moe-light)` or `(moe-dark)`:
+You may be dislike default highlight on mode-line-buffer-id, now it can be disable by setting the value of `moe-theme-highlight-buffer-id` to nil. Add this line **before** `(moe-light)` or `(moe-dark)`:
 
 ```lisp
 (setq moe-theme-highlight-buffer-id nil)
