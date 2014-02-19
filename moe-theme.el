@@ -14,6 +14,7 @@
 ;;; Commentary:
 
 ;; You can take a look at screenshots and acquire more information on:
+;;
 ;;     https://github.com/kuanyui/moe-theme.el
 ;;
 ;;
@@ -30,6 +31,11 @@
 ;;      (moe-dark)
 ;;          or
 ;;      (moe-light)
+;;
+;;   But if you want to install manually, add this first:
+;;
+;;      (add-to-list 'custom-theme-load-path "~/path/to/moe-theme")
+;;      (add-to-list 'load-path "~/path/to/moe-theme")
 ;;
 ;; = Customizations ============================================================
 ;;
@@ -181,6 +187,12 @@ of each level.
 If the value is t, the titles will be resized by its level.
 If the vaule is nil, all the outlines will be the same size.")
 
+(defvar moe-theme-revert-theme t
+  "When call (moe-light) or (moe-dark), `load-theme' & `set-background-color'
+ (they would cause screen flashing) again or not. If doesn't need load-theme,
+set this to nil temporarily: (let (moe-theme-revert-theme) ...)
+DO NOT CHANGE ITS VALUE.")
+
 (defun moe-theme-resize-font-size ()
   (when (and (listp moe-theme-resize-markdown-title)
              (not (null moe-theme-resize-markdown-title))
@@ -242,12 +254,13 @@ If the vaule is nil, all the outlines will be the same size.")
 (defun moe-light ()
   "Load moe-light-theme with your customizations."
   (interactive)
-  (load-theme 'moe-light t)
-  (moe-theme-resize-font-size)
+  (if (not (null moe-theme-revert-theme)) ;Avoid unnecessary flashing screen when using random-color
+      (progn (load-theme 'moe-light t)
+             (moe-theme-resize-font-size)
 
-  (if (and (not (null moe-light-pure-white-background-in-terminal))
-           (null (window-system)))
-      (set-face-attribute 'default nil :background "#ffffff" :foreground "#5f5f5f"))
+             (if (and (not (null moe-light-pure-white-background-in-terminal))
+                      (null (window-system)))
+                 (set-face-attribute 'default nil :background "#ffffff" :foreground "#5f5f5f"))))
 
   (cond ((eq moe-theme-mode-line-color 'blue) ;要考慮到powerline的顏色搭配...orz
          (set-face-attribute 'mode-line nil :background "#5fafd7" :foreground "#ffffff")
@@ -295,7 +308,8 @@ If the vaule is nil, all the outlines will be the same size.")
 (defun moe-dark ()
   "Load moe-light-theme with your customizations."
   (interactive)
-  (load-theme 'moe-dark t)
+  (if (not (null moe-theme-revert-theme))
+      (load-theme 'moe-dark t))
   (moe-theme-resize-font-size)
   (cond ((eq moe-theme-mode-line-color 'blue) ;要考慮到powerline的顏色搭配...orz
          (set-face-attribute 'mode-line nil :background "#afd7ff" :foreground "#005f87")
@@ -359,9 +373,10 @@ You may also like `moe-theme-random-color'"
                  "Select a color: "
                  '((blue) (green) (orange) (magenta) (yellow) (purple) (red) (cyan) (w/b))
                  nil t "" nil nil t)))
-  (if (eq (frame-parameter nil 'background-mode) 'light)
-      (moe-light)
-    (moe-dark))
+    (let (moe-theme-revert-theme)
+      (if (eq (frame-parameter nil 'background-mode) 'light)
+          (moe-light)
+        (moe-dark)))
   (if (eq moe-theme-powerline-enable-p t)
       (powerline-moe-theme)))
 
@@ -375,9 +390,10 @@ You may also like `moe-theme-random-color'"
         (moe-theme-random-color)
       (setq moe-theme-mode-line-color (elt color-list n)))
 
-    (if (eq (frame-parameter nil 'background-mode) 'light)
-        (moe-light)
-      (moe-dark))
+    (let (moe-theme-revert-theme)
+      (if (eq (frame-parameter nil 'background-mode) 'light)
+          (moe-light)
+        (moe-dark)))
     (if (eq moe-theme-powerline-enable-p t)
         (powerline-moe-theme))))
 
@@ -398,7 +414,7 @@ as long as setq `moe-theme-mode-line-color' first."
         (cond ((eq (frame-parameter nil 'background-mode) 'light)
                (set-face-attribute 'mode-line-buffer-id nil :background nil :foreground "#1c1c1c")
                (set-face-attribute 'mode-line-inactive nil :background "#b2b2b2" :foreground "#ffffff")
-               (set-face-attribute 'powerline-active2 nil :background "#949494" :foreground "#ffffff")
+               (set-face-attribute 'powerline-active2 nil :background "#585858" :foreground "#ffffff")
                (set-face-attribute 'powerline-inactive1 nil :background "#c6c6c6" :foreground "#585858")
                (set-face-attribute 'powerline-inactive2 nil :background "#e4e4e4" :foreground "#585858")
                (cond ((eq moe-theme-mode-line-color 'blue)
