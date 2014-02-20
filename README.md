@@ -59,7 +59,7 @@ Download the archive of `moe-theme` (or `git clone` it) to `~/.emacs.d/moe-theme
 ```
 
 ## Customizations
-It's impossible to satisfy everyone with one fixed theme, but `moe-theme` provide some customizations that you may like.
+It's impossible to satisfy everyone with one fixed theme, but `moe-theme` provide some easy ways to customize itself.
 
 Select a theme you like and let's go on:
 
@@ -93,16 +93,16 @@ The values should be lists. Larger the values, larger the fonts.
 If you don't like this, just leave them nil, and all the titles will be the same size.
 
 ### Colorful Mode-line and Powerline
-Tired of boring blue mode-line? You can set default mode-line color. Add following line **before** `(moe-light)` or `(moe-dark)`
+Tired of boring blue mode-line? You can set default mode-line color. moe-theme provides 9 colors mode-line style. Add following lines **before** `(moe-light)` or `(moe-dark)`:
 
 ```lisp
   (setq moe-theme-mode-line-color 'orange)
-  ;; (Available colors: blue, orange, magenta, yellow, purple, red, cyan, w/b.)
+  ;; (Available colors: blue, orange, green ,magenta, yellow, purple, red, cyan, w/b.)
 ```
 
-You can also use `moe-theme-select-color` to change color interactively.
+You can also use `M-x` `moe-theme-select-color` to change color interactively.
 
-Mayby you'll like `moe-theme-random-color`, too; which gives you a random mood :D.
+Mayby you'll like `M-x` `moe-theme-random-color`, too; which gives you a random mood :D.
 
 #### Powerline
 Now `moe-theme` supports [Powerline](https://github.com/milkypostman/powerline), which makes mode-line looks fabulous! We recommended installing `powerline` and run `powerline-moe-theme`. You can add this line to your init file:

@@ -262,7 +262,7 @@ DO NOT CHANGE ITS VALUE.")
                       (null (window-system)))
                  (set-face-attribute 'default nil :background "#ffffff" :foreground "#5f5f5f"))))
 
-  (cond ((eq moe-theme-mode-line-color 'blue) ;要考慮到powerline的顏色搭配...orz
+  (cond ((eq moe-theme-mode-line-color 'blue)
          (set-face-attribute 'mode-line nil :background "#5fafd7" :foreground "#ffffff")
          (set-face-attribute 'mode-line-buffer-id nil :background "#5fafd7" :foreground "#3a3a3a")
          (set-face-attribute 'minibuffer-prompt nil :foreground "#5fafd7" :background "#3a3a3a"))
@@ -311,7 +311,7 @@ DO NOT CHANGE ITS VALUE.")
   (if (not (null moe-theme-revert-theme))
       (load-theme 'moe-dark t))
   (moe-theme-resize-font-size)
-  (cond ((eq moe-theme-mode-line-color 'blue) ;要考慮到powerline的顏色搭配...orz
+  (cond ((eq moe-theme-mode-line-color 'blue)
          (set-face-attribute 'mode-line nil :background "#5fafd7" :foreground "#ffffff")
          (set-face-attribute 'mode-line-buffer-id nil :background "#5fafd7" :foreground "#080808")
          (set-face-attribute 'minibuffer-prompt nil :foreground "#005f87" :background "#afd7ff"))
