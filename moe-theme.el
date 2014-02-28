@@ -193,6 +193,14 @@ If the vaule is nil, all the outlines will be the same size.")
 set this to nil temporarily: (let (moe-theme-revert-theme) ...)
 DO NOT CHANGE ITS VALUE.")
 
+(defvar moe-theme-powerline-enable-p nil
+  "A variable indicate if `powerline-moe-theme' has been run.
+If you want to use powerline powered by moe-theme, please run
+`powerline-moe-theme', or `moe-theme-select-color' may act
+incorrectly.
+
+Don't setq this manually.")
+
 (defun moe-theme-resize-font-size ()
   (when (and (listp moe-theme-resize-markdown-title)
              (not (null moe-theme-resize-markdown-title))
@@ -355,14 +363,6 @@ DO NOT CHANGE ITS VALUE.")
       (powerline-moe-theme)))
 
 ;; Powerline
-
-(defvar moe-theme-powerline-enable-p nil
-  "A variable indicate if `powerline-moe-theme' has been run.
-If you want to use powerline powered by moe-theme, please run
-`powerline-moe-theme', or `moe-theme-select-color' may act
-incorrectly.
-
-Don't setq this manually.")
 
 (defun moe-theme-select-color ()
   "Select the color of mode-line you like. (Notice: we support Powerline :D)
