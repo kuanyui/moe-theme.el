@@ -110,8 +110,7 @@ Moe, moe, kyun!")
    `(org-tag ((,class (:background ,black-1 :foreground ,white-0 :bold t :weight bold))))
    `(org-column ((,class (:background ,yellow-00 :foreground ,black-3))))
    `(org-column-title ((,class (:background ,blue-0 :foreground ,black-5 :underline t :weight bold))))
-   `(org-agenda-structure
-     ((,class (:foreground ,black-4 :background ,green-0))))
+   `(org-agenda-structure ((,class (:foreground ,black-4 :background ,green-0))))
    `(org-deadline-announce ((,class (:foreground ,red-3))))
    `(org-scheduled ((,class (:foreground ,black-2))))
    `(org-scheduled-previously ((,class (:foreground ,red-1))))
@@ -138,7 +137,7 @@ Moe, moe, kyun!")
    `(org-agenda-dimmed-todo-face ((,class (:foreground ,white-0 :background ,red-2))))
    `(org-priority ((,class (:foreground ,red-3 :background ,nil))))
    `(org-block ((,class (:foreground ,blue-3 :background ,blue-00))))
-   `(org-block-background ((,class (:foreground nil :background ,white-1))))
+   `(org-block-background ((,class (:background ,white-1))))
    `(org-block-begin-line ((,class (:foreground ,blue-3 :background ,blue-0))))
    `(org-block-end-line ((,class (:foreground ,white-3 :background ,white-1))))
    `(org-quote ((,class (:foreground ,blue-3 :background ,blue-00))))
@@ -639,15 +638,24 @@ Moe, moe, kyun!")
    `(widget-button ((,class (:foreground ,blue-2 :underline t :bold t))))
    `(widget-button-pressed ((,class (:foreground ,blue-1))))
    `(widget-documentation ((,class (:foreground ,green-3))))
-   `(widget-field ((,class (:foreground ,black-6 :background ,orange-2))))
+   `(widget-field ((,class (:foreground ,black-6 :background ,green-00))))
    `(widget-inactive ((,class (:foreground ,white-4))))
    `(widget-single-line-field ((,class (:foreground ,black-6 :background ,orange-2))))
+
+   ;; Custom
+   `(custom-button ((,class (:foreground ,white-0 :background ,black-3
+                                         :box (:line-width 1 :style released-button)))))
+   `(custom-button-mouse ((,class (:foreground ,white-0 :background ,black-2
+                                               :box (:line-width 1 :style released-button)))))
+   `(custom-button-pressed ((,class (:foreground ,black-3 :background ,white-1
+                                                 :box (:line-width 1 :style pressed-button)))))
 )
 
   (custom-theme-set-variables
    'moe-light
    `(ansi-color-names-vector [,black-5 ,red-0 ,green-2 ,yellow-1
-			      ,blue-1 ,purple-1 ,blue-0 ,white-0])))
+                                       ,blue-1 ,purple-1 ,blue-0 ,white-0])))
+
 ;; fix wrong default face under GUI version Emacs
 (if window-system
     (progn

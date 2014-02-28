@@ -640,15 +640,24 @@ Moe, moe, kyun!")
    `(widget-button ((,class (:foreground ,blue-1 :underline t :bold t))))
    `(widget-button-pressed ((,class (:foreground ,blue-0))))
    `(widget-documentation ((,class (:foreground ,green-1))))
-   `(widget-field ((,class (:foreground ,black-6 :background ,orange-2))))
+   `(widget-field ((,class (:foreground ,green-0 :background ,black-3))))
    `(widget-inactive ((,class (:foreground ,black-2))))
-   `(widget-single-line-field ((,class (:foreground ,black-6 :background ,orange-2))))
+   `(widget-single-line-field ((,class (:foreground ,green-0 :background ,black-3))))
+
+  ;; Custom
+  `(custom-button ((,class (:background ,blue-0 :foreground ,blue-3
+                                        :box (:line-width 1 :style released-button)))))
+  `(custom-button-mouse ((,class (:background ,blue-00 :foreground ,black-3
+                                              :box (:line-width 1 :style released-button)))))
+  `(custom-button-pressed ((,class (:foreground ,black-3 :background ,white-1
+                                                :box (:line-width 1 :style pressed-button)))))
 )
 
   (custom-theme-set-variables
    'moe-dark
    `(ansi-color-names-vector [,black-5 ,red-0 ,green-0 ,yellow-1
-			      ,blue-1 ,purple-1 ,blue-0 ,white-1])))
+                                       ,blue-1 ,purple-1 ,blue-0 ,white-1])))
+
 ;; fix wrong default face under GUI version Emacs
 (if window-system
     (progn
