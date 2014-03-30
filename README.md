@@ -64,6 +64,7 @@ It's impossible to satisfy everyone with one fixed theme, but `moe-theme` provid
 Select a theme you like and let's go on:
 
 ```lisp
+    (require 'moe-theme)
     ;; Choose the one you like, (moe-light) or (moe-dark)
     (moe-light)
 ```
