@@ -298,6 +298,7 @@ Moe, moe, kyun!")
    `(helm-ff-prefix ((,class (:foreground ,white-1 :background ,orange-2))))
    `(helm-buffer-size ((,class (:foreground ,orange-2))))
    `(helm-grep-file ((,class (:foreground ,purple-1))))
+   `(helm-lisp-show-completion ((,class (:foreground ,black-3 :background ,green-0))))
 
    ;; Dired/Dired+
    `(dired-directory ((,class (:foreground ,blue-1 :bold t))))
