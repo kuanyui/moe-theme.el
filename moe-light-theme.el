@@ -24,7 +24,7 @@ Moe, moe, kyun!")
       (LIGHT_BG "#fdfde7") (white-0 "#ffffff")
       (green-02 "#5fd700") (green-01 "#d7ff00") (green-0 "#d7ff5f") (green-00 "#d7ff87")
       (blue-0 "#afd7ff") (blue-00 "#d7d7ff")
-      (yellow-0 "#ffff87") (yellow-00 "#ffffaf")
+      (yellow-0 "#ffff87") (yellow-00 "#ffffaf") (yellow-2-5 "#ffba27")
       (purple-0 "#af87ff") (purple-00 "#e6a8df")
       (red-0 "#ff4b4b") (red-00 "#ffafaf")
       (magenta-0 "#ffafd7") (magenta-00 "#ffd7ff")
@@ -633,6 +633,13 @@ Moe, moe, kyun!")
    `(column-marker-1 ((,class (:background ,white-3))))
    `(column-marker-2 ((,class (:background ,yellow-0))))
    `(column-marker-3 ((,class (:background ,red-00))))
+
+   ;; Swoop
+   `(swoop-face-header-format-line ((,class (:foreground ,black-6 :background nil :underline nil))))
+   `(swoop-face-line-buffer-name ((,class (:foreground ,green-4 :background ,green-0))))
+   `(swoop-face-line-number ((,class (:foreground "#87875f" :background "#d7d7af"))))
+   `(swoop-face-target-line ((,class (:foreground ,yellow-4 :background ,yellow-0))))
+   `(swoop-face-target-words ((,class (:foreground ,magenta-3 :background ,magenta-00 :bold t))))
 
    ;; widget
    `(widget-button ((,class (:foreground ,blue-2 :underline t :bold t))))

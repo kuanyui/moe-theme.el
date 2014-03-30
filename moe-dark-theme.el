@@ -636,6 +636,13 @@ Moe, moe, kyun!")
    `(column-marker-2 ((,class (:background ,yellow-4))))
    `(column-marker-3 ((,class (:background ,red-3))))
 
+   ;; Swoop
+   `(swoop-face-header-format-line ((,class (:foreground ,black-6 :background nil :underline nil))))
+   `(swoop-face-line-buffer-name ((,class (:foreground ,green-4 :background ,green-0))))
+   `(swoop-face-line-number ((,class (:foreground "#87875f" :background "#d7d7af"))))
+   `(swoop-face-target-line ((,class (:foreground ,yellow-1 :background ,black-3))))
+   `(swoop-face-target-words ((,class (:foreground ,magenta-0 :background ,black-3 :bold t))))
+
    ;; widget
    `(widget-button ((,class (:foreground ,blue-1 :underline t :bold t))))
    `(widget-button-pressed ((,class (:foreground ,blue-0))))
