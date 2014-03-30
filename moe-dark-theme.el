@@ -640,8 +640,11 @@ Moe, moe, kyun!")
    `(swoop-face-header-format-line ((,class (:foreground ,black-6 :background nil :underline nil))))
    `(swoop-face-line-buffer-name ((,class (:foreground ,green-4 :background ,green-0))))
    `(swoop-face-line-number ((,class (:foreground "#87875f" :background "#d7d7af"))))
-   `(swoop-face-target-line ((,class (:foreground ,yellow-1 :background ,black-3))))
-   `(swoop-face-target-words ((,class (:foreground ,magenta-0 :background ,black-3 :bold t))))
+   `(swoop-face-target-line ((,class (:foreground ,yellow-1 :background ,black-2-5))))
+   `(swoop-face-target-words ((,class (:foreground ,magenta-1 :background ,black-2-5 :bold t))))
+   `(helm-swoop-target-line-block-face ((,class (:foreground ,yellow-1 :background ,black-3))))
+   `(helm-swoop-target-line-face ((,class (:foreground ,yellow-1 :background ,black-2-5))))
+   `(helm-swoop-target-word-face ((,class (:foreground ,magenta-3 :background ,magenta-0 :bold t))))
 
    ;; widget
    `(widget-button ((,class (:foreground ,blue-1 :underline t :bold t))))

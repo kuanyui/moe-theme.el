@@ -287,7 +287,7 @@ Moe, moe, kyun!")
    `(helm-ff-directory ((,class (:foreground ,blue-1 :background ,LIGHT_BG :bold t))))
    `(helm-ff-file ((,class (:foreground ,black-5 :background ,LIGHT_BG))))
    `(helm-ff-excutable ((,class (:foreground ,green-2 :background ,LIGHT_BG :bold t))))
-   `(helm-source-header ((,class (:foreground ,black-4 :background ,blue-1 :bold t))))
+   `(helm-source-header ((,class (:foreground ,blue-3 :background ,blue-0 :bold t))))
    `(helm-header ((,class (:foreground ,blue-3 :background ,white-0))))
    `(helm-candidate-number ((,class (:foreground ,blue-3 :background ,white-0))))
    `(helm-match ((,class (:foreground ,green-2 :background ,LIGHT_BG :bold t))))
@@ -634,12 +634,15 @@ Moe, moe, kyun!")
    `(column-marker-2 ((,class (:background ,yellow-0))))
    `(column-marker-3 ((,class (:background ,red-00))))
 
-   ;; Swoop
+   ;; Swoop / Helm-Swoop
    `(swoop-face-header-format-line ((,class (:foreground ,black-6 :background nil :underline nil))))
    `(swoop-face-line-buffer-name ((,class (:foreground ,green-4 :background ,green-0))))
    `(swoop-face-line-number ((,class (:foreground "#87875f" :background "#d7d7af"))))
    `(swoop-face-target-line ((,class (:foreground ,yellow-4 :background ,yellow-0))))
    `(swoop-face-target-words ((,class (:foreground ,magenta-3 :background ,magenta-00 :bold t))))
+   `(helm-swoop-target-line-block-face ((,class (:foreground ,yellow-4 :background ,yellow-0))))
+   `(helm-swoop-target-line-face ((,class (:foreground ,black-3 :background ,green-01))))
+   `(helm-swoop-target-word-face ((,class (:foreground ,magenta-3 :background ,magenta-00 :bold t))))
 
    ;; widget
    `(widget-button ((,class (:foreground ,blue-2 :underline t :bold t))))
