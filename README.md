@@ -31,11 +31,12 @@
 * Eshell / Ansi-term
 * Gnus / Message
 * Helm / ido
-* Org-mode
+* Org-mode / Agenda / calfw
 * Magit / Git-commit / Git-gutter
 * Markdown-mode
 * popup / Auto-complete-mode
 * Rainbow-delimiters
+* Swoop
 * Twittering-mode
 * undo-tree
 * ......and More!
@@ -69,8 +70,9 @@ Select a theme you like and let's go on:
     (moe-light)
 ```
 
->#### Load Theme Itself Only?
->If you just want to use `load-theme` to apply **ONLY** `moe-theme` itself and **without customizations**, you can skip "Customizations" chapter and just use this:
+>#### Note
+>**Notice that the file `moe-theme.el` is NOT a theme file, but it provide the ability for customization `moe-dark-theme` & `moe-light-theme`.*&
+>So, if you just want to use `load-theme` to apply **ONLY** `moe-theme` itself and **without customizations**, you can skip "Customizations" chapter and just use this:
 >
 >```lisp
 >    (load-theme 'moe-dark t)
@@ -176,6 +178,7 @@ If you use Emacs build-in `show-paren-mode`, I recommend set the value of `show-
 Can't bear a mode with an ugly looking? `moe-theme` doesn't support the mode you like? It's welcome to report wishlist or issue on github, I'll try to add related settings as soon as possible. Or of course, you can push request, too. We need your feedback!
 
 ## Known Issues
+* If you add `(moe-dark)` or `(moe-light)` to your init file, the color of `buffer-id` would be incorrect after startuping CLI Emacs(but if you `M-x moe-dark/light` again, it would be corrected immediately). I don't know why, but this issue doesn't occur in GUI version Emacs. (Tested on GNU Emacs 24.3.90.1 2014-04-11)
 * When using `moe-light` and typing characters under terminal emulator (e.g. Konsole) with IM (e.g. fcitx), the string embedded in Emacs may be very insignificant (But as you output the word from IM, it turns normal).
 
 ## Todo
