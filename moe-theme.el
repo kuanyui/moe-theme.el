@@ -419,7 +419,7 @@ and `moe-theme-random-color' should call `powerline-moe-theme' again for update.
     (setq moe-theme-powerline-enable-p nil)
     (if (eq (frame-parameter nil 'background-mode) 'light)
           (moe-light)
-        (moe-dark))))
+        (moe-dark)))
 
   (defun powerline-moe-theme ()
     "Powerline theme powered by moe-theme.el
