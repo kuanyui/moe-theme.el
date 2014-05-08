@@ -71,7 +71,8 @@ Select a theme you like and let's go on:
 ```
 
 >#### Note
->**Notice that the file `moe-theme.el` is NOT a theme file, but it provide the ability for customization `moe-dark-theme` & `moe-light-theme`.*&
+>**Notice that the file `moe-theme.el` is NOT a theme file, but it provide the ability for customization `moe-dark-theme` & `moe-light-theme`.**
+>
 >So, if you just want to use `load-theme` to apply **ONLY** `moe-theme` itself and **without customizations**, you can skip "Customizations" chapter and just use this:
 >
 >```lisp
