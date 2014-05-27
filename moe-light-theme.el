@@ -95,7 +95,7 @@ Moe, moe, kyun!")
    `(org-checkbox ((,class (:background ,white-2 :foreground ,black-3
                                    :box (:line-width 1 :style released-button)))))
    `(org-date ((,class (:foreground ,blue-2 :underline t))))
-   `(org-done ((,class (:bold t :weight bold :foreground ,green-4 :background ,green-0
+   `(org-done ((,class (:bold t :weight bold :foreground ,green-4 :background ,green-00
                               :box (:line-width 1 :style none)))))
    `(org-todo ((,class (:bold t :weight bold :foreground ,red-3 :background ,orange-0
                               :box (:line-width 1 :style none)))))
@@ -130,7 +130,7 @@ Moe, moe, kyun!")
    `(org-agenda-clocking ((,class (:foreground ,blue-3 :background ,blue-0 :bold t))))
    `(org-agenda-date ((,class (:foreground ,blue-2 :background nil :underline nil))))
    `(org-agenda-date-weekend ((,class (:foreground ,purple-2 :background nil :slant italic :bold nil))))
-   `(org-agenda-date-today ((,class (:foreground ,blue-2 :background ,blue-00 :weight bold :underline t))))
+   `(org-agenda-date-today ((,class (:foreground ,blue-2 :background ,blue-000 :weight bold :underline t))))
    `(org-agenda-column-dateline ((,class (:foreground ,white-0 :background ,yellow-0 :underline t))))
    `(org-agenda-todo ((,class (:foreground ,white-0 :background ,red-2))))
    `(org-agenda-done ((,class (:foreground ,green-3 :background ,nil))))
@@ -143,6 +143,7 @@ Moe, moe, kyun!")
    `(org-quote ((,class (:foreground ,blue-3 :background ,blue-00))))
    `(org-mode-line-clock ((,class (:foreground ,blue-3 :background ,blue-0 :bold t))))
    `(org-mode-line-clock-overrun ((,class (:foreground ,white-0 :background ,red-1 :bold t))))
+   `(org-verbatim ((,class (:foreground ,blue-3 :background ,blue-00 :bold nil))))
 
    ;; outline
    `(outline-1 ((,class (:bold t :foreground ,blue-1))))

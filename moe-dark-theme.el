@@ -145,6 +145,7 @@ Moe, moe, kyun!")
    `(org-quote ((,class (:foreground ,blue-1 :background ,black-3))))
    `(org-mode-line-clock ((,class (:foreground ,blue-3 :background ,blue-0 :bold t))))
    `(org-mode-line-clock-overrun ((,class (:foreground ,white-0 :background ,red-1 :bold t))))
+   `(org-verbatim ((,class (:foreground ,blue-1 :background ,black-3 :bold nil))))
 
    ;; outline
    `(outline-1 ((,class (:bold t :foreground ,blue-1))))
