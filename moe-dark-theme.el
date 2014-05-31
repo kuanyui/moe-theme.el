@@ -54,7 +54,7 @@ Moe, moe, kyun!")
    `(isearch ((,class (:foreground ,white-1 :background ,orange-3))))
    `(lazy-highlight ((,class (:background ,magenta-3 :foreground ,white-1))))
    `(trailing-whitespace ((,class (:background ,red-3))))
-   `(show-paren-match ((,class (:background ,black-6))))
+   `(show-paren-match ((,class (:background ,blue-3 :foreground nil))))
    `(header-line ((,class (:background ,blue-0 :foreground ,black-4 :underline nil))))
 
    ;; Mode line & frames' faces
