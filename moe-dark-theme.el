@@ -89,9 +89,9 @@ Moe, moe, kyun!")
    `(font-lock-warning-face ((,class (:weight bold :foreground ,red-2))))
 
    ;; org-mode
-   `(org-document-title ((,class (:foreground ,blue-1 :background ,black-5 :weight bold))))
-   `(org-document-info ((,class (:foreground ,blue-3 :background ,black-5 :weight bold))))
-   `(org-document-info-keyword ((,class (:foreground ,white-1 :background ,black-5))))
+   `(org-document-title ((,class (:foreground ,blue-0 :background ,black-5 :weight bold))))
+   `(org-document-info ((,class (:foreground ,blue-1 :background ,black-5 :weight bold))))
+   `(org-document-info-keyword ((,class (:foreground ,orange-1 :background ,black-2-5))))
    `(org-archived ((,class (:slant italic))))
    `(org-checkbox ((,class (:background ,white-2 :foreground ,black-3
                                    :box (:line-width 1 :style released-button)))))
