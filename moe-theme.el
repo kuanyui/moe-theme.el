@@ -411,7 +411,7 @@ You may also like `moe-theme-random-color'"
     (if (eq moe-theme-powerline-enable-p t)
         (powerline-moe-theme))))
 
-(when (featurep 'powerline)
+(when (require 'powerline nil :no-error)
   (defadvice powerline-revert (after moe-theme-powerline-revert activate)
     "Auto set `moe-theme-powerline-enable-p' to nil after `powerline-revert'
 Because when `powerline-moe-theme' has been run, `moe-theme-select-color'
