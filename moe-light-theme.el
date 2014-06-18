@@ -202,12 +202,12 @@ Moe, moe, kyun!")
    `(popup-tip-face ((,class (:background ,yellow-00 :foreground ,black-3))))
 
    ;; company
-   `(company-tooltip ((,class (:background ,blue-00 :foreground ,blue-3))))
-   `(company-tooltip-selection ((,class (:background ,purple-1 :foreground ,blue-4))))
-   `(company-tooltip-common ((,class (:background ,blue-00 :foreground ,blue-5))))
-   `(company-tooltip-common-selection ((,class (:background ,purple-1 :foreground ,blue-5))))
-   `(company-scrollbar-fg ((,class (:background ,blue-2))))
-   `(company-scrollbar-bg ((,class (:background ,blue-1))))
+   `(company-tooltip ((,class (:background ,yellow-00 :foreground ,black-5))))
+   `(company-tooltip-selection ((,class (:background ,orange-1 :foreground ,black-6))))
+   `(company-tooltip-common ((,class (:background ,yellow-00 :foreground ,red-2))))
+   `(company-tooltip-common-selection ((,class (:background ,orange-1 :foreground ,red-2))))
+   `(company-scrollbar-fg ((,class (:background ,orange-2))))
+   `(company-scrollbar-bg ((,class (:background ,orange-1))))
 
    ;; Button and link faces
    `(link ((,class (:underline t :foreground ,blue-1))))
