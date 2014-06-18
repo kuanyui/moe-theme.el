@@ -203,6 +203,14 @@ Moe, moe, kyun!")
    `(popup-summary-face ((,class (:background ,blue-00 :foreground ,blue-3))))
    `(popup-tip-face ((,class (:background ,yellow-00 :foreground ,black-3))))
 
+   ;; company
+   `(company-tooltip ((,class (:background ,blue-00 :foreground ,blue-3))))
+   `(company-tooltip-selection ((,class (:background ,purple-1 :foreground ,blue-4))))
+   `(company-tooltip-common ((,class (:background ,blue-00 :foreground ,blue-5))))
+   `(company-tooltip-common-selection ((,class (:background ,purple-1 :foreground ,blue-5))))
+   `(company-scrollbar-fg ((,class (:background ,blue-2))))
+   `(company-scrollbar-bg ((,class (:background ,blue-1))))
+
    ;; Button and link faces
    `(link ((,class (:underline t :foreground ,blue-1))))
    `(link-visited ((,class (:underline t :foreground ,blue-2))))
