@@ -58,10 +58,10 @@ Moe, moe, kyun!")
    `(header-line ((,class (:background ,blue-0 :foreground ,black-4 :underline nil))))
 
    ;; Mode line & frames' faces
-   `(mode-line ((,class (:box nil :background ,white-0 :foreground ,blue-3))))
-   `(mode-line-inactive ((,class (:box nil :background ,black-3 :foreground ,white-1))))
-   `(mode-line-buffer-id ((,class (:box nil :foreground ,black-5 :background ,blue-1 :bold t))))
-   `(vertical-border ((,class (:foreground ,black-2 :background ,black-2))))
+   `(mode-line ((,class (:box nil :background ,blue-01 :foreground ,blue-3))))
+   `(mode-line-inactive ((,class (:box nil :background ,black-2-5 :foreground ,white-1))))
+   `(mode-line-buffer-id ((,class (:box nil :foreground ,black-5 :background nil :bold t))))
+   `(vertical-border ((,class (:foreground ,black-3 :background ,black-3))))
 
    ;; Escape and prompt faces
    `(minibuffer-prompt ((,class (:foreground ,black-3 :background ,green-2))))
