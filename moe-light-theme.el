@@ -55,6 +55,7 @@ Moe, moe, kyun!")
    `(trailing-whitespace ((,class (:background ,red-3))))
    `(show-paren-match ((,class (:background ,blue-00))))
    `(header-line ((,class (:background ,blue-1 :foreground ,white-0 :underline t))))
+   `(bold ((,class (:background nil :foreground ,black-6 :bold t))))
 
    ;; Mode line & frames' faces
    `(mode-line ((,class (:box nil :background ,blue-1 :foreground ,white-0))))
