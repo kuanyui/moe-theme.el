@@ -698,7 +698,17 @@ Moe, moe, kyun!")
    ;; table
    `(table-cell ((,class (:foreground ,white-0 :background ,black-3))))
 
-  ;; Custom
+   ;; compilation
+   `(compilation-column-number ((,class (:foreground ,green-2))))
+   `(compilation-error ((,class (:foreground ,red-3 :background ,red-0 :bold t))))
+   `(compilation-info ((,class (:foreground ,orange-1))))
+   `(compilation-line-number ((,class (:foreground ,blue-1))))
+   `(compilation-mode-line-exit ((,class (:foreground ,green-4 :background ,green-0 :bold t))))
+   `(compilation-mode-line-fail ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
+   `(compilation-mode-line-run ((,class (:foreground ,orange-4 :background ,orange-00 :bold t))))
+   `(compilation-warning ((,class (:foreground ,orange-3))))
+
+   ;; Custom
   `(custom-button ((,class (:background ,blue-0 :foreground ,blue-3
                                         :box (:line-width 1 :style released-button)))))
   `(custom-button-mouse ((,class (:background ,blue-00 :foreground ,black-3

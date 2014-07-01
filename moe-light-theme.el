@@ -693,6 +693,16 @@ Moe, moe, kyun!")
    `(widget-inactive ((,class (:foreground ,white-4))))
    `(widget-single-line-field ((,class (:foreground ,black-6 :background ,orange-2))))
 
+   ;; compilation
+   `(compilation-column-number ((,class (:foreground ,green-3))))
+   `(compilation-error ((,class (:foreground ,red-3 :background ,red-000 :bold t))))
+   `(compilation-info ((,class (:foreground ,orange-2))))
+   `(compilation-line-number ((,class (:foreground ,blue-2))))
+   `(compilation-mode-line-exit ((,class (:foreground ,green-4 :background ,green-0 :bold t))))
+   `(compilation-mode-line-fail ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
+   `(compilation-mode-line-run ((,class (:foreground ,orange-4 :background ,orange-00 :bold t))))
+   `(compilation-warning ((,class (:foreground ,orange-3))))
+
    ;; Custom
    `(custom-button ((,class (:foreground ,white-0 :background ,black-3
                                          :box (:line-width 1 :style released-button)))))
