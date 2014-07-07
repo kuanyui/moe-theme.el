@@ -58,6 +58,7 @@ Moe, moe, kyun!")
    `(header-line ((,class (:background ,blue-0 :foreground ,black-4 :underline nil))))
    `(bold ((,class (:background nil :foreground ,white-0 :bold t))))
    `(italic ((,class (:background nil :foreground ,white-0 :italic t))))
+   `(help-argument-name ((,class (:foreground ,magenta-1 :italic t))))
 
    ;; Mode line & frames' faces
    `(mode-line ((,class (:box nil :background ,blue-01 :foreground ,blue-3))))
