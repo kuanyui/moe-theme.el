@@ -44,7 +44,7 @@ Moe, moe, kyun!")
    `(cursor ((,class (:background ,white-1))))
 
    ;; Highlighting faces
-   `(fringe ((,class (:foreground ,black-3 :background ,black-2))))
+   `(fringe ((,class (:foreground ,black-1 :background ,black-3))))
    `(linum ((,class (:foreground ,white-3 :background ,black-3))))
    `(linum-highlight-face ((,class (:background ,green-0 :foreground ,black-4))))
    `(highlight ((,class (:background ,black-3))))
@@ -61,7 +61,7 @@ Moe, moe, kyun!")
    `(help-argument-name ((,class (:foreground ,magenta-1 :italic t))))
 
    ;; Mode line & frames' faces
-   `(mode-line ((,class (:box nil :background ,blue-01 :foreground ,blue-3))))
+   `(mode-line ((,class (:box nil :background ,blue-0 :foreground ,blue-3))))
    `(mode-line-inactive ((,class (:box nil :background ,black-2-5 :foreground ,white-1))))
    `(mode-line-buffer-id ((,class (:box nil :foreground ,black-5 :background nil :bold t))))
    `(vertical-border ((,class (:foreground ,black-3 :background ,black-3))))
