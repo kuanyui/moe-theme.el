@@ -206,7 +206,7 @@ Moe, moe, kyun!")
    `(popup-scroll-bar-foreground-face ((,class (:background ,black-2 :foreground ,white-3))))
    `(popup-summary-face ((,class (:background ,black-3 :foreground ,blue-1))))
    `(popup-tip-face ((,class (:background ,black-2-5 :foreground ,white-1))))
-   
+
    ;; company
    `(company-echo ((,class (:background nil :foreground ,white-1))))
    `(company-echo-common ((,class (:background ,black-3 :foreground ,red-1))))
@@ -653,9 +653,6 @@ Moe, moe, kyun!")
    `(ido-virtual ((,class (:foreground ,magenta-3))))
 
    ;; git-gutter (&-fringe)
-   `(git-gutter-fr:added ((,class (:foreground ,green-4 :background ,green-0 :bold t))))
-   `(git-gutter-fr:deleted ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
-   `(git-gutter-fr:modified ((,class (:foreground ,yellow-4 :background ,yellow-0 :bold t))))
    `(git-gutter:added ((,class (:foreground ,green-4 :background ,green-0 :bold t))))
    `(git-gutter:deleted ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
    `(git-gutter:modified ((,class (:foreground ,yellow-4 :background ,yellow-0 :bold t))))
