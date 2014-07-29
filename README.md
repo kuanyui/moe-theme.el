@@ -109,7 +109,11 @@ You can also use `M-x` `moe-theme-select-color` to change color interactively.
 Mayby you'll like `M-x` `moe-theme-random-color`, too; which gives you a random mood :D.
 
 #### Powerline
-Now `moe-theme` supports [Powerline](https://github.com/milkypostman/powerline), which makes mode-line looks fabulous! We recommended installing `powerline` and run `powerline-moe-theme`. You can add this line to your init file:
+Now `moe-theme` supports [Powerline](https://github.com/milkypostman/powerline), which makes mode-line looks fabulous! We recommended installing `powerline` and run `powerline-moe-theme`.
+
+>**Confirm that `(require 'powerline)` must before `(require 'moe-theme)`. Otherwise, `powerline-moe-theme` will not be initallized.**
+
+You can add this line to your init file:
 
 ```lisp
 (powerline-moe-theme)
