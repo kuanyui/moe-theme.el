@@ -708,6 +708,20 @@ Moe, moe, kyun!")
    `(compilation-mode-line-run ((,class (:foreground ,orange-4 :background ,orange-00 :bold t))))
    `(compilation-warning ((,class (:foreground ,orange-3))))
 
+   ;; info
+   `(info-header-node ((,class (:foreground ,red-3 :bold t))))
+   `(info-header-xref ((,class (:foreground ,black-5 ::bold t))))
+   `(info-index-match ((,class (:background ,yellow-0))))
+   `(info-menu-header ((,class (:foreground ,black-4 :bold t :underline t))))
+   `(info-menu-star ((,class (:foreground ,red-1))))
+   `(info-node ((,class (:foreground ,red-3))))
+   `(info-title-1 ((,class (:foreground ,blue-1 :bold t))))
+   `(info-title-2 ((,class (:foreground ,green-02 :bold t))))
+   `(info-title-3 ((,class (:foreground ,orange-2 :bold t))))
+   `(info-title-4 ((,class (:foreground ,magenta-2 :bold t))))
+   `(info-xref ((,class (:foreground ,blue-2 :underline t))))
+   `(info-xref-visited ((,class (:foreground ,purple-1 :underline t))))
+
    ;; Custom
    `(custom-button ((,class (:foreground ,white-0 :background ,black-3
                                          :box (:line-width 1 :style released-button)))))
