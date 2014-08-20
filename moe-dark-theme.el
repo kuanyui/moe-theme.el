@@ -15,10 +15,10 @@ Moe, moe, kyun!")
       (orange-1 "#ffaf5f") (orange-2 "#ff8700") (orange-3 "#ff5d17") (orange-4 "#d75f00") (orange-5 "#af5f00")
       (magenta-1 "#ff7bbb") (magenta-2 "#ff4ea3") (magenta-3 "#ff1f8b")
       (green-1 "#afff00") (green-2 "#a1db00") (green-3 "#5faf00") (green-4 "#008700") (green-5 "#005f00")
-      (blue-1 "#5fafd7") (blue-2 "#1f5bff") (blue-3 "#005f87") (blue-4 "#005faf") (blue-5 "#0000af")
+      (blue-1 "#5fafd7") (blue-2 "#1f5bff") (blue-3 "#005f87") (blue-4 "#005faf") (blue-5 "#0000af") (blue-6 "#00005f")
       (cyan-1 "#87ffff") (cyan-2 "#87d7af") (cyan-3 "#00d7af") (cyan-4 "#00ac8a") (cyan-5 "#5faf87") (cyan-6 "#005f5f") (cyan-7 "#005f87")
       (purple-1 "#d18aff") (purple-2 "#af5fff") (purple-3 "#9a08ff") (purple-4 "#6c0099")
-      (red-1 "#ef2929")  (red-2 "#dd0000")  (red-3 "#a40000")
+      (red-1 "#ef2929")  (red-2 "#dd0000")  (red-3 "#a40000") (red-4 "#5f0000")
       (white-1 "#c6c6c6") (white-2 "#c6c6c6") (white-3 "#b2b2b2") (black-1 "#a8a8a8") (black-2 "#8a8a8a")
       (black-2-5 "#6c6c6c") (black-3 "#4e4e4e") (black-4 "#3a3a3a") (black-5 "#303030") (black-6 "#000000")
       (LIGHT_BG "#fdfde7") (white-0 "#ffffff")
@@ -735,6 +735,11 @@ Moe, moe, kyun!")
    `(tuareg-font-lock-interactive-output-face ((,class (:foreground ,blue-3))))
    `(tuareg-font-lock-multistage-face ((,class (:foreground ,blue-3 :background ,blue-0))))
    `(tuareg-font-lock-operator-face ((,class (:foreground ,red-1 :bold t))))
+
+   ;; CPerl
+   `(cperl-array-face ((,class (:foreground ,blue-01 :background ,blue-3))))
+   `(cperl-hash-face ((,class (:foreground ,orange-0 :background ,red-4))))
+   `(cperl-nonoverridable-face ((,class (:foreground ,green-01 :background ,green-5))))
 
    ;; Custom
    `(custom-button ((,class (:background ,blue-0 :foreground ,blue-3
