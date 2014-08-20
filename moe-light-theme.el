@@ -722,6 +722,25 @@ Moe, moe, kyun!")
    `(info-xref ((,class (:foreground ,blue-2 :underline t))))
    `(info-xref-visited ((,class (:foreground ,purple-1 :underline t))))
 
+   `(whitespace-empty ((,class (:foreground ,magenta-3 :background ,magenta-00))))
+   `(whitespace-hspace ((,class (:foreground ,blue-0 :background "#f5f5dc"))))
+   `(whitespace-indentation ((,class (:foreground "#dadada" :background "#f5f5dc"))))
+   `(whitespace-line ((,class (:foreground nil :background ,yellow-00))))
+   `(whitespace-newline ((,class (:foreground "#dadada" :background nil))))
+   `(whitespace-space ((,class (:foreground "#dadada" :background "#f5f5dc"))))
+   `(whitespace-space-after-tab ((,class (:foreground ,cyan-2 :background "#f5f5dc"))))
+   `(whitespace-space-before-tab ((,class (:foreground ,orange-3 :background ,orange-00))))
+   `(whitespace-tab ((,class (:foreground ,cyan-2 :background "#f5f5dc"))))
+   `(whitespace-trailing ((,class (:foreground ,red-1 :background ,red-000))))
+
+   ;; Tuareg
+   `(tuareg-font-lock-error-face ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
+   `(tuareg-font-lock-governing-face ((,class (:foreground ,black-4 :bold t))))
+   `(tuareg-font-lock-interactive-error-face ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
+   `(tuareg-font-lock-interactive-output-face ((,class (:foreground ,blue-3))))
+   `(tuareg-font-lock-multistage-face ((,class (:foreground ,blue-3 :background ,blue-0))))
+   `(tuareg-font-lock-operator-face ((,class (:foreground ,red-1 :bold t))))
+
    ;; Custom
    `(custom-button ((,class (:foreground ,white-0 :background ,black-3
                                          :box (:line-width 1 :style released-button)))))

@@ -728,13 +728,21 @@ Moe, moe, kyun!")
    `(info-xref ((,class (:foreground ,blue-1 :underline t))))
    `(info-xref-visited ((,class (:foreground ,purple-1 :underline t))))
 
+   ;; Tuareg
+   `(tuareg-font-lock-error-face ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
+   `(tuareg-font-lock-governing-face ((,class (:foreground ,white-1 :bold t))))
+   `(tuareg-font-lock-interactive-error-face ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
+   `(tuareg-font-lock-interactive-output-face ((,class (:foreground ,blue-3))))
+   `(tuareg-font-lock-multistage-face ((,class (:foreground ,blue-3 :background ,blue-0))))
+   `(tuareg-font-lock-operator-face ((,class (:foreground ,red-1 :bold t))))
+
    ;; Custom
-  `(custom-button ((,class (:background ,blue-0 :foreground ,blue-3
-                                        :box (:line-width 1 :style released-button)))))
-  `(custom-button-mouse ((,class (:background ,blue-00 :foreground ,black-3
-                                              :box (:line-width 1 :style released-button)))))
-  `(custom-button-pressed ((,class (:foreground ,black-3 :background ,white-1
-                                                :box (:line-width 1 :style pressed-button)))))
+   `(custom-button ((,class (:background ,blue-0 :foreground ,blue-3
+					 :box (:line-width 1 :style released-button)))))
+   `(custom-button-mouse ((,class (:background ,blue-00 :foreground ,black-3
+					       :box (:line-width 1 :style released-button)))))
+   `(custom-button-pressed ((,class (:foreground ,black-3 :background ,white-1
+						 :box (:line-width 1 :style pressed-button)))))
 )
 
   (custom-theme-set-variables
