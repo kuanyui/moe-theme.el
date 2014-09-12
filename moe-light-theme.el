@@ -747,8 +747,8 @@ Moe, moe, kyun!")
    `(cperl-nonoverridable-face ((,class (:foreground ,green-3 :background ,green-00))))
 
    ;; Haskell
-   `(haskell-interactive-face-compile-error ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
-   `(haskell-interactive-face-compile-warning ((,class (:foreground ,orange-4 :background ,orange-00 :bold t))))
+   `(haskell-interactive-face-compile-error ((,class (:foreground ,red-2 :background nil :bold t))))
+   `(haskell-interactive-face-compile-warning ((,class (:foreground ,orange-2 :background nil :bold t))))
    `(haskell-interactive-face-garbage ((,class (:foreground ,black-2))))
    `(haskell-interactive-face-prompt ((,class (:foreground ,black-4 :background ,yellow-0 :bold t))))
    `(haskell-interactive-face-result ((,class (:foreground ,blue-2))))
