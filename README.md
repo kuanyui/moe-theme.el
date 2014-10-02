@@ -97,10 +97,10 @@ The values should be lists. Larger the values, larger the fonts.
 If you don't like this, just leave them nil, and all the titles will be the same size.
 
 ### Colorful Mode-line and Powerline
-Tired of boring blue mode-line? You can set default mode-line color. moe-theme provides 9 colors mode-line style. Add following lines **before** `(moe-light)` or `(moe-dark)`:
+Tired of boring blue mode-line? You can set default mode-line color. moe-theme provides 9 colors mode-line style. Add following lines **after** `(moe-light)` or `(moe-dark)`:
 
 ```lisp
-  (setq moe-theme-mode-line-color 'orange)
+  (moe-theme-set-color 'orange)
   ;; (Available colors: blue, orange, green ,magenta, yellow, purple, red, cyan, w/b.)
 ```
 
@@ -168,7 +168,7 @@ If your terminal emulator doesn't render 256-color output correctly, set its env
     TERM=xterm-256color
 
 If you also use `tmux`, add this to `~/.tmux.conf`, too:
-	
+
     set -g default-terminal "screen-256color"
 
 ### Paren
@@ -191,4 +191,3 @@ Can't bear a mode with an ugly looking? `moe-theme` doesn't support the mode you
 
 ## License
 `moe-theme.el` (include images) is released under GPL v3. Copyleft is so cute!
-

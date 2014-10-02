@@ -377,15 +377,12 @@ Don't setq this manually.")
 
 ;; Powerline
 
-(defun moe-theme-select-color ()
-  "Select the color of mode-line you like. (Notice: we support Powerline :D)
-You may also like `moe-theme-random-color'"
-  (interactive)
+(defun moe-theme-set-color (color)
+  "Set the COLOR of mode-line you like. You may also like
+`moe-theme-random-color' This should be called
+programmly (e.g. in init.el), not interactively."
   (setq moe-theme-mode-line-color
-        (intern (completing-read
-                 "Select a color: "
-                 '((blue) (green) (orange) (magenta) (yellow) (purple) (red) (cyan) (w/b))
-                 nil t "" nil nil t)))
+		color)
     (let (moe-theme-revert-theme) ;set to nil to change only mode-line's color
       (if (eq (frame-parameter nil 'background-mode) 'light)
           (moe-light)
@@ -393,22 +390,26 @@ You may also like `moe-theme-random-color'"
   (if (eq moe-theme-powerline-enable-p t)
       (powerline-moe-theme)))
 
+(defun moe-theme-select-color ()
+  "Interactively select the color of mode-line you like and set
+it. (Notice: we support Powerline :D) You may also like
+`moe-theme-random-color'"
+  (interactive)
+  (moe-theme-set-color (intern (completing-read
+                 "Select a color: "
+                 '((blue) (green) (orange) (magenta) (yellow) (purple) (red) (cyan) (w/b))
+                 nil t "" nil nil t))))
+
 (defun moe-theme-random-color ()
-  "Give me a random mode-line color.=w=+"
+  "Give me a random mode-line color.=w=+
+This function can be called both programmly and interactively."
   (interactive)
   (let* ((n (abs (% (random) 9)))
          (current-color moe-theme-mode-line-color)
          (color-list '(blue green orange magenta yellow purple red cyan w/b)))
     (if (eq (elt color-list n) current-color) ;If gotten color eq current-color, random again.
         (moe-theme-random-color)
-      (setq moe-theme-mode-line-color (elt color-list n)))
-
-    (let (moe-theme-revert-theme) ;set to nil to change only mode-line's color
-      (if (eq (frame-parameter nil 'background-mode) 'light)
-          (moe-light)
-        (moe-dark)))
-    (if (eq moe-theme-powerline-enable-p t)
-        (powerline-moe-theme))))
+      (moe-theme-set-color (elt color-list n)))))
 
 (when (require 'powerline nil :no-error)
   (defadvice powerline-revert (after moe-theme-powerline-revert activate)
