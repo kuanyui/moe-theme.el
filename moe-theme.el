@@ -378,8 +378,9 @@ Don't setq this manually.")
 ;; Powerline
 
 (defun moe-theme-set-color (color)
-  "Set the COLOR of mode-line you like. (Notice: we support
-Powerline :D) You may also like `moe-theme-random-color'"
+  "Set the COLOR of mode-line you like. You may also like
+`moe-theme-random-color' This should be called
+programmly (e.g. in init.el), not interactively."
   (setq moe-theme-mode-line-color
 		color)
     (let (moe-theme-revert-theme) ;set to nil to change only mode-line's color
@@ -390,8 +391,9 @@ Powerline :D) You may also like `moe-theme-random-color'"
       (powerline-moe-theme)))
 
 (defun moe-theme-select-color ()
-  "Select the color of mode-line you like and set it. (Notice: we
-support Powerline :D) You may also like `moe-theme-random-color'"
+  "Interactively select the color of mode-line you like and set
+it. (Notice: we support Powerline :D) You may also like
+`moe-theme-random-color'"
   (interactive)
   (moe-theme-set-color (intern (completing-read
                  "Select a color: "
@@ -399,7 +401,8 @@ support Powerline :D) You may also like `moe-theme-random-color'"
                  nil t "" nil nil t))))
 
 (defun moe-theme-random-color ()
-  "Give me a random mode-line color.=w=+"
+  "Give me a random mode-line color.=w=+
+This function can be called both programmly and interactively."
   (interactive)
   (let* ((n (abs (% (random) 9)))
          (current-color moe-theme-mode-line-color)
