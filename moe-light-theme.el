@@ -629,8 +629,8 @@ Moe, moe, kyun!")
    `(enh-ruby-op-face ((,class (:foreground ,orange-3 :bold t))))
    `(enh-ruby-regexp-delimiter-face ((,class (:foreground ,purple-2))))
    `(enh-ruby-string-delimiter-face ((,class (:foreground ,purple-3))))
-   `(erm-syn-errline ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
-   `(erm-syn-warnline ((,class (:foreground ,white-0 :background ,orange-2 :bold t))))
+   `(erm-syn-errline ((,class (:foreground ,red-3 :background ,red-00 :bold t :underline t))))
+   `(erm-syn-warnline ((,class (:bold t :underline t))))
 
    ;; ansi-term
    `(term-color-black ((,class (:background ,black-5 :foreground ,black-5))))
