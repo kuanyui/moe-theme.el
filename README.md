@@ -39,6 +39,7 @@
 * Swoop
 * Twittering-mode
 * undo-tree
+* Ruby / Haskell / CPerl / Tuareg
 * ......and More!
 
 ## Requirements
@@ -163,11 +164,17 @@ Take "Keelung, Taiwan" (25N,121E) for example, you can set like this:
 
 ## Notes
 ### No 256-Color Output?
-If your terminal emulator doesn't render 256-color output correctly, set its environment variable `TERM` to `xterm-256color`. For example, if you are using `Konsole`, navigate to `Edit Current Profile > General > Environment > Edit` and add the following line:
+If your terminal emulator doesn't render 256-color output correctly, set its environment variable `TERM` to `xterm-256color`. For example:
+
+- If you are using `bash` or `zsh`, add following line into your `~/.bashrc` or `~/.zshrc`:
+
+	export TERM=xterm-256color
+
+- Or if you are using `Konsole`, navigate to `Edit Current Profile > General > Environment > Edit` and add the following line:
 
     TERM=xterm-256color
 
-If you also use `tmux`, add this to `~/.tmux.conf`, too:
+- If you're using `tmux` and it cannot display in 256-color correctly, add this to `~/.tmux.conf`, too:
 
     set -g default-terminal "screen-256color"
 
