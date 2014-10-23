@@ -29,6 +29,7 @@ Moe, moe, kyun!")
       (red-0 "#ff4b4b") (red-00 "#ffafaf")
       (magenta-0 "#ffafd7") (magenta-00 "#ffd7ff")
       (orange-0 "#ffaf87") (orange-00 "#ffd787") (orange-000 "#ffd7af")
+      (linum-dark "#87875f") (linum-light "#d7d7af")
       )
 
 
@@ -747,6 +748,12 @@ Moe, moe, kyun!")
    `(haskell-interactive-face-garbage ((,class (:foreground ,black-2))))
    `(haskell-interactive-face-prompt ((,class (:foreground ,green-01 :background ,black-2-5 :bold t))))
    `(haskell-interactive-face-result ((,class (:foreground ,blue-1))))
+
+   ;; tty-menu
+   `(menu ((,class (:foreground ,black-1 :background ,black-3))))
+   `(tty-menu-disabled-face ((,class (:foreground ,black-2-5 :background ,black-3))))
+   `(tty-menu-enabled-face ((,class (:foreground ,white-0 :background ,black-3 :bold t))))
+   `(tty-menu-selected-face ((,class (:background ,blue-3))))
 
    ;; Custom
    `(custom-button ((,class (:background ,blue-0 :foreground ,blue-3

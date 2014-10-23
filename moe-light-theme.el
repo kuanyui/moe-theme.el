@@ -29,6 +29,7 @@ Moe, moe, kyun!")
       (red-0 "#ff4b4b") (red-00 "#ffafaf") (red-000 "#ffd5e5")
       (magenta-0 "#ffafd7") (magenta-00 "#ffd7ff")
       (orange-0 "#ffaf87") (orange-00 "#ffd787") (orange-000 "#ffd7af")
+      (linum-dark "#87875f") (linum-light "#d7d7af")
       )
 
   (custom-theme-set-faces
@@ -43,9 +44,9 @@ Moe, moe, kyun!")
    `(cursor ((,class (:background ,black-5))))
 
    ;; Highlighting faces
-   `(fringe ((,class (:foreground ,black-1 :background "#d7d7af"))))
-   `(linum ((,class (:foreground "#87875f" :background "#d7d7af"))))
-   `(linum-highlight-face ((,class (:background "#87875f" :foreground "#d7d7af"))))
+   `(fringe ((,class (:foreground ,black-1 :background ,linum-light))))
+   `(linum ((,class (:foreground ,linum-dark :background ,linum-light))))
+   `(linum-highlight-face ((,class (:background ,linum-dark :foreground ,linum-light))))
    `(highlight ((,class (:background ,green-0))))
    `(hl-line ((,class (:background ,green-00)))) ; Embedded strings of IM (e.g. fcitx) would be very unreadable... orz
    `(highlight-symbol-face ((,class (:background ,green-00))))
@@ -752,6 +753,11 @@ Moe, moe, kyun!")
    `(haskell-interactive-face-garbage ((,class (:foreground ,black-2))))
    `(haskell-interactive-face-prompt ((,class (:foreground ,black-4 :background ,yellow-0 :bold t))))
    `(haskell-interactive-face-result ((,class (:foreground ,blue-2))))
+
+   `(menu ((,class (:foreground ,linum-light :background ,linum-dark))))
+   `(tty-menu-disabled-face ((,class (:foreground ,black-1 :background ,black-3))))
+   `(tty-menu-enabled-face ((,class (:foreground ,white-0 :background ,black-3 :bold t))))
+   `(tty-menu-selected-face ((,class (:background ,blue-3))))
 
 
    ;; Custom
