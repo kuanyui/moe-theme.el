@@ -708,6 +708,15 @@ Moe, moe, kyun!")
    `(compilation-mode-line-run ((,class (:foreground ,orange-4 :background ,orange-00 :bold t))))
    `(compilation-warning ((,class (:foreground ,orange-3))))
 
+   ;; Neotree
+   `(neo-banner-face ((,class (:foreground ,green-5 :background ,green-00))))
+   `(neo-header-face ((,class (:foreground ,green-4 :background nil))))
+   `(neo-root-dir-face ((,class (:foreground ,magenta-2))))
+   `(neo-button-face ((,class (:foreground ,blue-1 :bold t))))
+   `(neo-dir-link-face ((,class (:foreground ,blue-2 :bold t))))
+   `(neo-expand-btn-face ((,class (:foreground ,blue-3 :background ,blue-00))))
+   `(neo-file-link-face ((,class (:foreground ,black-4))))
+
    ;; info
    `(info-header-node ((,class (:foreground ,red-3 :bold t))))
    `(info-header-xref ((,class (:foreground ,black-5 ::bold t))))

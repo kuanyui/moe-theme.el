@@ -714,6 +714,15 @@ Moe, moe, kyun!")
    `(compilation-mode-line-run ((,class (:foreground ,orange-4 :background ,orange-00 :bold t))))
    `(compilation-warning ((,class (:foreground ,orange-3))))
 
+   ;; Neotree
+   `(neo-banner-face ((,class (:foreground ,green-3 :background nil))))
+   `(neo-header-face ((,class (:foreground ,green-1 :background nil))))
+   `(neo-root-dir-face ((,class (:foreground ,magenta-1))))
+   `(neo-button-face ((,class (:foreground ,blue-1 :bold t))))
+   `(neo-dir-link-face ((,class (:foreground ,blue-2 :bold t))))
+   `(neo-expand-btn-face ((,class (:foreground ,blue-3 :background ,black-2-5))))
+   `(neo-file-link-face ((,class (:foreground ,white-1))))
+
    ;; info
    `(info-header-node ((,class (:foreground ,magenta-2 :bold t))))
    `(info-header-xref ((,class (:foreground ,blue-1 :background nil :bold t))))
