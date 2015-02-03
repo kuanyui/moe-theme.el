@@ -97,7 +97,7 @@ Moe, moe, kyun!")
    `(org-document-info-keyword ((,class (:foreground ,orange-1 :background ,black-2-5))))
    `(org-archived ((,class (:slant italic))))
    `(org-checkbox ((,class (:background ,white-2 :foreground ,black-3
-                                   :box (:line-width 1 :style released-button)))))
+					:box (:line-width 1 :style released-button)))))
    `(org-date ((,class (:foreground ,blue-0 :underline t))))
    `(org-done ((,class (:bold t :weight bold :foreground ,green-4 :background ,green-0
                               :box (:line-width 1 :style none)))))
@@ -659,19 +659,19 @@ Moe, moe, kyun!")
    `(git-gutter:modified ((,class (:foreground ,yellow-4 :background ,yellow-0 :bold t))))
 
    ;; cfw: Calendar Framework
-;;   `(cfw:face-annotation ((,class (:foreground , :background ,))))
+   ;;   `(cfw:face-annotation ((,class (:foreground , :background ,))))
    `(cfw:face-day-title ((,class (:foreground ,white-0 :background "#262626"))))
-;;   `(cfw:face-default-content ((,class (:foreground , :background ,))))
-;;   `(cfw:face-default-day ((,class (:foreht , :background ,))))
-;;   `(cfw:face-disable ((,class (:foreground , :background ,))))
+   ;;   `(cfw:face-default-content ((,class (:foreground , :background ,))))
+   ;;   `(cfw:face-default-day ((,class (:foreht , :background ,))))
+   ;;   `(cfw:face-disable ((,class (:foreground , :background ,))))
    `(cfw:face-grid ((,class (:foreground ,black-2))))
    `(cfw:face-header ((,class (:foreground ,white-1 :background ,black-3 :bold t))))
    `(cfw:face-holiday ((,class (:foreground ,purple-1 :background "#262626" :bold t))))
-;;   `(cfw:face-periods ((,class (:foreground , :background ,))))
+   ;;   `(cfw:face-periods ((,class (:foreground , :background ,))))
    `(cfw:face-saturday ((,class (:foreground ,blue-01 :background ,blue-3 :bold t))))
    `(cfw:face-select ((,class (:foreground ,black-5 :background ,blue-1))))
    `(cfw:face-sunday ((,class (:foreground ,red-00 :background ,red-3 :bold t))))
-;;   `(cfw:face-title ((,class (:foreground , :background ,))))
+   ;;   `(cfw:face-title ((,class (:foreground , :background ,))))
    `(cfw:face-today ((,class (:foreground ,orange-2 :background ,black-3))))
    `(cfw:face-today-title ((,class (:foreground ,white-0 :background ,orange-2))))
    `(cfw:face-toolbar ((,class (:foreground ,white-1 :background ,black-3))))
@@ -720,7 +720,7 @@ Moe, moe, kyun!")
    `(neo-root-dir-face ((,class (:foreground ,magenta-1))))
    `(neo-button-face ((,class (:foreground ,blue-1 :bold t))))
    `(neo-dir-link-face ((,class (:foreground ,blue-2 :bold t))))
-   `(neo-expand-btn-face ((,class (:foreground ,blue-3 :background ,black-2-5))))
+   `(neo-expand-btn-face ((,class (:foreground ,blue-1 :background ,black-2-5))))
    `(neo-file-link-face ((,class (:foreground ,white-1))))
 
    ;; info
@@ -756,12 +756,16 @@ Moe, moe, kyun!")
    `(haskell-interactive-face-garbage ((,class (:foreground ,black-2))))
    `(haskell-interactive-face-prompt ((,class (:foreground ,green-01 :background ,black-2-5 :bold t))))
    `(haskell-interactive-face-result ((,class (:foreground ,blue-1))))
-
+   
    ;; tty-menu
    `(menu ((,class (:foreground ,black-1 :background ,black-3))))
    `(tty-menu-disabled-face ((,class (:foreground ,black-2-5 :background ,black-3))))
    `(tty-menu-enabled-face ((,class (:foreground ,white-0 :background ,black-3 :bold t))))
    `(tty-menu-selected-face ((,class (:background ,blue-3))))
+
+   ;; web-mode
+   `(web-mode-comment-face ((,class (:foreground ,black-3))))
+   `(web-mode-current-element-highlight-face ((,class (:background ,blue-3))))
 
    ;; Custom
    `(custom-button ((,class (:background ,blue-0 :foreground ,blue-3
@@ -770,7 +774,7 @@ Moe, moe, kyun!")
 					       :box (:line-width 1 :style released-button)))))
    `(custom-button-pressed ((,class (:foreground ,black-3 :background ,white-1
 						 :box (:line-width 1 :style pressed-button)))))
-)
+   )
 
   (custom-theme-set-variables
    'moe-dark
