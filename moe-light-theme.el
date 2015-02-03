@@ -770,6 +770,7 @@ Moe, moe, kyun!")
    ;; web-mode
    `(web-mode-comment-face ((,class (:foreground ,white-3))))
    `(web-mode-current-element-highlight-face ((,class (:background ,green-00))))
+   `(web-mode-current-column-highlight-face ((,class (:background ,green-00))))
 
    ;; Custom
    `(custom-button ((,class (:foreground ,white-0 :background ,black-3
