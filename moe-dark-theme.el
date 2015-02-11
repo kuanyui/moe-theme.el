@@ -441,9 +441,6 @@ Moe, moe, kyun!")
    `(message-mml ((,class (:foreground ,orange-2))))
    `(message-separator ((,class (:foreground ,black-2-5))))
 
-   ;; SMerge faces
-   `(smerge-refined-change ((,class (:background ,blue-3))))
-
    ;; Grep
    `(grep-context-face ((,class (:foreground ,red-2))))
    `(grep-error-face ((,class (:foreground ,red-1 :weight bold :underline t))))
