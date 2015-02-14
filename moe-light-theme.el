@@ -776,7 +776,11 @@ Moe, moe, kyun!")
                                                :box (:line-width 1 :style released-button)))))
    `(custom-button-pressed ((,class (:foreground ,black-3 :background ,white-1
                                                  :box (:line-width 1 :style pressed-button)))))
-   )
+
+   ;; Hydra
+   `(hydra-face-red ((,class (:foreground ,red-2))))
+   `(hydra-face-blue ((,class (:foreground ,blue-2))))
+   `(hydra-face-amaranth ((,class (:foreground ,magenta-2))))))
 
   (custom-theme-set-variables
    'moe-light

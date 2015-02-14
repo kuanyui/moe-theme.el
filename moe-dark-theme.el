@@ -753,7 +753,7 @@ Moe, moe, kyun!")
    `(haskell-interactive-face-garbage ((,class (:foreground ,black-2))))
    `(haskell-interactive-face-prompt ((,class (:foreground ,green-01 :background ,black-2-5 :bold t))))
    `(haskell-interactive-face-result ((,class (:foreground ,blue-1))))
-   
+
    ;; tty-menu
    `(menu ((,class (:foreground ,black-1 :background ,black-3))))
    `(tty-menu-disabled-face ((,class (:foreground ,black-2-5 :background ,black-3))))
@@ -772,7 +772,12 @@ Moe, moe, kyun!")
 					       :box (:line-width 1 :style released-button)))))
    `(custom-button-pressed ((,class (:foreground ,black-3 :background ,white-1
 						 :box (:line-width 1 :style pressed-button)))))
-   )
+
+   ;; Hydra
+   `(hydra-face-red ((,class (:foreground ,red-0))))
+   `(hydra-face-blue ((,class (:foreground ,blue-1))))
+   `(hydra-face-amaranth ((,class (:foreground ,magenta-2)))))
+  )
 
   (custom-theme-set-variables
    'moe-dark
