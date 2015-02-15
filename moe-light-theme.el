@@ -780,7 +780,7 @@ Moe, moe, kyun!")
    ;; Hydra
    `(hydra-face-red ((,class (:foreground ,red-2))))
    `(hydra-face-blue ((,class (:foreground ,blue-2))))
-   `(hydra-face-amaranth ((,class (:foreground ,magenta-2))))))
+   `(hydra-face-amaranth ((,class (:foreground ,magenta-2)))))
 
   (custom-theme-set-variables
    'moe-light

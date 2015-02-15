@@ -777,7 +777,6 @@ Moe, moe, kyun!")
    `(hydra-face-red ((,class (:foreground ,red-0))))
    `(hydra-face-blue ((,class (:foreground ,blue-1))))
    `(hydra-face-amaranth ((,class (:foreground ,magenta-2)))))
-  )
 
   (custom-theme-set-variables
    'moe-dark
