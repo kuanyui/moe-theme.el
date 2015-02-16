@@ -1,5 +1,32 @@
 # moe-theme
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/moe-theme.png"><img src="https://raw.github.com/kuanyui/moe-theme.el/master/pics/moe-theme.png" width="720" height="401"/></a>
+
+>**Table of Contents**
+- [moe-theme](#moe-theme)
+  - [Screenshot](#screenshot)
+  - [What Special?](#what-special)
+  - [Support](#support)
+  - [Requirements](#requirements)
+  - [Download](#download)
+    - [Via package.el](#via-packageel)
+    - [Manually](#manually)
+  - [Customizations](#customizations)
+    - [Resize Titles](#resize-titles)
+    - [Colorful Mode-line and Powerline](#colorful-mode-line-and-powerline)
+      - [Powerline](#powerline)
+    - [Too Yellow Background?](#too-yellow-background)
+    - [Highlight Buffer-id on Mode-line?](#highlight-buffer-id-on-mode-line)
+  - [Have A Good Mood Today?](#have-a-good-mood-today)
+    - [Live in Antarctica?](#live-in-antarctica)
+  - [Notes](#notes)
+    - [No 256-Color Output?](#no-256-color-output)
+    - [Paren](#paren)
+    - [Not supported the mode(s) you're using?](#not-supported-the-modes-youre-using)
+  - [Known Issues](#known-issues)
+  - [Todo](#todo)
+  - [License](#license)
+
+
 ## Screenshot
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark01.png"><img src="pics/dark01.png" width="355" height="192"/></a>
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light01.png"><img src="pics/light01.png" width="355" height="192"/></a>
@@ -34,12 +61,12 @@
 * Org-mode / Agenda / calfw
 * Magit / Git-commit / Git-gutter
 * Markdown-mode
-* popup / Auto-complete-mode
+* Auto-complete-mode / Company
 * Rainbow-delimiters
 * Swoop
 * Twittering-mode
-* undo-tree
-* Ruby / Haskell / CPerl / Tuareg
+* undo-tree / Neotree
+* Ruby / Haskell / CPerl / Tuareg / Web-mode
 * ......and More!
 
 ## Requirements
