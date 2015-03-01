@@ -193,6 +193,26 @@ Moe, moe, kyun!")
    `(twittering-timeline-footer-face ((,class (:foreground ,black-1 :bold t))))
    `(twittering-timeline-header-face ((,class (:foreground ,black-1 :bold t))))
 
+   ;; Jabber
+   `(jabber-chat-prompt-local ((,class (:foreground ,yellow-3))))
+   `(jabber-chat-prompt-foreign ((,class (:foreground ,orange-3))))
+   `(jabber-chat-prompt-system ((,class (:foreground ,yellow-2 :weight bold))))
+   `(jabber-chat-text-local ((,class (:foreground ,yellow-3))))
+   `(jabber-chat-text-foreign ((,class (:foreground ,orange-3))))
+   `(jabber-chat-text-error ((,class (:foreground ,red-2))))
+
+   `(jabber-roster-user-online ((,class (:foreground ,green-3))))
+   `(jabber-roster-user-xa ((,class (:foreground ,black-1))))
+   `(jabber-roster-user-dnd ((,class (:foreground ,yellow-2))))
+   `(jabber-roster-user-away ((,class (:foreground ,orange-2))))
+   `(jabber-roster-user-chatty ((,class (:foreground ,purple-3))))
+   `(jabber-roster-user-error ((,class (:foreground ,red-1))))
+   `(jabber-roster-user-offline ((,class (:foreground ,black-1))))
+
+   `(jabber-rare-time-face ((,class (:foreground ,black-1))))
+   `(jabber-activity-face ((,class (:foreground ,purple-3))))
+   `(jabber-activity-personal-face ((,class (:foreground ,cyan-1))))
+
    ;; popup
    `(popup-face ((,class (:background ,black-5 :foreground ,blue-1))))
    `(popup-isearch-match ((,class (:background ,black-5 :foreground ,magenta-2 :bold t))))
