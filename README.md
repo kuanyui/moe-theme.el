@@ -60,7 +60,7 @@
 * Helm / ido
 * Org-mode / Agenda / calfw
 * Magit / Git-commit / Git-gutter
-* Markdown-mode
+* Markdown-mode / ReStructText-mode
 * Auto-complete-mode / Company
 * Rainbow-delimiters
 * Swoop
