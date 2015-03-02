@@ -113,13 +113,14 @@ There's a full customization example:
     (setq moe-theme-resize-rst-title '(1.5 1.4 1.3 1.2 1.1 1.0))
 
     ;; Choose a color for mode-line.
-    ;; (Available colors: blue, orange, green ,magenta, yellow, purple, red, cyan, w/b.)
     (moe-theme-set-color 'cyan)
 
     ;; Finally, apply moe-theme now.
     ;; Choose what you like, (moe-light) or (moe-dark)
     (moe-light)
-```
+	```
+
+If you have any question, go on and read following README to get more detailed information.
 
 >#### Note
 >**Notice that the file `moe-theme.el` is NOT a theme file, but it provide the ability for customization `moe-dark-theme` & `moe-light-theme`.**
