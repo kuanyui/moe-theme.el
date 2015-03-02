@@ -101,18 +101,17 @@ There's a full customization example:
     ;; Moe-theme
     (add-to-list 'custom-theme-load-path "~/.emacs.d/PATH/TO/moe-theme/")
     (add-to-list 'load-path "~/.emacs.d/PATH/TO/moe-theme/")
-    
     (require 'moe-theme)
 
     ;; Show highlighted buffer-id as decoration. (Default: nil)
     (setq moe-theme-highlight-buffer-id t)
     
-    ;; Resize titles.
+    ;; Resize titles (optional).
     (setq moe-theme-resize-markdown-title '(1.5 1.4 1.3 1.2 1.0 1.0))
     (setq moe-theme-resize-org-title '(1.5 1.4 1.3 1.2 1.1 1.0 1.0 1.0 1.0))
     (setq moe-theme-resize-rst-title '(1.5 1.4 1.3 1.2 1.1 1.0))
 
-    ;; Choose a color for mode-line.
+    ;; Choose a color for mode-line.(Default: blue)
     (moe-theme-set-color 'cyan)
 
     ;; Finally, apply moe-theme now.
@@ -120,7 +119,7 @@ There's a full customization example:
     (moe-light)
 ```
 
-If you have any question, go on and read following README to get more detailed information.
+If you have any question about settings, go on and read following README to get more detailed information first.
 
 >#### Note
 >**Notice that the file `moe-theme.el` is NOT a theme file, but it provide the ability for customization `moe-dark-theme` & `moe-light-theme`.**
@@ -128,6 +127,8 @@ If you have any question, go on and read following README to get more detailed i
 >So, if you just want to use `load-theme` to apply **ONLY** `moe-theme` itself and **without customizations**, you can skip "Customizations" chapter and just use this:
 >
 >```lisp
+>    (add-to-list 'custom-theme-load-path "~/.emacs.d/PATH/TO/moe-theme/")
+> 
 >    (load-theme 'moe-dark t)
 >    ;;or
 >    (load-theme 'moe-light t)
