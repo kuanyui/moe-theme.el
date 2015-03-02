@@ -90,11 +90,34 @@ Download the archive of `moe-theme` (or `git clone` it) to `~/.emacs.d/moe-theme
 ## Customizations
 It's impossible to satisfy everyone with one fixed theme, but `moe-theme` provide some easy ways to customize itself.
 
-Select a theme you like and let's go on:
+There's a full customization example:
 
 ```lisp
+    ;; If you want to use powerline, (require 'powerline) must be
+    ;; before (require 'moe-theme).
+    (add-to-list 'load-path "~/.emacs.d/PATH/TO/powerline/")
+    (require 'powerline)
+
+    ;; Moe-theme
+    (add-to-list 'custom-theme-load-path "~/.emacs.d/PATH/TO/moe-theme/")
+    (add-to-list 'load-path "~/.emacs.d/PATH/TO/moe-theme/")
+    
     (require 'moe-theme)
-    ;; Choose the one you like, (moe-light) or (moe-dark)
+
+    ;; Show highlighted buffer-id as decoration. (Default: nil)
+    (setq moe-theme-highlight-buffer-id t)
+    
+    ;; Resize titles.
+    (setq moe-theme-resize-markdown-title '(1.5 1.4 1.3 1.2 1.0 1.0))
+    (setq moe-theme-resize-org-title '(1.5 1.4 1.3 1.2 1.1 1.0 1.0 1.0 1.0))
+    (setq moe-theme-resize-rst-title '(1.5 1.4 1.3 1.2 1.1 1.0))
+
+    ;; Choose a color for mode-line.
+    ;; (Available colors: blue, orange, green ,magenta, yellow, purple, red, cyan, w/b.)
+    (moe-theme-set-color 'cyan)
+
+    ;; Finally, apply moe-theme now.
+    ;; Choose what you like, (moe-light) or (moe-dark)
     (moe-light)
 ```
 
