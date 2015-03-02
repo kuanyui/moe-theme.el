@@ -120,6 +120,7 @@ You may want to resize titles in `markdown-mode`, `org-mode`, or `ReStructuredTe
 ```
 
 >Markdown should have 6 items; org has 9 items; rst has 6 items.
+>Notice that these resizing settings should be placed **before** `(moe-dark)` or `(moe-light)`.
 
 The values should be lists. Larger the values, larger the fonts.
 If you don't like this, just leave them nil, and all the titles will be the same size.
