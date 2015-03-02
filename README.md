@@ -120,7 +120,8 @@ You may want to resize titles in `markdown-mode`, `org-mode`, or `ReStructuredTe
 ```
 
 >Markdown should have 6 items; org has 9 items; rst has 6 items.
->Notice that these resizing settings should be placed **before** `(moe-dark)` or `(moe-light)`.
+>
+>Make sure that these resizing settings should be placed **before** `(moe-dark)` or `(moe-light)`.
 
 The values should be lists. Larger the values, larger the fonts.
 If you don't like this, just leave them nil, and all the titles will be the same size.
@@ -140,7 +141,7 @@ Mayby you'll like `M-x` `moe-theme-random-color`, too; which gives you a random 
 #### Powerline
 Now `moe-theme` supports [Powerline](https://github.com/milkypostman/powerline), which makes mode-line looks fabulous! We recommended installing `powerline` and run `powerline-moe-theme`.
 
->**Confirm that `(require 'powerline)` must before `(require 'moe-theme)`. Otherwise, `powerline-moe-theme` will not be initallized.**
+>Make sure that `(require 'powerline)` must be placed **before** `(require 'moe-theme)`. Otherwise, `powerline-moe-theme` will not be initallized.
 
 You can add this line to your init file:
 
