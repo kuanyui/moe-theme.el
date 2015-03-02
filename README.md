@@ -118,7 +118,7 @@ There's a full customization example:
     ;; Finally, apply moe-theme now.
     ;; Choose what you like, (moe-light) or (moe-dark)
     (moe-light)
-	```
+```
 
 If you have any question, go on and read following README to get more detailed information.
 
