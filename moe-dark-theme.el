@@ -207,12 +207,12 @@ Moe, moe, kyun!")
    `(jabber-roster-user-xa ((,class (:foreground ,black-1))))
    `(jabber-roster-user-dnd ((,class (:foreground ,yellow-2))))
    `(jabber-roster-user-away ((,class (:foreground ,orange-2))))
-   `(jabber-roster-user-chatty ((,class (:foreground ,purple-3))))
-   `(jabber-roster-user-error ((,class (:foreground ,red-1))))
+   `(jabber-roster-user-chatty ((,class (:foreground ,purple-1))))
+   `(jabber-roster-user-error ((,class (:foreground ,red-0))))
    `(jabber-roster-user-offline ((,class (:foreground ,black-1))))
 
    `(jabber-rare-time-face ((,class (:foreground ,black-1))))
-   `(jabber-activity-face ((,class (:foreground ,purple-3))))
+   `(jabber-activity-face ((,class (:foreground ,magenta-2))))
    `(jabber-activity-personal-face ((,class (:foreground ,cyan-1))))
 
    ;; popup
