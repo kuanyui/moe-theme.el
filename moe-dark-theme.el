@@ -793,6 +793,8 @@ Moe, moe, kyun!")
    `(web-mode-comment-face ((,class (:foreground ,black-3))))
    `(web-mode-current-element-highlight-face ((,class (:background ,black-3))))
    `(web-mode-current-column-highlight-face ((,class (:background ,black-3))))
+   `(web-mode-symbol-face ((,class (:foreground ,yellow-2))))
+   `(web-mode-type-face ((,class (:foreground ,cyan-3))))
 
    ;; Custom
    `(custom-button ((,class (:background ,blue-0 :foreground ,blue-3
