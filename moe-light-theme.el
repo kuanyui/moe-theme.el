@@ -86,7 +86,7 @@ Moe, moe, kyun!")
    `(font-lock-regexp-grouping-backslash ((,class (:foreground ,orange-2))))
    `(font-lock-regexp-grouping-construct ((,class (:foreground ,purple-2))))
    `(font-lock-string-face ((,class (:foreground ,magenta-3))))
-   `(font-lock-type-face ((,class (:foreground ,blue-1))))
+   `(font-lock-type-face ((,class (:foreground ,blue-4))))
    `(font-lock-variable-name-face ((,class (:foreground ,orange-2))))
    `(font-lock-warning-face ((,class (:weight bold :foreground ,red-2))))
 
