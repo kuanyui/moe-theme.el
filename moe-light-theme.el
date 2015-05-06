@@ -475,9 +475,9 @@ Moe, moe, kyun!")
    `(diff-indicator-changed ((,class (:foreground ,white-0 :background ,yellow-3 :bold t))))
    `(diff-indicator-removed ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
    `(diff-nonexistent ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
-   `(diff-refine-added ((,class (:foreground ,green-3))))
-   `(diff-refine-change ((,class (:foreground ,yellow-3 :bold t))))
-   `(diff-refine-removed ((,class (:foreground ,red-3 :bold t))))
+   `(diff-refine-added ((,class (:foreground ,white-0 :background ,green-3 :bold t))))
+   `(diff-refine-change ((,class (:foreground ,white-0 :background ,yellow-3 :bold t))))
+   `(diff-refine-removed ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
    `(diff-removed ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
 
    ;; Ediff
