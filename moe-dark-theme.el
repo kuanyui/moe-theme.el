@@ -593,7 +593,7 @@ Moe, moe, kyun!")
    `(js2-function-param-face ((,class (:foreground ,green-3))))
    `(js2-external-variable ((,class (:foreground ,orange-2 :underline t))))
    `(js2-error ((,class (:foreground ,red-2 :underline t :bold t))))
-   `(js2-warning ((,class (:foreground ,orange-2 :underline t :bold t))))
+   `(js2-warning ((,class (:foreground nil :underline t :bold t))))
 
    ;; rcirc
    `(rcirc-bright-nick ((,class (:foreground ,blue-1 :bold t))))
