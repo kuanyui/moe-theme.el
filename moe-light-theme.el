@@ -56,7 +56,7 @@ Moe, moe, kyun!")
    `(lazy-highlight ((,class (:background ,magenta-3 :foreground ,white-0))))
    `(trailing-whitespace ((,class (:background ,red-3))))
    `(show-paren-match ((,class (:background ,blue-00))))
-   `(header-line ((,class (:background ,blue-1 :foreground ,white-0 :underline t))))
+   `(header-line ((,class (:background ,blue-0 :foreground ,blue-3))))
    `(help-argument-name ((,class (:foreground ,magenta-3 :italic t))))
 
    ;; Mode line & frames' faces
