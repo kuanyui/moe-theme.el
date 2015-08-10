@@ -817,7 +817,7 @@ Moe, moe, kyun!")
    `(neo-header-face ((,class (:foreground ,green-4 :background nil))))
    `(neo-root-dir-face ((,class (:foreground ,magenta-2))))
    `(neo-button-face ((,class (:foreground ,blue-1 :bold t))))
-   `(neo-dir-link-face ((,class (:foreground ,blue-2 :bold t))))
+   `(neo-dir-link-face ((,class (:foreground ,blue-1 :bold t))))
    `(neo-expand-btn-face ((,class (:foreground ,blue-3 :background ,blue-00))))
    `(neo-file-link-face ((,class (:foreground ,black-4))))
 

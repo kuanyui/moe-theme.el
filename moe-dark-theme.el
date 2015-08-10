@@ -822,7 +822,7 @@ Moe, moe, kyun!")
    `(neo-header-face ((,class (:foreground ,green-1 :background nil))))
    `(neo-root-dir-face ((,class (:foreground ,magenta-1))))
    `(neo-button-face ((,class (:foreground ,blue-1 :bold t))))
-   `(neo-dir-link-face ((,class (:foreground ,blue-2 :bold t))))
+   `(neo-dir-link-face ((,class (:foreground ,blue-1 :bold t))))
    `(neo-expand-btn-face ((,class (:foreground ,blue-1 :background ,black-2-5))))
    `(neo-file-link-face ((,class (:foreground ,white-1))))
 
