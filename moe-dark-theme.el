@@ -811,7 +811,7 @@ Moe, moe, kyun!")
    ;; compilation
    `(compilation-column-number ((,class (:foreground ,green-2))))
    `(compilation-error ((,class (:foreground ,red-3 :background ,red-0 :bold t))))
-   `(compilation-info ((,class (:foreground ,orange-1))))
+   `(compilation-info ((,class (:foreground ,orange-2 :background ,black-3))))
    `(compilation-line-number ((,class (:foreground ,blue-1))))
    `(compilation-mode-line-exit ((,class (:foreground ,green-4 :background ,green-0 :bold t))))
    `(compilation-mode-line-fail ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
