@@ -868,7 +868,7 @@ Moe, moe, kyun!")
    `(tty-menu-selected-face ((,class (:background ,blue-3))))
 
    ;; web-mode
-   `(web-mode-comment-face ((,class (:foreground ,black-3))))
+   `(web-mode-comment-face ((,class (:foreground ,black-2-5))))
    `(web-mode-current-element-highlight-face ((,class (:background ,black-3))))
    `(web-mode-current-column-highlight-face ((,class (:background ,black-3))))
    `(web-mode-symbol-face ((,class (:foreground ,yellow-2))))
