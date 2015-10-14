@@ -347,6 +347,7 @@ Moe, moe, kyun!")
    `(helm-selection ((,class (:foreground nil :background ,blue-3))))
    `(helm-selection-line ((,class (:foreground nil :background ,yellow-4))))
    `(helm-source-header ((,class (:foreground ,white-0 :background ,black-2-5 :bold t))))
+   `(helm-visible-mark ((,class (:foreground ,magenta-2 :background ,magenta-0))))
 
    ;; Dired/Dired+
    `(dired-directory ((,class (:foreground ,blue-1 :bold t))))
