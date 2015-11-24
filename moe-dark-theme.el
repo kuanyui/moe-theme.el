@@ -347,6 +347,7 @@ Moe, moe, kyun!")
    `(helm-selection ((,class (:foreground nil :background ,blue-3))))
    `(helm-selection-line ((,class (:foreground nil :background ,yellow-4))))
    `(helm-source-header ((,class (:foreground ,white-0 :background ,black-2-5 :bold t))))
+   `(helm-visible-mark ((,class (:foreground ,magenta-2 :background ,magenta-0))))
 
    ;; Dired/Dired+
    `(dired-directory ((,class (:foreground ,blue-1 :bold t))))
@@ -868,7 +869,7 @@ Moe, moe, kyun!")
    `(tty-menu-selected-face ((,class (:background ,blue-3))))
 
    ;; web-mode
-   `(web-mode-comment-face ((,class (:foreground ,black-3))))
+   `(web-mode-comment-face ((,class (:foreground ,black-2-5))))
    `(web-mode-current-element-highlight-face ((,class (:background ,black-3))))
    `(web-mode-current-column-highlight-face ((,class (:background ,black-3))))
    `(web-mode-symbol-face ((,class (:foreground ,yellow-2))))
