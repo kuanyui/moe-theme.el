@@ -91,6 +91,11 @@ Moe, moe, kyun!")
    `(font-lock-variable-name-face ((,class (:foreground ,orange-2))))
    `(font-lock-warning-face ((,class (:weight bold :foreground ,red-2))))
 
+   ;; Completions
+   `(completions-annotations ((,class (:foreground ,green-3))))
+   `(completions-common-part ((,class (:foreground ,white-3))))
+   `(completions-first-difference ((,class (:weight bold :foreground ,orange-2))))
+
    ;; org-mode
    `(org-document-title ((,class (:foreground ,blue-3 :background ,LIGHT_BG :weight bold))))
    `(org-document-info ((,class (:foreground ,blue-1 :background ,LIGHT_BG :weight bold))))
