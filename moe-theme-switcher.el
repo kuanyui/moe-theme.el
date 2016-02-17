@@ -39,7 +39,7 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
                   (setq moe-theme-which-enabled 'dark)))))) ;[FIXME] Maybe unnecessary
 
 (defun switch-at-fixed-time ()
-  (let ((now (string-to-int (format-time-string "%H"))))
+  (let ((now (string-to-number (format-time-string "%H"))))
     (if (and (>= now 06) (<= now 18))
         (moe-load-theme 'light)
       (moe-load-theme 'dark))
