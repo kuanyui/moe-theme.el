@@ -615,7 +615,7 @@ Moe, moe, kyun!")
    `(rainbow-delimiters-depth-5-face ((,class (:bold t :foreground ,cyan-3))))
    `(rainbow-delimiters-depth-6-face ((,class (:bold t :foreground ,orange-2))))
    `(rainbow-delimiters-depth-7-face ((,class (:bold t :foreground ,purple-2))))
-   `(rainbow-delimiters-depth-8-face ((,class (:bold t :foreground ,yellow-2))))
+   `(rainbow-delimiters-depth-8-face ((,class (:bold t :foreground ,yellow-3))))
    `(rainbow-delimiters-depth-9-face ((,class (:bold t :foreground ,black-5))))
    `(rainbow-delimiters-unmatched-face ((,class (:foreground ,white-0 :background ,red-3 :bold t))))
 
