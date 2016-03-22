@@ -38,11 +38,11 @@ Moe, moe, kyun!")
    'moe-dark
    ;; Ensure sufficient contrast on low-color terminals.
    `(default ((((class color) (min-colors 4096))
-	       (:foreground ,white-1 :background ,black-5))
-	      (((class color) (min-colors 256))
-	       (:foreground ,white-1 :background ,black-5))
-	      (,class
-	       (:foreground ,white-1 :background ,black-5))))
+               (:foreground ,white-1 :background ,black-5))
+              (((class color) (min-colors 256))
+               (:foreground ,white-1 :background ,black-5))
+              (,class
+               (:foreground ,white-1 :background ,black-5))))
    `(cursor ((,class (:background ,white-1))))
 
    ;; Highlighting faces
@@ -84,10 +84,10 @@ Moe, moe, kyun!")
    `(font-lock-function-name-face ((,class (:foreground ,yellow-2))))
    `(font-lock-keyword-face ((,class (:foreground ,green-2))))
    `(font-lock-negation-char-face ((,class (:foreground ,red-0))))
-   `(font-lock-preprocessor-face ((,class (:foreground ,purple-1))))
+   `(font-lock-preprocessor-face ((,class (:foreground ,green-3))))
    `(font-lock-regexp-grouping-backslash ((,class (:foreground ,yellow-1))))
    `(font-lock-regexp-grouping-construct ((,class (:foreground ,purple-1))))
-   `(font-lock-string-face ((,class (:foreground ,magenta-2))))
+   `(font-lock-string-face ((,class (:foreground ,blue-1))))
    `(font-lock-type-face ((,class (:foreground ,cyan-3))))
    `(font-lock-variable-name-face ((,class (:foreground ,orange-2))))
    `(font-lock-warning-face ((,class (:weight bold :foreground ,red-2))))
@@ -103,7 +103,7 @@ Moe, moe, kyun!")
    `(org-document-info-keyword ((,class (:foreground ,orange-1 :background ,black-2-5))))
    `(org-archived ((,class (:slant italic))))
    `(org-checkbox ((,class (:background ,white-2 :foreground ,black-3
-					:box (:line-width 1 :style released-button)))))
+                                        :box (:line-width 1 :style released-button)))))
    `(org-date ((,class (:foreground ,blue-0 :underline t))))
    `(org-done ((,class (:bold t :weight bold :foreground ,green-4 :background ,green-0
                               :box (:line-width 1 :style none)))))
@@ -610,7 +610,7 @@ Moe, moe, kyun!")
    `(ace-jump-face-foreground ((,class (:foreground ,orange-2 :bold t))))
 
    ;; Rainbow-delimiters
-   `(rainbow-delimiters-depth-1-face ((,class (:bold t :foreground ,red-2))))
+   `(rainbow-delimiters-depth-1-face ((,class (:bold t :foreground ,purple-1))))
    `(rainbow-delimiters-depth-2-face ((,class (:bold t :foreground ,blue-1))))
    `(rainbow-delimiters-depth-3-face ((,class (:bold t :foreground ,green-2))))
    `(rainbow-delimiters-depth-4-face ((,class (:bold t :foreground ,magenta-2))))
@@ -882,11 +882,11 @@ Moe, moe, kyun!")
 
    ;; Custom
    `(custom-button ((,class (:background ,blue-0 :foreground ,blue-3
-					 :box (:line-width 1 :style released-button)))))
+                                         :box (:line-width 1 :style released-button)))))
    `(custom-button-mouse ((,class (:background ,blue-00 :foreground ,black-3
-					       :box (:line-width 1 :style released-button)))))
+                                               :box (:line-width 1 :style released-button)))))
    `(custom-button-pressed ((,class (:foreground ,black-3 :background ,white-1
-						 :box (:line-width 1 :style pressed-button)))))
+                                                 :box (:line-width 1 :style pressed-button)))))
 
    ;; Hydra
    `(hydra-face-red ((,class (:foreground ,red-0))))
