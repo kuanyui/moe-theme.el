@@ -607,6 +607,12 @@ Moe, moe, kyun!")
    `(ace-jump-face-background ((,class (:foreground ,white-4))))
    `(ace-jump-face-foreground ((,class (:foreground ,red-2 :bold t))))
 
+   ;; avy-mode
+   `(avy-lead-face ((,class (:background ,cyan-1 :foreground ,black-4))))
+   `(avy-lead-face-0 ((,class (:background ,purple-00 :foreground ,black-4))))
+   `(avy-lead-face-1 ((,class (:background ,white-2 :foreground ,black-4))))
+   `(avy-lead-face-2 ((,class (:background ,green-2 :foreground ,black-4))))
+
    ;; Rainbow-delimiters
    `(rainbow-delimiters-depth-1-face ((,class (:bold t :foreground ,red-2))))
    `(rainbow-delimiters-depth-2-face ((,class (:bold t :foreground ,blue-2))))
