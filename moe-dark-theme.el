@@ -873,6 +873,13 @@ Moe, moe, kyun!")
    `(haskell-interactive-face-prompt ((,class (:foreground ,green-01 :background ,black-2-5 :bold t))))
    `(haskell-interactive-face-result ((,class (:foreground ,blue-1))))
 
+   ;; EMMS
+   `(emms-state-current-playing-time ((,class (:foreground ,blue-3 :bold t))))
+   `(emms-state-total-playing-time ((,class (:foreground ,blue-3))))
+   `(emms-playlist-selected-face ((,class (:foreground ,green-2 :bold t))))
+   `(emms-playlist-track-face ((,class (:foreground ,cyan-5))))
+
+
    ;; tty-menu
    `(menu ((,class (:foreground ,black-1 :background ,black-3))))
    `(tty-menu-disabled-face ((,class (:foreground ,black-2-5 :background ,black-3))))
