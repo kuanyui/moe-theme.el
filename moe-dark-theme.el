@@ -671,10 +671,11 @@ Moe, moe, kyun!")
    `(mmm-output-submode-face ((,class (:background ,purple-00))))
    `(mmm-special-submode-face ((,class (:background ,green-00))))
 
-   ;; Clojure
+   ;; Clojure/Cider
    `(clojure-test-failure-face ((,class (:underline ,orange-2))))
    `(clojure-test-error-face ((,class (:underline ,red-2))))
    `(clojure-test-success-face ((,class (:underline ,green-3))))
+   `(cider-deprecated-face ((,class (:background ,red-4))))
 
    ;; Javascript
    `(js2-function-param-face ((,class (:foreground ,green-3))))
