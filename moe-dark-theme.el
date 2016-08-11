@@ -771,6 +771,9 @@ Moe, moe, kyun!")
    `(ido-virtual ((,class (:foreground ,magenta-3))))
 
 
+   ;; volatile-highlights
+   `(vhl/default-face ((,class (:foreground ,black-3 :background ,green-0))))
+
    ;; notmuch
    `(notmuch-search-unread-face ((,class (:weight bold))))
 

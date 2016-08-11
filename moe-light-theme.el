@@ -768,6 +768,9 @@ Moe, moe, kyun!")
    `(ido-subdir ((,class (:foreground ,blue-1 :bold t))))
    `(ido-virtual ((,class (:foreground ,magenta-3))))
 
+   ;; volatile-highlights
+   `(vhl/default-face ((,class (:foreground ,white-0 :background ,blue-1))))
+
    ;; notmuch
    `(notmuch-search-unread-face ((,class (:weight bold))))
 
