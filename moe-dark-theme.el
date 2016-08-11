@@ -770,6 +770,16 @@ Moe, moe, kyun!")
    `(ido-subdir ((,class (:foreground ,blue-1 :bold t))))
    `(ido-virtual ((,class (:foreground ,magenta-3))))
 
+   ;; ivy-mode
+   `(ivy-current-match ((,class (:foreground ,orange-2 :bold t :inherit highlight))))
+   `(ivy-confirm-face ((,class (:foreground ,green-4 :background ,green-00 :bold t))))
+   `(ivy-subdir ((,class (:foreground ,blue-1 :bold t))))
+   `(ivy-virtual ((,class (:foreground ,magenta-3))))
+
+   `(ivy-minibuffer-match-face-1 ((,class (:background ,blue-1 :foreground ,white-0))))
+   `(ivy-minibuffer-match-face-2 ((,class (:bold t :background ,green-2 :foreground ,white-0))))
+   `(ivy-minibuffer-match-face-3 ((,class (:bold t :background ,magenta-2 :foreground ,white-0))))
+   `(ivy-minibuffer-match-face-4 ((,class (:bold t :background ,cyan-3 :foreground ,white-0))))
 
    ;; swiper
    `(swiper-match-face-1 ((,class (:background ,blue-1 :foreground ,white-0))))
