@@ -771,6 +771,13 @@ Moe, moe, kyun!")
    `(ido-virtual ((,class (:foreground ,magenta-3))))
 
 
+   ;; swiper
+   `(swiper-match-face-1 ((,class (:background ,blue-1 :foreground ,white-0))))
+   `(swiper-match-face-2 ((,class (:bold t :background ,green-2 :foreground ,white-0))))
+   `(swiper-match-face-3 ((,class (:bold t :background ,magenta-2 :foreground ,white-0))))
+   `(swiper-match-face-4 ((,class (:bold t :background ,cyan-3 :foreground ,white-0))))
+   `(swiper-line-face ((,class (:foreground ,orange-2 :bold t :inherit highlight))))
+
    ;; volatile-highlights
    `(vhl/default-face ((,class (:foreground ,black-3 :background ,green-0))))
 
