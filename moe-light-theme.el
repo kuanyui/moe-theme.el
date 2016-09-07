@@ -934,7 +934,18 @@ Moe, moe, kyun!")
    ;; Hydra
    `(hydra-face-red ((,class (:foreground ,red-2))))
    `(hydra-face-blue ((,class (:foreground ,blue-2))))
-   `(hydra-face-amaranth ((,class (:foreground ,magenta-2)))))
+   `(hydra-face-amaranth ((,class (:foreground ,magenta-2))))
+
+   ;; rpm-spec-mode
+   `(rpm-spec-tag-face ((,class (:foreground ,blue-2))))
+   `(rpm-spec-obsolete-tag-face ((,class (:foreground ,white-0 :bold t :background ,red-2))))
+   `(rpm-spec-macro-face ((,class (:foreground ,red-1))))
+   `(rpm-spec-var-face ((,class (:foreground ,purple-2))))
+   `(rpm-spec-doc-face ((,class (:foreground ,magenta-3))))
+   `(rpm-spec-dir-face ((,class (:foreground ,green-3))))
+   `(rpm-spec-package-face ((,class (:foreground ,red-2))))
+   `(rpm-spec-ghost-face ((,class (:foreground ,red-2))))
+   `(rpm-spec-section-face ((,class (:foreground ,red-1)))))
 
   (custom-theme-set-variables
    'moe-light
