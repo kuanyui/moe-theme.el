@@ -279,12 +279,6 @@ Don't setq this manually.")
              (if (and (not (null moe-light-pure-white-background-in-terminal))
                       (null (window-system)))
                  (set-face-attribute 'default nil :background "#ffffff" :foreground "#5f5f5f"))))
-  ;; In Emacs 24.3.50.1 , background-color may cannot be changed under GUI Emacs.
-  ;; So do this again.
-  (if window-system
-      (progn
-        (set-background-color "#fdfde7")
-        (set-foreground-color "#5f5f5f")))
 
   (cond ((eq moe-theme-mode-line-color 'blue)
          (set-face-attribute 'mode-line nil :background "#afd7ff" :foreground "#005f87")
@@ -334,13 +328,6 @@ Don't setq this manually.")
   (interactive)
   (if (not (null moe-theme-revert-theme))
       (load-theme 'moe-dark t))
-
-  ;; In Emacs 24.3.50.1 , background-color may cannot be changed under GUI Emacs.
-  ;; So do this again.
-  (if window-system
-    (progn
-      (set-background-color "#303030")
-      (set-foreground-color "#c6c6c6")))
 
   (moe-theme-resize-font-size)
   (cond ((eq moe-theme-mode-line-color 'blue)
