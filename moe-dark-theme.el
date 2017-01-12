@@ -21,7 +21,7 @@ Moe, moe, kyun!")
       (red-1 "#ef2929")  (red-2 "#dd0000")  (red-3 "#a40000") (red-4 "#5f0000")
       (white-1 "#c6c6c6") (white-2 "#c6c6c6") (white-3 "#b2b2b2") (black-1 "#a8a8a8") (black-2 "#8a8a8a")
       (black-2-5 "#6c6c6c") (black-3 "#4e4e4e") (black-4 "#3a3a3a") (black-5 "#303030") (black-6 "#000000")
-      (LIGHT_BG "#fdfde7") (white-0 "#ffffff")
+      (LIGHT_BG "#fdfde7") (white-0 "#eeeeee")
       (green-02 "#5fd700") (green-01 "#d7ff00") (green-0 "#d7ff5f") (green-00 "#d7ff87")
       (cyan-0 "#d7ffd7")
       (blue-01 "#c3c9f8") (blue-0 "#afd7ff") (blue-00 "#d7d7ff")
@@ -43,14 +43,14 @@ Moe, moe, kyun!")
 	       (:foreground ,white-1 :background ,black-5))
 	      (,class
 	       (:foreground ,white-1 :background ,black-5))))
-   `(cursor ((,class (:background ,white-1))))
+   `(cursor ((,class (:background ,white-0))))
 
    ;; Highlighting faces
    `(fringe ((,class (:foreground ,black-1 :background ,black-3))))
    `(linum ((,class (:foreground ,white-3 :background ,black-3))))
    `(linum-highlight-face ((,class (:background ,green-0 :foreground ,black-4))))
    `(highlight ((,class (:background ,black-3))))
-   `(hl-line ((,class (:background ,black-3))))
+   `(hl-line ((,class (:background ,black-4))))
    `(highlight-symbol-face ((,class (:background ,green-5))))
    `(region ((,class (:foreground ,black-3 :background ,green-0))))
    `(secondary-selection ((,class (:background ,blue-3 :foreground ,white-0))))
@@ -947,11 +947,6 @@ Moe, moe, kyun!")
    `(ansi-color-names-vector [,black-5 ,red-0 ,green-0 ,yellow-1
                                        ,blue-1 ,purple-1 ,blue-0 ,white-1])))
 
-;; fix wrong default face under GUI version Emacs
-(if window-system
-    (progn
-      (set-background-color "#303030")
-      (set-foreground-color "#c6c6c6")))
 
 (setq moe-theme-which-enabled 'dark)
 
