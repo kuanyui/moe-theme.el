@@ -184,13 +184,8 @@ If the vaule is nil, all the outlines will be the same size.")
   "For internal use. DO NOT CHANGE THIS.
 Avoid unnecessary load-theme")
 
-(defvar moe-theme-powerline-enable-p nil
-  "A variable indicate if `powerline-moe-theme' has been run.
-If you want to use powerline powered by moe-theme, please run
-`powerline-moe-theme', or `moe-theme-select-color' may act
-incorrectly.
-
-Don't setq this manually.")
+(defvar moe-theme-enable-powerline-supporting nil
+  "Don't setq this manually.")
 
 
 
@@ -340,8 +335,6 @@ Don't setq this manually.")
          (set-face-attribute 'minibuffer-prompt nil :foreground "#3e3e3e" :background "#ffffff")))
   (moe-theme--common-setup))
 
-;; Powerline
-
 (defun moe-theme-set-color (color)
   "Set the COLOR of mode-line you like. You may also like
 `moe-theme-random-color' This should be called
@@ -352,18 +345,21 @@ programmly (e.g. in init.el), not interactively."
     (if (eq (frame-parameter nil 'background-mode) 'light)
         (moe-light)
       (moe-dark)))
-  (if (eq moe-theme-powerline-enable-p t)
-      (powerline-moe-theme)))
+  (if moe-theme-enable-powerline-supporting
+      (powerline-load-moe-theme-color-scheme)))
+
+(defun moe-theme-toggle-powerline-supporting ()
+  (interactive)
+  )
 
 (defun moe-theme-select-color ()
   "Interactively select the color of mode-line you like and set
-it. (Notice: we support Powerline :D) You may also like
-`moe-theme-random-color'"
+it. Also see `moe-theme-random-color'"
   (interactive)
   (moe-theme-set-color (intern (completing-read
-                 "Select a color: "
-                 '((blue) (green) (orange) (magenta) (yellow) (purple) (red) (cyan) (w/b))
-                 nil t "" nil nil t))))
+                                "Select a color: "
+                                '((blue) (green) (orange) (magenta) (yellow) (purple) (red) (cyan) (w/b))
+                                nil t "" nil nil t))))
 
 (defun moe-theme-random-color ()
   "Give me a random mode-line color.=w=+
@@ -379,53 +375,51 @@ This function can be called both programmly and interactively."
 
 (with-eval-after-load "powerline"
   (defadvice powerline-revert (after moe-theme-powerline-revert activate)
-    "Auto set `moe-theme-powerline-enable-p' to nil after `powerline-revert'
-Because when `powerline-moe-theme' has been run, `moe-theme-select-color'
-and `moe-theme-random-color' should call `powerline-moe-theme' again for update."
-    (setq moe-theme-powerline-enable-p nil)
-    (if (eq (frame-parameter nil 'background-mode) 'light)
-          (moe-light)
-        (moe-dark)))
-  (defalias 'moe-theme-powerline 'powerline-moe-theme)
-  (defun powerline-moe-theme ()
+    "Because when `powerline-load-moe-theme-color-scheme' has been run, `moe-theme-select-color'
+and `moe-theme-random-color' should call `powerline-load-moe-theme-color-scheme' again for update."
+    (when moe-theme-enable-powerline-supporting
+      (powerline-load-moe-theme-color-scheme)
+      ))
+  (defalias 'moe-theme-load-powerline 'powerline-load-moe-theme-color-scheme)
+  (defun powerline-load-moe-theme-color-scheme ()
     "Powerline theme powered by moe-theme.el
 It's recommended use this with `moe-light' or `moe-dark', but it's ok without them,
 as long as setq `moe-theme-mode-line-color' first."
     (interactive)
     (cond ((eq (frame-parameter nil 'background-mode) 'light)
            (set-face-attribute 'mode-line-buffer-id nil :background nil :foreground "#1c1c1c")
-             (set-face-attribute 'mode-line-inactive nil :background "#b2b2b2" :foreground "#ffffff")
-             (set-face-attribute 'powerline-active2 nil :background "#585858" :foreground "#ffffff")
-             (set-face-attribute 'powerline-inactive1 nil :background "#c6c6c6" :foreground "#585858")
-             (set-face-attribute 'powerline-inactive2 nil :background "#e4e4e4" :foreground "#585858")
-             (cond ((eq moe-theme-mode-line-color 'blue)
-                    (set-face-attribute 'mode-line nil :background "#5fafd7" :foreground "#ffffff")
-                    (set-face-attribute 'powerline-active1 nil :background "#afd7ff" :foreground "#005faf"))
-                   ((eq moe-theme-mode-line-color 'green)
-                    (set-face-attribute 'mode-line nil :background "#a1db00" :foreground "#005f00")
-                    (set-face-attribute 'powerline-active1 nil :background "#d7ff87" :foreground "#008700"))
-                   ((eq moe-theme-mode-line-color 'orange)
-                    (set-face-attribute 'mode-line nil :background "#ff8700" :foreground "#ffffff")
-                    (set-face-attribute 'powerline-active1 nil :background "#ffd787" :foreground "#d75f00"))
-                   ((eq moe-theme-mode-line-color 'magenta)
-                    (set-face-attribute 'mode-line nil :background "#ff4ea3" :foreground "#ffffff")
-                    (set-face-attribute 'powerline-active1 nil :background "#ffafff" :foreground "#ff1f8b"))
-                   ((eq moe-theme-mode-line-color 'yellow)
-                    (set-face-attribute 'mode-line nil :background "#fce94f" :foreground "#875f00")
-                    (set-face-attribute 'powerline-active1 nil :background "#ffff87" :foreground "#875f00"))
-                   ((eq moe-theme-mode-line-color 'purple)
-                    (set-face-attribute 'mode-line nil :background "#af5fd7" :foreground "#ffffff")
-                    (set-face-attribute 'powerline-active1 nil :background "#e6a8df" :foreground "#6c0099"))
-                   ((eq moe-theme-mode-line-color 'red)
-                    (set-face-attribute 'mode-line nil :background "#ff4b4b" :foreground "#ffffff")
-                    (set-face-attribute 'powerline-active1 nil :background "#ffafaf" :foreground "#cc0000"))
-                   ((eq moe-theme-mode-line-color 'cyan)
-                    (set-face-attribute 'mode-line nil :background "#5faf87" :foreground "#ffffff")
-                    (set-face-attribute 'powerline-active1 nil :background "#87d7af" :foreground "#005f5f"))
-                   ((eq moe-theme-mode-line-color 'w/b)
-                    (set-face-attribute 'mode-line nil :background "#1c1c1c" :foreground "#ffffff")
-                    (set-face-attribute 'powerline-active1 nil :background "#bcbcbc" :foreground "#3a3a3a")
-                    (set-face-attribute 'mode-line-buffer-id nil :background nil :foreground "#ffffff"))))
+           (set-face-attribute 'mode-line-inactive nil :background "#b2b2b2" :foreground "#ffffff")
+           (set-face-attribute 'powerline-active2 nil :background "#585858" :foreground "#ffffff")
+           (set-face-attribute 'powerline-inactive1 nil :background "#c6c6c6" :foreground "#585858")
+           (set-face-attribute 'powerline-inactive2 nil :background "#e4e4e4" :foreground "#585858")
+           (cond ((eq moe-theme-mode-line-color 'blue)
+                  (set-face-attribute 'mode-line nil :background "#5fafd7" :foreground "#ffffff")
+                  (set-face-attribute 'powerline-active1 nil :background "#afd7ff" :foreground "#005faf"))
+                 ((eq moe-theme-mode-line-color 'green)
+                  (set-face-attribute 'mode-line nil :background "#a1db00" :foreground "#005f00")
+                  (set-face-attribute 'powerline-active1 nil :background "#d7ff87" :foreground "#008700"))
+                 ((eq moe-theme-mode-line-color 'orange)
+                  (set-face-attribute 'mode-line nil :background "#ff8700" :foreground "#ffffff")
+                  (set-face-attribute 'powerline-active1 nil :background "#ffd787" :foreground "#d75f00"))
+                 ((eq moe-theme-mode-line-color 'magenta)
+                  (set-face-attribute 'mode-line nil :background "#ff4ea3" :foreground "#ffffff")
+                  (set-face-attribute 'powerline-active1 nil :background "#ffafff" :foreground "#ff1f8b"))
+                 ((eq moe-theme-mode-line-color 'yellow)
+                  (set-face-attribute 'mode-line nil :background "#fce94f" :foreground "#875f00")
+                  (set-face-attribute 'powerline-active1 nil :background "#ffff87" :foreground "#875f00"))
+                 ((eq moe-theme-mode-line-color 'purple)
+                  (set-face-attribute 'mode-line nil :background "#af5fd7" :foreground "#ffffff")
+                  (set-face-attribute 'powerline-active1 nil :background "#e6a8df" :foreground "#6c0099"))
+                 ((eq moe-theme-mode-line-color 'red)
+                  (set-face-attribute 'mode-line nil :background "#ff4b4b" :foreground "#ffffff")
+                  (set-face-attribute 'powerline-active1 nil :background "#ffafaf" :foreground "#cc0000"))
+                 ((eq moe-theme-mode-line-color 'cyan)
+                  (set-face-attribute 'mode-line nil :background "#5faf87" :foreground "#ffffff")
+                  (set-face-attribute 'powerline-active1 nil :background "#87d7af" :foreground "#005f5f"))
+                 ((eq moe-theme-mode-line-color 'w/b)
+                  (set-face-attribute 'mode-line nil :background "#1c1c1c" :foreground "#ffffff")
+                  (set-face-attribute 'powerline-active1 nil :background "#bcbcbc" :foreground "#3a3a3a")
+                  (set-face-attribute 'mode-line-buffer-id nil :background nil :foreground "#ffffff"))))
           ((eq (frame-parameter nil 'background-mode) 'dark)
            (set-face-attribute 'mode-line-buffer-id nil :background nil :foreground "#080808")
            (set-face-attribute 'mode-line-inactive nil :background "#4e4e4e" :foreground "#9e9e9e")
@@ -461,7 +455,8 @@ as long as setq `moe-theme-mode-line-color' first."
                   (set-face-attribute 'powerline-active1 nil :background "#bcbcbc" :foreground "#3a3a3a")
                   (set-face-attribute 'mode-line-buffer-id nil :background nil :foreground "#3a3a3a")))))
     (powerline-default-theme)
-    (powerline-reset)))
+    (powerline-reset)
+    ))
 
 
 (provide 'moe-theme)
