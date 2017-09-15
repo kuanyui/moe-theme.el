@@ -59,7 +59,7 @@ Moe, moe, kyun!")
    `(show-paren-match ((,class (:background ,blue-00))))
    `(header-line ((,class (:background ,blue-0 :foreground ,blue-3))))
    `(help-argument-name ((,class (:foreground ,magenta-3 :italic t))))
-
+   `(eldoc-highlight-function-argument ((,class (:foreground ,green-3 :bold t :underline t :background ,green-00))))
    ;; Mode line & frames' faces
    `(mode-line ((,class (:box nil :background ,blue-1 :foreground ,white-0))))
    `(mode-line-inactive ((,class (:box nil :background ,white-2 :foreground ,black-1))))

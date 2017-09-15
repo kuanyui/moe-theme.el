@@ -60,7 +60,7 @@ Moe, moe, kyun!")
    `(show-paren-match ((,class (:background ,blue-3 :foreground nil))))
    `(header-line ((,class (:background ,blue-3 :foreground ,white-0))))
    `(help-argument-name ((,class (:foreground ,magenta-1 :italic t))))
-
+   `(eldoc-highlight-function-argument ((,class (:foreground ,green-01 :bold t :underline t :background ,green-5))))
    ;; Mode line & frames' faces
    `(mode-line ((,class (:box nil :background ,blue-0 :foreground ,blue-3))))
    `(mode-line-inactive ((,class (:box nil :background ,black-2-5 :foreground ,white-1))))
