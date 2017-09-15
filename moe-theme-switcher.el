@@ -31,12 +31,17 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
   "Avoid unnecessary load-theme and screen flashing in GUI version Emacs"
   (cond ((equal switch-to 'light)
          (if (not (equal moe-theme-which-enabled 'light))
-           (progn (moe-light)
-                  (setq moe-theme-which-enabled 'light)))) ;[FIXME] Maybe unnecessary
+             (progn (moe-light)
+                    (setq moe-theme-which-enabled 'light)))) ;[FIXME] Maybe unnecessary
         ((equal switch-to 'dark)
          (if (not (equal moe-theme-which-enabled 'dark))
-           (progn (moe-dark)
-                  (setq moe-theme-which-enabled 'dark)))))) ;[FIXME] Maybe unnecessary
+             (progn (moe-dark)
+                    (setq moe-theme-which-enabled 'dark)))))) ;[FIXME] Maybe unnecessary
+
+(solar-sunrise-sunset-string (calendar-current-date))
+(solar-sunrise-sunset (calendar-current-date))
+(solar-time-string )
+
 
 (defun switch-at-fixed-time ()
   (let ((now (string-to-number (format-time-string "%H"))))

@@ -374,12 +374,6 @@ This function can be called both programmly and interactively."
 
 
 (with-eval-after-load "powerline"
-  (defadvice powerline-revert (after moe-theme-powerline-revert activate)
-    "Because when `powerline-load-moe-theme-color-scheme' has been run, `moe-theme-select-color'
-and `moe-theme-random-color' should call `powerline-load-moe-theme-color-scheme' again for update."
-    (when moe-theme-enable-powerline-supporting
-      (powerline-load-moe-theme-color-scheme)
-      ))
   (defalias 'moe-theme-load-powerline 'powerline-load-moe-theme-color-scheme)
   (defun powerline-load-moe-theme-color-scheme ()
     "Powerline theme powered by moe-theme.el
