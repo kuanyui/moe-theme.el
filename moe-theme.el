@@ -136,10 +136,12 @@
   "If t, highlight buffer-id on mode-line.
 If nil, just bold buffer-id without highlight")
 
+(defconst moe-theme-available-modeline-colors-set '(blue green orange magenta yellow purple red cyan w/b))
+
 (defvar moe-theme-mode-line-color 'blue
   "Default is 'blue.
 If nil, no background color.
-Available choices: 'blue, 'green, 'magenta, 'red, 'orange, 'yellow, 'purple, 'b/w")
+Available choices: 'blue, 'cyan', 'green, 'magenta, 'red, 'orange, 'yellow, 'purple, 'b/w")
 
 (defvar moe-light-pure-white-background-in-terminal nil
   "With 256-colors, default yellow background of moe-light may be 'too yellow'
@@ -186,6 +188,12 @@ Avoid unnecessary load-theme")
 
 (defvar moe-theme-enable-powerline-supporting nil
   "Don't setq this manually.")
+
+(setq moe-theme-colorize-modeline-by-frame-id t)
+(setq moe-theme-colorize-modeline-color-set '(cyan green orange blue yellow magenta b/w purple))
+
+
+
 
 
 
@@ -244,7 +252,7 @@ Avoid unnecessary load-theme")
   (if (functionp 'moe-theme--resize-font-markdown) (moe-theme--resize-font-markdown))
   (if (functionp 'moe-theme--resize-font-org) (moe-theme--resize-font-org))
   (if (functionp 'moe-theme--resize-font-rst) (moe-theme--resize-font-rst))
-)
+  )
 
 (defun moe-light ()
   "Load moe-light-theme with your customizations."
@@ -348,9 +356,6 @@ programmly (e.g. in init.el), not interactively."
   (if moe-theme-enable-powerline-supporting
       (powerline-load-moe-theme-color-scheme)))
 
-(defun moe-theme-toggle-powerline-supporting ()
-  (interactive)
-  )
 
 (defun moe-theme-select-color ()
   "Interactively select the color of mode-line you like and set
@@ -358,7 +363,7 @@ it. Also see `moe-theme-random-color'"
   (interactive)
   (moe-theme-set-color (intern (completing-read
                                 "Select a color: "
-                                '((blue) (green) (orange) (magenta) (yellow) (purple) (red) (cyan) (w/b))
+                                (mapcar #'list moe-theme-available-modeline-colors-set)
                                 nil t "" nil nil t))))
 
 (defun moe-theme-random-color ()
@@ -366,14 +371,30 @@ it. Also see `moe-theme-random-color'"
 This function can be called both programmly and interactively."
   (interactive)
   (let* ((n (abs (% (random) 9)))
-         (current-color moe-theme-mode-line-color)
-         (color-list '(blue green orange magenta yellow purple red cyan w/b)))
-    (if (eq (elt color-list n) current-color) ;If gotten color eq current-color, random again.
+         (current-color moe-theme-mode-line-color))
+    (if (eq (elt moe-theme-available-modeline-colors-set n) current-color) ;If gotten color eq current-color, random again.
         (moe-theme-random-color)
-      (moe-theme-set-color (elt color-list n)))))
+      (moe-theme-set-color (elt moe-theme-available-modeline-colors-set n)))))
 
+(defun moe-theme-get-color-by-frame-name ()
+  (if moe-theme-colorize-modeline-by-frame-id
+      (let* ((obj-name (format "%s" (selected-frame)))
+             (name (progn (string-match "#<frame \\(.+?\\) 0x[0-9a-f]+>" obj-name)
+                          (match-string-no-properties 1 obj-name)))
+             (int (if (string-match "F\\([0-9]+\\)" name)
+                      (string-to-int (match-string-no-properties 1 name))
+                    (string-to-int (substring (md5 name) 0 1) 16)))
+             (enabled-colors-len (length moe-theme-colorize-modeline-color-set)))
+        (nth (% int enabled-colors-len) moe-theme-colorize-modeline-color-set))))
+
+(defadvice other-frame (after change-mode-line-color-by-frame-id activate)
+  (moe-theme-set-color (moe-theme-get-color-by-frame-name)))
 
 (with-eval-after-load "powerline"
+  (defun moe-theme-toggle-powerline-supporting ()
+    (interactive)
+    )
+
   (defalias 'moe-theme-load-powerline 'powerline-load-moe-theme-color-scheme)
   (defun powerline-load-moe-theme-color-scheme ()
     "Powerline theme powered by moe-theme.el
