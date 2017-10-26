@@ -645,7 +645,7 @@ Moe, moe, kyun!")
    `(comint-highlight-prompt ((,class (:foreground ,white-0 :background ,black-2-5 :bold t))))
 
    ;; which-function-mode
-   `(which-func ((,class (:foreground ,white-0 :background ,orange-2))))
+   `(which-func ((,class (:foreground ,blue-0 :background nil))))
 
    ;; Flymake
    `(flymake-warnline ((,class (:underline ,orange-2))))
