@@ -81,8 +81,8 @@
 Download the archive of `moe-theme` (or `git clone` it) to `~/.emacs.d/moe-theme.el` and extract it. Then, add these to your init file:
 
 ```lisp
-	;;customize theme
-	(add-to-list 'custom-theme-load-path "~/.emacs.d/moe-theme.el/")
+    ;;customize theme
+    (add-to-list 'custom-theme-load-path "~/.emacs.d/moe-theme.el/")
     (add-to-list 'load-path "~/.emacs.d/moe-theme.el/")
     (require 'moe-theme)
 ```
@@ -105,7 +105,7 @@ There's a full customization example:
 
     ;; Show highlighted buffer-id as decoration. (Default: nil)
     (setq moe-theme-highlight-buffer-id t)
-    
+
     ;; Resize titles (optional).
     (setq moe-theme-resize-markdown-title '(1.5 1.4 1.3 1.2 1.0 1.0))
     (setq moe-theme-resize-org-title '(1.5 1.4 1.3 1.2 1.1 1.0 1.0 1.0 1.0))
@@ -128,7 +128,7 @@ If you have any question about settings, go on and read following README to get 
 >
 >```lisp
 >    (add-to-list 'custom-theme-load-path "~/.emacs.d/PATH/TO/moe-theme/")
-> 
+>
 >    (load-theme 'moe-dark t)
 >    ;;or
 >    (load-theme 'moe-light t)
@@ -195,7 +195,7 @@ I prefer a terminal with a black-on-white color scheme. I found that in the dayt
 So if you like, you can add the following line to your `~/.emacs` to automatically switch between `moe-dark` and `moe-light` according to the system time:
 
 ```lisp
-	(require 'moe-theme-switcher)
+    (require 'moe-theme-switcher)
 ```
 
 By adding the line above, your Emacs will have a light theme in the day and a dark one at night. =w=+
@@ -212,8 +212,8 @@ If this value is `t` and both `calendar-latitude` and `calendar-longitude` are s
 Take "Keelung, Taiwan" (25N,121E) for example, you can set like this:
 
 ```lisp
-	(setq calendar-latitude +25)
-	(setq calendar-longitude +121)
+    (setq calendar-latitude +25)
+    (setq calendar-longitude +121)
 ```
 
 ## Notes
