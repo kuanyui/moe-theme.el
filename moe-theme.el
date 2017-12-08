@@ -382,7 +382,7 @@ This function can be called both programmly and interactively."
              (name (progn (string-match "#<frame \\(.+?\\) 0x[0-9a-f]+>" obj-name)
                           (match-string-no-properties 1 obj-name)))
              (int (if (string-match "F\\([0-9]+\\)" name)
-                      (string-to-int (match-string-no-properties 1 name))
+                      (1- (string-to-int (match-string-no-properties 1 name)))
                     (string-to-int (substring (md5 name) 0 1) 16)))
              (enabled-colors-len (length moe-theme-colorize-modeline-color-set)))
         (nth (% int enabled-colors-len) moe-theme-colorize-modeline-color-set))))
@@ -390,13 +390,20 @@ This function can be called both programmly and interactively."
 (defadvice other-frame (after change-mode-line-color-by-frame-id activate)
   (moe-theme-set-color (moe-theme-get-color-by-frame-name)))
 
+(defadvice delete-frame (after change-mode-line-color-by-frame-id activate)
+  (moe-theme-set-color (moe-theme-get-color-by-frame-name)))
+
+(defadvice make-frame-command (after change-mode-line-color-by-frame-id activate)
+  (moe-theme-set-color (moe-theme-get-color-by-frame-name)))
+
 (with-eval-after-load "powerline"
   (defun moe-theme-toggle-powerline-supporting ()
     (interactive)
+
     )
 
-  (defalias 'moe-theme-load-powerline 'powerline-load-moe-theme-color-scheme)
-  (defun powerline-load-moe-theme-color-scheme ()
+  ;; (defalias 'moe-theme-load-powerline 'powerline-load-moe-theme-color-scheme)
+  (defun moe-theme--setup-theme-for-powerline ()
     "Powerline theme powered by moe-theme.el
 It's recommended use this with `moe-light' or `moe-dark', but it's ok without them,
 as long as setq `moe-theme-mode-line-color' first."
