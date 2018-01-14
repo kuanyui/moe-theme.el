@@ -112,10 +112,12 @@
 ;; 	(setq calendar-longitude +121)
 
 ;;; Code:
-
 (when load-file-name
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
+
+(require 'moe-light-theme)
+(require 'moe-dark-theme)
 
 ;; ======================================================
 ;; Buffer ID
@@ -266,7 +268,7 @@ Avoid unnecessary load-theme")
   )
 
 (defun moe-light ()
-  "Load moe-light-theme with your customizations."
+  "Load moe-light-theme with additional customizations"
   (interactive)
   (if moe-theme--need-reload-theme ;Avoid unnecessary flashing screen when using random-color
       (progn (load-theme 'moe-light t)
@@ -313,7 +315,7 @@ Avoid unnecessary load-theme")
   (moe-theme--common-setup))
 
 (defun moe-dark ()
-  "Load moe-light-theme with your customizations."
+  "Load moe-light-theme with your additional customization."
   (interactive)
   (if moe-theme--need-reload-theme (load-theme 'moe-dark t))
   (cond ((eq moe-theme-mode-line-color 'blue)
