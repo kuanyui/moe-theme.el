@@ -136,7 +136,9 @@ If nil, just bold buffer-id without highlight")
 If nil, no background color.
 Available choices: 'blue, 'cyan', 'green, 'magenta, 'red, 'orange, 'yellow, 'purple, 'b/w")
 
-
+;; ======================================================
+;; Auto Change Modeline Color By Frame ID
+;; ======================================================
 
 (defvar moe-theme-colorize-modeline-by-frame-id nil
   "Auto change mode-line color after switching frame
@@ -193,11 +195,8 @@ If the value is t, the titles will be resized by its level.
 If the vaule is nil, all the outlines will be the same size.")
 
 ;; ======================================================
-;; Options
+;; INTERNAL VARIABLES
 ;; ======================================================
-
-
-
 
 (defvar moe-theme--need-reload-theme t
   "For internal use. DO NOT CHANGE THIS.
