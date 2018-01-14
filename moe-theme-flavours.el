@@ -24,6 +24,15 @@
 
 ;;; Code:
 
+(defun moe-theme-reload-by-background-brightness ()
+  (if (eq (frame-parameter nil 'background-mode) 'light)
+        (load-theme 'moe-light)
+      (load-theme 'moe-dark)))
+
+;; ======================================================
+;; Tomorrow
+;; ======================================================
+
 (defun moe-theme-flavour-tomorrow ()
   (interactive)
   (let ((dark-background "#1d1f21")
@@ -87,10 +96,45 @@
     (setq moe-light-type                      light-blue)
     (setq moe-light-variable-name             light-yellow)
     (setq moe-light-warning                   light-red)
-    (if (eq (frame-parameter nil 'background-mode) 'light)
-        (load-theme 'moe-light)
-      (load-theme 'moe-dark)
-      )))
+    (moe-theme-reload-by-background-brightness)))
+
+;; ======================================================
+;; Monokai
+;; ======================================================
+(defun moe-theme-flavour-monokai ()
+  (interactive)
+  (let ((monokai-256-foreground "#F5F5F5")
+        (monokai-256-background "#1B1E1C")
+        (monokai-256-yellow   "#CDC673")
+        (monokai-256-orange   "#FF8C00")
+        (monokai-256-red      "#FF1493")
+        (monokai-256-magenta  "#D700D7")
+        (monokai-256-violet   "#AF87FF")
+        (monokai-256-blue     "#5FD7FF")
+        (monokai-256-cyan     "#5FFFFF")
+        (monokai-256-green    "#87D700")
+        (monokai-256-gray     "#3D3D3D")
+        (monokai-256-comments "#8B8878")
+        )
+    (setq moe-dark-bg monokai-256-background)
+    (setq moe-dark-fg monokai-256-foreground)
+    (setq moe-dark-builtin monokai-256-red)
+    (setq moe-dark-comment-delimiter monokai-256-comments)
+    (setq moe-dark-comment monokai-256-comments)
+    (setq moe-dark-constant monokai-256-violet)
+    (setq moe-dark-doc monokai-256-yellow)
+    (setq moe-dark-doc-string monokai-256-cyan)
+    (setq moe-dark-function-name monokai-256-green)
+    (setq moe-dark-keyword monokai-256-red)
+    (setq moe-dark-negation-char monokai-256-yellow)
+    (setq moe-dark-preprocessor monokai-256-red)
+    (setq moe-dark-regexp-grouping-construct monokai-256-yellow)
+    (setq moe-dark-regexp-grouping-backslash monokai-256-violet)
+    (setq moe-dark-string monokai-256-yellow)
+    (setq moe-dark-type monokai-256-blue)
+    (setq moe-dark-variable-name monokai-256-orange)
+    (setq moe-dark-warning monokai-256-orange)
+    (moe-theme-reload-by-background-brightness)))
 
 
 (provide 'moe-theme-flavours)
