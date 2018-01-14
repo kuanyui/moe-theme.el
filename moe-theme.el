@@ -24,18 +24,16 @@
 ;;   - 256 colors terminal (or higher)
 ;;
 ;; = Usage =====================================================================
-;;
-;;   Add you to your .emacs:
-;;
-;;      (require 'moe-theme)
-;;      (moe-dark)
-;;          or
-;;      (moe-light)
-;;
-;;   But if you want to install manually, add this first:
+;;   If you install this package manually, add this first:
 ;;
 ;;      (add-to-list 'custom-theme-load-path "~/path/to/moe-theme")
 ;;      (add-to-list 'load-path "~/path/to/moe-theme")
+;;
+;;   Add you to your configuration:
+;;
+;;      (require 'moe-theme)
+;;      (moe-dark)  ;; or (moe-light)
+;;
 ;;
 ;; = Customizations ============================================================
 ;;
@@ -219,7 +217,7 @@ Avoid unnecessary load-theme")
 
 (with-eval-after-load "markdown"
   (defun moe-theme-resize-title-apply-markdown ()
-    (setq moe-theme--resize)
+    (setq moe-theme-resize-title-markdown (moe-theme-resize-title--repaire-list moe-theme-resize-title-markdown 6))
     (set-face-attribute 'markdown-header-face-1 nil :height (nth 0 moe-theme-resize-title-markdown))
     (set-face-attribute 'markdown-header-face-2 nil :height (nth 1 moe-theme-resize-title-markdown))
     (set-face-attribute 'markdown-header-face-3 nil :height (nth 2 moe-theme-resize-title-markdown))
@@ -230,6 +228,7 @@ Avoid unnecessary load-theme")
 
 (with-eval-after-load "org"
   (defun moe-theme-resize-title-apply-org ()
+    (setq moe-theme-resize-title-org (moe-theme-resize-title--repaire-list moe-theme-resize-title-org 9))
     (set-face-attribute 'org-document-title nil :height (nth 0 moe-theme-resize-title-org))
     (set-face-attribute 'org-level-1        nil :height (nth 1 moe-theme-resize-title-org))
     (set-face-attribute 'org-level-2        nil :height (nth 2 moe-theme-resize-title-org))
@@ -243,6 +242,7 @@ Avoid unnecessary load-theme")
 
 (with-eval-after-load "rst"
   (defun moe-theme-resize-title-apply-rst ()
+    (setq moe-theme-resize-title-rst (moe-theme-resize-title--repaire-list moe-theme-resize-title-rst 6))
     (if (facep 'rst-level-1-face)
         (progn
           (set-face-attribute 'rst-level-1-face nil :height (nth 0 moe-theme-resize-title-rst))
@@ -261,7 +261,7 @@ Avoid unnecessary load-theme")
   (moe-theme-resize-title-apply-rst))
 
 (defun moe-theme--common-setup ()
-  (if (functionp 'powerline-moe-theme) (powerline-moe-theme))
+  (if (functionp 'powerline) (powerline-moe-theme))
   (if (functionp 'moe-theme-resize-title-apply-markdown) (moe-theme-resize-title-apply-markdown))
   (if (functionp 'moe-theme-resize-title-apply-org) (moe-theme-resize-title-apply-org))
   (if (functionp 'moe-theme-resize-title-apply-rst) (moe-theme-resize-title-apply-rst))
@@ -471,7 +471,7 @@ as long as setq `moe-theme-mode-line-color' first."
                   (set-face-attribute 'mode-line-buffer-id nil :background nil :foreground "#3a3a3a")))))
     (powerline-default-theme)
     (powerline-reset))
-  (defalias powerline-moe-theme moe-theme-powerline))
+  (defalias 'powerline-moe-theme 'moe-theme-powerline))
 
 ;; ======================================================
 ;; Auto Colorize by frame id (Only usable under terminal)
