@@ -47,9 +47,9 @@
 ;;    You may want to resize the titles in `markdown-mode', `org-mode', or
 ;;    `rst-mode':
 ;;
-;;      (setq moe-theme-resize-markdown-title '(2.0 1.7 1.5 1.3 1.0 1.0))
-;;      (setq moe-theme-resize-org-title '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
-;;      (setq moe-theme-resize-rst-title '(2.0 1.7 1.5 1.3 1.1 1.0))
+;;      (setq moe-theme-resize-title-markdown '(2.0 1.7 1.5 1.3 1.0 1.0))
+;;      (setq moe-theme-resize-title-org '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
+;;      (setq moe-theme-resize-title-rst '(2.0 1.7 1.5 1.3 1.1 1.0))
 ;;
 ;;    Markdown should have 6 items; org has 9 items; rst has 6 items.
 ;;
@@ -72,23 +72,9 @@
 ;;
 ;;    ### Powerline ############################################################
 ;;
-;;    Now we supports Powerline (https://github.com/milkypostman/powerline),
-;;    which makes mode-line looks fabulous! We recommended installing Powerline
-;;    and run `powerline-moe-theme'.
-;;    ### Too Yellow Background? ###############################################
-;;
-;;
-;;    With 256-colors, default yellow background of moe-light may be too yellow
-;;    and harsh to eyes on some screens.
-;;
-;;    If you encounter this problem, and want to set background color to #ffffff
-;;    in terminal, set the value of `moe-light-pure-white-background-in-terminal'
-;;    to t:
-;;
-;;        (setq moe-light-pure-white-background-in-terminal t)
-;;
-;;
-;;
+;;    moe-theme provide colorized Powerline (https://github.com/milkypostman/powerline),
+;;    Install powerline then run `powerline-moe-theme'.
+
 ;; = Auto Switching ============================================================
 ;;
 ;;   I prefer a terminal with a black-on-white color scheme. I found that in the
@@ -132,16 +118,28 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
+;; ======================================================
+;; Buffer ID
+;; ======================================================
+
 (defvar moe-theme-highlight-buffer-id t
   "If t, highlight buffer-id on mode-line.
 If nil, just bold buffer-id without highlight")
 
-(defconst moe-theme-available-modeline-colors-set '(blue green orange magenta yellow purple red cyan w/b))
+;; ======================================================
+;; Modeline Color
+;; ======================================================
+
+(defconst moe-theme-modeline-available-colors-set '(blue green orange magenta yellow purple red cyan w/b))
 
 (defvar moe-theme-mode-line-color 'blue
   "Default is 'blue.
 If nil, no background color.
 Available choices: 'blue, 'cyan', 'green, 'magenta, 'red, 'orange, 'yellow, 'purple, 'b/w")
+
+;; ======================================================
+;; Background
+;; ======================================================
 
 (defvar moe-light-pure-white-background-in-terminal nil
   "With 256-colors, default yellow background of moe-light may be 'too yellow'
@@ -150,17 +148,19 @@ on some screen.
 If you encounter this problem, and want to have a background of #ffffff, set
 the value of `moe-light-pure-white-background-in-terminal' to t.")
 
-;; The variable `moe-theme-resize-title-fonts`
-(defvar moe-theme-resize-markdown-title nil
+;; ======================================================
+;; Resize Titles (Markdown / Org / RST)
+;; ======================================================
+(defvar moe-theme-resize-title-markdown nil
   "Resize header/title faces of Markdown-mode or not. (default value is nil)
 The value should be a list with 6 items of number, which decide title font sizes
 of each level.
 
-  (setq moe-theme-resize-markdown-title '(2.0 1.7 1.5 1.3 1.0 1.0))
+  (setq moe-theme-resize-title-markdown '(2.0 1.7 1.5 1.3 1.0 1.0))
 
 If the vaule is nil, all the titles will be the same size.")
 
-(defvar moe-theme-resize-org-title nil
+(defvar moe-theme-resize-title-org nil
   "Resize outline/title faces of Org-mode or not. (default value is nil)
 
 The value should be a list with 9 items of number; which decide title font sizes
@@ -168,16 +168,16 @@ of each level. The first item is the font size of `org-document-title', from
 second to ninth is outlines of 1-8.
 For example, you can set like this:
 
-  (setq moe-theme-resize-org-title '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
+  (setq moe-theme-resize-title-org '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
 
 If the vaule is nil, all the outlines will be the same size.")
 
-(defvar moe-theme-resize-rst-title nil
+(defvar moe-theme-resize-title-rst nil
   "Resize title faces of ReStructuredText-mode or not. (default value is nil)
 The value should be a list with 6 items of number, which decide title font sizes
 of each level.
 
-  (setq moe-theme-resize-rst-title '(2.0 1.7 1.5 1.3 1.1 1.0))
+  (setq moe-theme-resize-title-rst '(2.0 1.7 1.5 1.3 1.1 1.0))
 
 If the value is t, the titles will be resized by its level.
 If the vaule is nil, all the outlines will be the same size.")
@@ -192,66 +192,63 @@ Avoid unnecessary load-theme")
 (setq moe-theme-colorize-modeline-by-frame-id t)
 (setq moe-theme-colorize-modeline-color-set '(cyan green orange blue yellow magenta b/w purple))
 
-
-
-
-
-
-
+(defun moe-theme-resize-title--repaire-list (list final-length)
+  "Non-destructive"
+  (if (not (listp list))
+      (setq list '()))
+  (setq list (delete-if-not #'numberp list))
+  (while (< (length list) final-length)
+    (setq list (append list '(1.0))))
+  list)
 
 (with-eval-after-load "markdown"
-  (defun moe-theme--resize-font-markdown ()
-    (when (and (listp moe-theme-resize-markdown-title)
-               (>= (length moe-theme-resize-markdown-title) 6))
-      (set-face-attribute 'markdown-header-face-1 nil :height (nth 0 moe-theme-resize-markdown-title))
-      (set-face-attribute 'markdown-header-face-2 nil :height (nth 1 moe-theme-resize-markdown-title))
-      (set-face-attribute 'markdown-header-face-3 nil :height (nth 2 moe-theme-resize-markdown-title))
-      (set-face-attribute 'markdown-header-face-4 nil :height (nth 3 moe-theme-resize-markdown-title))
-      (set-face-attribute 'markdown-header-face-5 nil :height (nth 4 moe-theme-resize-markdown-title))
-      (set-face-attribute 'markdown-header-face-6 nil :height (nth 5 moe-theme-resize-markdown-title))))
-  (moe-theme--resize-font-markdown))
+  (defun moe-theme-resize-title-apply-markdown ()
+    (setq moe-theme--resize)
+    (set-face-attribute 'markdown-header-face-1 nil :height (nth 0 moe-theme-resize-title-markdown))
+    (set-face-attribute 'markdown-header-face-2 nil :height (nth 1 moe-theme-resize-title-markdown))
+    (set-face-attribute 'markdown-header-face-3 nil :height (nth 2 moe-theme-resize-title-markdown))
+    (set-face-attribute 'markdown-header-face-4 nil :height (nth 3 moe-theme-resize-title-markdown))
+    (set-face-attribute 'markdown-header-face-5 nil :height (nth 4 moe-theme-resize-title-markdown))
+    (set-face-attribute 'markdown-header-face-6 nil :height (nth 5 moe-theme-resize-title-markdown)))
+  (moe-theme-resize-title-apply-markdown))
 
 (with-eval-after-load "org"
-  (defun moe-theme--resize-font-org ()
-    (when (and (listp moe-theme-resize-org-title)
-               (>= (length moe-theme-resize-org-title) 9))
-      (set-face-attribute 'org-document-title nil :height (nth 0 moe-theme-resize-org-title))
-      (set-face-attribute 'org-level-1        nil :height (nth 1 moe-theme-resize-org-title))
-      (set-face-attribute 'org-level-2        nil :height (nth 2 moe-theme-resize-org-title))
-      (set-face-attribute 'org-level-3        nil :height (nth 3 moe-theme-resize-org-title))
-      (set-face-attribute 'org-level-4        nil :height (nth 4 moe-theme-resize-org-title))
-      (set-face-attribute 'org-level-5        nil :height (nth 5 moe-theme-resize-org-title))
-      (set-face-attribute 'org-level-6        nil :height (nth 6 moe-theme-resize-org-title))
-      (set-face-attribute 'org-level-7        nil :height (nth 7 moe-theme-resize-org-title))
-      (set-face-attribute 'org-level-8        nil :height (nth 8 moe-theme-resize-org-title))))
-  (moe-theme--resize-font-org))
+  (defun moe-theme-resize-title-apply-org ()
+    (set-face-attribute 'org-document-title nil :height (nth 0 moe-theme-resize-title-org))
+    (set-face-attribute 'org-level-1        nil :height (nth 1 moe-theme-resize-title-org))
+    (set-face-attribute 'org-level-2        nil :height (nth 2 moe-theme-resize-title-org))
+    (set-face-attribute 'org-level-3        nil :height (nth 3 moe-theme-resize-title-org))
+    (set-face-attribute 'org-level-4        nil :height (nth 4 moe-theme-resize-title-org))
+    (set-face-attribute 'org-level-5        nil :height (nth 5 moe-theme-resize-title-org))
+    (set-face-attribute 'org-level-6        nil :height (nth 6 moe-theme-resize-title-org))
+    (set-face-attribute 'org-level-7        nil :height (nth 7 moe-theme-resize-title-org))
+    (set-face-attribute 'org-level-8        nil :height (nth 8 moe-theme-resize-title-org)))
+  (moe-theme-resize-title-apply-org))
 
 (with-eval-after-load "rst"
-  (defun moe-theme--resize-font-rst ()
-    (when (and (listp moe-theme-resize-rst-title)
-               (>= (length moe-theme-resize-rst-title) 6))
-      (if (facep 'rst-level-1-face)
-          (progn
-            (set-face-attribute 'rst-level-1-face nil :height (nth 0 moe-theme-resize-rst-title))
-            (set-face-attribute 'rst-level-2-face nil :height (nth 1 moe-theme-resize-rst-title))
-            (set-face-attribute 'rst-level-3-face nil :height (nth 2 moe-theme-resize-rst-title))
-            (set-face-attribute 'rst-level-4-face nil :height (nth 3 moe-theme-resize-rst-title))
-            (set-face-attribute 'rst-level-5-face nil :height (nth 4 moe-theme-resize-rst-title))
-            (set-face-attribute 'rst-level-6-face nil :height (nth 5 moe-theme-resize-rst-title)))
+  (defun moe-theme-resize-title-apply-rst ()
+    (if (facep 'rst-level-1-face)
         (progn
-          (set-face-attribute 'rst-level-1 nil :height (nth 0 moe-theme-resize-rst-title))
-          (set-face-attribute 'rst-level-2 nil :height (nth 1 moe-theme-resize-rst-title))
-          (set-face-attribute 'rst-level-3 nil :height (nth 2 moe-theme-resize-rst-title))
-          (set-face-attribute 'rst-level-4 nil :height (nth 3 moe-theme-resize-rst-title))
-          (set-face-attribute 'rst-level-5 nil :height (nth 4 moe-theme-resize-rst-title))
-          (set-face-attribute 'rst-level-6 nil :height (nth 5 moe-theme-resize-rst-title))))))
-  (moe-theme--resize-font-rst))
+          (set-face-attribute 'rst-level-1-face nil :height (nth 0 moe-theme-resize-title-rst))
+          (set-face-attribute 'rst-level-2-face nil :height (nth 1 moe-theme-resize-title-rst))
+          (set-face-attribute 'rst-level-3-face nil :height (nth 2 moe-theme-resize-title-rst))
+          (set-face-attribute 'rst-level-4-face nil :height (nth 3 moe-theme-resize-title-rst))
+          (set-face-attribute 'rst-level-5-face nil :height (nth 4 moe-theme-resize-title-rst))
+          (set-face-attribute 'rst-level-6-face nil :height (nth 5 moe-theme-resize-title-rst)))
+      (progn
+        (set-face-attribute 'rst-level-1 nil :height (nth 0 moe-theme-resize-title-rst))
+        (set-face-attribute 'rst-level-2 nil :height (nth 1 moe-theme-resize-title-rst))
+        (set-face-attribute 'rst-level-3 nil :height (nth 2 moe-theme-resize-title-rst))
+        (set-face-attribute 'rst-level-4 nil :height (nth 3 moe-theme-resize-title-rst))
+        (set-face-attribute 'rst-level-5 nil :height (nth 4 moe-theme-resize-title-rst))
+        (set-face-attribute 'rst-level-6 nil :height (nth 5 moe-theme-resize-title-rst)))))
+  (moe-theme-resize-title-apply-rst))
 
 (defun moe-theme--common-setup ()
   (if (functionp 'powerline-moe-theme) (powerline-moe-theme))
-  (if (functionp 'moe-theme--resize-font-markdown) (moe-theme--resize-font-markdown))
-  (if (functionp 'moe-theme--resize-font-org) (moe-theme--resize-font-org))
-  (if (functionp 'moe-theme--resize-font-rst) (moe-theme--resize-font-rst))
+  (if (functionp 'moe-theme-resize-title-apply-markdown) (moe-theme-resize-title-apply-markdown))
+  (if (functionp 'moe-theme-resize-title-apply-org) (moe-theme-resize-title-apply-org))
+  (if (functionp 'moe-theme-resize-title-apply-rst) (moe-theme-resize-title-apply-rst))
   )
 
 (defun moe-light ()
@@ -363,7 +360,7 @@ it. Also see `moe-theme-random-color'"
   (interactive)
   (moe-theme-set-color (intern (completing-read
                                 "Select a color: "
-                                (mapcar #'list moe-theme-available-modeline-colors-set)
+                                (mapcar #'list moe-theme-modeline-available-colors-set)
                                 nil t "" nil nil t))))
 
 (defun moe-theme-random-color ()
@@ -372,9 +369,9 @@ This function can be called both programmly and interactively."
   (interactive)
   (let* ((n (abs (% (random) 9)))
          (current-color moe-theme-mode-line-color))
-    (if (eq (elt moe-theme-available-modeline-colors-set n) current-color) ;If gotten color eq current-color, random again.
+    (if (eq (elt moe-theme-modeline-available-colors-set n) current-color) ;If gotten color eq current-color, random again.
         (moe-theme-random-color)
-      (moe-theme-set-color (elt moe-theme-available-modeline-colors-set n)))))
+      (moe-theme-set-color (elt moe-theme-modeline-available-colors-set n)))))
 
 (defun moe-theme-get-color-by-frame-name ()
   (if moe-theme-colorize-modeline-by-frame-id
