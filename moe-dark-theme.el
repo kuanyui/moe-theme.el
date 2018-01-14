@@ -72,9 +72,9 @@ Moe, moe, kyun!")
    `(font-lock-variable-name-face        ((,class (:foreground ,moe-dark-variable-name            ))))
    `(font-lock-warning-face              ((,class (:foreground ,moe-dark-warning               :weight bold ))))
    ;; Ensure sufficient contrast on low-color terminals.
-   `(default ((((class color) (min-colors 4096)) (:foreground ,white-1 :background ,black-5))
-	      (((class color) (min-colors 256)) (:foreground ,white-1 :background ,black-5))
-	      (,class (:foreground ,white-1 :background ,black-5))))
+   `(default ((((class color) (min-colors 4096)) (:foreground ,moe-dark-fg :background ,moe-dark-bg))
+	      (((class color) (min-colors 256)) (:foreground ,moe-dark-fg :background ,moe-dark-bg))
+	      (,class (:foreground ,moe-dark-fg :background ,moe-dark-bg))))
    `(cursor ((,class (:background ,white-0))))
 
    ;; Highlighting faces
