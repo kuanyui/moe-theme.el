@@ -5,8 +5,6 @@
 ;; This file is not a part of GNU Emacs,
 ;; but this file is released under GPL v3.
 
-(require 'moe-dark-theme)
-(require 'moe-light-theme)
 (require 'moe-theme)
 
 (defvar moe-theme-switch-by-sunrise-and-sunset t
