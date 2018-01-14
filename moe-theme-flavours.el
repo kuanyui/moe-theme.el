@@ -114,7 +114,7 @@
         (monokai-gray "#64645E")
         (monokai-foreground "#F8F8F2")
         (monokai-background "#272722")
-        (monokai-comments "#75715E")
+        (monokai-comments "#757165")
         (monokai-emphasis "#F8F8F0")
         (monokai-line-number "#8F908A")
         (monokai-highlight "#49483E")
