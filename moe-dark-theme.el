@@ -32,17 +32,49 @@ Moe, moe, kyun!")
       (orange-0 "#ffaf87") (orange-00 "#ffd787") (orange-000 "#ffd7af")
       (linum-dark "#87875f") (linum-light "#d7d7af")
       )
-
+  ;; Customize color
+  (defvar moe-dark-bg                         black-5)
+  (defvar moe-dark-fg                         white-1)
+  (defvar moe-dark-builtin                    purple-1)
+  (defvar moe-dark-comment-delimiter          black-2-5)
+  (defvar moe-dark-comment                    black-2-5)
+  (defvar moe-dark-constant                   blue-1)
+  (defvar moe-dark-doc                        red-0)
+  (defvar moe-dark-doc-string                 yellow-3)
+  (defvar moe-dark-function-name              yellow-2)
+  (defvar moe-dark-keyword                    green-2)
+  (defvar moe-dark-negation-char              red-0)
+  (defvar moe-dark-preprocessor               purple-1)
+  (defvar moe-dark-regexp-grouping-backslash  yellow-1)
+  (defvar moe-dark-regexp-grouping-construct  purple-1)
+  (defvar moe-dark-string                     magenta-2)
+  (defvar moe-dark-type                       cyan-3)
+  (defvar moe-dark-variable-name              orange-2)
+  (defvar moe-dark-warning                    red-2)
 
   (custom-theme-set-faces
    'moe-dark
+   ;; Font lock faces
+   `(font-lock-builtin-face              ((,class (:foreground ,moe-dark-builtin                  ))))
+   `(font-lock-comment-delimiter-face    ((,class (:foreground ,moe-dark-comment-delimiter        :slant italic))))
+   `(font-lock-comment-face              ((,class (:foreground ,moe-dark-comment                  :slant italic))))
+   `(font-lock-constant-face             ((,class (:foreground ,moe-dark-constant                 ))))
+   `(font-lock-doc-face                  ((,class (:foreground ,moe-dark-doc                      ))))
+   `(font-lock-doc-string-face           ((,class (:foreground ,moe-dark-doc-string               ))))
+   `(font-lock-function-name-face        ((,class (:foreground ,moe-dark-function-name            ))))
+   `(font-lock-keyword-face              ((,class (:foreground ,moe-dark-keyword                  ))))
+   `(font-lock-negation-char-face        ((,class (:foreground ,moe-dark-negation-char            ))))
+   `(font-lock-preprocessor-face         ((,class (:foreground ,moe-dark-preprocessor             ))))
+   `(font-lock-regexp-grouping-backslash ((,class (:foreground ,moe-dark-regexp-grouping-backslash))))
+   `(font-lock-regexp-grouping-construct ((,class (:foreground ,moe-dark-regexp-grouping-construct))))
+   `(font-lock-string-face               ((,class (:foreground ,moe-dark-string                   ))))
+   `(font-lock-type-face                 ((,class (:foreground ,moe-dark-type                     ))))
+   `(font-lock-variable-name-face        ((,class (:foreground ,moe-dark-variable-name            ))))
+   `(font-lock-warning-face              ((,class (:foreground ,moe-dark-warning               :weight bold ))))
    ;; Ensure sufficient contrast on low-color terminals.
-   `(default ((((class color) (min-colors 4096))
-	       (:foreground ,white-1 :background ,black-5))
-	      (((class color) (min-colors 256))
-	       (:foreground ,white-1 :background ,black-5))
-	      (,class
-	       (:foreground ,white-1 :background ,black-5))))
+   `(default ((((class color) (min-colors 4096)) (:foreground ,white-1 :background ,black-5))
+	      (((class color) (min-colors 256)) (:foreground ,white-1 :background ,black-5))
+	      (,class (:foreground ,white-1 :background ,black-5))))
    `(cursor ((,class (:background ,white-0))))
 
    ;; Highlighting faces
@@ -73,24 +105,6 @@ Moe, moe, kyun!")
    `(error ((,class (:foreground ,red-0))))
    `(warning ((,class (:foreground ,orange-1))))
    `(success ((,class (:foreground ,green-1))))
-
-   ;; Font lock faces
-   `(font-lock-builtin-face ((,class (:foreground ,purple-1))))
-   `(font-lock-comment-delimiter-face ((,class (:foreground ,black-2-5 :slant italic))))
-   `(font-lock-comment-face ((,class (:foreground ,black-2-5 :slant italic))))
-   `(font-lock-constant-face ((,class (:foreground ,blue-1))))
-   `(font-lock-doc-face ((,class (:foreground ,red-0))))
-   `(font-lock-doc-string-face ((,class (:foreground ,yellow-3))))
-   `(font-lock-function-name-face ((,class (:foreground ,yellow-2))))
-   `(font-lock-keyword-face ((,class (:foreground ,green-2))))
-   `(font-lock-negation-char-face ((,class (:foreground ,red-0))))
-   `(font-lock-preprocessor-face ((,class (:foreground ,purple-1))))
-   `(font-lock-regexp-grouping-backslash ((,class (:foreground ,yellow-1))))
-   `(font-lock-regexp-grouping-construct ((,class (:foreground ,purple-1))))
-   `(font-lock-string-face ((,class (:foreground ,magenta-2))))
-   `(font-lock-type-face ((,class (:foreground ,cyan-3))))
-   `(font-lock-variable-name-face ((,class (:foreground ,orange-2))))
-   `(font-lock-warning-face ((,class (:weight bold :foreground ,red-2))))
 
    ;; Completions
    `(completions-annotations ((,class (:foreground ,green-2))))
@@ -944,11 +958,7 @@ Moe, moe, kyun!")
 
   (custom-theme-set-variables
    'moe-dark
-   `(ansi-color-names-vector [,black-5 ,red-0 ,green-0 ,yellow-1
-                                       ,blue-1 ,purple-1 ,blue-0 ,white-1])))
-
-
-(setq moe-theme-which-enabled 'dark)
+   `(ansi-color-names-vector [,black-5 ,red-0 ,green-0 ,yellow-1 ,blue-1 ,purple-1 ,blue-0 ,white-1])))
 
 (provide-theme 'moe-dark)
 
