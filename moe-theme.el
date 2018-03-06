@@ -51,6 +51,7 @@ Available choices: 'blue, 'cyan', 'green, 'magenta, 'red, 'orange, 'yellow, 'pur
 
 (defvar moe-theme-colorize-modeline-by-frame-id nil
   "Auto change mode-line color after switching frame
+(If Elscreen is enabled, use it first.)
 This feature rely on a checksum function to ensure a predictable order of color.
 Function `moe-theme-get-color-by-frame-name' is the implementation.")
 
@@ -386,6 +387,7 @@ as long as setq `moe-theme-mode-line-color' first."
 ;; Auto Colorize by frame id (Only usable under terminal)
 ;; ======================================================
 (when (null (window-system))
+  ;; [TODO] support for Elscreen
   (defun moe-theme-get-color-by-frame-name ()
     (let* ((obj-name (format "%s" (selected-frame)))
            (name (progn (string-match "#<frame \\(.+?\\) 0x[0-9a-f]+>" obj-name)
