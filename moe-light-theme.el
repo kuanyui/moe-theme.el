@@ -578,22 +578,26 @@ Moe, moe, kyun!")
    `(diff-removed ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
 
    ;; Ediff
-   `(ediff-current-diff-A ((,class (:background ,yellow-0))))
-   `(ediff-current-diff-Ancestor ((,class (:background ,blue-0))))
-   `(ediff-current-diff-B ((,class (:background ,green-00))))
-   `(ediff-current-diff-C ((,class (:background ,orange-00))))
-   `(ediff-even-diff-A ((,class (:background ,white-3))))
-   `(ediff-even-diff-Ancestor ((,class (:background ,white-3))))
-   `(ediff-even-diff-B ((,class (:background ,white-3))))
-   `(ediff-even-diff-C ((,class (:background ,white-3))))
-   `(ediff-fine-diff-A ((,class (:foreground nil :background ,green-00 :bold t))))
-   `(ediff-fine-diff-Ancestor ((,class (:foreground nil :background ,green-00 :bold t))))
-   `(ediff-fine-diff-B ((,class (:foreground nil :background ,green-00 :bold t))))
-   `(ediff-fine-diff-C ((,class (:foreground nil :background ,green-00 :bold t))))
-   `(ediff-odd-diff-A ((,class (:background ,red-00 :bold t))))
-   `(ediff-odd-diff-Ancestor ((,class (:background ,red-00 :bold t))))
-   `(ediff-odd-diff-B ((,class (:background ,red-00 :bold t))))
-   `(ediff-odd-diff-C ((,class (:background ,red-00 :bold t))))
+   ;; `current': Face for highlighting the selected difference in buffer A/B/C
+   ;; `fine':    Face for highlighting the refinement of the selected diff in buffer A/B/C.
+   ;; `even':    Face for highlighting even-numbered non-current differences in buffer A/B/C
+   ;; `odd':     Face for highlighting odd-numbered non-current differences in buffer A/B/C.
+   `(ediff-current-diff-A        ((,class (:background ,green-00 :foreground ,black-5))))
+   `(ediff-current-diff-Ancestor ((,class (:background ,green-00 :foreground ,black-5))))
+   `(ediff-current-diff-B        ((,class (:background ,green-00 :foreground ,black-5))))
+   `(ediff-current-diff-C        ((,class (:background ,green-00 :foreground ,black-5))))
+   `(ediff-fine-diff-A           ((,class (:background ,green-0  :foreground ,green-5 :bold t))))
+   `(ediff-fine-diff-Ancestor    ((,class (:background ,green-0  :foreground ,green-5 :bold t))))
+   `(ediff-fine-diff-B           ((,class (:background ,green-0  :foreground ,green-5 :bold t))))
+   `(ediff-fine-diff-C           ((,class (:background ,green-0  :foreground ,green-5 :bold t))))
+   `(ediff-even-diff-A           ((,class (:background ,white-2 :foreground ,black-2))))
+   `(ediff-even-diff-Ancestor    ((,class (:background ,white-2 :foreground ,black-2))))
+   `(ediff-even-diff-B           ((,class (:background ,white-2 :foreground ,black-2))))
+   `(ediff-even-diff-C           ((,class (:background ,white-2 :foreground ,black-2))))
+   `(ediff-odd-diff-A            ((,class (:background ,white-2 :foreground ,black-2))))
+   `(ediff-odd-diff-Ancestor     ((,class (:background ,white-2 :foreground ,black-2))))
+   `(ediff-odd-diff-B            ((,class (:background ,white-2 :foreground ,black-2))))
+   `(ediff-odd-diff-C            ((,class (:background ,white-2 :foreground ,black-2))))
 
    ;; smerge
    `(smerge-refined-change ((,class (:background ,blue-3 :foreground ,white-0))))
