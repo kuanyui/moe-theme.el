@@ -922,7 +922,7 @@ Moe, moe, kyun!")
    `(tuareg-font-lock-interactive-error-face ((,class (:foreground ,red-3 :background ,red-00 :bold t))))
    `(tuareg-font-lock-interactive-output-face ((,class (:foreground ,blue-3))))
    `(tuareg-font-lock-multistage-face ((,class (:foreground ,blue-3 :background ,blue-0))))
-   `(tuareg-font-lock-operator-face ((,class (:foreground ,green-2 :background ,black-3 :bold t))))
+   `(tuareg-font-lock-operator-face ((,class (:foreground ,green-2 :bold t))))
 
    ;; CPerl
    `(cperl-array-face ((,class (:foreground ,blue-01 :background ,blue-3))))
