@@ -30,6 +30,52 @@
       (load-theme 'moe-dark)))
 
 ;; ======================================================
+;; Default
+;; ======================================================
+(defun moe-theme-flavour-default ()
+  (mapc (lambda (symbol)
+          (set symbol (default-value symbol)))
+        '(moe-dark-bg
+          moe-dark-fg
+          moe-dark-builtin
+          moe-dark-comment-delimiter
+          moe-dark-comment
+          moe-dark-constant
+          moe-dark-doc
+          moe-dark-doc-string
+          moe-dark-function-name
+          moe-dark-keyword
+          moe-dark-negation-char
+          moe-dark-preprocessor
+          moe-dark-regexp-grouping-backslash
+          moe-dark-regexp-grouping-construct
+          moe-dark-string
+          moe-dark-type
+          moe-dark-variable-name
+          moe-dark-warning
+          moe-light-bg
+          moe-light-fg
+          moe-light-builtin
+          moe-light-comment-delimiter
+          moe-light-comment
+          moe-light-constant
+          moe-light-doc
+          moe-light-doc-string
+          moe-light-function-name
+          moe-light-keyword
+          moe-light-negation-char
+          moe-light-preprocessor
+          moe-light-regexp-grouping-backslash
+          moe-light-regexp-grouping-construct
+          moe-light-string
+          moe-light-type
+          moe-light-variable-name
+          moe-light-warning))
+  (moe-theme-reload-by-background-brightness)
+  )
+(default-value 'moe-light-string)
+
+;; ======================================================
 ;; Tomorrow
 ;; ======================================================
 
