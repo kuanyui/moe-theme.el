@@ -224,7 +224,7 @@ If your terminal emulator doesn't render 256-color output correctly, set its env
 
 	export TERM=xterm-256color
 
-- Or if you are using `Konsole`, navigate to `Edit Current Profile > General > Environment > Edit` and add the following line:
+- Or if you are using `Console`, navigate to `Edit Current Profile > General > Environment > Edit` and add the following line:
 
     TERM=xterm-256color
 
