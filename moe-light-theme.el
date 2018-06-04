@@ -80,7 +80,9 @@ Moe, moe, kyun!")
    ;; Highlighting faces
    `(fringe ((,class (:foreground ,black-1 :background ,linum-light))))
    `(linum ((,class (:foreground ,linum-dark :background ,linum-light))))
+   `(line-number ((,class (:foreground ,linum-dark :background ,linum-light))))
    `(linum-highlight-face ((,class (:background ,linum-dark :foreground ,linum-light))))
+   `(line-number-current-line ((,class (:background ,linum-dark :foreground ,linum-light))))
    `(highlight ((,class (:background ,green-0))))
    `(hl-line ((,class (:background ,green-00)))) ; Embedded strings of IM (e.g. fcitx) would be very unreadable... orz
    `(highlight-symbol-face ((,class (:background ,green-00))))
