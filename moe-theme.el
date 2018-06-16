@@ -411,6 +411,14 @@ as long as setq `moe-theme-mode-line-color' first."
         (moe-theme-apply-color (moe-theme-get-color-by-frame-name)))))
 
 
+;;;###autoload
+(when (and (boundp 'custom-theme-load-path)
+           load-file-name)
+  ;; add theme folder to `custom-theme-load-path' when installing over MELPA
+  (add-to-list 'custom-theme-load-path
+               (file-name-as-directory (file-name-directory load-file-name))))
+
+
 (provide 'moe-theme)
 
 ;; Local Variables:
