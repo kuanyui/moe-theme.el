@@ -393,8 +393,8 @@ as long as setq `moe-theme-mode-line-color' first."
            (name (progn (string-match "#<frame \\(.+?\\) 0x[0-9a-f]+>" obj-name)
                         (match-string-no-properties 1 obj-name)))
            (int (if (string-match "F\\([0-9]+\\)" name)
-                    (1- (string-to-int (match-string-no-properties 1 name)))
-                  (string-to-int (substring (md5 name) 0 1) 16)))
+                    (1- (string-to-number (match-string-no-properties 1 name)))
+                  (string-to-number (substring (md5 name) 0 1) 16)))
            (enabled-colors-len (length moe-theme-colorize-modeline-by-frame-id-color-set)))
       (nth (% int enabled-colors-len) moe-theme-colorize-modeline-by-frame-id-color-set)))
 
