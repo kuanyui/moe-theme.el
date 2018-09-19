@@ -33,8 +33,9 @@
 ;; Default
 ;; ======================================================
 (defun moe-theme-flavour-default ()
-  (mapc (lambda (symbol)
-          (set symbol (default-value symbol)))
+  (interactive)
+  (mapc (lambda (x)
+          (set x (symbol-value (intern (concat "-" (symbol-name x))))))
         '(moe-dark-bg
           moe-dark-fg
           moe-dark-builtin
