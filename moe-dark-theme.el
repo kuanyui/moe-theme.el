@@ -611,14 +611,12 @@ Moe, moe, kyun!")
 
    ;; Semantic faces
    `(semantic-decoration-on-includes ((,class (:underline ,black-1))))
-   `(semantic-decoration-on-private-members-face
-     ((,class (:background ,purple-3))))
-   `(semantic-decoration-on-protected-members-face
-     ((,class (:background ,magenta-3))))
-   `(semantic-decoration-on-unknown-includes
-     ((,class (:background ,red-3))))
-   `(semantic-decoration-on-unparsed-includes
-     ((,class (:background ,black-4))))
+   `(semantic-decoration-on-private-members-face   ((,class (:foreground ,white-0 :background ,purple-3))))
+   `(semantic-decoration-on-protected-members-face ((,class (:foreground ,white-0 :background ,magenta-3))))
+   `(semantic-decoration-on-unknown-includes       ((,class (:foreground ,white-0 :background ,red-3))))
+   `(semantic-decoration-on-unparsed-includes      ((,class (:foreground nil      :background ,black-3))))
+   `(semantic-highlight-edits-face                 ((,class (:foreground nil :background ,green-5))))
+   `(semantic-highlight-func-current-tag-face      ((,class (:foreground nil :background ,green-5))))
    `(semantic-tag-boundary-face ((,class (:overline ,blue-1))))
    `(semantic-unmatched-syntax-face ((,class (:underline ,red-1))))
 
