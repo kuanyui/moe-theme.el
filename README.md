@@ -1,4 +1,4 @@
-# moe-theme
+ # moe-theme
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/moe-theme.png"><img src="https://raw.github.com/kuanyui/moe-theme.el/master/pics/moe-theme.png" width="720" height="401"/></a>
 
 >**Table of Contents**
@@ -27,7 +27,7 @@
   - [License](#license)
 
 
-## Screenshot
+## Screenshots
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark01.png"><img src="pics/dark01.png" width="355" height="192"/></a>
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light01.png"><img src="pics/light01.png" width="355" height="192"/></a>
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark02.png"><img src="pics/dark02.png" width="355" height="192"/></a>
@@ -40,18 +40,18 @@
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/light05.png"><img src="pics/light05.png" width="355" height="192"/></a>
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/mode-line-preview.png"><img src="pics/mode-line-preview.png" width="710" height="182"/></a>
 
-## What Special?
-* Optimized for terminal's 256 color palettes.
+## What's Special?
+* Optimized for terminals with 256 color palettes.
 * Black-on-white & white-on-black.
 * Delightful and cheerful color palettes.
 * Quite completed (and reasonable) font faces for each mode.
 * **Easy to customize!**
     * Colorful Mode-line / Powerline.
-    * Enlarge titles font sizes or not.
+    * Enlarge title font sizes or not.
     * Automatically switch between dark and light `moe-theme` by local time! (optional)
 
 ## Support
-`moe-theme.el` provide good-looking™ and quite fully-supported font-faces for various modes, include:
+`moe-theme.el` provides good-looking™ and quite fully-supported font-faces for various modes, including:
 * Diff / EDiff
 * Dired / Dired+
 * ERC / rcirc
@@ -67,34 +67,34 @@
 * Twittering-mode
 * undo-tree / Neotree
 * Ruby / Haskell / CPerl / Tuareg / Web-mode
-* ......and More!
+* ......and more!
 
 ## Requirements
-* Emacs 24 or above.
+* Emacs 24 and above.
 * 256-colors (or higher) terminal.
 
 ## Download
 ### Via package.el
-`Moe-theme` is available in [MELPA](https://github.com/milkypostman/melpa) repository now, so you can install `moe-theme` easily with `M-x` `list-packages`.
+`Moe-theme` is available in [MELPA](https://github.com/milkypostman/melpa) repository now, so you can install `moe-theme` easily with `M-x` `package-install` `RET` `moe-theme` `RET`.
 
 ### Manually
 Download the archive of `moe-theme` (or `git clone` it) to `~/.emacs.d/moe-theme.el` and extract it. Then, add these to your init file:
 
 ```lisp
-	;;customize theme
-	(add-to-list 'custom-theme-load-path "~/.emacs.d/moe-theme.el/")
+    ;;customize theme
+    (add-to-list 'custom-theme-load-path "~/.emacs.d/moe-theme.el/")
     (add-to-list 'load-path "~/.emacs.d/moe-theme.el/")
     (require 'moe-theme)
 ```
 
 ## Customizations
-It's impossible to satisfy everyone with one fixed theme, but `moe-theme` provide some easy ways to customize itself.
+It's impossible to satisfy everyone with one fixed theme, but `moe-theme` provides some easy ways to customize itself.
 
 There's a full customization example:
 
 ```lisp
     ;; If you want to use powerline, (require 'powerline) must be
-    ;; before (require 'moe-theme).
+    ;; placed before (require 'moe-theme).
     (add-to-list 'load-path "~/.emacs.d/PATH/TO/powerline/")
     (require 'powerline)
 
@@ -119,18 +119,18 @@ There's a full customization example:
     (moe-light)
 ```
 
-If you have any question about settings, go on and read following README to get more detailed information first.
+If you have any question about the settings, go on and read the following README to get more detailed information first.
 
 >#### Note
->**Notice that the file `moe-theme.el` is NOT a theme file, but it provide the ability for customization `moe-dark-theme` & `moe-light-theme`.**
+>**Notice that the file `moe-theme.el` is NOT a theme file, but it provides the ability for customization `moe-dark-theme` & `moe-light-theme`.**
 >
->So, if you just want to use `load-theme` to apply **ONLY** `moe-theme` itself and **without customizations**, you can skip "Customizations" chapter and just use this:
+>So, if you just want to use `load-theme` to apply **ONLY** to `moe-theme` itself,  **without customizations**, you can skip "Customizations" chapter and just use this:
 >
 >```lisp
 >    (add-to-list 'custom-theme-load-path "~/.emacs.d/PATH/TO/moe-theme/")
 > 
 >    (load-theme 'moe-dark t)
->    ;;or
+>    ;; or
 >    (load-theme 'moe-light t)
 >```
 
@@ -138,40 +138,40 @@ If you have any question about settings, go on and read following README to get 
 You may want to resize titles in `markdown-mode`, `org-mode`, or `ReStructuredText-mode`:
 
 ```lisp
-  ;; Resize titles
-  (setq moe-theme-resize-markdown-title '(2.0 1.7 1.5 1.3 1.0 1.0))
-  (setq moe-theme-resize-org-title '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
-  (setq moe-theme-resize-rst-title '(2.0 1.7 1.5 1.3 1.1 1.0))
+    ;; Resize titles
+    (setq moe-theme-resize-markdown-title '(2.0 1.7 1.5 1.3 1.0 1.0))
+    (setq moe-theme-resize-org-title '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
+    (setq moe-theme-resize-rst-title '(2.0 1.7 1.5 1.3 1.1 1.0))
 ```
 
 >Markdown should have 6 items; org has 9 items; rst has 6 items.
 >
->Make sure that these resizing settings should be placed **before** `(moe-dark)` or `(moe-light)`.
+>Make sure that these resizing settings are placed **before** `(moe-dark)` or `(moe-light)`.
 
 The values should be lists. Larger the values, larger the fonts.
 If you don't like this, just leave them nil, and all the titles will be the same size.
 
 ### Colorful Mode-line and Powerline
-Tired of boring blue mode-line? You can set default mode-line color. moe-theme provides 9 colors mode-line style. Add following lines **after** `(moe-light)` or `(moe-dark)`:
+Tired of the boring blue mode-line? You can set a default mode-line color. moe-theme provides 9 different colors for mode-line style. Add the following lines **after** `(moe-light)` or `(moe-dark)`:
 
 ```lisp
-  (moe-theme-set-color 'orange)
-  ;; (Available colors: blue, orange, green ,magenta, yellow, purple, red, cyan, w/b.)
+    (moe-theme-set-color 'orange)
+    ;; (Available colors: blue, orange, green, magenta, yellow, purple, red, cyan, w/b.)
 ```
 
-You can also use `M-x` `moe-theme-select-color` to change color interactively.
+You can also use `M-x` `moe-theme-select-color` `RET` `<desired color>`  `RET` to change the color interactively.
 
-Mayby you'll like `M-x` `moe-theme-random-color`, too; which gives you a random mood :D.
+Maybe you'll like `M-x` `moe-theme-random-color` `RET`, too; which gives you a random mood :D.
 
 #### Powerline
-Now `moe-theme` supports [Powerline](https://github.com/milkypostman/powerline), which makes mode-line looks fabulous! We recommended installing `powerline` and run `powerline-moe-theme`.
+Now `moe-theme` supports [Powerline](https://github.com/milkypostman/powerline), which makes mode-line looks fabulous! We recommended installing `powerline` and running `powerline-moe-theme`.
 
->Make sure that `(require 'powerline)` must be placed **before** `(require 'moe-theme)`. Otherwise, `powerline-moe-theme` will not be initallized.
+>Make sure that `(require 'powerline)` is placed **before** `(require 'moe-theme)`. Otherwise, `powerline-moe-theme` will not be initallized.
 
 You can add this line to your init file:
 
 ```lisp
-(powerline-moe-theme)
+    (powerline-moe-theme)
 ```
 
 ### Too Yellow Background?
@@ -183,42 +183,42 @@ If you encounter this problem, and want to set background color to `#ffffff` in 
     (setq moe-light-pure-white-background-in-terminal t)
 ```
 ### Highlight Buffer-id on Mode-line?
-You may be dislike default highlight on mode-line-buffer-id, now it can be disable by setting the value of `moe-theme-highlight-buffer-id` to nil. Add this line **before** `(moe-light)` or `(moe-dark)`:
+You may dislike the default highlight settings on mode-line-buffer-id, so now those settings can be disabled by setting the value of `moe-theme-highlight-buffer-id` to nil. Add this line **before** `(moe-light)` or `(moe-dark)`:
 
 ```lisp
-(setq moe-theme-highlight-buffer-id nil)
+    (setq moe-theme-highlight-buffer-id nil)
 ```
 
 ## Have A Good Mood Today?
-I prefer a terminal with a black-on-white color scheme. I found that in the daytime, sunlight is strong and black-on-white is more readable; However, white-on-black would be less harsh to the eyes at night.
+I prefer a terminal with a black-on-white color scheme. During daytime, sunlight is strong and black-on-white is more readable; however, white-on-black would put less strain on your eyes.
 
 So if you like, you can add the following line to your `~/.emacs` to automatically switch between `moe-dark` and `moe-light` according to the system time:
 
 ```lisp
-	(require 'moe-theme-switcher)
+    (require 'moe-theme-switcher)
 ```
 
 By adding the line above, your Emacs will have a light theme in the day and a dark one at night. =w=+
 
-### Live in Antarctica?
-Daytime is longer in summer but shorter in winter; or you live in a high latitude region which midnight-sun or polar-night may occur such as Finland or Antarctica?
+### Living in Antarctica?
+Daytime is longer in summer and shorter in winter. Or you live in a high latitude region where midnight-sun or polar-night may occur such as Finland or Antarctica?
 
-There's a variable `moe-theme-switch-by-sunrise-and-sunset` would solve your problem (default value is `t`)
+There's a variable `moe-theme-switch-by-sunrise-and-sunset` that would solve your problem (default value is `t`)
 
-If this value is `nil`, `moe-theme-switcher` will switch theme at fixed time (06:00 and 18:00).
+If this value is `nil`, `moe-theme-switcher` will switch your theme at a fixed time (06:00 and 18:00).
 
 If this value is `t` and both `calendar-latitude` and `calendar-longitude` are set properly, the switching will be triggered at the sunrise and sunset time of the local calendar.
 
-Take "Keelung, Taiwan" (25N,121E) for example, you can set like this:
+Let's take "Keelung, Taiwan" (25N,121E) for example, you can set the coordinates like this:
 
 ```lisp
-	(setq calendar-latitude +25)
-	(setq calendar-longitude +121)
+    (setq calendar-latitude +25)
+    (setq calendar-longitude +121)
 ```
 
 ## Notes
 ### No 256-Color Output?
-If your terminal emulator doesn't render 256-color output correctly, set its environment variable `TERM` to `xterm-256color`. For example:
+If your terminal emulator doesn't render 256-color output correctly, set the environment variable `TERM` to `xterm-256color`. For example:
 
 - If you are using `bash` or `zsh`, add following line into your `~/.bashrc` or `~/.zshrc`:
 
@@ -228,24 +228,24 @@ If your terminal emulator doesn't render 256-color output correctly, set its env
 
     TERM=xterm-256color
 
-- If you're using `tmux` and it cannot display in 256-color correctly, add this to `~/.tmux.conf`, too:
+- If you're using `tmux` and it cannot display 256-colors correctly, add this to `~/.tmux.conf`, too:
 
     set -g default-terminal "screen-256color"
 
 ### Paren
-If you use Emacs build-in `show-paren-mode`, I recommend set the value of `show-paren-style` to `expression` for optimized visual experience:
+If you use Emacs build-in `show-paren-mode`, I recommend setting the value of `show-paren-style` to `expression` for optimized visual experience:
 
 ```lisp
     (show-paren-mode t)
     (setq show-paren-style 'expression)
 ```
 
-### Not supported the mode(s) you're using?
-Can't bear a mode with an ugly looking? `moe-theme` doesn't support the mode you like? It's welcome to report wishlist or issue on github, I'll try to add related settings as soon as possible. Or of course, you can push request, too. We need your feedback!
+### No support for the mode(s) you're using?
+Can't bear a mode's ugly look because there's no `moe-theme` support? You're welcomed to open an issue on github and I'll try to add related settings as soon as possible. Or of course, you can add that functionality and send a pull request, too. We need your feedback!
 
 ## Known Issues
-* If you add `(moe-dark)` or `(moe-light)` to your init file, the color of `buffer-id` would be incorrect after startuping CLI Emacs(but if you `M-x moe-dark/light` again, it would be corrected immediately). I don't know why, but this issue doesn't occur in GUI version Emacs. (Tested on GNU Emacs 24.3.90.1 2014-04-11)
-* When using `moe-light` and typing characters under terminal emulator (e.g. Konsole) with IM (e.g. fcitx), the string embedded in Emacs may be very insignificant (But as you output the word from IM, it turns normal).
+* If you add `(moe-dark)` or `(moe-light)` to your init file, the color of `buffer-id` would be incorrect after starting the CLI Emacs (but if you `M-x moe-dark/light` `RET` again, it would be corrected immediately). I don't know why, but this issue doesn't occur in GUI version Emacs. (Tested on GNU Emacs 24.3.90.1 2014-04-11)
+* When using `moe-light` and typing characters under terminal emulator (e.g. Konsole) with IM (e.g. fcitx), the string embedded in Emacs may be very insignificant (But as you output the word from IM, it turns to normal).
 
 ## Todo
 * Minor mode for `moe-theme-switcher`.
