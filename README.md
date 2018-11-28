@@ -1,6 +1,18 @@
 # moe-theme
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/moe-theme.png"><img src="https://raw.github.com/kuanyui/moe-theme.el/master/pics/moe-theme.png" width="720" height="401"/></a>
 
+> ## Acknowedgement
+> Latest version is under inactive development. I haven't finished it indeed, however, I personally have already used it for quite a long time.
+>
+> Currently free time is precious for me, to rest from work, to learn foreign languages, to study Harmony & Voice Leading, to compose, to practice piano and violin, to exercise. So I will not spend more massive time on this project for any large modification. I've ever spent too much time on this project before to hold more passion and patience to write merely a color theme, even not an application. (You will not believe how much it is if you has never done such tedious task for EACH mode and find a color balances manually for them) I think it's enough now.
+>
+> **If you want to try or help to QA the latest development version, see `dev` branch.**
+>
+> **If you want to make `moe-theme` supports more modes, please send a PR (but be aesthetic; too ugly color balance will be rejected.^^||| )**. Currently I honestly has no more free time and passion on such a tedious time-costing trial-and-error task.
+>
+> The last but not the least, thanks for your using and happy hacking!
+
+
 >**Table of Contents**
 - [moe-theme](#moe-theme)
   - [Screenshot](#screenshot)
@@ -21,7 +33,6 @@
   - [Notes](#notes)
     - [No 256-Color Output?](#no-256-color-output)
     - [Paren](#paren)
-    - [Not supported the mode(s) you're using?](#not-supported-the-modes-youre-using)
   - [Known Issues](#known-issues)
   - [Todo](#todo)
   - [License](#license)
@@ -105,7 +116,7 @@ There's a full customization example:
 
     ;; Show highlighted buffer-id as decoration. (Default: nil)
     (setq moe-theme-highlight-buffer-id t)
-    
+
     ;; Resize titles (optional).
     (setq moe-theme-resize-markdown-title '(1.5 1.4 1.3 1.2 1.0 1.0))
     (setq moe-theme-resize-org-title '(1.5 1.4 1.3 1.2 1.1 1.0 1.0 1.0 1.0))
@@ -128,7 +139,7 @@ If you have any question about settings, go on and read following README to get 
 >
 >```lisp
 >    (add-to-list 'custom-theme-load-path "~/.emacs.d/PATH/TO/moe-theme/")
-> 
+>
 >    (load-theme 'moe-dark t)
 >    ;;or
 >    (load-theme 'moe-light t)
@@ -239,9 +250,6 @@ If you use Emacs build-in `show-paren-mode`, I recommend set the value of `show-
     (show-paren-mode t)
     (setq show-paren-style 'expression)
 ```
-
-### Not supported the mode(s) you're using?
-Can't bear a mode with an ugly looking? `moe-theme` doesn't support the mode you like? It's welcome to report wishlist or issue on github, I'll try to add related settings as soon as possible. Or of course, you can push request, too. We need your feedback!
 
 ## Known Issues
 * If you add `(moe-dark)` or `(moe-light)` to your init file, the color of `buffer-id` would be incorrect after startuping CLI Emacs(but if you `M-x moe-dark/light` again, it would be corrected immediately). I don't know why, but this issue doesn't occur in GUI version Emacs. (Tested on GNU Emacs 24.3.90.1 2014-04-11)
