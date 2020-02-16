@@ -793,7 +793,7 @@ Moe, moe, kyun!")
 
    ;; notmuch
    `(notmuch-search-unread-face ((,class (:weight bold))))
-   `(notmuch-message-summary-face ((,class (:background "#f0f0f0"))))
+   `(notmuch-message-summary-face ((,class (:background ,white-1))))
 
    ;; git-gutter (&-fringe)
    `(git-gutter:added ((,class (:foreground ,green-4 :background ,green-0 :bold t))))
