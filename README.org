@@ -1,4 +1,14 @@
 * moe-theme
+> ## Acknowedgement
+> Latest version is under inactive development. I haven't finished it indeed, however, I personally have already used it for quite a long time.
+>
+> Currently free time is precious for me, to rest from work, to learn foreign languages, to study Harmony & Voice Leading, to compose, to practice piano and violin, to exercise. So I will not spend more massive time on this project for any large modification. I've ever spent too much time on this project before to hold more passion and patience to write merely a color theme, even not an application. (You will not believe how much it is if you has never done such tedious task for EACH mode and find a color balances manually for them) I think it's enough now.
+>
+> **If you want to try or help to QA the latest development version, see `dev` branch.**
+>
+> **If you want to make `moe-theme` supports more modes, please send a PR (but be aesthetic; patch with too ugly color balance will be rejected.^^||| )**. Currently I honestly has no more free time and passion on such a tedious time-costing trial-and-error task.
+>
+> The last but not the least, thanks for your using and happy hacking!
 
 #+BEGIN_HTML
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/moe-theme.png"><img src="https://raw.github.com/kuanyui/moe-theme.el/master/pics/moe-theme.png" width="720" height="401"/></a>
