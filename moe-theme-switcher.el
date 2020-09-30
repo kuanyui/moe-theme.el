@@ -130,7 +130,6 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
      (boundp 'calendar-latitude)
      (eql moe-theme-switch-by-sunrise-and-sunset t))
     (progn
-      (convert-time-format-of-sunrise-and-sunset)
       (run-with-timer 0 (* 60 60 24) 'convert-time-format-of-sunrise-and-sunset))
   ()
   )
@@ -141,7 +140,5 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
 (defun moe-theme-switcher-disable ()
   (interactive)
   (cancel-timer moe-timer))
-
-(moe-theme-auto-switch)
 
 (provide 'moe-theme-switcher)
