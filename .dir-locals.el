@@ -3,4 +3,5 @@
 
 ((emacs-lisp-mode
   (eval . (progn
-            (aggressive-indent-mode -1)))))
+            (when (fboundp 'aggressive-indent-mode)
+              (aggressive-indent-mode -1))))))
