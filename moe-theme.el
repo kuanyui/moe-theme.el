@@ -25,7 +25,7 @@
 
 (require 'moe-light-theme)
 (require 'moe-dark-theme)
-(require 'cl)
+(require 'cl-lib)
 
 ;; ======================================================
 ;; Buffer ID
