@@ -121,7 +121,7 @@ Avoid unnecessary load-theme")
   "Non-destructive"
   (if (not (listp list))
       (setq list '()))
-  (setq list (delete-if-not #'numberp list))
+  (setq list (cl-delete-if-not #'numberp list))
   (while (< (length list) final-length)
     (setq list (append list '(1.0))))
   list)
