@@ -9,7 +9,7 @@
 ;; Keywords: themes
 ;; X-URL: https://github.com/kuanyui/moe-theme.el
 ;; URL: https://github.com/kuanyui/moe-theme.el
-;; Version: {{VERSION}}
+;; Version: 0.1
 
 ;; This file is not part of GNU Emacs.
 ;;
