@@ -38,7 +38,7 @@ Moe, moe, kyun!")
       (red-1 "#ef2929")  (red-2 "#cc0000")  (red-3 "#a40000")
       (white-1 "#eeeeee") (white-2 "#dadada") (white-3 "#c6c6c6") (white-4 "#b2b2b2") (black-1 "#9e9e9e")
       (black-2 "#8a8a8a") (black-3 "#767676") (black-4 "#626262") (black-5 "#5f5f5f") (black-6 "#3a3a3a")
-      (LIGHT_BG "#fdfde7") (white-0 "#ffffff")
+      (LIGHT_BG "#fdfdf6") (white-0 "#ffffff")
       (green-02 "#5fd700") (green-01 "#d7ff00") (green-0 "#d7ff5f") (green-00 "#d7ff87")
       (cyan-0 "#d7ffd7")
       (blue-01 "#c3c9f8") (blue-0 "#afd7ff") (blue-00 "#d7d7ff") (blue-000 "#d4e5ff")
@@ -590,6 +590,18 @@ Moe, moe, kyun!")
    `(message-header-xheader ((,class (:foreground ,white-4))))
    `(message-mml ((,class (:foreground ,orange-2))))
    `(message-separator ((,class (:foreground ,white-3))))
+
+   ;; Tab-bar & Tab-line for Emacs 27
+   `(tab-bar ((,class (:background ,linum-light :foreground ,linum-dark :underline ,linum-light))))
+   `(tab-bar-tab ((,class (:background "#e7e7bf" :foreground ,black-5 :underline ,black-5 :bold t))))
+   `(tab-bar-tab-inactive ((,class (:background ,linum-light :foreground ,black-2))))
+
+   `(tab-line ((,class (:background ,linum-light :foreground ,linum-dark))))
+   `(tab-line-close-highlight ((,class (:background ,linum-light :foreground ,linum-dark))))
+   `(tab-line-highlight ((,class (:background "#e7e7bf" :foreground ,linum-dark))))
+   `(tab-line-tab ((,class (:background ,linum-light :foreground ,linum-dark))))
+   `(tab-line-tab-current ((,class (:background "#e7e7bf" :foreground ,black-6 :underline ,black-6))))
+   `(tab-line-tab-inactive ((,class (:background ,linum-light :foreground ,black-2))))
 
    ;; Grep
    `(grep-context-face ((,class (:foreground ,red-2))))

@@ -592,6 +592,18 @@ Moe, moe, kyun!")
    `(message-mml ((,class (:foreground ,orange-2))))
    `(message-separator ((,class (:foreground ,black-2-5))))
 
+   ;; Tab-bar & Tab-line for Emacs 27
+   `(tab-bar ((,class (:background ,black-3 :foreground ,white-0 :underline ,black-2))))
+   `(tab-bar-tab ((,class (:background ,black-2-5 :foreground ,white-0 :underline ,green-1 :bold t))))
+   `(tab-bar-tab-inactive ((,class (:background ,black-3 :foreground ,white-2))))
+
+   `(tab-line ((,class (:background ,black-3 :foreground ,white-0))))
+   `(tab-line-close-highlight ((,class (:background ,black-3 :foreground ,white-0))))
+   `(tab-line-highlight ((,class (:background ,black-2-5 :foreground ,white-0))))
+   `(tab-line-tab ((,class (:background ,black-3 :foreground ,white-0))))
+   `(tab-line-tab-current ((,class (:background ,black-2-5 :foreground ,white-0 :underline ,green-1))))
+   `(tab-line-tab-inactive ((,class (:background ,black-3 :foreground ,white-3))))
+
    ;; Grep
    `(grep-context-face ((,class (:foreground ,red-2))))
    `(grep-error-face ((,class (:foreground ,red-1 :weight bold :underline t))))
