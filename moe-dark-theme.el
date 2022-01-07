@@ -598,6 +598,17 @@ Moe, moe, kyun!")
    `(grep-hit-face ((,class (:foreground ,green-2))))
    `(grep-match-face ((,class (:foreground nil :background nil :inherit match))))
 
+   ;; diff-hl
+   `(diff-hl-change ((,class (:foreground ,blue-4 :background ,blue-1 :bold t))))
+   `(diff-hl-delete ((,class (:foreground ,red-3 :background ,red-1 :bold t))))
+   `(diff-hl-insert ((,class (:foreground ,green-4, :background ,green-2 :bold t))))
+   `(diff-hl-reverted-hunk-highlight ((,class (:inherit (highlight)))))
+   `(diff-hl-dired-change ((,class (:inherit (diff-hl-change)))))
+   `(diff-hl-dired-delete ((,class (:inherit (diff-hl-delete)))))
+   ;; `(diff-hl-dired-ignored ((,class (:inherit (font-lock-comment-face)))))
+   `(diff-hl-dired-insert ((,class (:inherit (diff-hl-insert)))))
+   ;; `(diff-hl-dired-unknown ((,class (:inherit (diff-hl-change)))))
+
    ;; Diff
    `(diff-added ((,class (:foreground ,green-0 :background ,black-4 :bold t))))
    `(diff-changed ((,class (:foreground ,yellow-2 :background ,black-4 :bold t))))
