@@ -102,12 +102,12 @@ There's a full customization example:
         (setq moe-theme-highlight-buffer-id t)
 
         ;; Resize titles (optional).
-        (setq moe-theme-resize-markdown-title '(1.5 1.4 1.3 1.2 1.0 1.0))
-        (setq moe-theme-resize-org-title '(1.5 1.4 1.3 1.2 1.1 1.0 1.0 1.0 1.0))
-        (setq moe-theme-resize-rst-title '(1.5 1.4 1.3 1.2 1.1 1.0))
+        (setq moe-theme-resize-title-markdown '(1.5 1.4 1.3 1.2 1.0 1.0))
+        (setq moe-theme-resize-title-org '(1.5 1.4 1.3 1.2 1.1 1.0 1.0 1.0 1.0))
+        (setq moe-theme-resize-title-rst '(1.5 1.4 1.3 1.2 1.1 1.0))
 
         ;; Choose a color for mode-line.(Default: blue)
-        (moe-theme-set-color 'cyan)
+        (setq moe-theme-mode-line-color 'cyan)
 
         ;; Finally, apply moe-theme now.
         ;; Choose what you like, (moe-light) or (moe-dark)
@@ -143,9 +143,9 @@ You may want to resize titles in =markdown-mode=, =org-mode=, or
 
 #+BEGIN_SRC lisp
       ;; Resize titles
-      (setq moe-theme-resize-markdown-title '(2.0 1.7 1.5 1.3 1.0 1.0))
-      (setq moe-theme-resize-org-title '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
-      (setq moe-theme-resize-rst-title '(2.0 1.7 1.5 1.3 1.1 1.0))
+      (setq moe-theme-resize-title-markdown '(2.0 1.7 1.5 1.3 1.0 1.0))
+      (setq moe-theme-resize-title-org '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
+      (setq moe-theme-resize-title-rst '(2.0 1.7 1.5 1.3 1.1 1.0))
 #+END_SRC
 
 #+BEGIN_QUOTE
@@ -162,7 +162,7 @@ same size.
 *** Change Color of Mode-line (or Powerline)
 
 #+BEGIN_SRC lisp
- (moe-theme-set-color 'orange)
+ (setq moe-theme-mode-line-color 'orange)
  ;; (Available colors: blue, orange, green ,magenta, yellow, purple, red, cyan, w/b.)
 #+END_SRC
 
