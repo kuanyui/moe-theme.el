@@ -1022,7 +1022,26 @@ Moe, moe, kyun!")
    `(rpm-spec-dir-face ((,class (:foreground ,green-2))))
    `(rpm-spec-package-face ((,class (:foreground ,red-0))))
    `(rpm-spec-ghost-face ((,class (:foreground ,red-0))))
-   `(rpm-spec-section-face ((,class (:foreground ,yellow-2)))))
+   `(rpm-spec-section-face ((,class (:foreground ,yellow-2))))
+
+   ;; ansi-color
+   `(ansi-color-black ((,class (:background ,black-5 :foreground ,black-5))))
+   `(ansi-color-red ((,class (:background ,red-0 :foreground ,red-0))))
+   `(ansi-color-green ((,class (:background ,green-0 :foreground ,green-0))))
+   `(ansi-color-yellow ((,class (:background ,yellow-1 :foreground ,yellow-1))))
+   `(ansi-color-blue ((,class (:background ,blue-1 :foreground ,blue-1))))
+   `(ansi-color-magenta ((,class (:background ,purple-1 :foreground ,purple-1))))
+   `(ansi-color-cyan ((,class (:background ,blue-0 :foreground ,blue-0))))
+   `(ansi-color-white ((,class (:background ,white-1 :foreground ,white-1))))
+   `(ansi-color-bright-black ((,class (:background ,black-5 :foreground ,black-5))))
+   `(ansi-color-bright-red ((,class (:background ,red-0 :foreground ,red-0))))
+   `(ansi-color-bright-green ((,class (:background ,green-0 :foreground ,green-0))))
+   `(ansi-color-bright-yellow ((,class (:background ,yellow-1 :foreground ,yellow-1))))
+   `(ansi-color-bright-blue ((,class (:background ,blue-1 :foreground ,blue-1))))
+   `(ansi-color-bright-magenta ((,class (:background ,purple-1 :foreground ,purple-1))))
+   `(ansi-color-bright-cyan ((,class (:background ,blue-0 :foreground ,blue-0))))
+   `(ansi-color-bright-white ((,class (:background ,white-1 :foreground ,white-1))))
+   `(ansi-color-bold ((,class (:inherit bold)))))
 
   (custom-theme-set-variables
    'moe-dark
