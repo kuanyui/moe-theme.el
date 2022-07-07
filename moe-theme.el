@@ -403,7 +403,6 @@ as long as setq `moe-theme-mode-line-color' first."
 ;; Auto Colorize by frame id (Only usable under terminal)
 ;; ======================================================
 (when (null (window-system))
-  ;; [TODO] support for Elscreen
   (defun moe-theme-get-color-by-frame-name ()
     (let* ((obj-name (format "%s" (selected-frame)))
            (name (progn (string-match "#<frame \\(.+?\\) 0x[0-9a-f]+>" obj-name)
@@ -426,7 +425,19 @@ as long as setq `moe-theme-mode-line-color' first."
     (if moe-theme-colorize-modeline-by-frame-id
         (moe-theme-apply-color (moe-theme-get-color-by-frame-name)))))
 
-
+;; support for Elscreen
+(with-eval-after-load 'elscreen
+  (when (and (window-system))
+    (defun moe-theme-get-color-by-frame-name ()
+      (let* ((all-screen-indexes (sort (elscreen-get-screen-list) '<))
+             (cur-index (elscreen-get-current-screen))
+             (enabled-colors-len (length moe-theme-colorize-modeline-by-frame-id-color-set)))
+        (nth (% cur-index enabled-colors-len) moe-theme-colorize-modeline-by-frame-id-color-set)))
+    (defadvice elscreen-goto (after change-mode-line-color-by-frame-id activate)
+      (if moe-theme-colorize-modeline-by-frame-id
+          (moe-theme-apply-color (moe-theme-get-color-by-frame-name)))
+      )
+    ))
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path)
            load-file-name)
