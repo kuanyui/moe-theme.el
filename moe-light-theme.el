@@ -832,15 +832,25 @@ Moe, moe, kyun!")
    `(erm-syn-errline ((,class (:foreground ,red-3 :background ,red-00 :bold t :underline t))))
    `(erm-syn-warnline ((,class (:bold t :underline t))))
 
+   ;; ansi-colors
+   `(ansi-color-black ((,class (:background ,black-5 :foreground ,black-5))))
+   `(ansi-color-blue ((,class (:background ,blue-1 :foreground ,blue-1))))
+   `(ansi-color-cyan ((,class (:background ,cyan-3 :foreground ,cyan-3))))
+   `(ansi-color-green ((,class (:background ,green-2 :foreground ,green-2))))
+   `(ansi-color-magenta ((,class (:background ,magenta-3 :foreground ,magenta-3))))
+   `(ansi-color-red ((,class (:background ,red-2 :foreground ,red-2))))
+   `(ansi-color-white ((,class (:background ,white-0 :foreground ,white-0))))
+   `(ansi-color-yellow ((,class (:background ,orange-2 :foreground ,orange-2))))
+
    ;; ansi-term
-   `(term-color-black ((,class (:background ,black-5 :foreground ,black-5))))
-   `(term-color-blue ((,class (:background ,blue-1 :foreground ,blue-1))))
-   `(term-color-cyan ((,class (:background ,cyan-3 :foreground ,cyan-3))))
-   `(term-color-green ((,class (:background ,green-2 :foreground ,green-2))))
-   `(term-color-magenta ((,class (:background ,magenta-3 :foreground ,magenta-3))))
-   `(term-color-red ((,class (:background ,red-2 :foreground ,red-2))))
-   `(term-color-white ((,class (:background ,white-0 :foreground ,white-0))))
-   `(term-color-yellow ((,class (:background ,orange-2 :foreground ,orange-2))))
+   `(term-color-black ((,class (:inherit (ansi-color-black)))))
+   `(term-color-blue ((,class (:inherit (ansi-color-blue)))))
+   `(term-color-cyan ((,class (:inherit (ansi-color-cyan)))))
+   `(term-color-green ((,class (:inherit (ansi-color-green)))))
+   `(term-color-magenta ((,class (:inherit (ansi-color-magenta)))))
+   `(term-color-red ((,class (:inherit (ansi-color-red)))))
+   `(term-color-white ((,class (:inherit (ansi-color-white)))))
+   `(term-color-yellow ((,class (:inherit (ansi-color-yellow)))))
 
    ;; ido-mode
    `(ido-first-match ((,class (:foreground ,orange-2 :bold t))))
