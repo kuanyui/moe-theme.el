@@ -137,6 +137,9 @@ Moe, moe, kyun!")
    `(mode-line-buffer-id ((,class (:box nil :foreground ,black-5 :background unspecified :bold t))))
    `(vertical-border ((,class (:foreground ,black-3 :background ,black-3))))
 
+   `(fixed-pitch-serif ((,class (:inherit (fixed-pitch)))))
+   `(Info-quoted ((,class (:background ,black-2-5 :foreground ,white-0))))
+
    ;; Escape and prompt faces
    `(minibuffer-prompt ((,class (:foreground ,black-3 :background ,green-2))))
    `(escape-glyph ((,class (:foreground ,yellow-3))))
