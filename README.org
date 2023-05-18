@@ -1,17 +1,4 @@
 * moe-theme
-#+BEGIN_QUOTE
-** Acknowedgement
-Latest version is under inactive development. I haven't finished it indeed, however, I personally have already used it for quite a long time.
-
-Currently free time is precious for me, to rest from work, to learn foreign languages, to study Harmony & Voice Leading, to compose, to practice piano and violin, to exercise. So I will not spend more massive time on this project for any large modification. I've ever spent too much time on this project before to hold more passion and patience to write merely a color theme, even not an application. (You will not believe how much it is if you has never done such tedious task for EACH mode and find a color balances manually for them) I think it's enough now.
-
-*If you want to try or help to QA the latest development version, see ~dev~ branch.*
-
-*If you want to make `moe-theme` supports more modes, please send a PR (but be aesthetic; patch with too ugly color balance will be rejected.^^||| )*. Currently I honestly has no more free time and passion on such a tedious time-costing trial-and-error task.
-
-The last but not the least, thanks for your using and happy hacking!
-#+END_QUOTE
-
 #+BEGIN_HTML
 <a href="https://raw.github.com/kuanyui/moe-theme.el/master/pics/moe-theme.png"><img src="https://raw.github.com/kuanyui/moe-theme.el/master/pics/moe-theme.png" width="720" height="401"/></a>
 #+END_HTML
@@ -39,7 +26,7 @@ And more:
 2. Delightful & good-looking color palettes™
 3. Customizable
    - Optional =Monokai= / =Tomorrow= for syntax-highlighting (or totally customize by yourself)
-   - Changable Mode-line / Powerline color.
+   - Mode-line / Powerline color
    - Titles font sizes for .
 4. Fully-supported for each modes:
    - Diff / EDiff
@@ -106,8 +93,8 @@ There's a full customization example:
         (setq moe-theme-resize-title-org '(1.5 1.4 1.3 1.2 1.1 1.0 1.0 1.0 1.0))
         (setq moe-theme-resize-title-rst '(1.5 1.4 1.3 1.2 1.1 1.0))
 
-        ;; Choose a color for mode-line.(Default: blue)
-        (setq moe-theme-mode-line-color 'cyan)
+        ;; Choose a color for modeline.(Default: blue)
+        (setq moe-theme-modeline-color 'cyan)
 
         ;; Finally, apply moe-theme now.
         ;; Choose what you like, (moe-light) or (moe-dark)
@@ -162,13 +149,13 @@ same size.
 *** Change Color of Mode-line (or Powerline)
 
 #+BEGIN_SRC lisp
- (setq moe-theme-mode-line-color 'orange)
+ (setq moe-theme-modeline-color 'orange)
  ;; (Available colors: blue, orange, green ,magenta, yellow, purple, red, cyan, w/b.)
 #+END_SRC
 
-You can also use =M-x= =moe-theme-select-color= to change color interactively.
+You can also use =M-x= =moe-theme-modeline-select-color= to change color interactively.
 
-Or =M-x= =moe-theme-random-color= to have a good luck.
+Or =M-x= =moe-theme-modeline-random-color= to have a good luck.
 
 **** Powerline support
 
