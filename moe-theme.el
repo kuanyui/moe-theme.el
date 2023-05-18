@@ -59,7 +59,7 @@ If nil, just bold buffer-id without highlight")
 (defvar moe-theme-mode-line-color 'blue
   "Default is 'blue.
 If nil, no background color.
-Available choices: 'blue, 'cyan', 'green, 'magenta, 'red, 'orange, 'yellow, 'purple, 'b/w")
+Available choices: 'blue, 'cyan', 'green, 'magenta, 'red, 'orange, 'yellow, 'purple, 'w/b")
 
 ;; ======================================================
 ;; Auto Change Modeline Color By Frame ID
@@ -71,7 +71,7 @@ Available choices: 'blue, 'cyan', 'green, 'magenta, 'red, 'orange, 'yellow, 'pur
 This feature rely on a checksum function to ensure a predictable order of color.
 Function `moe-theme-get-color-by-frame-name' is the implementation.")
 
-(defvar moe-theme-colorize-modeline-by-frame-id-color-set '(cyan green orange blue yellow magenta b/w purple)
+(defvar moe-theme-colorize-modeline-by-frame-id-color-set '(cyan green orange blue yellow magenta w/b purple)
   "See `moe-theme-colorize-modeline-by-frame-id'.
 `moe-theme-get-color-by-frame-name' will choose a color from this list")
 
@@ -431,8 +431,10 @@ as long as setq `moe-theme-mode-line-color' first."
     (defun moe-theme-get-color-by-frame-name ()
       (let* ((all-screen-indexes (sort (elscreen-get-screen-list) '<))
              (cur-index (elscreen-get-current-screen))
-             (enabled-colors-len (length moe-theme-colorize-modeline-by-frame-id-color-set)))
-        (nth (% cur-index enabled-colors-len) moe-theme-colorize-modeline-by-frame-id-color-set)))
+             (enabled-colors-len (length moe-theme-colorize-modeline-by-frame-id-color-set))
+	     (gotten-color (nth (% cur-index enabled-colors-len) moe-theme-colorize-modeline-by-frame-id-color-set)))
+	(message "[%s] %s" cur-index gotten-color)
+	gotten-color))
     (defadvice elscreen-goto (after change-mode-line-color-by-frame-id activate)
       (if moe-theme-colorize-modeline-by-frame-id
           (moe-theme-apply-color (moe-theme-get-color-by-frame-name)))
