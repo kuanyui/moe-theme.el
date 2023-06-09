@@ -480,6 +480,8 @@ Moe, moe, kyun!")
    `(magit-diff-our-highlight ((,class (:foreground ,magenta-3 :background ,magenta-00))))
    `(magit-diff-removed ((,class (:foreground ,red-2 :background unspecified :bold t))))
    `(magit-diff-removed-highlight ((,class (:foreground ,red-2 :bold t :inherit (magit-section-highlight)))))
+   `(magit-diff-revision-summary ((,class (:foreground ,black-4 :bold t))))
+   `(magit-diff-revision-summary-highlight ((,class (:foreground ,yellow-4 :background ,yellow-1 :bold t))))
    `(magit-diff-their ((,class (:foreground ,cyan-4)))) ;
    `(magit-diff-their-highlight ((,class (:foreground ,cyan-6 :background ,cyan-1))))
    `(magit-diff-whitespace-warning ((,class (:foreground ,red-3 :background ,red-3))))
