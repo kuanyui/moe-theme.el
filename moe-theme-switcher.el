@@ -122,12 +122,12 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
                    (> (car now) (car 24h/sunrise))
                    (and
                     (= (car now) (car 24h/sunrise))
-                    (>= (second now) (second 24h/sunrise))))
+                    (>= (cadr now) (cadr 24h/sunrise))))
                   (or
                    (< (car now) (car 24h/sunset))
                    (and
                     (= (car now) (car 24h/sunset))
-                    (< (second now) (second 24h/sunset)))))
+                    (< (cadr now) (cadr 24h/sunset)))))
              (moe-load-theme 'light)
            (moe-load-theme 'dark)
            ))))))
