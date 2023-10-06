@@ -447,6 +447,10 @@ Moe, moe, kyun!")
    `(diredp-write-priv ((,class (:foreground ,blue-5 :background ,blue-0))))
    `(diredp-exec-priv ((,class (:foreground ,red-3 :background ,orange-0))))
 
+   ;; Transient (Mainly used in Magit)
+   `(transient-argument ((,class (:foreground ,orange-3 :background ,orange-000 :bold t))))
+   `(transient-heading ((,class (:foreground ,green-3 :background unspecified :underline t))))
+
    ;; Magit >= 2.1.0
    `(magit-bisect-bad ((,class (:foreground ,red-3 :background ,red-00))))
    `(magit-bisect-good ((,class (:foreground ,green-4 :background ,green-0))))
