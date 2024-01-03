@@ -161,9 +161,9 @@ Moe, moe, kyun!")
                                         :box (:line-width 1 :style released-button)))))
    `(org-date ((,class (:foreground ,blue-2 :underline t))))
    `(org-done ((,class (:bold t :weight bold :foreground ,green-4 :background ,green-00
-                              :box (:line-width 1 :style none)))))
+                              :box (:line-width 1 :style nil)))))
    `(org-todo ((,class (:bold t :weight bold :foreground ,red-3 :background ,orange-0
-                              :box (:line-width 1 :style none)))))
+                              :box (:line-width 1 :style nil)))))
    `(org-level-1 ((,class (:bold t :foreground ,blue-1))))
    `(org-level-2 ((,class (:bold t :foreground ,green-02))))
    `(org-level-3 ((,class (:bold t :foreground ,orange-2))))
