@@ -48,6 +48,9 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
 
 (defvar moe-theme-switcher--24h/sunset)
 
+(defvar moe-theme-switcher--compute-sunrise-sunset-timer nil
+  "Timer for updating the computed sunrise and sunset times.")
+
 (defvar moe-theme-switcher--timer nil
   "Timer for checking whether to switch themes between `moe-light' and `moe-dark'.")
 
@@ -147,20 +150,46 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
     (moe-theme-switcher--switch-at-fixed-time))
   )
 
-(if (and
-     (boundp 'calendar-longitude)
-     (boundp 'calendar-latitude)
-     (eql moe-theme-switch-by-sunrise-and-sunset t))
-    (progn
-      (run-with-timer 0 (* 60 60 24) 'moe-theme-switcher--compute-sunrise-sunset))
-  ()
-  )
+(defun moe-theme-switcher-enable ()
+  "Enable automatic switching between the `moe-light' and `moe-dark'
+themes according to the time of day.
 
-(setq moe-theme-switcher--timer (run-with-timer 0 (* 1 60) 'moe-theme-switcher--auto-switch))
+If `moe-theme-switch-by-sunrise-and-sunset' is non-`nil', this
+will use the values of `calendar-latitude' and
+`caledar-longitude' to compute the sunrise and sunset.
 
-;; [FIXME] A minor-mode to enable/disable moe-theme-switcher
-(defun moe-theme-switcher-disable ()
+Otherwise, switch the the theme at fixed times (06:00 and 18:00)."
   (interactive)
+  (when (and
+         (boundp 'calendar-longitude)
+         (boundp 'calendar-latitude)
+         moe-theme-switch-by-sunrise-and-sunset)
+    (setq moe-theme-switcher--compute-sunrise-sunset-timer
+          (run-with-timer 0 (* 60 60 24)
+                          'moe-theme-switcher--compute-sunrise-sunset)))
+
+  (setq moe-theme-switcher--timer (run-with-timer 0 (* 1 60) 'moe-theme-switcher--auto-switch)))
+
+(defun moe-theme-switcher-disable ()
+  "Disable automatic switching between the `moe-light' and
+`moe-dark' themes."
+  (interactive)
+  (when (and (boundp 'moe-theme-switcher--compute-sunrise-sunset-timer)
+             (timerp moe-theme-switcher--compute-sunrise-sunset-timer))
+    (cancel-timer moe-theme-switcher--compute-sunrise-sunset-timer))
   (cancel-timer moe-theme-switcher--timer))
+
+(define-minor-mode moe-theme-switcher-mode
+  "Minor mode for enabling automatic switching between the
+`moe-light' and `moe-dark' themes accoring to the time of day.
+
+See the documentation for `moe-theme-switcher-enable' and
+`moe-theme-switch-by-sunrise-and-sunset' for details."
+  :lighter " Moe"
+  :global t
+  :group 'moe-theme-switcher
+  (if moe-theme-switcher-mode
+      (moe-theme-switcher-enable)
+    (moe-theme-switcher-disable)))
 
 (provide 'moe-theme-switcher)
