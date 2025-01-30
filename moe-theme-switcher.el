@@ -38,8 +38,7 @@ local calendar.
 Take Keelung, Taiwan(25N,121E) for example, you can set like this:
 
 	(setq calendar-latitude +25)
-	(setq calendar-longitude +121)"
-)
+	(setq calendar-longitude +121)")
 
 (defvar moe-theme-switcher--which-enabled nil
   "Variable indicate which theme (moe-dark or light) is being used.")
@@ -139,16 +138,14 @@ Take Keelung, Taiwan(25N,121E) for example, you can set like this:
                     (= (car now) (car moe-theme-switcher--24h/sunset))
                     (< (cadr now) (cadr moe-theme-switcher--24h/sunset)))))
              (moe-theme-switcher--load-theme 'light)
-           (moe-theme-switcher--load-theme 'dark)
-           ))))))
+           (moe-theme-switcher--load-theme 'dark)))))))
 
 (defun moe-theme-switcher--auto-switch ()
   "Automatically switch between dark and light moe-theme."
   (interactive)
   (if (boundp 'moe-theme-switcher--24h/sunrise)
       (moe-theme-switcher--switch-by-locale)
-    (moe-theme-switcher--switch-at-fixed-time))
-  )
+    (moe-theme-switcher--switch-at-fixed-time)))
 
 (defun moe-theme-switcher-enable ()
   "Enable automatic switching between the `moe-light' and `moe-dark'
