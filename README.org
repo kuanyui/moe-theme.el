@@ -208,6 +208,18 @@ I recommend set the value of =show-paren-style= to =expression= for better visua
         (setq show-paren-style 'expression)
 #+END_SRC
 
+** Changelog
+
+Notable changes from earlier versions of =moe-theme=:
+
+*** v1.1.0
+- =moe-theme-switcher= is now a minor mode
+
+  In previous versions, =moe-theme-switcher= was enabled automatically
+  by just loading the module. As it has now been turned into a minor
+  mode, users will need to update their configuration to enable this
+  mode. See [[* Switch between light and dark theme by time of daylight][this section]] for details on how to do this.
+
 ** Known Issues
 - If you add =(moe-dark)= or =(moe-light)= to your init file, the color
   of =buffer-id= would be incorrect after startuping CLI Emacs(but if
