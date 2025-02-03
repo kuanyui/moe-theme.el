@@ -176,6 +176,7 @@ Otherwise, switch the the theme at fixed times (06:00 and 18:00)."
     (cancel-timer moe-theme-switcher--compute-sunrise-sunset-timer))
   (cancel-timer moe-theme-switcher--timer))
 
+;;;###autoload
 (define-minor-mode moe-theme-switcher-mode
   "Minor mode for enabling automatic switching between the
 `moe-light' and `moe-dark' themes accoring to the time of day.

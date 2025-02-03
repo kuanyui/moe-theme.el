@@ -172,7 +172,10 @@ between the =moe-light= and =moe-dark= themes automatically, to match
 the time of day. To enable it, you can use the following:
 
 #+BEGIN_SRC emacs-lisp
-  (require 'moe-theme-switcher)
+  ;; If moe-theme was installed manually as described above, uncomment
+  ;; the following:
+  ;; (require 'moe-theme-switcher)
+
   (setq calendar-latitude +25
         calendar-longitude +121
         moe-theme-switch-by-sunrise-and-sunset t)
