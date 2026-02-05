@@ -1,4 +1,4 @@
-;;; moe-theme.el --- A colorful eye-candy theme. Moe, moe, kyun!
+;;; moe-theme.el --- A colorful eye-candy theme. Moe, moe, kyun!  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2013-2022 kuanyui
 

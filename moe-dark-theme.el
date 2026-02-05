@@ -1,4 +1,4 @@
-;;; moe-dark-theme.el --- An eye-candy theme for Emacser
+;;; moe-dark-theme.el --- An eye-candy theme for Emacser  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2013-2022 kuanyui
 

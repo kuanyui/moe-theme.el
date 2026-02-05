@@ -1,4 +1,4 @@
-;; moe-theme-switcher.el
+;; moe-theme-switcher.el  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2013-2022 kuanyui
 
