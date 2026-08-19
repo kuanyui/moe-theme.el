@@ -676,6 +676,13 @@ Moe, moe, kyun!")
    `(tab-line-tab-current ((,class (:background ,black-2-5 :foreground ,white-0 :underline ,green-1))))
    `(tab-line-tab-inactive ((,class (:background ,black-3 :foreground ,white-3))))
 
+   ;; centaur-tabs
+   `(centaur-tabs-default ((,class (:inherit fringe))))
+   `(centaur-tabs-selected ((,class (:background ,moe-dark-bg :foreground ,moe-dark-fg))))
+   `(centaur-tabs-selected-modified ((,class (:inherit centaur-tabs-selected))))
+   `(centaur-tabs-unselected-modified ((,class (:inherit centaur-tabs-unselected))))
+   `(centaur-tabs-unselected ((,class (:background ,black-2-5 :foreground ,moe-dark-fg))))
+
    ;; Grep
    `(grep-context-face ((,class (:foreground ,red-2))))
    `(grep-error-face ((,class (:foreground ,red-1 :weight bold :underline t))))
